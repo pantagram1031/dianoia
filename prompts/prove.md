@@ -42,3 +42,17 @@ path pointer is the only chat output permitted after wind-down.
   a file pointer without running halt.md is incomplete.
 - A successful invocation ends with halt.md's 10-line digest written
   to stdout, followed by the result.md path. Nothing else.
+
+[BATCHING PROHIBITED]
+- Phases 00 through 06 MUST be executed strictly sequentially.
+- Each phase produces its own commit-worthy set of artifacts before
+  the next phase begins. Reading multiple phase prompt files into
+  context up-front is permitted; writing outputs for multiple phases
+  in one edit pass is NOT.
+- After each phase's artifacts are written, prompts/checkpoint.md
+  MUST be invoked as a separate atomic unit. checkpoint.md is the
+  ONLY place where work_journal.md is updated and the status line is
+  emitted. Inline work_journal updates inside a phase artifact write
+  are violations.
+- Equivalently: there must be exactly one work_journal.md entry per
+  phase per invocation, no more and no fewer.

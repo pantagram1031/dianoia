@@ -34,3 +34,18 @@ Example:
   [prove-that-2-is-irrational-35bb78 p3 u03-hypothesize L@C-002 g0 t12/85%]
 
 No additional chat output is permitted at unit close.
+
+[JOURNAL ENTRY CONTENT REQUIREMENTS]
+Each checkpoint MUST append exactly one entry to work_journal.md with:
+
+  ## <ISO8601> | <agent> | u<phase-id>
+  decisions: <2-4 bullets — what choices were made this phase>
+  artifacts: <files written this phase, relative paths>
+  ledger_delta: <new ledger row IDs, or "none">
+  open: <gaps/conjectures introduced this phase, or "none">
+
+If the phase produced no decisions worth recording, the phase did not
+do work — that is a defect to investigate, not an entry to skip.
+
+The status line (MSP R5) is emitted to stdout IMMEDIATELY after the
+journal entry is written. No other stdout in checkpoint.md.

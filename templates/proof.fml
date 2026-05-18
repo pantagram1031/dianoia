@@ -1,0 +1,8 @@
+thm <ID> [tags: ..., MSC-...]
+  stmt: <WN statement>
+  proof:
+    <WN proof body>
+    qed.
+  deps: [<IDs>]
+  ledger: <ID>
+  paper: proofs/<id>.md  -- if expanded

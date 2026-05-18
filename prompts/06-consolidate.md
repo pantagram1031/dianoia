@@ -1,0 +1,28 @@
+Consolidate established work into final result artifacts and promote eligible theorems to the corpus.
+
+[INPUTS]
+1. Active slug from `problems/.active`.
+2. `claim_ledger.md`.
+3. Surviving proof, obstruction, falsification, reformulation, or conjecture artifacts.
+
+[PROCEDURE]
+1. Read all `PROVED` and `CITED` ledger rows needed for the result.
+2. Choose the strongest honest result type from meta-goal outputs (a) through (e).
+3. Write `problems/<slug>/result.md` with a one-sentence headline stating exactly what was established.
+4. Write the formal statement with all assumptions explicit.
+5. Write the full proof or evidence chain, with every step backed by ledger rows.
+6. Write significance, residual obstruction, and two to five concrete open problems.
+7. Write `problems/<slug>/result.fml` as the WN source of truth when a formal theorem, obstruction, or reformulation exists.
+8. Write `problems/<slug>/executive_summary.md` in at most 250 words.
+9. Promote eligible `PROVED` ledger rows to `corpus/theorems/<sha12>.fml` after light review.
+10. Update `corpus/INDEX.md`.
+11. Invoke `prompts/checkpoint.md`.
+
+[OUTPUTS]
+1. `problems/<slug>/result.md`.
+2. `problems/<slug>/result.fml`.
+3. `problems/<slug>/executive_summary.md`.
+4. Optional promoted theorem files and updated `corpus/INDEX.md`.
+
+[FAILURE]
+1. No established result: print `BLOCKED: no consolidated result survived review.` and stop.

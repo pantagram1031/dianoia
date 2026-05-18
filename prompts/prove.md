@@ -31,3 +31,14 @@ Do NOT echo the result, proof, or summary to chat. Chat output for the
 entire invocation is limited to the wind-down digest (≤10 lines, fixed
 schema from prompts/halt.md). The file IS the deliverable. A bare file
 path pointer is the only chat output permitted after wind-down.
+
+[PHASE LOOP DISCIPLINE]
+- After EACH phase prompt (00..06) completes, prompts/checkpoint.md
+  MUST be invoked as a separate atomic unit BEFORE the next phase
+  prompt is read. This is non-negotiable; merging phases into a
+  single edit is a violation.
+- After Phase 6 closes successfully, prompts/halt.md MUST be invoked
+  with trigger reason SUCCESS to emit the wind-down digest. Returning
+  a file pointer without running halt.md is incomplete.
+- A successful invocation ends with halt.md's 10-line digest written
+  to stdout, followed by the result.md path. Nothing else.

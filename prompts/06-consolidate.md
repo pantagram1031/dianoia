@@ -32,3 +32,18 @@ Do NOT echo the result, proof, or summary to chat. Chat output for the
 entire invocation is limited to the wind-down digest (≤10 lines, fixed
 schema from prompts/halt.md). The file IS the deliverable. A bare file
 path pointer is the only chat output permitted after wind-down.
+
+[CORPUS SELF-CONTAINMENT]
+- corpus/theorems/<sha12>.fml MUST contain the full WN content:
+  definitions used, all supporting lemmas with proofs, and the main
+  theorem with proof. A pointer to problems/<slug>/proofs/*.fml is
+  insufficient.
+- The corpus entry must be readable and verifiable WITHOUT opening
+  any file under problems/. The origin_problem field records
+  provenance only; downstream problems must be able to consume the
+  corpus entry standalone.
+- If a proof is too long for inline inclusion (>500 lines), inline
+  the theorem statement and the top-level proof skeleton, then
+  reference the full lemma stack by ID — but the lemma statements
+  and proofs themselves must also be in the corpus entry or in
+  separate corpus/theorems/<sha12>.fml entries.

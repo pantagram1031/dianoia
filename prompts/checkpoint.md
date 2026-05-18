@@ -22,3 +22,15 @@ Close one atomic unit by persisting claims, journals, integrity checks, and next
 
 [FAILURE]
 1. Missing active state: print `BLOCKED: cannot checkpoint without session_state.md.` and stop.
+
+[STATUS LINE — MSP R5]
+On unit close, after updating session_state.md and merging
+work_journal fragments, emit exactly one line to stdout in this
+format:
+
+  [<slug> p<phase> u<unit-id> L@<ledger_head> g<open_gaps_count> t<used>/<cap>%]
+
+Example:
+  [prove-that-2-is-irrational-35bb78 p3 u03-hypothesize L@C-002 g0 t12/85%]
+
+No additional chat output is permitted at unit close.

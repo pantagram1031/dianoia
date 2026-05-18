@@ -20,3 +20,12 @@ Select three specialist lenses and extract day-one sub-questions for the active 
 
 [FAILURE]
 1. Missing survey: print `BLOCKED: run 01-survey before 02-perspective.` and stop.
+
+[REGISTRY GATE]
+- The specialists chosen MUST appear in specialists/INDEX.md.
+  Inventing a specialist name not in the index is a fatal defect.
+- If a needed lens is absent from the registry, invoke
+  prompts/subagents/specialist-factory.md to add it (with PROFILE.md
+  and INDEX.md registration) BEFORE writing perspectives.md.
+- perspectives.md MUST cite each selected specialist's slug exactly
+  as it appears in specialists/INDEX.md.

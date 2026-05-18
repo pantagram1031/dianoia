@@ -24,3 +24,19 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
 
 [FAILURE]
 1. Missing review target: print `BLOCKED: no phase artifact supplied for review.` and stop.
+
+[INVARIANTS]
+- 05-review MUST be a separate atomic unit invoked AFTER 04-develop's
+  artifacts exist on disk. Do not interleave with 04-develop.
+- Each reviewer persona writes its OWN file in problems/<slug>/reviews/
+  BEFORE consolidation:
+    reviews/<artifact>-reviewer-A.md  (Skeptic)
+    reviews/<artifact>-reviewer-B.md  (Specialist)
+    reviews/<artifact>-reviewer-C.md  (Editor)
+- Reviewer A MUST attempt at least one explicit counter-construction
+  or precise objection. A reviewer file with zero raised defects is
+  itself a defect (insufficient adversarial pressure) and triggers
+  re-invocation of that reviewer with a stricter prompt before the
+  phase may close.
+- Only after all three reviewer files exist may
+  review_consolidated.md be written.

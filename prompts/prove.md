@@ -25,3 +25,9 @@ Create a new problem instance and drive the complete phase loop for one problem.
 
 [FAILURE]
 1. Missing `$1`: print `BLOCKED: provide a problem statement or path.` and stop.
+
+[POST-INVOCATION SILENCE]
+Do NOT echo the result, proof, or summary to chat. Chat output for the
+entire invocation is limited to the wind-down digest (≤10 lines, fixed
+schema from prompts/halt.md). The file IS the deliverable. A bare file
+path pointer is the only chat output permitted after wind-down.

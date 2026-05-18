@@ -26,3 +26,9 @@ Consolidate established work into final result artifacts and promote eligible th
 
 [FAILURE]
 1. No established result: print `BLOCKED: no consolidated result survived review.` and stop.
+
+[POST-INVOCATION SILENCE]
+Do NOT echo the result, proof, or summary to chat. Chat output for the
+entire invocation is limited to the wind-down digest (≤10 lines, fixed
+schema from prompts/halt.md). The file IS the deliverable. A bare file
+path pointer is the only chat output permitted after wind-down.

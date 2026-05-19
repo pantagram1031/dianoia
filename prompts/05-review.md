@@ -4,7 +4,14 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
 1. Active slug from `problems/.active`.
 2. Phase artifact to review.
 3. Reviewed phase label, supplied by the caller or inferred from the artifact path: one of `00-intake`, `01-survey`, `02-perspective`, `03-hypothesize`, `04-develop`, `06-consolidate`.
-4. `claim_ledger.md`, `survey.md`, and current `session_state.md`.
+4. Common state: current `claim_ledger.md` tail and `session_state.md`.
+5. Phase-dependent context:
+   - `00-intake`: `problem.md` and `intake.md`; `survey.md` is not required.
+   - `01-survey`: `intake.md`, `survey.md`, and `corpus/INDEX.md`.
+   - `02-perspective`: `survey.md`, `perspectives.md`, and `specialists/INDEX.md`.
+   - `03-hypothesize`: `intake.md`, `survey.md`, `perspectives.md`, and `hypotheses_live.md`.
+   - `04-develop`: `intake.md`, `survey.md`, `hypotheses_live.md`, current proof or failure artifacts, and `work_journal.md`.
+   - `06-consolidate`: `survey.md`, `result.md`, `result.fml` when present, `executive_summary.md`, and any proposed corpus entry.
 
 [PROCEDURE]
 1. Invoke `prompts/subagents/reviewer.md` with persona `A` for skeptic review.
@@ -26,6 +33,7 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
 
 [FAILURE]
 1. Missing review target: print `BLOCKED: no phase artifact supplied for review.` and stop.
+2. Missing a phase-dependent input for the reviewed phase: print `BLOCKED: missing review input <path>.` and stop.
 
 [INVARIANTS]
 - 05-review MUST be a separate atomic unit invoked AFTER the specific

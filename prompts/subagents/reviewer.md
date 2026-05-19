@@ -1,6 +1,6 @@
 SUBAGENT CONTRACT
 role: Review one artifact under persona A, B, C, or D.
-read_only_inputs: target artifact, ledger tail, survey, active definitions, and persona parameter.
+read_only_inputs: target artifact, ledger tail, phase-dependent context supplied by 05-review, active definitions, and persona parameter.
 drop_zone: problems/<slug>/inbox/<unit-id>/reviewer-<persona>/
 token_budget_defaults: 10000 tokens unless the caller supplies a smaller budget.
 return_contract: write return.md with status and artifact path; write review.md using templates/review.md.

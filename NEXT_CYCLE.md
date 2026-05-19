@@ -2,16 +2,15 @@
 
 cycle: 4
 current_step: 2
-next_problem: T1
-status: Cycle 4 initialized after fetch/pull; worktree clean before init artifacts.
+next_problem: T2
+status: Cycle 4 through T1 completed; next problem T2.
 remaining_work:
-- Run T1 through T6 capability tests in order.
-- Write cycle-4 REPORT.md.
+- Continue the cycle from the indicated next problem or write cycle-4 REPORT.md if next_problem is none.
 - Diagnose top machinery gaps.
 - Apply improvements if needed.
 - Run post-improve audit.
 - Update mastery-tracking.md.
 - Check MASTERY/PLATEAU/BLOCKED criteria.
-carryover_active_problem: cycle-3-t6-perfect-numbers is halted with halt_flag=true.
+carryover_active_problem: cycle-4-t1-primes-4k3 is halted with halt_flag=true.
 notes:
-- Cycles 2 and 3 were clean. Cycle 4 can complete the three-cycle mastery window if it also stays clean.
+- Cycles 2 and 3 were clean. Cycle 4 can complete the three-cycle mastery window if it stays clean.

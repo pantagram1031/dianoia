@@ -2,8 +2,8 @@
 
 cycle: 4
 current_step: 2
-next_problem: T3
-status: Cycle 4 through T2 completed; next problem T3.
+next_problem: T4
+status: Cycle 4 through T3 completed; next problem T4.
 remaining_work:
 - Continue the cycle from the indicated next problem or write cycle-4 REPORT.md if next_problem is none.
 - Diagnose top machinery gaps.
@@ -11,6 +11,6 @@ remaining_work:
 - Run post-improve audit.
 - Update mastery-tracking.md.
 - Check MASTERY/PLATEAU/BLOCKED criteria.
-carryover_active_problem: cycle-4-t2-intermediate-value is halted with halt_flag=true.
+carryover_active_problem: cycle-4-t3-quadratic-reciprocity is halted with halt_flag=true.
 notes:
 - Cycles 2 and 3 were clean. Cycle 4 can complete the three-cycle mastery window if it stays clean.

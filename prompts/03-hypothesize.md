@@ -19,16 +19,18 @@ Generate falsifiable hypotheses from three selected perspectives and test them q
 5. Design a 10-minute sanity check for each hypothesis: computation, small-case probe, known-counterexample probe, or limit case.
 6. For each hypothesis, invoke `prompts/subagents/sanity-checker.md` with the statement, refutation condition, minimal check, and evidence standard.
 7. Merge sanity-checker returns into `hypotheses_live.md` and record the evidence.
-8. If the direct-attack hypothesis is killed or a new angle is needed before choosing a fallback, invoke `prompts/subagents/muser.md` with the open blocker and specialist bias from the selected perspectives.
-9. Mark killed hypotheses with the reason and surviving hypotheses with the exact survival evidence.
-10. Append conjectural ledger rows only for survivors that are precise enough to track.
-11. Invoke `prompts/checkpoint.md`.
+8. If the three selected perspectives genuinely disagree about direct-attack viability, obstruction severity, or hypothesis ranking, invoke `prompts/panel.md` with the disagreeing specialist slugs and the concrete disputed statement.
+9. If the direct-attack hypothesis is killed or a new angle is needed before choosing a fallback, invoke `prompts/subagents/muser.md` with the open blocker and specialist bias from the selected perspectives.
+10. Mark killed hypotheses with the reason and surviving hypotheses with the exact survival evidence.
+11. Append conjectural ledger rows only for survivors that are precise enough to track.
+12. Invoke `prompts/checkpoint.md`.
 
 [OUTPUTS]
 1. `problems/<slug>/hypotheses_live.md`.
 2. Sanity-check log attached inside `hypotheses_live.md`.
 3. Sanity-checker return artifacts under `problems/<slug>/inbox/<unit-id>/sanity-checker/`.
-4. Muser return artifacts when a direct-attack blocker or new-angle need occurs.
+4. Panel dialogue artifacts when selected perspectives disagree.
+5. Muser return artifacts when a direct-attack blocker or new-angle need occurs.
 
 [FAILURE]
 1. Missing perspectives: print `BLOCKED: run 02-perspective before 03-hypothesize.` and stop.

@@ -8,3 +8,4 @@
 - iter-6 | dimensions: 4 Ideating, 6 Researching collaboratively | M4 added top-level muse and consult prompts for AGENTS first-message routes.
 - iter-7 | dimensions: 1 Proving, 3 Attempting, 4 Ideating, 7 Organizing materials, 8 Reading papers | M5 wired surveyor, sanity-checker, prover, muser, and skill-author into their natural phases.
 - iter-8 | dimensions: 7 Organizing materials | M6 added a context manifest template and checkpoint rule for per-unit context tracking.
+- iter-9 | dimensions: 3 Attempting, 7 Organizing materials | M7 guarded resume so closed v4 halt reasons cannot be reopened by clearing halt_flag.

@@ -7,11 +7,13 @@ Resume the active problem from durable disk state without relying on chat histor
 1. Resolve the slug from `$1` or `problems/.active`.
 2. Read `IDENTITY.md`, `goal.md`, `problems/<slug>/session_state.md`, `problems/<slug>/claim_ledger.md` tail 20, and `problems/<slug>/resume_brief.md` if present.
 3. Read any hot files listed in `session_state.next_atomic_unit.inputs_required`.
-4. Verify `phase_status`, `halt_flag`, `needs_human`, and rate budget fields.
-5. If `phase_status=blocked` or `needs_human.flag=true`, print one line with the block reason and stop.
-6. If `halt_flag=true`, clear it only after writing a checkpoint-ready resume note into `work_journal.md`.
-7. Invoke `session_state.next_atomic_unit.prompt_to_invoke` with the listed inputs.
-8. After the atomic unit, invoke `prompts/checkpoint.md`.
+4. Verify `phase_status`, `halt_flag`, `needs_human`, rate budget fields, and the most recent halt reason in `resume_brief.md`.
+5. If the prior halt reason is `SUCCESS-MEANINGFUL` or `FAILURE-AMBITION-GAP`, print `BLOCKED: problem is closed with halt_reason=<reason>.` and stop without clearing `halt_flag`.
+6. If `phase_status=blocked` or `needs_human.flag=true`, print one line with the block reason and stop.
+7. If `halt_flag=true` and the prior halt reason is not `BLOCKED-ITERATE`, print `BLOCKED: halt_flag true without resume-eligible halt reason.` and stop.
+8. If `halt_flag=true` and the prior halt reason is `BLOCKED-ITERATE`, clear it only after writing a checkpoint-ready resume note into `work_journal.md`.
+9. Invoke `session_state.next_atomic_unit.prompt_to_invoke` with the listed inputs.
+10. After the atomic unit, invoke `prompts/checkpoint.md`.
 
 [OUTPUTS]
 1. Continued work on the active problem.
@@ -22,6 +24,7 @@ Resume the active problem from durable disk state without relying on chat histor
 2. Missing required state file: print `BLOCKED: missing required state file <path>.` and stop.
 
 INVARIANTS (v4 resume discipline):
+- Only `BLOCKED-ITERATE` is resume-eligible. `SUCCESS-MEANINGFUL` and `FAILURE-AMBITION-GAP` are closed states and MUST NOT have `halt_flag` cleared by resume.
 - On resume from a BLOCKED-ITERATE problem, do NOT re-run Phase 0 intake. Read prior session_state.md, the most recent STUCK-STATE entry in work_journal.md, and the NEXT-SESSION ATTACK PLAN in resume_brief.md.
 - Phase 3 hypotheses for the new session must include the refined attack plan as at least one hypothesis. The original direct attack from the first session is restated and re-tested at this point.
 - The new session may invoke SpecialistFactory if the refined attack plan names a specialist domain not present in specialists/INDEX.md.

@@ -1,0 +1,2 @@
+﻿-- Lean stub: theorem primes_4k3_infinite : forall N : Nat, exists p : Nat, Nat.Prime p /\ p > N /\ p % 4 = 3 := by
+--   sorry

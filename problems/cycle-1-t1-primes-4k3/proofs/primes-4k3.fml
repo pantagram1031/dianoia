@@ -1,0 +1,25 @@
+﻿thm T1_PRIMES_4K3 [tags: primes, congruences, MSC-11A41]
+  stmt: For every integer N >= 1, there exists a prime p such that p > N and p == 3 mod 4.
+  proof:
+    intro N.
+    assume for_contradiction finite_bound: every prime p with p == 3 mod 4 satisfies p <= N.
+    let S be the finite set of primes p with p <= N and p == 3 mod 4.
+    let Q be the product of all elements of S, with Q = 1 if S is empty.
+    have M_def: M = 4*Q - 1.
+    have M_mod: M == 3 mod 4 by arithmetic from M_def.
+    have M_gt_1: M > 1 by Q >= 1 and M = 4*Q - 1.
+    have prime_divisor: there exists a prime r with r divides M by least-divisor argument on M > 1.
+    obtain r with r_prime and r_divides_M.
+    have r_odd: r is odd because M is odd.
+    have r_mod_cases: r == 1 mod 4 or r == 3 mod 4 because r is an odd prime.
+    case r == 1 mod 4 for every prime divisor r of M:
+      then the product of prime factors of M is 1 mod 4, contradicting M_mod.
+    therefore obtain r with r_prime, r divides M, and r == 3 mod 4.
+    by finite_bound, r is in S.
+    hence r divides Q.
+    since r divides M = 4*Q - 1 and r divides 4*Q, r divides 1, contradiction.
+    therefore finite_bound is false.
+    hence for every N there is a prime p > N with p == 3 mod 4.
+    qed.
+  deps: []
+  ledger: C-003

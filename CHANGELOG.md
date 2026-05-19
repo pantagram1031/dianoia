@@ -10,3 +10,4 @@
 - iter-8 | dimensions: 7 Organizing materials | M6 added a context manifest template and checkpoint rule for per-unit context tracking.
 - iter-9 | dimensions: 3 Attempting, 7 Organizing materials | M7 guarded resume so closed v4 halt reasons cannot be reopened by clearing halt_flag.
 - iter-10 | dimensions: 1 Proving, 7 Organizing materials | m1 added formalization notes placeholder to the problem skeleton.
+- iter-11 | dimensions: 7 Organizing materials | m2 added explicit MSP narration mode to both session state templates.

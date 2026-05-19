@@ -1,5 +1,6 @@
 active_problem: <slug>
 mode: auto | interactive
+msp_narration: quiet | verbose
 halt_flag: false
 current_phase: <0|1|2|3|4|5|6>
 phase_status: in_progress | awaiting_review | review_complete | blocked | focused

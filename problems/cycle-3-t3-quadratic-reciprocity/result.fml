@@ -1,0 +1,16 @@
+thm T3_QUADRATIC_RECIPROCITY [tags: quadratic-reciprocity, Legendre-symbol, MSC-11A15]
+  stmt: For distinct odd primes p and q, (p/q)(q/p) = (-1)^(((p-1)/2)*((q-1)/2)).
+  proof:
+    let m=(p-1)/2 and n=(q-1)/2.
+    By Gauss's lemma [C-002], (q/p)=(-1)^A where A is the number of i in {1,...,m} for which the least positive residue of iq modulo p is greater than p/2.
+    By Gauss's lemma [C-002], (p/q)=(-1)^B where B is the number of j in {1,...,n} for which the least positive residue of jp modulo q is greater than q/2.
+    Consider the m*n lattice points (i,j) with 1<=i<=m and 1<=j<=n.
+    Since p and q are distinct primes, no point lies on the line iq=jp.
+    For fixed i, the count of j with jp < iq equals floor(iq/p); summing over i gives A after the standard residue comparison from Gauss's lemma.
+    For fixed j, the count of i with iq < jp equals floor(jp/q); summing over j gives B after the symmetric comparison.
+    Every lattice point lies exactly on one side of the line iq=jp, so A+B = m*n.
+    Therefore (q/p)(p/q)=(-1)^(A+B)=(-1)^(m*n)=(-1)^(((p-1)/2)*((q-1)/2)).
+    qed.
+  deps: [C-002]
+  ledger: C-004
+

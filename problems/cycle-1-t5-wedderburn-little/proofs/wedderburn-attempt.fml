@@ -1,0 +1,11 @@
+﻿thm T5_WEDDERBURN_LITTLE [tags: finite-division-rings, MSC-16K20]
+  stmt: Every finite division ring D is commutative.
+  proof:
+    Let F be the center of D and suppose D is not commutative.
+    Choose a maximal commutative subfield K containing F.
+    K is finite, hence K^* is cyclic by the finite-field theorem [C-004].
+    The conjugation action of D^* on maximal subfields should force the normalizer N_D(K)^* to be larger than K^* unless K=D.
+    [GAP: normalizer/counting lemma not closed | suffices: prove that the class equation for D^* acting by conjugation on maximal subfields contradicts the cyclic structure of K^*/F^* when D is noncommutative]
+    qed.
+  deps: [C-004]
+  ledger: C-005

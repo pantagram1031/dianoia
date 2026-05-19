@@ -14,3 +14,4 @@
 - iter-12 | dimensions: 5 Asking, 7 Organizing materials | Added audit-backed needs_human gate to prevent evasive user blocking.
 - iter-13 | dimensions: 4 Ideating, 6 Researching collaboratively | Added panel prompt and disagreement-triggered panel routing for specialist collaboration.
 - iter-14 | dimensions: 8 Reading papers | Wired Researcher into Phase 1 survey citation verification for State of the Art and high-impact references.
+- iter-15 | dimensions: 1 Proving, 7 Organizing materials | Added Phase 4 formalization stub or skip-rationale rule for key lemmas.

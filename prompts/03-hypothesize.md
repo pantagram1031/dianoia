@@ -17,14 +17,18 @@ Generate falsifiable hypotheses from three selected perspectives and test them q
 3. State each hypothesis with explicit quantifiers, definitions, and refutation conditions.
 4. For each hypothesis, cite the nearest existing result or tag `[UNVERIFIED]` and keep it out of downstream reasoning.
 5. Design a 10-minute sanity check for each hypothesis: computation, small-case probe, known-counterexample probe, or limit case.
-6. Execute the sanity checks as reasoning tasks and record evidence.
-7. Mark killed hypotheses with the reason and surviving hypotheses with the exact survival evidence.
-8. Append conjectural ledger rows only for survivors that are precise enough to track.
-9. Invoke `prompts/checkpoint.md`.
+6. For each hypothesis, invoke `prompts/subagents/sanity-checker.md` with the statement, refutation condition, minimal check, and evidence standard.
+7. Merge sanity-checker returns into `hypotheses_live.md` and record the evidence.
+8. If the direct-attack hypothesis is killed or a new angle is needed before choosing a fallback, invoke `prompts/subagents/muser.md` with the open blocker and specialist bias from the selected perspectives.
+9. Mark killed hypotheses with the reason and surviving hypotheses with the exact survival evidence.
+10. Append conjectural ledger rows only for survivors that are precise enough to track.
+11. Invoke `prompts/checkpoint.md`.
 
 [OUTPUTS]
 1. `problems/<slug>/hypotheses_live.md`.
 2. Sanity-check log attached inside `hypotheses_live.md`.
+3. Sanity-checker return artifacts under `problems/<slug>/inbox/<unit-id>/sanity-checker/`.
+4. Muser return artifacts when a direct-attack blocker or new-angle need occurs.
 
 [FAILURE]
 1. Missing perspectives: print `BLOCKED: run 02-perspective before 03-hypothesize.` and stop.

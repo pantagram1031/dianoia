@@ -6,3 +6,4 @@
 - iter-4 | dimensions: 2 Verifying, 7 Organizing materials | M2 added explicit preconditions to every phase prompt from intake through consolidation.
 - iter-5 | dimensions: 7 Organizing materials | M3 added corpus/theorems placeholder for self-contained Phase 6 promotions.
 - iter-6 | dimensions: 4 Ideating, 6 Researching collaboratively | M4 added top-level muse and consult prompts for AGENTS first-message routes.
+- iter-7 | dimensions: 1 Proving, 3 Attempting, 4 Ideating, 7 Organizing materials, 8 Reading papers | M5 wired surveyor, sanity-checker, prover, muser, and skill-author into their natural phases.

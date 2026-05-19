@@ -19,15 +19,17 @@ Consolidate established work into final result artifacts and promote eligible th
 6. Write significance, residual obstruction, and two to five concrete open problems.
 7. Write `problems/<slug>/result.fml` as the WN source of truth when a formal theorem, obstruction, or reformulation exists.
 8. Write `problems/<slug>/executive_summary.md` in at most 250 words.
-9. Promote eligible `PROVED` ledger rows to `corpus/theorems/<sha12>.fml` after light review.
-10. Update `corpus/INDEX.md`.
-11. Invoke `prompts/checkpoint.md`.
+9. If the work identifies a reusable technique or repeated mathematical workflow, invoke `prompts/subagents/skill-author.md` with pattern evidence, proposed skill slug, champion specialist, and transfer criteria.
+10. Promote eligible `PROVED` ledger rows to `corpus/theorems/<sha12>.fml` after light review.
+11. Update `corpus/INDEX.md`.
+12. Invoke `prompts/checkpoint.md`.
 
 [OUTPUTS]
 1. `problems/<slug>/result.md`.
 2. `problems/<slug>/result.fml`.
 3. `problems/<slug>/executive_summary.md`.
-4. Optional promoted theorem files and updated `corpus/INDEX.md`.
+4. Skill-author return artifacts when a reusable technique is identified.
+5. Optional promoted theorem files and updated `corpus/INDEX.md`.
 
 [FAILURE]
 1. No established result: print `BLOCKED: no consolidated result survived review.` and stop.

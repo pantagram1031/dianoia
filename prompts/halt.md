@@ -23,3 +23,14 @@ Wind down the active problem into a resumable state.
 
 [FAILURE]
 1. Missing active problem: print `BLOCKED: no active problem to halt.` and stop.
+
+INVARIANTS (v4 halt reasons):
+halt.md writes ONE of three halt reasons to resume_brief.md:
+
+SUCCESS-MEANINGFUL: result passed Phase 6 meaningfulness gate. corpus/INDEX.md updated. session_state.halt_flag = true. The problem is closed.
+
+BLOCKED-ITERATE: run produced no meaningful result but at least one live attack angle remains, or Phase 4 STUCK-STATE has a NEXT-SESSION ATTACK PLAN. resume_brief.md records the next-session plan verbatim. session_state.session_count increments by 1. session_state.attempt_log appends a one-line summary of this session's attempt. corpus is NOT updated. session_state.halt_flag = false (resume eligible).
+
+FAILURE-AMBITION-GAP: Reviewer D MAJOR defect unfixed, OR all hypothesized attack angles closed as obstructions with no new fallback. corpus is NOT updated. session_state.halt_flag = true. The problem is closed but no result was promotion-worthy. resume_brief.md states why each attack angle is dead.
+
+BLOCKED-ITERATE is the default outcome when Phase 4 records a STUCK-STATE without a closed direct attack. The user re-invoking the problem (or running prompts/resume.md) on a BLOCKED-ITERATE problem begins a new session that picks up the next-session attack plan, not a redo of Phase 0.

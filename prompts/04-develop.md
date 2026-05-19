@@ -24,3 +24,8 @@ Develop the two most promising surviving hypotheses into formal proof attempts o
 
 [FAILURE]
 1. Missing live hypotheses: print `BLOCKED: run 03-hypothesize before 04-develop.` and stop.
+
+INVARIANTS (v4 persistence on stuck):
+- A direct-attack hypothesis that does not close in Phase 4 must NOT be silently replaced with a fallback. Record a work_journal.md entry "STUCK-STATE: <precise blocker>" and a "NEXT-SESSION ATTACK PLAN: <refined approach naming new technique, specialist, or literature angle>".
+- A run that produces only fallback (conditional/reformulation/obstruction/conjecture) results without recording at least one STUCK-STATE entry for the direct attack is a fatal defect at Phase 4.
+- Phase 4 may end in three states: (a) direct attack closed with proof, (b) direct attack stuck with STUCK-STATE recorded plus optional fallback partial results, (c) all live hypotheses closed as obstructions ruling out the primary target. State (b) is normal and not a failure; it triggers BLOCKED-ITERATE at halt.

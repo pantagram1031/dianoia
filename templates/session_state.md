@@ -27,3 +27,8 @@ context:
   last_pct: 0.0
   mode: normal | distill | focus | starve
 forbidden_word_count: 0
+
+session_count: 1
+attempt_log: []
+last_stuck_state:
+last_retreat_trigger:

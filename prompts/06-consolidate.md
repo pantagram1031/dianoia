@@ -47,3 +47,13 @@ path pointer is the only chat output permitted after wind-down.
   reference the full lemma stack by ID — but the lemma statements
   and proofs themselves must also be in the corpus entry or in
   separate corpus/theorems/<sha12>.fml entries.
+
+INVARIANTS (v4 meaningfulness gate):
+Before corpus promotion, the result must pass the meaningfulness test:
+
+(a) Direct attack closed with proof → MEANINGFUL. Promote.
+(b) Direct attack stuck, but the STUCK-STATE names an obstruction or technique-class failure not recorded in any prior corpus entry, prior session attempt_log, or survey.md citation → MEANINGFUL. Promote with headline acknowledging partial nature and the precise newly-identified obstacle.
+(c) Result strictly stronger than the strongest survey.md "State of the Art" entry (proves more, requires less, or has a strictly weaker hypothesis) → MEANINGFUL. Promote with explicit comparison in headline.
+(d) Result equivalent to or weaker than a survey.md "State of the Art" entry, OR re-derivation of any textbook fact → NOT MEANINGFUL. Block corpus promotion. Halt reason becomes BLOCKED-ITERATE if attack angles remain, FAILURE-AMBITION-GAP if exhausted.
+
+Reviewer D MAJOR defects unfixed at this phase force halt reason FAILURE-AMBITION-GAP regardless of (a)/(b)/(c)/(d).

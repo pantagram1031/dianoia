@@ -20,3 +20,11 @@ Resume the active problem from durable disk state without relying on chat histor
 [FAILURE]
 1. Missing slug and missing `problems/.active`: print `BLOCKED: no active problem.` and stop.
 2. Missing required state file: print `BLOCKED: missing required state file <path>.` and stop.
+
+INVARIANTS (v4 resume discipline):
+- On resume from a BLOCKED-ITERATE problem, do NOT re-run Phase 0 intake. Read prior session_state.md, the most recent STUCK-STATE entry in work_journal.md, and the NEXT-SESSION ATTACK PLAN in resume_brief.md.
+- Phase 3 hypotheses for the new session must include the refined attack plan as at least one hypothesis. The original direct attack from the first session is restated and re-tested at this point.
+- The new session may invoke SpecialistFactory if the refined attack plan names a specialist domain not present in specialists/INDEX.md.
+- The new session may invoke the Researcher subagent to investigate the specific obstruction named in the prior STUCK-STATE.
+- session_state.session_count increments by 1 at session start. session_state.attempt_log gains a new entry after Phase 4.
+- A resumed session that produces the same STUCK-STATE as the prior session without a new attack angle is itself a Reviewer D MAJOR defect at Phase 4. Each session must try something the prior sessions did not.

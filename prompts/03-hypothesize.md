@@ -23,3 +23,9 @@ Generate falsifiable hypotheses from three selected perspectives and test them q
 
 [FAILURE]
 1. Missing perspectives: print `BLOCKED: run 02-perspective before 03-hypothesize.` and stop.
+
+INVARIANTS (v4 attack discipline):
+- At least one hypothesis must be a direct frontal attack on the primary target stated in intake.md Section A, with original quantifiers intact. Conditional, reformulated, or restricted versions do not qualify as direct attack.
+- The direct-attack hypothesis receives a sanity check like every other hypothesis. If the sanity check kills it, work_journal.md gains an entry "RETREAT TRIGGER: <precise reason>" before any fallback hypothesis is selected.
+- If hypotheses_live.md Survivors contain only conditional/reformulation/obstruction/conjecture entries AND work_journal.md has no RETREAT TRIGGER entry for this Phase 3, the artifact is a fatal defect.
+- Survivors selected for Phase 4 must include the direct attack if it survived. If it died, Survivors must include a documented fallback chain stating, for each weaker hypothesis, why it is the strongest still-living attempt.

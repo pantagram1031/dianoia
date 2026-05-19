@@ -1,0 +1,2 @@
+Sylvester-Gallai is proved by the standard minimal-distance argument. Among all pairs consisting of a point of S and a determined line not containing it, choose one of least distance. If the line contains a third point of S, adjacent points on the line and the external point form a triangle yielding a strictly closer nonincident point-line pair. This contradiction leaves a line through exactly two points.
+

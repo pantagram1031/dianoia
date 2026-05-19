@@ -26,8 +26,9 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
 1. Missing review target: print `BLOCKED: no phase artifact supplied for review.` and stop.
 
 [INVARIANTS]
-- 05-review MUST be a separate atomic unit invoked AFTER 04-develop's
-  artifacts exist on disk. Do not interleave with 04-develop.
+- 05-review MUST be a separate atomic unit invoked AFTER the specific
+  phase artifact it reviews exists on disk. Do not interleave review
+  work with the phase that produced that artifact.
 - Each reviewer persona writes its OWN file in problems/<slug>/reviews/
   BEFORE consolidation:
     reviews/<artifact>-reviewer-A.md  (Skeptic)

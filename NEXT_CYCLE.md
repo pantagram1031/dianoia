@@ -1,16 +1,15 @@
 # NEXT_CYCLE
 
 cycle: 4
-current_step: 2
+current_step: 3
 next_problem: none
-status: Cycle 4 T1-T6 capability tests completed and pushed through T6.
+status: Cycle 4 T1-T6 capability tests and REPORT.md completed; report commit pending or complete depending on git log.
 remaining_work:
-- Continue the cycle from the indicated next problem or write cycle-4 REPORT.md if next_problem is none.
-- Diagnose top machinery gaps.
+- Write cycle-4 DIAGNOSIS.md.
 - Apply improvements if needed.
 - Run post-improve audit.
 - Update mastery-tracking.md.
 - Check MASTERY/PLATEAU/BLOCKED criteria.
 carryover_active_problem: cycle-4-t6-perfect-numbers is halted with halt_flag=true.
 notes:
-- Cycles 2 and 3 were clean. Cycle 4 can complete the three-cycle mastery window if it stays clean.
+- Cycle 4 had 6 PASS, 0 DEGRADED, 0 FAIL.

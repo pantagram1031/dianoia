@@ -7,3 +7,4 @@
 - iter-5 | dimensions: 7 Organizing materials | M3 added corpus/theorems placeholder for self-contained Phase 6 promotions.
 - iter-6 | dimensions: 4 Ideating, 6 Researching collaboratively | M4 added top-level muse and consult prompts for AGENTS first-message routes.
 - iter-7 | dimensions: 1 Proving, 3 Attempting, 4 Ideating, 7 Organizing materials, 8 Reading papers | M5 wired surveyor, sanity-checker, prover, muser, and skill-author into their natural phases.
+- iter-8 | dimensions: 7 Organizing materials | M6 added a context manifest template and checkpoint rule for per-unit context tracking.

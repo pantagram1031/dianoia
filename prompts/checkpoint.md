@@ -11,14 +11,16 @@ Close one atomic unit by persisting claims, journals, integrity checks, and next
 4. Run a citation check: every citation-like token used for reasoning must match a `claim_ledger.md` row or be tagged `[UNVERIFIED]`.
 5. Run the forbidden vocabulary scan for the words listed in `goal.md`; record count and locations.
 6. Inventory every `[GAP]`, `[ASSUMPTION]`, and `[CONJECTURE]` marker in the unit artifact.
-7. Update `last_atomic_unit_completed`, `next_atomic_unit`, `ledger_head`, `rate_window`, `context`, and `forbidden_word_count`.
-8. On any integrity failure, set `phase_status=blocked`, set `needs_human.flag=true`, and write the reason.
-9. Emit only the MSP R5 status line.
+7. Write or refresh `problems/<slug>/context_manifest.md` from `templates/context_manifest.md` for the just-completed unit, filling `always`, `phase_active`, `this_unit`, and `dropped`.
+8. Update `last_atomic_unit_completed`, `next_atomic_unit`, `ledger_head`, `rate_window`, `context`, and `forbidden_word_count`.
+9. On any integrity failure, set `phase_status=blocked`, set `needs_human.flag=true`, and write the reason.
+10. Emit only the MSP R5 status line.
 
 [OUTPUTS]
 1. Updated `session_state.md`.
 2. Updated `claim_ledger.md` and `work_journal.md`.
-3. Integrity inventory recorded in the active problem directory.
+3. Updated `context_manifest.md` for the just-completed unit.
+4. Integrity inventory recorded in the active problem directory.
 
 [FAILURE]
 1. Missing active state: print `BLOCKED: cannot checkpoint without session_state.md.` and stop.
@@ -49,3 +51,17 @@ do work — that is a defect to investigate, not an entry to skip.
 
 The status line (MSP R5) is emitted to stdout IMMEDIATELY after the
 journal entry is written. No other stdout in checkpoint.md.
+
+[CONTEXT MANIFEST REQUIREMENTS]
+Each checkpoint MUST write `problems/<slug>/context_manifest.md` using
+`templates/context_manifest.md`. The manifest records:
+
+  always: constitutional anchors, active session state, and ledger.
+  phase_active: the current phase prompt and phase-level artifact(s).
+  this_unit: artifacts written, reviewed, or merged in this atomic unit.
+  dropped: files or summaries deliberately omitted from immediate
+           context, with recovery path or summary pointer.
+
+The manifest is rewritten at every checkpoint to describe the unit
+that just closed. It is not a proof artifact and does not create
+ledger rows.

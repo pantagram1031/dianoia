@@ -65,3 +65,26 @@ Each checkpoint MUST write `problems/<slug>/context_manifest.md` using
 The manifest is rewritten at every checkpoint to describe the unit
 that just closed. It is not a proof artifact and does not create
 ledger rows.
+
+[NEEDS_HUMAN GATE]
+Set `needs_human.flag=true` only when the system is genuinely blocked
+and the next required information cannot be derived from active
+artifacts, corpus entries, specialist profiles, survey/researcher
+work, or bounded subagent attempts.
+
+Before setting the flag, write a `needs_human` block in
+`session_state.md` with:
+
+  reason: <one-sentence blocker>
+  exhausted:
+    - <artifact, corpus, specialist, web/research, or subagent path checked>
+  question: <specific user question>
+  allowed_answers: <short options or expected shape of answer>
+  resumes_at: <next_atomic_unit prompt and artifact>
+
+Do NOT set `needs_human.flag=true` merely because a proof attempt is
+hard, a direct attack is stuck, a citation is currently unverified, a
+fallback is tempting, or a phase produced a `[GAP]`. Those cases must
+be handled as STUCK-STATE, `[REFERENCE NEEDS VERIFICATION]`,
+fallback-chain evidence, or ordinary open gaps unless a specific user
+decision is truly required.

@@ -11,3 +11,4 @@
 - iter-9 | dimensions: 3 Attempting, 7 Organizing materials | M7 guarded resume so closed v4 halt reasons cannot be reopened by clearing halt_flag.
 - iter-10 | dimensions: 1 Proving, 7 Organizing materials | m1 added formalization notes placeholder to the problem skeleton.
 - iter-11 | dimensions: 7 Organizing materials | m2 added explicit MSP narration mode to both session state templates.
+- iter-12 | dimensions: 5 Asking, 7 Organizing materials | Added audit-backed needs_human gate to prevent evasive user blocking.

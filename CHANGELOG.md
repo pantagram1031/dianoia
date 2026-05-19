@@ -4,3 +4,4 @@
 - iter-2 | dimensions: 2 Verifying, 3 Attempting | B2 wired Persona D into Phase 5 review and reviewer subagent contract.
 - iter-3 | dimensions: 2 Verifying, 7 Organizing materials | M1 made Phase 5 review inputs depend on the artifact phase so intake review does not require survey.md.
 - iter-4 | dimensions: 2 Verifying, 7 Organizing materials | M2 added explicit preconditions to every phase prompt from intake through consolidation.
+- iter-5 | dimensions: 7 Organizing materials | M3 added corpus/theorems placeholder for self-contained Phase 6 promotions.

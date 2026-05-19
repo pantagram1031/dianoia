@@ -1,0 +1,24 @@
+﻿thm T2_IVT [tags: real-analysis, continuity, MSC-26A06]
+  stmt: For real a < b and continuous f : [a,b] -> R, if f(a) <= 0 <= f(b) or f(b) <= 0 <= f(a), then exists c in [a,b] with f(c)=0.
+  proof:
+    It suffices to prove the case f(a) <= 0 <= f(b); the other case applies to -f.
+    assume f(a) <= 0 <= f(b).
+    if f(a)=0 take c=a; if f(b)=0 take c=b.
+    hence assume f(a)<0 and f(b)>0.
+    let S = { x in [a,b] : f(x) <= 0 }.
+    have S_nonempty: a in S.
+    have S_bounded_above: every x in S satisfies x <= b.
+    by completeness of R [C-001], let c = sup S.
+    have c_in_interval: a <= c <= b by S_nonempty and S_bounded_above.
+    suppose f(c) < 0.
+      by continuity at c, exists delta>0 such that |x-c|<delta and x in [a,b] imply f(x)<0.
+      choose x in [a,b] with c < x < min(b,c+delta) if c<b; if c=b then f(b)<0 contradicts f(b)>0.
+      then x in S and x>c, contradicting c being an upper bound of S.
+    suppose f(c) > 0.
+      by continuity at c, exists delta>0 such that |x-c|<delta and x in [a,b] imply f(x)>0.
+      since c=sup S and a in S, choose y in S with c-delta < y <= c.
+      then f(y)>0 and f(y)<=0, contradiction.
+    therefore neither f(c)<0 nor f(c)>0, so f(c)=0 by trichotomy of real order.
+    qed.
+  deps: [C-001]
+  ledger: C-003

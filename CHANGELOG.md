@@ -5,3 +5,4 @@
 - iter-3 | dimensions: 2 Verifying, 7 Organizing materials | M1 made Phase 5 review inputs depend on the artifact phase so intake review does not require survey.md.
 - iter-4 | dimensions: 2 Verifying, 7 Organizing materials | M2 added explicit preconditions to every phase prompt from intake through consolidation.
 - iter-5 | dimensions: 7 Organizing materials | M3 added corpus/theorems placeholder for self-contained Phase 6 promotions.
+- iter-6 | dimensions: 4 Ideating, 6 Researching collaboratively | M4 added top-level muse and consult prompts for AGENTS first-message routes.

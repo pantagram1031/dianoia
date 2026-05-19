@@ -3,19 +3,21 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
 [INPUTS]
 1. Active slug from `problems/.active`.
 2. Phase artifact to review.
-3. `claim_ledger.md`, `survey.md`, and current `session_state.md`.
+3. Reviewed phase label, supplied by the caller or inferred from the artifact path: one of `00-intake`, `01-survey`, `02-perspective`, `03-hypothesize`, `04-develop`, `06-consolidate`.
+4. `claim_ledger.md`, `survey.md`, and current `session_state.md`.
 
 [PROCEDURE]
 1. Invoke `prompts/subagents/reviewer.md` with persona `A` for skeptic review.
 2. Invoke `prompts/subagents/reviewer.md` with persona `B` for specialist review.
 3. Invoke `prompts/subagents/reviewer.md` with persona `C` for editor review.
-4. Collect all reviewer returns into `problems/<slug>/reviews/`.
-5. Consolidate defects into `problems/<slug>/review_consolidated.md`.
-6. Mark every defect `FIXED`, `DEFERRED`, or `FATAL`.
-7. For `FIXED`, attach the patch or artifact path that resolves the defect.
-8. For `DEFERRED`, append a ledger row or deferred-defect entry with reason.
-9. For `FATAL`, set the next phase to return to Phase 3 and set `phase_status=blocked` until the return path is written.
-10. Invoke `prompts/checkpoint.md`.
+4. If the reviewed phase is `00-intake`, `03-hypothesize`, `04-develop`, or `06-consolidate`, invoke `prompts/subagents/reviewer.md` with persona `D` for ambition review.
+5. Collect all reviewer returns into `problems/<slug>/reviews/`.
+6. Consolidate defects into `problems/<slug>/review_consolidated.md`.
+7. Mark every defect `FIXED`, `DEFERRED`, or `FATAL`.
+8. For `FIXED`, attach the patch or artifact path that resolves the defect.
+9. For `DEFERRED`, append a ledger row or deferred-defect entry with reason.
+10. For `FATAL`, set the next phase to return to Phase 3 and set `phase_status=blocked` until the return path is written.
+11. Invoke `prompts/checkpoint.md`.
 
 [OUTPUTS]
 1. Reviewer artifacts under `problems/<slug>/reviews/`.
@@ -34,12 +36,13 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
     reviews/<artifact>-reviewer-A.md  (Skeptic)
     reviews/<artifact>-reviewer-B.md  (Specialist)
     reviews/<artifact>-reviewer-C.md  (Editor)
+    reviews/<artifact>-reviewer-D.md  (Ambition, only for gated phases)
 - Reviewer A MUST attempt at least one explicit counter-construction
   or precise objection. A reviewer file with zero raised defects is
   itself a defect (insufficient adversarial pressure) and triggers
   re-invocation of that reviewer with a stricter prompt before the
   phase may close.
-- Only after all three reviewer files exist may
+- Only after all required reviewer files for the reviewed phase exist may
   review_consolidated.md be written.
 
 PERSONA D (v4 Ambition Reviewer):

@@ -19,3 +19,4 @@
 - iter-17 | dimensions: all | Recorded plateau after three consecutive clean/minor-only audits with all dimensions at least 4.
 cycle-1 iter-1 | dimensions: 2 Verifying | Require reviewer attempted_attacks evidence before empty defect lists.
 cycle-1 iter-2 | dimensions: 1 Proving | Add Phase 4 proof granularity and circularity gate.
+cycle-1 iter-3 | dimensions: 7 Organizing materials | Require concrete checkpoint context-manifest evidence fields.

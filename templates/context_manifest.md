@@ -2,6 +2,7 @@
 
 unit_id:
 phase:
+phase_prompt:
 timestamp:
 
 always:
@@ -12,12 +13,25 @@ always:
   - problems/<slug>/claim_ledger.md
 
 phase_active:
-  - <phase prompt>
-  - <current phase artifact>
+  artifact:
+  prompt:
+  required_inputs: []
+  produced_outputs: []
 
 this_unit:
-  - <artifact written or reviewed in this atomic unit>
-  - <inbox fragments merged in this atomic unit>
+  artifacts_written: []
+  artifacts_reviewed: []
+  reviewer_files: []
+  subagent_returns: []
+  journal_fragments_merged: []
+  ledger_delta: []
+  open_markers: []
+
+checkpoint_evidence:
+  forbidden_word_scan:
+  citation_check:
+  review_status:
+  next_atomic_unit:
 
 dropped:
   - path: <path or summary id>

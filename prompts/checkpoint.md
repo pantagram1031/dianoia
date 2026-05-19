@@ -25,7 +25,7 @@ Close one atomic unit by persisting claims, journals, integrity checks, and next
 [FAILURE]
 1. Missing active state: print `BLOCKED: cannot checkpoint without session_state.md.` and stop.
 
-[STATUS LINE — MSP R5]
+[STATUS LINE ??MSP R5]
 On unit close, after updating session_state.md and merging
 work_journal fragments, emit exactly one line to stdout in this
 format:
@@ -41,13 +41,13 @@ No additional chat output is permitted at unit close.
 Each checkpoint MUST append exactly one entry to work_journal.md with:
 
   ## <ISO8601> | <agent> | u<phase-id>
-  decisions: <2-4 bullets — what choices were made this phase>
+  decisions: <2-4 bullets ??what choices were made this phase>
   artifacts: <files written this phase, relative paths>
   ledger_delta: <new ledger row IDs, or "none">
   open: <gaps/conjectures introduced this phase, or "none">
 
 If the phase produced no decisions worth recording, the phase did not
-do work — that is a defect to investigate, not an entry to skip.
+do work ??that is a defect to investigate, not an entry to skip.
 
 The status line (MSP R5) is emitted to stdout IMMEDIATELY after the
 journal entry is written. No other stdout in checkpoint.md.
@@ -88,3 +88,26 @@ fallback is tempting, or a phase produced a `[GAP]`. Those cases must
 be handled as STUCK-STATE, `[REFERENCE NEEDS VERIFICATION]`,
 fallback-chain evidence, or ordinary open gaps unless a specific user
 decision is truly required.
+[CONTEXT MANIFEST EVIDENCE GATE]
+A checkpoint manifest is invalid if it only names broad categories.
+It MUST include concrete paths or explicit `none` values for:
+
+- `phase_prompt`
+- `phase_active.artifact`
+- `phase_active.required_inputs`
+- `phase_active.produced_outputs`
+- `this_unit.artifacts_written`
+- `this_unit.artifacts_reviewed`
+- `this_unit.reviewer_files` when closing a review unit
+- `this_unit.subagent_returns` when subagents fired
+- `this_unit.journal_fragments_merged`
+- `this_unit.ledger_delta`
+- `this_unit.open_markers`
+- `checkpoint_evidence.forbidden_word_scan`
+- `checkpoint_evidence.citation_check`
+- `checkpoint_evidence.review_status`
+- `checkpoint_evidence.next_atomic_unit`
+
+Skeletal manifests are invalid. If a field does not apply, write
+`none` and the reason. If context was dropped, each dropped item must
+include a recovery path or summary pointer.

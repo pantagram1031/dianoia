@@ -1,0 +1,12 @@
+attempt T5_WEDDERBURN_LITTLE_CYCLE_3
+  target: For every finite division ring D, D is commutative.
+  progress:
+    let F=Z(D) and choose a maximal subfield K containing F.
+    For x in K generating K over F, centralizer control gives C_D(x)=K; otherwise a larger commutative division subring would contradict maximality.
+    Hence distinct conjugates of K cannot share such a generator; the cycle-2 intersection/no-double-counting obstruction is sharpened.
+    The remaining normalizer N=N_D*(K^*) acts on K over F, giving a homomorphism N/K^* -> Aut_F(K).
+  stuck_state:
+    Need a closed normalizer quotient/divisibility lemma showing the possible size of N/K^* forces D=K or contradicts the class equation. The needed cyclotomic divisibility step is not yet proved here.
+  next_attack:
+    Write q=|F| and |K|=q^n. Prove the exact divisibility relation for conjugates of K^* in D^* and compare it with |Aut_F(K)|=n; attack the cyclotomic factor (q^n-1)/(q-1).
+  status: BLOCKED-ITERATE-with-new-obstruction

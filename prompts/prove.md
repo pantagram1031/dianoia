@@ -11,7 +11,7 @@ Create a new problem instance and drive the complete phase loop for one problem.
 5. Create `problems/<slug>/` by copying every file and marker from `templates/problem_skeleton/`.
 6. Write the statement into `problems/<slug>/problem.md` under `## Statement`.
 7. Write `problems/.active` containing only `<slug>`.
-8. Initialize `problems/<slug>/session_state.md` from `templates/session_state.md` with `active_problem: <slug>`, `current_phase: 0`, `mode: auto`, `halt_flag: false`, and default `rate_window`.
+8. Initialize `problems/<slug>/session_state.md` from `templates/session_state.md` with `active_problem: <slug>`, `current_phase: 0`, `mode: auto`, `msp_narration: quiet`, `halt_flag: false`, and default `rate_window`.
 9. Initialize `problems/<slug>/claim_ledger.md` from `templates/claim_ledger.md` if the skeleton did not already create it.
 10. Enter the autonomous phase loop in this order: `00-intake`, `05-review`, `01-survey`, `05-review`, `02-perspective`, `05-review`, `03-hypothesize`, `05-review`, `04-develop`, `05-review`, `06-consolidate`, `05-review`.
 11. After each atomic unit, invoke `prompts/checkpoint.md`.

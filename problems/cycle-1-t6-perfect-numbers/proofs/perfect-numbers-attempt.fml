@@ -1,0 +1,8 @@
+﻿thm T6_PERFECT_NUMBERS_DECISION [tags: perfect-numbers, open-problem, MSC-11A25]
+  stmt: The set of perfect numbers is finite or infinite.
+  proof_attempt:
+    Direct infinitude route: Euclid gives a perfect number from each Mersenne prime exponent [C-001], but no proof supplies infinitely many such exponents.
+    [GAP: infinitude of Mersenne primes | suffices: prove infinitely many primes p with 2^p-1 prime]
+    Direct finiteness route: Euler classifies even perfect numbers [C-002], but finiteness would require finitely many Mersenne primes and exclusion or finite bounding of odd perfect numbers.
+    [GAP: finite bound for odd perfect numbers and Mersenne prime exponents | suffices: prove no odd perfect numbers and finitely many Mersenne primes, or another exhaustive bound]
+  status: not proved.

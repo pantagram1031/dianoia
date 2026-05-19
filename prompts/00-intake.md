@@ -4,6 +4,10 @@ Convert a raw problem statement into a formal investigation brief and initialize
 1. Active slug from `problems/.active`.
 2. `problems/<slug>/problem.md`.
 
+[PRECONDITIONS]
+1. `problems/.active` names exactly one slug.
+2. `problems/<slug>/problem.md` exists and contains the raw problem statement.
+
 [PROCEDURE]
 1. Read `IDENTITY.md`, `goal.md`, `corpus/INDEX.md`, and the active `problem.md`.
 2. Write `problems/<slug>/intake.md` section A: formal restatement with all quantifiers explicit and every symbol defined.

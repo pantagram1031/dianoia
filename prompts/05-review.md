@@ -13,6 +13,11 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
    - `04-develop`: `intake.md`, `survey.md`, `hypotheses_live.md`, current proof or failure artifacts, and `work_journal.md`.
    - `06-consolidate`: `survey.md`, `result.md`, `result.fml` when present, `executive_summary.md`, and any proposed corpus entry.
 
+[PRECONDITIONS]
+1. The reviewed non-review phase has completed.
+2. The specific phase artifact to review exists on disk.
+3. The phase-dependent context listed for the reviewed phase exists, except optional files explicitly marked `when present`.
+
 [PROCEDURE]
 1. Invoke `prompts/subagents/reviewer.md` with persona `A` for skeptic review.
 2. Invoke `prompts/subagents/reviewer.md` with persona `B` for specialist review.

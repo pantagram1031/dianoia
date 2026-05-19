@@ -6,6 +6,11 @@ Develop the two most promising surviving hypotheses into formal proof attempts o
 3. `problems/<slug>/survey.md`.
 4. `claim_ledger.md`.
 
+[PRECONDITIONS]
+1. Phase 3 hypothesize has completed.
+2. `problems/<slug>/hypotheses_live.md` exists and records surviving hypotheses plus sanity-check evidence.
+3. `problems/<slug>/survey.md` and `claim_ledger.md` exist for allowed dependencies.
+
 [PROCEDURE]
 1. Select the two most promising surviving hypotheses by leverage, distance from known obstructions, and falsifiability.
 2. For each selected hypothesis, state a formal claim with all quantifiers explicit and all function spaces or structures named.

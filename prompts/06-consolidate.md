@@ -5,6 +5,11 @@ Consolidate established work into final result artifacts and promote eligible th
 2. `claim_ledger.md`.
 3. Surviving proof, obstruction, falsification, reformulation, or conjecture artifacts.
 
+[PRECONDITIONS]
+1. Phase 4 develop has completed.
+2. `claim_ledger.md` exists and records the statuses of all claims needed for consolidation.
+3. At least one proof, failure, obstruction, falsification, reformulation, or conjecture artifact from Phase 4 exists for consolidation.
+
 [PROCEDURE]
 1. Read all `PROVED` and `CITED` ledger rows needed for the result.
 2. Choose the strongest honest result type from meta-goal outputs (a) through (e).

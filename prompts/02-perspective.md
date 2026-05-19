@@ -5,6 +5,10 @@ Select three specialist lenses and extract day-one sub-questions for the active 
 2. `problems/<slug>/survey.md`.
 3. `specialists/INDEX.md`.
 
+[PRECONDITIONS]
+1. Phase 1 survey has completed.
+2. `problems/<slug>/survey.md` exists and contains the literature tree, State of the Art, and open terrain map.
+
 [PROCEDURE]
 1. Read `specialists/INDEX.md` and all listed specialist profiles needed for scoring.
 2. Score each specialist against the active problem by MSC overlap, recent activity, and blind-spot relevance.

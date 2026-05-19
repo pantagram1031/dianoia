@@ -5,6 +5,10 @@ Build a literature terrain map rooted at the active problem.
 2. `problems/<slug>/intake.md`.
 3. Existing `claim_ledger.md` and `corpus/INDEX.md`.
 
+[PRECONDITIONS]
+1. Phase 0 intake has completed.
+2. `problems/<slug>/intake.md` exists and contains the formal restatement, classification, success criteria, and risk register.
+
 [PROCEDURE]
 1. Read the intake classification, success criteria, and corpus seed rows.
 2. Create a literature tree rooted at the active problem.

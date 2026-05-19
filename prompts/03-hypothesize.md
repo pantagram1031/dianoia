@@ -6,6 +6,11 @@ Generate falsifiable hypotheses from three selected perspectives and test them q
 3. `problems/<slug>/survey.md`.
 4. `claim_ledger.md` tail.
 
+[PRECONDITIONS]
+1. Phase 2 perspective selection has completed.
+2. `problems/<slug>/perspectives.md` exists and names exactly three selected specialist lenses.
+3. `problems/<slug>/survey.md` exists for nearest-result and obstruction checks.
+
 [PROCEDURE]
 1. Read the three selected perspectives and their day-one sub-questions.
 2. For each perspective, generate three to five hypotheses.

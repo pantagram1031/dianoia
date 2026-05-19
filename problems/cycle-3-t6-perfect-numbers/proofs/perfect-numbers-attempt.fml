@@ -1,0 +1,11 @@
+attempt T6_PERFECT_NUMBERS_DECISION_CYCLE_2
+  target: Prove infinitude or finiteness of perfect numbers.
+  H1_infinitude:
+    Euclid-Euler: if 2^p-1 is prime, then 2^(p-1)(2^p-1) is perfect.
+    obstruction: need infinitely many p with 2^p-1 prime.
+    status: killed.
+  H2_finiteness:
+    even perfect numbers correspond to Mersenne primes; odd perfect numbers, if any, satisfy strong necessary conditions.
+    obstruction: no proof gives a finite bound on Mersenne prime exponents or eliminates/finite-bounds odd perfect numbers.
+    status: killed.
+  halt: FAILURE-AMBITION-GAP

@@ -41,3 +41,25 @@ INVARIANTS (v4 persistence on stuck):
 - A direct-attack hypothesis that does not close in Phase 4 must NOT be silently replaced with a fallback. Record a work_journal.md entry "STUCK-STATE: <precise blocker>" and a "NEXT-SESSION ATTACK PLAN: <refined approach naming new technique, specialist, or literature angle>".
 - A run that produces only fallback (conditional/reformulation/obstruction/conjecture) results without recording at least one STUCK-STATE entry for the direct attack is a fatal defect at Phase 4.
 - Phase 4 may end in three states: (a) direct attack closed with proof, (b) direct attack stuck with STUCK-STATE recorded plus optional fallback partial results, (c) all live hypotheses closed as obstructions ruling out the primary target. State (b) is normal and not a failure; it triggers BLOCKED-ITERATE at halt.
+[PROOF GRANULARITY GATE]
+Before a Phase 4 proof attempt may close as PROVED, scan every proof
+transition. Any nontrivial transition must be exactly one of:
+
+1. A named lemma proved in the same artifact.
+2. A ledger or corpus dependency with full citation fields and a
+   statement that is strictly weaker than the active theorem being
+   proved.
+3. An explicit `[GAP: <missing> | suffices: <what would close>]`.
+
+Compressed phrases such as "standard argument", "by the usual proof",
+"after the standard comparison", or a one-line transition that hides a
+case split, counting identity, compactness argument, normalizer lemma,
+or diagram chase are fatal until expanded into named lemmas or marked
+as gaps.
+
+Run a circularity check before appending any `PROVED` ledger row: the
+proof may not cite the active theorem, an equivalent State of the Art
+statement, or a corpus entry whose statement would immediately imply
+this theorem without a separately proved strengthening or specialization
+claim. If the only available support is equivalent to the target, write
+`[GAP: circular dependency | suffices: independent proof of <lemma>]`.

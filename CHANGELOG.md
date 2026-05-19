@@ -13,3 +13,4 @@
 - iter-11 | dimensions: 7 Organizing materials | m2 added explicit MSP narration mode to both session state templates.
 - iter-12 | dimensions: 5 Asking, 7 Organizing materials | Added audit-backed needs_human gate to prevent evasive user blocking.
 - iter-13 | dimensions: 4 Ideating, 6 Researching collaboratively | Added panel prompt and disagreement-triggered panel routing for specialist collaboration.
+- iter-14 | dimensions: 8 Reading papers | Wired Researcher into Phase 1 survey citation verification for State of the Art and high-impact references.

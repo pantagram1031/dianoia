@@ -1,0 +1,17 @@
+﻿thm T4_SYLVESTER_GALLAI [tags: incidence-geometry, ordinary-lines, MSC-52C10]
+  stmt: Every finite noncollinear set S in R^2 determines a line containing exactly two points of S.
+  proof:
+    Let D be the finite set of pairs (P,L) where L is a line through two points of S and P in S is not on L.
+    Since S is not collinear, D is nonempty.
+    Choose (P,L) in D minimizing the positive distance d(P,L).
+    Let A and B be two points of S on L such that the perpendicular foot H from P to L lies between A and B or, if H lies outside the convex hull of S on L, A and B are the two nearest consecutive points of S on L on the side nearest H.
+    Suppose L contains a third point C of S.
+    Choose adjacent points A,B of S on L such that no point of S on L lies in the open segment AB and H is not farther from segment AB than from any adjacent segment on L.
+    In triangle PAB, at least one of the distances from A to line PB or from B to line PA is strictly less than the altitude from P to line AB=L.
+    The corresponding line PB or PA is determined by two points of S, and the corresponding point A or B is not on that line.
+    This gives a pair in D with smaller positive distance than d(P,L), contradiction.
+    Hence L contains no third point of S.
+    Therefore L is an ordinary line through exactly two points of S.
+    qed.
+  deps: []
+  ledger: C-004

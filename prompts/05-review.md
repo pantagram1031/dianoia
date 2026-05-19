@@ -50,6 +50,10 @@ Run adversarial review passes and force every defect into fixed, deferred, or fa
     reviews/<artifact>-reviewer-B.md  (Specialist)
     reviews/<artifact>-reviewer-C.md  (Editor)
     reviews/<artifact>-reviewer-D.md  (Ambition, only for gated phases)
+- Every reviewer file MUST contain an ttempted_attacks section before
+  defects. Missing attempted_attacks is itself a MAJOR review defect
+  and triggers re-invocation of that reviewer with a stricter prompt
+  before the phase may close.
 - Reviewer A MUST attempt at least one explicit counter-construction
   or precise objection. A reviewer file with zero raised defects is
   itself a defect (insufficient adversarial pressure) and triggers

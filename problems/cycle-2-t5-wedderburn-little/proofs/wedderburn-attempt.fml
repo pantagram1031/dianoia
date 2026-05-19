@@ -1,0 +1,13 @@
+attempt T5_WEDDERBURN_LITTLE_CYCLE_2
+  target: For every finite division ring D, D is commutative.
+  progress:
+    let F=Z(D) and choose a maximal subfield K containing F.
+    K is finite, hence K^* is cyclic.
+    D^* acts by conjugation on maximal subfields; the normalizer N_D*(K^*) controls the conjugacy class of K.
+    If N_D*(K^*) is strictly larger than K^*, the induced automorphism action on K should yield centrality constraints.
+    If N_D*(K^*)=K^*, the conjugates of K intersect in F on noncentral elements only under an unproved intersection lemma.
+  stuck_state:
+    Need a closed normalizer/intersection/counting lemma: for maximal subfields K,L of D, prove the required intersection and conjugacy count without citing Wedderburn or cyclic algebra classification.
+  next_attack:
+    Prove the intersection lemma first: if K and gKg^-1 share a noncentral element, show maximality forces K=gKg^-1 or identify the centralizer as a larger commutative subfield.
+  status: BLOCKED-ITERATE-with-new-obstruction

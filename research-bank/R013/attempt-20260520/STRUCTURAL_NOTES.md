@@ -40,6 +40,10 @@ Artifacts:
   the three named cases.
 - `BRANCH_ENUMERATION_LEDGER.md`: hand enumeration of the residual depth-2
   branch counts for the common matrix subcase.
+- `MATRIX_BUCKET_ROADMAP.md`: ranked matrix-bucket proof queue for the
+  restricted class.
+- `SECOND_MATRIX_BUCKET_NOTES.md`: singleton second-bucket derivation and hand
+  count, giving lower orientation probability `2/5`.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -92,7 +96,10 @@ These are search signals only:
    `RECURRENCE_LEDGER.md` now exposes two recurrence levels for a
    hand-checkable branch proof. `BRANCH_ENUMERATION_LEDGER.md` now
    hand-enumerates those residual branch counts for the common matrix subcase.
-5. Scale canonical generation to `n=8` only after further optimizing
+5. Continue the matrix-bucket proof queue: `SECOND_MATRIX_BUCKET_NOTES.md`
+   handles the singleton `2/5` bucket; the next nontrivial target is one of
+   the remaining `2/5` buckets with 4-6 profiles.
+6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 
 ## Honesty Boundary

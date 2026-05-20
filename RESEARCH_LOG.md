@@ -13,6 +13,22 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T02:05:00+09:00
+
+- Continued P11 on `R013` by ranking the restricted matrix buckets and
+  classifying the singleton second bucket.
+- New artifacts:
+  `MATRIX_BUCKET_ROADMAP.md`,
+  `width3-rank2221-second-matrix-bucket-n7.json`,
+  `width3-rank2221-second-cover-matrix-forms-n7.json`,
+  `normal-form-cases/case-second-bucket*.json`, and
+  `SECOND_MATRIX_BUCKET_NOTES.md`.
+- Finite signal: the second-ranked bucket derives exactly one rank-normal
+  form, and the pair `(b,d)` has orientation counts `(14,21)` over `35`
+  extensions, lower probability `2/5`.
+- Claim discipline: restricted subcase only; no `CLAIMS.md` row and no P12
+  trigger.
+
 ## 2026-05-21T01:32:00+09:00
 
 - Continued P11 on `R013` by writing a hand enumeration for the common

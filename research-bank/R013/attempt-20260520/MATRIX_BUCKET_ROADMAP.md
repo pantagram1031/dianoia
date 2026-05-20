@@ -52,13 +52,17 @@ Target signature:
 layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,0,0],[0,0,3,0],[0,0,0,2],[0,0,0,0]]
 ```
 
-Expected proof task:
+Proof task:
 
-1. Extract the singleton bucket with `bucket-members`.
+1. Extract the singleton bucket with `bucket-members`: done in
+   `width3-rank2221-second-matrix-bucket-n7.json`.
 2. Derive its rank-normal forms from the cover matrix with
-   `cover-matrix-forms`.
-3. Compare the derived form with the extracted singleton profile.
-4. Hand-count a balanced pair achieving lower probability `2/5`.
+   `cover-matrix-forms`: done in
+   `width3-rank2221-second-cover-matrix-forms-n7.json`.
+3. Compare the derived form with the extracted singleton profile: both give
+   covers `a<c, a<d, c<e, c<f, d<e, e<g, f<g`.
+4. Hand-count a balanced pair achieving lower probability `2/5`: done in
+   `SECOND_MATRIX_BUCKET_NOTES.md`.
 
 ## Claim Discipline
 

@@ -203,3 +203,18 @@ candidate_id: R013
   `14/33`, and `5/11`, with equality only in Case A.
 - Claim discipline: no `CLAIMS.md` row; this remains a restricted subcase,
   not a solution of R013.
+
+## 2026-05-21 P11 Attempt 1P
+
+- Added `MATRIX_BUCKET_ROADMAP.md`, ranking the near-boundary matrix buckets
+  in the width-3, height-4, rank-shape `2,2,2,1` restricted class.
+- Extracted the singleton second matrix bucket to
+  `width3-rank2221-second-matrix-bucket-n7.json`.
+- Derived the same singleton form from its cover matrix in
+  `width3-rank2221-second-cover-matrix-forms-n7.json`.
+- Added named replay artifacts for the second bucket under
+  `normal-form-cases/`.
+- Added `SECOND_MATRIX_BUCKET_NOTES.md`, hand-counting the pair `(b,d)` as
+  `(14,21)` over `35` extensions, hence lower probability `2/5`.
+- Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
+  subcase, not a solution of R013.

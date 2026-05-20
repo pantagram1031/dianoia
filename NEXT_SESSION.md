@@ -23,9 +23,12 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   cover matrix. `RECURRENCE_LEDGER.md` exposes depth-2 recurrence counts, with
   `case-a-recurrence-depth2.json`, `case-b-recurrence-depth2.json`, and
   `case-c-recurrence-depth2.json`; `BRANCH_ENUMERATION_LEDGER.md` reduces the
-  residual branch totals to terminal chain/shuffle counts. Next decide whether
-  this common cover-matrix subcase can be lifted to a broader width-3 lemma or
-  whether another matrix bucket should be hand-classified;
+  residual branch totals to terminal chain/shuffle counts.
+  `MATRIX_BUCKET_ROADMAP.md` ranks the adjacent buckets and
+  `SECOND_MATRIX_BUCKET_NOTES.md` hand-classifies the singleton second bucket
+  with lower probability `2/5`. Next either classify one of the remaining
+  `2/5` matrix buckets with 4-6 profiles, or abstract the completed buckets
+  into a broader width-3 lemma candidate;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -79,7 +82,11 @@ Current state:
   - `research-bank/R013/attempt-20260520/RECURRENCE_LEDGER.md`
   - `research-bank/R013/attempt-20260520/COVER_MATRIX_DERIVATION.md`
   - `research-bank/R013/attempt-20260520/BRANCH_ENUMERATION_LEDGER.md`
+  - `research-bank/R013/attempt-20260520/MATRIX_BUCKET_ROADMAP.md`
+  - `research-bank/R013/attempt-20260520/SECOND_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/normal-form-cases/`
   - `research-bank/R013/attempt-20260520/normal-form-cases/*-recurrence-depth2.json`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`

@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T02:05:00+09:00
+
+- Continued P11 on `R013`.
+- Added a ranked matrix-bucket roadmap for the restricted width-3,
+  height-4, rank-shape `2,2,2,1` class.
+- Extracted and derived the singleton second matrix bucket.
+- Added named replay artifacts and `SECOND_MATRIX_BUCKET_NOTES.md`, with a
+  hand count proving the pair `(b,d)` has lower probability `2/5`.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T01:32:00+09:00
 
 - Continued P11 on `R013`.

@@ -92,8 +92,11 @@ orientation counts from named case inputs. `COVER_MATRIX_DERIVATION.md` now
 derives the same three forms directly from the cover matrix.
 `RECURRENCE_LEDGER.md` now exposes depth-2 recurrences for Cases A/B/C, and
 `BRANCH_ENUMERATION_LEDGER.md` reduces those residual branch totals to
-terminal chain/shuffle counts for the common cover-matrix subcase. Next decide
-whether this subcase can be lifted to a broader width-3 lemma or whether the
-next matrix bucket should be hand-classified.
+terminal chain/shuffle counts for the common cover-matrix subcase.
+`MATRIX_BUCKET_ROADMAP.md` ranks the remaining near-boundary matrix buckets,
+and `SECOND_MATRIX_BUCKET_NOTES.md` hand-classifies the singleton second bucket
+with lower probability `2/5`. Next target one of the remaining `2/5` buckets
+with 4-6 profiles, or try to abstract the two completed buckets into a
+broader width-3 lemma.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

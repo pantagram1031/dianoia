@@ -35,6 +35,9 @@ Key evidence:
 
 ## Three Differences
 
-1.
-2.
-3.
+1. artifact: `path/to/raw-or-dianoia-artifact.md`; quote: `short quoted evidence`
+   difference:
+2. artifact: `path/to/raw-or-dianoia-artifact.md`; quote: `short quoted evidence`
+   difference:
+3. artifact: `path/to/raw-or-dianoia-artifact.md`; quote: `short quoted evidence`
+   difference:

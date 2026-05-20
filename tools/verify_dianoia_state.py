@@ -86,6 +86,23 @@ def markdown_bullet_field(text: str, name: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def numbered_items(text: str) -> list[str]:
+    items: list[str] = []
+    current: list[str] = []
+    for line in text.splitlines():
+        if re.match(r"^\s*\d+\.\s+", line):
+            if current:
+                items.append("\n".join(current).strip())
+            current = [line.strip()]
+        elif current and (line.startswith(" ") or line.startswith("\t")):
+            current.append(line.strip())
+        elif current and not line.strip():
+            current.append("")
+    if current:
+        items.append("\n".join(current).strip())
+    return items
+
+
 def weak_blank(value: str) -> bool:
     normalized = value.strip().lower()
     return normalized in {"", "none", "n/a", "na", "no", "unknown", "tbd"}
@@ -131,8 +148,20 @@ def check_benchmarks(result: CheckResult) -> None:
             for field in ("Authors", "Year", "Title", "Exact statement reference"):
                 if weak_blank(markdown_bullet_field(metadata, field)):
                     result.add_fail(f"{bid}: SOURCE.md Metadata missing {field}")
-        if "VALUE_ADDED" in row["verdict"] and "## Three Differences" not in comparison_text:
-            result.add_fail(f"{bid}: VALUE_ADDED comparison missing Three Differences")
+        if "VALUE_ADDED" in row["verdict"]:
+            differences = section_body(comparison_text, "Three Differences")
+            if not differences:
+                result.add_fail(f"{bid}: VALUE_ADDED comparison missing Three Differences")
+            if int(bid[1:]) >= 6:
+                items = numbered_items(differences)
+                if len(items) < 3:
+                    result.add_fail(f"{bid}: VALUE_ADDED comparison must contain at least 3 numbered differences")
+                for index, item in enumerate(items[:3], start=1):
+                    lowered = item.lower()
+                    if "artifact:" not in lowered or "quote:" not in lowered:
+                        result.add_fail(
+                            f"{bid}: VALUE_ADDED comparison difference {index} missing artifact/quote evidence"
+                        )
         if int(bid[1:]) >= 6:
             if not run_manifest.exists():
                 result.add_fail(f"{bid}: B6+ benchmark missing RUN.md")

@@ -1,5 +1,22 @@
 # Devlog
 
+## 2026-05-21T00:31:00+09:00
+
+- Added B6+ comparison evidence regressions to
+  `tests/test_verify_dianoia_state.py`.
+- Extended `tools/verify_dianoia_state.py` so B6+ `VALUE_ADDED`
+  `COMPARISON.md` files must include three numbered differences with
+  `artifact:` and `quote:` evidence.
+- Updated `templates/benchmark_case/COMPARISON.md` and
+  `benchmark-bank/RUNBOOK.md` with the structured difference format.
+- Recorded smoke evidence in
+  `capability-test/BENCHMARK-DIFFERENCE-EVIDENCE-VERIFY-20260521.md`.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: benchmark, test.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:22:00+09:00
 
 - Added a B6+ source metadata regression to

@@ -29,10 +29,11 @@ Important:
   so future B6+ rows prefer full fresh raw and dianoia runs and clearly label
   weaker evidence.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
-  smoke is `capability-test/BENCHMARK-SOURCE-METADATA-VERIFY-20260521.md`;
+  smoke is `capability-test/BENCHMARK-DIFFERENCE-EVIDENCE-VERIFY-20260521.md`;
   warnings are expected for UNVERIFIED token accounting in B1-B5. It also
-  checks B6+ source citation metadata and that docs/state references to
-  `capability-test/*.md` artifacts resolve.
+  checks B6+ source citation metadata, structured comparison difference
+  evidence, and that docs/state references to `capability-test/*.md` artifacts
+  resolve.
 - Phase-loop verifier exists: `python tools\verify_phase_loop.py`. Latest smoke
   is `capability-test/PHASE-LOOP-VERIFY-20260520.md`.
 - Routing guard verifier exists: `python tools\verify_routing_guards.py`.

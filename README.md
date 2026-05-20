@@ -92,8 +92,9 @@ Fresh problem statements always create a fresh problem slug, even if
 
 - Stale `.active` guards for fresh problem routing and resume/intake safety.
 - Local baseline verifier: `python tools\verify_dianoia_state.py`.
-  This also checks B6+ source citation metadata and that referenced
-  `capability-test/*.md` evidence exists.
+  This also checks B6+ source citation metadata, structured comparison
+  difference evidence, and that referenced `capability-test/*.md` evidence
+  exists.
 - Local phase-loop verifier: `python tools\verify_phase_loop.py`.
 - Local routing-guard verifier: `python tools\verify_routing_guards.py`.
 - Local connector contract verifier: `python tools\verify_connectors.py`.

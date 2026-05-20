@@ -55,7 +55,9 @@ should say `run_class: full-fresh`.
 Each VALUE_ADDED verdict must quote or point to three concrete differences from
 artifact files. A difference that only says "dianoia is more structured" is not
 enough; it must name the artifact and the claim or check that changed the
-answer.
+answer. For B6 and later, each numbered item in `## Three Differences` must
+include both `artifact:` and `quote:` fields so `tools/verify_dianoia_state.py`
+can reject unsupported verdicts.
 
 ## Token Accounting
 

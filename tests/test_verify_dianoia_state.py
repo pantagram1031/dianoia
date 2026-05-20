@@ -87,6 +87,21 @@ VALUE_ADDED
 """
 
 
+def structured_comparison_text() -> str:
+    return """# Comparison
+
+## Verdict
+
+VALUE_ADDED
+
+## Three Differences
+
+1. artifact: `raw/answer.md`; quote: `raw omitted reviewer evidence`
+2. artifact: `problems/example/claim_ledger.md`; quote: `C-001 | ... | PROVED`
+3. artifact: `problems/example/review.md`; quote: `Reviewer D blocked overclaim`
+"""
+
+
 def run_text(run_class: str, known_weaknesses: str) -> str:
     return f"""# Run
 
@@ -206,6 +221,41 @@ class BenchmarkManifestVerifierTest(unittest.TestCase):
 
         self.assertTrue(
             any("SOURCE.md Metadata missing Exact statement reference" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_value_added_requires_structured_difference_evidence(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(temp_root, run_text("full-fresh", "none"))
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertTrue(
+            any("VALUE_ADDED comparison difference 1 missing artifact/quote evidence" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_value_added_accepts_structured_difference_evidence(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(temp_root, run_text("full-fresh", "none"))
+                write(temp_root / "benchmark-bank" / "B6" / "COMPARISON.md", structured_comparison_text())
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertFalse(
+            any("VALUE_ADDED comparison difference" in item for item in result.fail),
             result.fail,
         )
 

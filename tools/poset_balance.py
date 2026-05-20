@@ -930,6 +930,85 @@ def recurrence_mechanism_summary_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def recurrence_forced_block_obligations(
+    recurrence: dict[str, object],
+    source: str,
+) -> dict[str, object]:
+    mechanism = recurrence_mechanism_summary(recurrence, source)
+    if mechanism["mechanism_type"] != "forced-block":
+        return {
+            "source": source,
+            "applies": False,
+            "reason": f"mechanism_type is {mechanism['mechanism_type']}, not forced-block",
+            "mechanism_type": mechanism["mechanism_type"],
+            "pair": mechanism["pair"],
+            "depth": mechanism["depth"],
+        }
+
+    first = int(mechanism["root_first_before_second"])
+    second = int(mechanism["root_second_before_first"])
+    total = int(mechanism["root_total"])
+    if first <= second:
+        lower_orientation = "first_before_second"
+        lower_total = first
+        upper_total = second
+    else:
+        lower_orientation = "second_before_first"
+        lower_total = second
+        upper_total = first
+
+    obligations = []
+    for leaf in mechanism["leaves"]:
+        state = str(leaf["pair_state"])
+        count = int(leaf["total"])
+        obligations.append(
+            {
+                "path": leaf["path"],
+                "orientation": state,
+                "count": count,
+                "counts_toward_lower_orientation": state == lower_orientation,
+                "remaining_after_choice": leaf.get("remaining_after_choice", []),
+            }
+        )
+
+    return {
+        "source": source,
+        "applies": True,
+        "mechanism_type": "forced-block",
+        "pair": mechanism["pair"],
+        "depth": mechanism["depth"],
+        "root_split": {
+            "first_before_second": first,
+            "second_before_first": second,
+            "total": total,
+        },
+        "lower_orientation": lower_orientation,
+        "lower_total": lower_total,
+        "upper_total": upper_total,
+        "lower_probability": [lower_total, total],
+        "forced_first_total": mechanism["forced_first_total"],
+        "forced_second_total": mechanism["forced_second_total"],
+        "split_counts": mechanism["split_counts"],
+        "obligations": obligations,
+        "lemma_schema": [
+            "Partition linear extensions by the listed initial paths.",
+            "For each path, prove the terminal count by a direct residual-poset count.",
+            "Sum the terminal counts by forced orientation.",
+            "Use the lower orientation total as the certified probability lower bound.",
+        ],
+    }
+
+
+def recurrence_forced_block_obligations_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.recurrence.read_text(encoding="utf-8"))
+    out = recurrence_forced_block_obligations(payload, str(args.recurrence))
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
 def recurrence_leaf_compare_command(args: argparse.Namespace) -> int:
     left = json.loads(args.left.read_text(encoding="utf-8"))
     right = json.loads(args.right.read_text(encoding="utf-8"))
@@ -2042,6 +2121,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     mechanism_parser.add_argument("recurrence", type=Path)
     mechanism_parser.add_argument("--output", type=Path)
     mechanism_parser.set_defaults(func=recurrence_mechanism_summary_command)
+
+    forced_block_parser = subparsers.add_parser("recurrence-forced-block-obligations")
+    forced_block_parser.add_argument("recurrence", type=Path)
+    forced_block_parser.add_argument("--output", type=Path)
+    forced_block_parser.set_defaults(func=recurrence_forced_block_obligations_command)
 
     leaf_compare_parser = subparsers.add_parser("recurrence-leaf-compare")
     leaf_compare_parser.add_argument("left", type=Path)

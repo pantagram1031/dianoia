@@ -306,6 +306,59 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(4, payload["unseen_second_total"])
             self.assertEqual(1, payload["balanced_unseen_leaf_count"])
 
+    def test_recurrence_forced_block_obligations_records_lower_side(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            recurrence = Path(temp_dir) / "trace.json"
+            output = Path(temp_dir) / "obligations.json"
+            recurrence.write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b"],
+                        "pair": ["a", "b"],
+                        "depth": 1,
+                        "trace": {
+                            "pair_state": "unseen",
+                            "first_before_second": 3,
+                            "second_before_first": 2,
+                            "available": [
+                                {
+                                    "choose": "a",
+                                    "pair_state_after_choice": "first_before_second",
+                                    "first_before_second": 3,
+                                    "second_before_first": 0,
+                                },
+                                {
+                                    "choose": "b",
+                                    "pair_state_after_choice": "second_before_first",
+                                    "first_before_second": 0,
+                                    "second_before_first": 2,
+                                },
+                            ],
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "recurrence-forced-block-obligations",
+                        str(recurrence),
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertTrue(payload["applies"])
+            self.assertEqual("second_before_first", payload["lower_orientation"])
+            self.assertEqual([2, 5], payload["lower_probability"])
+            lower_obligations = [
+                item for item in payload["obligations"] if item["counts_toward_lower_orientation"]
+            ]
+            self.assertEqual([[ "b" ]], [item["path"] for item in lower_obligations])
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"

@@ -315,6 +315,31 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertIn("rank_normal_form", payload["records"][0])
             self.assertIn("cover_relations", payload["records"][0]["rank_normal_form"])
 
+    def test_cover_matrix_forms_derives_rank_normal_forms(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "forms.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "cover-matrix-forms",
+                        "--rank-shape",
+                        "2,1",
+                        "--cover-matrix",
+                        "[[0,2],[0,0]]",
+                        "--width",
+                        "2",
+                        "--height",
+                        "2",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(1, payload["form_count"])
+            self.assertEqual(["a<c", "b<c"], payload["forms"][0]["cover_relations"])
+
 
 if __name__ == "__main__":
     unittest.main()

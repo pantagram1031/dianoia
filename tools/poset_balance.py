@@ -247,6 +247,15 @@ def rank_layer_labels(layers: Sequence[Sequence[int]]) -> list[list[str]]:
     return labels
 
 
+def layered_items_from_shape(shape: Sequence[int]) -> list[list[int]]:
+    layers: list[list[int]] = []
+    offset = 0
+    for layer_size in shape:
+        layers.append(list(range(offset, offset + layer_size)))
+        offset += layer_size
+    return layers
+
+
 def named_edges(edges: Iterable[Relation], label_by_item: dict[int, str]) -> list[str]:
     return sorted(f"{label_by_item[lower]}<{label_by_item[upper]}" for lower, upper in edges)
 
@@ -329,6 +338,30 @@ def parse_rank_shape(raw: str | None) -> tuple[int, ...] | None:
     if not shape or any(part <= 0 for part in shape):
         raise ValueError(f"rank shape must contain positive integers: {raw!r}")
     return shape
+
+
+def parse_cover_matrix(raw: str) -> tuple[tuple[int, ...], ...]:
+    try:
+        payload = json.loads(raw)
+    except json.JSONDecodeError as exc:
+        raise ValueError(f"cover matrix must be JSON: {raw!r}") from exc
+    if not isinstance(payload, list) or not payload:
+        raise ValueError("cover matrix must be a nonempty JSON list")
+    rows: list[tuple[int, ...]] = []
+    width_value: int | None = None
+    for row in payload:
+        if not isinstance(row, list) or not row:
+            raise ValueError("cover matrix rows must be nonempty lists")
+        if not all(isinstance(item, int) and item >= 0 for item in row):
+            raise ValueError("cover matrix entries must be nonnegative integers")
+        if width_value is None:
+            width_value = len(row)
+        elif len(row) != width_value:
+            raise ValueError("cover matrix rows must have equal length")
+        rows.append(tuple(row))
+    if len(rows) != width_value:
+        raise ValueError("cover matrix must be square")
+    return tuple(rows)
 
 
 def rank_shape(poset: Poset) -> tuple[int, ...]:
@@ -1004,6 +1037,82 @@ def bucket_members_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def cover_matrix_forms_command(args: argparse.Namespace) -> int:
+    shape = parse_rank_shape(args.rank_shape)
+    if shape is None:
+        raise ValueError("cover-matrix-forms requires --rank-shape")
+    matrix = parse_cover_matrix(args.cover_matrix)
+    if len(matrix) != len(shape):
+        raise ValueError("cover matrix dimensions must match rank shape")
+    layers = layered_items_from_shape(shape)
+    edge_choices: list[list[tuple[Relation, ...]]] = []
+    for lower_rank, row in enumerate(matrix):
+        for upper_rank, count in enumerate(row):
+            if count == 0:
+                continue
+            if lower_rank >= upper_rank:
+                raise ValueError("cover matrix may only use upward rank entries")
+            possible_edges = [
+                (lower, upper)
+                for lower in layers[lower_rank]
+                for upper in layers[upper_rank]
+            ]
+            if count > len(possible_edges):
+                raise ValueError(
+                    f"cover matrix entry {lower_rank},{upper_rank} exceeds possible edges"
+                )
+            edge_choices.append(list(itertools.combinations(possible_edges, count)))
+
+    forms: dict[tuple[str, ...], dict[str, object]] = {}
+    for choice in itertools.product(*edge_choices):
+        relation_seed = list(itertools.chain.from_iterable(choice))
+        try:
+            poset = make_poset(sum(shape), relation_seed)
+        except ValueError:
+            continue
+        profile = structural_profile(poset)
+        if tuple(profile["rank_layer_sizes"]) != shape:
+            continue
+        if cover_rank_matrix(poset) != [list(row) for row in matrix]:
+            continue
+        actual_covers = set(covers(poset))
+        if actual_covers != set(relation_seed):
+            continue
+        if args.width is not None and width(poset) != args.width:
+            continue
+        if args.height is not None and height(poset) != args.height:
+            continue
+        normal = rank_normal_form(poset)
+        key = tuple(normal["cover_relations"])
+        forms.setdefault(
+            key,
+            {
+                "cover_relations": normal["cover_relations"],
+                "relations": normal["relations"],
+                "rank_layers": normal["rank_layers"],
+                "linear_extensions": count_linear_extensions(poset),
+                "width": width(poset),
+                "height": height(poset),
+                "rank_normal_form": normal,
+            },
+        )
+
+    records = [forms[key] for key in sorted(forms)]
+    payload = {
+        "rank_shape": list(shape),
+        "cover_matrix": [list(row) for row in matrix],
+        "width": args.width,
+        "height": args.height,
+        "form_count": len(records),
+        "forms": records,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -1068,6 +1177,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     bucket_parser.add_argument("--bucket", required=True)
     bucket_parser.add_argument("--output", type=Path)
     bucket_parser.set_defaults(func=bucket_members_command)
+
+    matrix_forms_parser = subparsers.add_parser("cover-matrix-forms")
+    matrix_forms_parser.add_argument("--rank-shape", required=True)
+    matrix_forms_parser.add_argument("--cover-matrix", required=True)
+    matrix_forms_parser.add_argument("--width", type=int)
+    matrix_forms_parser.add_argument("--height", type=int)
+    matrix_forms_parser.add_argument("--output", type=Path)
+    matrix_forms_parser.set_defaults(func=cover_matrix_forms_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

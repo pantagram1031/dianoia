@@ -1,0 +1,58 @@
+{
+  "check_pairs": [
+    {
+      "balanced": true,
+      "first_before_second": [
+        17,
+        33
+      ],
+      "lower_orientation_probability": [
+        16,
+        33
+      ],
+      "pair": [
+        "b",
+        "c"
+      ],
+      "second_before_first": [
+        16,
+        33
+      ]
+    }
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "c<e",
+    "c<f",
+    "d<f",
+    "f<g"
+  ],
+  "height": 4,
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "linear_extensions": 33,
+  "relations": [
+    "a<c",
+    "a<d",
+    "a<e",
+    "a<f",
+    "a<g",
+    "b<e",
+    "c<e",
+    "c<f",
+    "c<g",
+    "d<f",
+    "d<g",
+    "f<g"
+  ],
+  "width": 3
+}

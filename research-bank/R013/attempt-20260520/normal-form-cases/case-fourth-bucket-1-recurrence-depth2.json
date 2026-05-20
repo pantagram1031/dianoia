@@ -1,0 +1,134 @@
+{
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "c<e",
+    "c<f",
+    "d<e",
+    "e<g"
+  ],
+  "depth": 2,
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "linear_extensions": 31,
+  "pair": [
+    "e",
+    "f"
+  ],
+  "trace": {
+    "available": [
+      {
+        "choose": "a",
+        "first_before_second": 12,
+        "pair_state_after_choice": "unseen",
+        "remaining_after_choice": [
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g"
+        ],
+        "second_before_first": 12,
+        "subtrace": {
+          "available": [
+            {
+              "choose": "b",
+              "first_before_second": 4,
+              "pair_state_after_choice": "unseen",
+              "remaining_after_choice": [
+                "c",
+                "d",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 3
+            },
+            {
+              "choose": "c",
+              "first_before_second": 4,
+              "pair_state_after_choice": "unseen",
+              "remaining_after_choice": [
+                "b",
+                "d",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 6
+            },
+            {
+              "choose": "d",
+              "first_before_second": 4,
+              "pair_state_after_choice": "unseen",
+              "remaining_after_choice": [
+                "b",
+                "c",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 3
+            }
+          ],
+          "first_before_second": 12,
+          "pair_state": "unseen",
+          "placed": [
+            "a"
+          ],
+          "second_before_first": 12
+        }
+      },
+      {
+        "choose": "b",
+        "first_before_second": 4,
+        "pair_state_after_choice": "unseen",
+        "remaining_after_choice": [
+          "a",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g"
+        ],
+        "second_before_first": 3,
+        "subtrace": {
+          "available": [
+            {
+              "choose": "a",
+              "first_before_second": 4,
+              "pair_state_after_choice": "unseen",
+              "remaining_after_choice": [
+                "c",
+                "d",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 3
+            }
+          ],
+          "first_before_second": 4,
+          "pair_state": "unseen",
+          "placed": [
+            "b"
+          ],
+          "second_before_first": 3
+        }
+      }
+    ],
+    "first_before_second": 16,
+    "pair_state": "unseen",
+    "placed": [],
+    "second_before_first": 15
+  }
+}

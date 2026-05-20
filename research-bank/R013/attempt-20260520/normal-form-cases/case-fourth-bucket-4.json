@@ -1,0 +1,27 @@
+{
+  "case": "fourth-matrix-bucket-4",
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "c<e",
+    "c<f",
+    "d<f",
+    "f<g"
+  ],
+  "check_pairs": [
+    [
+      "b",
+      "c"
+    ]
+  ]
+}

@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T21:05:00+09:00
+
+- Added Phase 4 benchmark B2 in combinatorics from Bai-Berczi 2026,
+  arXiv:2604.11326, Theorem 4.11.
+- Created raw baseline artifacts in
+  `C:\Users\SAMSUNG\Downloads\raw-attempt-3`.
+- Created dianoia-run artifacts in
+  `C:\Users\SAMSUNG\Downloads\dianoia-run\problems\b2-properly-colored-spanning-trees`.
+- Appended B2 to `BENCHMARK.md` as VALUE_ADDED and updated docs/state files.
+
+Self-audit:
+- Commits this session so far: 5 pushed, 1 pending.
+- Concrete progress category: benchmark.
+- Failed-session streak: 0.
+
 ## 2026-05-20T20:45:00+09:00
 
 - Refreshed Phase 7 documentation: `README.md`, `ARCHITECTURE.md`,

@@ -20,14 +20,15 @@ claim ledgers, adversarial review, specialist subagents, skills, and connectors.
 
 ## Current Benchmark Summary
 
-`BENCHMARK.md` currently has 1 accepted controlled comparison:
+`BENCHMARK.md` currently has 2 accepted controlled comparisons:
 
 | ID | area | verdict | source |
 |----|------|---------|--------|
 | B1 | number theory | VALUE_ADDED | APSSV 2026, arXiv:2604.06609 |
+| B2 | combinatorics | VALUE_ADDED | Bai-Berczi 2026, arXiv:2604.11326 |
 
-MASTERPIECE is not complete. The benchmark bank still needs 4 more VALUE_ADDED
-rows across at least 2 additional mathematical areas.
+MASTERPIECE is not complete. The benchmark bank still needs 3 more VALUE_ADDED
+rows across at least 1 additional mathematical area.
 
 ## Architecture
 

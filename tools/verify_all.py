@@ -50,6 +50,14 @@ COMMANDS = [
         "--signature",
         "matrix",
     ],
+    [
+        sys.executable,
+        "tools/poset_balance.py",
+        "matrix-feature-partition",
+        "research-bank/R013/attempt-20260520/width3-rank2221-matrix-shape-classes-n7.json",
+        "--threshold",
+        "13/32",
+    ],
 ]
 
 

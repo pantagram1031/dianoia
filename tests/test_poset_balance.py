@@ -404,6 +404,56 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(1, payload["form_count"])
             self.assertEqual(["a<c", "b<c"], payload["forms"][0]["cover_relations"])
 
+    def test_matrix_feature_partition_groups_near_boundary_buckets(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            classes = Path(temp_dir) / "classes.json"
+            output = Path(temp_dir) / "features.json"
+            classes.write_text(
+                json.dumps(
+                    {
+                        "bucket_count": 2,
+                        "buckets": [
+                            {
+                                "signature": (
+                                    "layers=2,2,1|covers=4|mins=2|maxs=2|"
+                                    "cover_matrix=[[0,2,1],[0,0,1],[0,0,0]]"
+                                ),
+                                "count": 1,
+                                "min_lower_orientation_probability": [4, 11],
+                            },
+                            {
+                                "signature": (
+                                    "layers=2,2,1|covers=5|mins=2|maxs=1|"
+                                    "cover_matrix=[[0,2,1],[0,0,2],[0,0,0]]"
+                                ),
+                                "count": 1,
+                                "min_lower_orientation_probability": [1, 2],
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-feature-partition",
+                        str(classes),
+                        "--threshold",
+                        "2/5",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(1, payload["included_bucket_count"])
+            self.assertEqual(1, payload["group_count"])
+            features = payload["groups"][0]["features"]
+            self.assertEqual(1, features["skip_edges"])
+            self.assertTrue(features["has_bottom_skip"])
+
 
 if __name__ == "__main__":
     unittest.main()

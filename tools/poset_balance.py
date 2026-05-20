@@ -1019,6 +1019,77 @@ def profile_signature(profile: dict[str, object], mode: str) -> str:
     raise ValueError(f"unknown signature mode: {mode}")
 
 
+def parse_fraction(raw: str) -> Fraction:
+    if "/" in raw:
+        numerator, denominator = raw.split("/", 1)
+        return Fraction(int(numerator), int(denominator))
+    return Fraction(int(raw), 1)
+
+
+def matrix_from_bucket_signature(signature: str) -> tuple[tuple[int, ...], ...]:
+    fields: dict[str, str] = {}
+    for part in signature.split("|"):
+        if "=" not in part:
+            continue
+        key, value = part.split("=", 1)
+        fields[key] = value
+    if "cover_matrix" not in fields:
+        raise ValueError(f"signature has no cover_matrix field: {signature!r}")
+    return parse_cover_matrix(fields["cover_matrix"])
+
+
+def matrix_feature_record(bucket: dict[str, object]) -> dict[str, object]:
+    signature = str(bucket["signature"])
+    matrix = matrix_from_bucket_signature(signature)
+    size = len(matrix)
+
+    def entry(row: int, column: int) -> int:
+        if row >= size or column >= size:
+            return 0
+        return matrix[row][column]
+
+    adjacent_edges = sum(entry(rank, rank + 1) for rank in range(size - 1))
+    skip_edges = sum(
+        entry(row, column)
+        for row in range(size)
+        for column in range(row + 2, size)
+    )
+    layer_features = {
+        f"r{row}_to_r{column}": entry(row, column)
+        for row in range(size)
+        for column in range(row + 1, size)
+    }
+    flags = {
+        "bottom_dense": entry(0, 1) >= 3,
+        "middle_dense": entry(1, 2) >= 3,
+        "has_bottom_skip": entry(0, 2) > 0,
+        "has_middle_to_top_skip": entry(1, 3) > 0,
+        "top_fed_by_two": entry(2, 3) >= 2,
+        "has_skip_cover": skip_edges > 0,
+    }
+    key_parts = [
+        f"covers={sum(sum(row) for row in matrix)}",
+        f"adjacent={adjacent_edges}",
+        f"skip={skip_edges}",
+    ]
+    key_parts.extend(f"{key}={int(value)}" for key, value in sorted(flags.items()))
+    return {
+        "signature": signature,
+        "count": bucket["count"],
+        "min_lower_orientation_probability": bucket[
+            "min_lower_orientation_probability"
+        ],
+        "cover_matrix": [list(row) for row in matrix],
+        "features": {
+            "adjacent_edges": adjacent_edges,
+            "skip_edges": skip_edges,
+            **layer_features,
+            **flags,
+        },
+        "feature_key": "|".join(key_parts),
+    }
+
+
 def shape_classes_command(args: argparse.Namespace) -> int:
     shape_filter = parse_rank_shape(args.rank_shape)
     buckets: dict[str, dict[str, object]] = {}
@@ -1094,6 +1165,58 @@ def shape_classes_command(args: argparse.Namespace) -> int:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
+def matrix_feature_partition_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.classes.read_text(encoding="utf-8"))
+    threshold = parse_fraction(args.threshold) if args.threshold else None
+    groups: dict[str, dict[str, object]] = {}
+    for bucket in payload["buckets"]:
+        record = matrix_feature_record(bucket)
+        lower = Fraction(*record["min_lower_orientation_probability"])
+        if threshold is not None and lower > threshold:
+            continue
+        group = groups.setdefault(
+            str(record["feature_key"]),
+            {
+                "feature_key": record["feature_key"],
+                "bucket_count": 0,
+                "profile_count": 0,
+                "min_lower_orientation_probability": record[
+                    "min_lower_orientation_probability"
+                ],
+                "features": record["features"],
+                "buckets": [],
+            },
+        )
+        group["bucket_count"] = int(group["bucket_count"]) + 1
+        group["profile_count"] = int(group["profile_count"]) + int(record["count"])
+        if lower < Fraction(*group["min_lower_orientation_probability"]):
+            group["min_lower_orientation_probability"] = record[
+                "min_lower_orientation_probability"
+            ]
+        group["buckets"].append(record)
+
+    group_list = sorted(
+        groups.values(),
+        key=lambda group: (
+            Fraction(*group["min_lower_orientation_probability"]),
+            group["feature_key"],
+        ),
+    )
+    out = {
+        "source": str(args.classes),
+        "threshold": args.threshold,
+        "source_bucket_count": payload["bucket_count"],
+        "included_bucket_count": sum(int(group["bucket_count"]) for group in group_list),
+        "group_count": len(group_list),
+        "groups": group_list,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
     return 0
 
 
@@ -1288,6 +1411,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     classes_parser.add_argument("--examples-per-bucket", type=int, default=2)
     classes_parser.add_argument("--output", type=Path)
     classes_parser.set_defaults(func=shape_classes_command)
+
+    feature_parser = subparsers.add_parser("matrix-feature-partition")
+    feature_parser.add_argument("classes", type=Path)
+    feature_parser.add_argument("--threshold")
+    feature_parser.add_argument("--output", type=Path)
+    feature_parser.set_defaults(func=matrix_feature_partition_command)
 
     bucket_parser = subparsers.add_parser("bucket-members")
     bucket_parser.add_argument("--max-n", type=int, default=7)

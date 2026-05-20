@@ -17,7 +17,7 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 8 | DEEPER RESEARCH | GATED | Requires 5 contamination-free novel VALUE_ADDED B6+ rows across 3 areas |
 | 9 | RESEARCH INFRA | COMPLETE | `connectors/lean/`, enhanced `connectors/arxiv/`, openness/novelty skills, research-state verifier, and candidate templates |
 | 10 | CURATION | COMPLETE | `research-bank/INDEX.md` records 20 `OPEN-VERIFIED` candidates across 10 areas |
-| 11 | ATTEMPTS | READY | P10 gate satisfied; begin candidate attempts from highest-tractability bank entries |
+| 11 | ATTEMPTS | IN_PROGRESS | R020 attempt 1 recorded `PARTIAL-PROGRESS` with verifier-backed N=47 replay |
 | 12 | VERIFICATION GATE | PENDING | Mandatory for any SOLVED-CLAIM |
 | 13 | INTERMEDIATE WINS | PENDING | Draft note plus BLOCKED_ON_USER before any external claim |
 
@@ -34,7 +34,7 @@ for external mathematician review.
 |-------|--------|---------------|
 | P9 infra | COMPLETE | `connectors/lean/`, enhanced arXiv lookup, openness skill, adversarial novelty skill, `tools/verify_research_state.py`, `templates/research_candidate/` |
 | P10 curation | COMPLETE | `research-bank/INDEX.md` with 20 verified-open candidates across 10 areas |
-| P11 attempts | READY | First attempt should target a rank A candidate with exact-checkable artifacts |
+| P11 attempts | IN_PROGRESS | Continue R020 replay/search using `tools/no_three_in_line_verify.py` |
 | P12 verification | PENDING | `CLAIMS.md` rows with gates, confidence, and downgrade/blocked status |
 | P13 notes | PENDING | `research-bank/<id>/draft-note.md` for any intermediate win |
 
@@ -65,12 +65,11 @@ reproducibility toward that evidence standard.
 
 P11 ATTEMPTS. P10 curation is complete: `research-bank/INDEX.md` records 20
 `OPEN-VERIFIED` candidates across 10 areas, plus one `OPEN-WEAK` warm-up
-candidate (`research-bank/R001/`). Begin attempts from rank A/B candidates
-whose subtargets have exact certificate paths.
+candidate (`research-bank/R001/`). R020 attempt 1 is complete with
+`PARTIAL-PROGRESS`: dianoia now has a solver-independent no-three-in-line
+certificate verifier and has replayed Prellberg's `N=47` certificate.
 
-Recommended first P11 target: `research-bank/R020/` no-three-in-line, rank A.
-Reason: it has current 2026 CSP frontier evidence, exact integer
-collinearity checks, and a natural first deliverable: replay one known
-`D(n)=2n` certificate with an auditable verifier before searching beyond the
-frontier. Alternative rank A target: `research-bank/R013/` 1/3-2/3 posets,
-where exact linear-extension counts provide similarly replayable artifacts.
+Next R020 target: replay the remaining Prellberg frontier certificates through
+`N=60`, then either attempt a bounded search beyond the frontier or switch to
+another rank A candidate (`research-bank/R013/` or `research-bank/R017/`) if
+the search setup becomes too solver-dependent for a clean session.

@@ -30,6 +30,14 @@
 - Added counted `OPEN-VERIFIED` candidates R016-R021, bringing P10 to 20/20
   candidates across 10/4 required areas and opening P11 attempts.
 
+## 2026-05-20 P11 Research Attempts
+
+- Began R020 no-three-in-line attempts with a solver-independent certificate
+  verifier and unit tests.
+- Replayed Prellberg's published `N=47` certificate with exact integer
+  collinearity checks.
+- Wired the replay into `tools/verify_all.py`.
+
 ## 2026-05-21 Continuous Objective Refresh
 
 - Re-centered ROADMAP, README, BENCHMARK, NEXT_SESSION, and DECISIONS on the

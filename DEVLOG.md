@@ -1,5 +1,24 @@
 # Devlog
 
+## 2026-05-20T21:58:00+09:00
+
+- Began P11 ATTEMPTS with `R020` no-three-in-line, following the P10 handoff.
+- Added a solver-independent certificate verifier:
+  `tools/no_three_in_line_verify.py`.
+- Added unit tests in `tests/test_no_three_in_line_verify.py`.
+- Replayed Prellberg's published `N=47` certificate from the 2026 CSP frontier:
+  `research-bank/R020/certificates/prellberg-n47.json`.
+- Recorded P11 attempt artifacts under
+  `research-bank/R020/attempt-20260520/`.
+- Wired the R020 replay into `tools/verify_all.py`.
+- Verdict: `PARTIAL-PROGRESS`; no `CLAIMS.md` row because this is published
+  certificate replay, not a new mathematical result.
+
+Self-audit:
+- Commits this session: 4 pushed.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:46:00+09:00
 
 - Continued P10 CURATION from a clean, synced `main`.

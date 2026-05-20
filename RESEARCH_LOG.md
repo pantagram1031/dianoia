@@ -13,6 +13,18 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T21:58:00+09:00
+
+- Opened P11 with `R020` no-three-in-line.
+- Raw route outcome: `NO-PROGRESS`; it located the Prellberg 2026 CSP source
+  but did not independently verify or extend it.
+- Dianoia route outcome: `PARTIAL-PROGRESS`; added an exact verifier and
+  replayed Prellberg's `N=47` certificate with no line violations.
+- Verification evidence:
+  `research-bank/R020/certificates/prellberg-n47.verify.json`,
+  `tests/test_no_three_in_line_verify.py`, and `tools/verify_all.py`.
+- Claim discipline: no new result, no `CLAIMS.md` row, no external-review halt.
+
 ## 2026-05-20T21:46:00+09:00
 
 - Added six counted P10 `OPEN-VERIFIED` candidates:

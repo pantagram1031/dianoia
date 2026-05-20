@@ -32,6 +32,8 @@ Artifacts:
 - `WIDTH3_EXTREMAL_NOTES.md`: human-readable proof-target notes.
 - `MATRIX_BUCKET_NOTES.md`: three-profile matrix-bucket case split for the
   current extremal subcase.
+- `RANK_NORMAL_FORM_NOTES.md`: rank-layer normal-form rewrite of the three
+  matrix-bucket cases.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
 ## Exhaustive Small Evidence
@@ -75,7 +77,8 @@ These are search signals only:
    through `n=7`.
 4. Turn `MATRIX_BUCKET_NOTES.md` into a coordinate-free sublemma for the
    3-profile matrix bucket: equality only in Case A, with Cases B and C giving
-   `14/33` and `5/11`.
+   `14/33` and `5/11`. `RANK_NORMAL_FORM_NOTES.md` now supplies the stable
+   rank-layer names for this proof attempt.
 5. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

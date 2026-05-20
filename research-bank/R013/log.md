@@ -136,3 +136,14 @@ candidate_id: R013
   bucket, sorted by best lower orientation probability.
 - Updated `MATRIX_BUCKET_NOTES.md` to cite the exact generation command.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-20 P11 Attempt 1J
+
+- Added rank-layer normal forms to `bucket-members` records.
+- Regenerated
+  `research-bank/R013/attempt-20260520/width3-rank2221-extremal-matrix-bucket-n7.json`
+  with stable rank labels.
+- Added `research-bank/R013/attempt-20260520/RANK_NORMAL_FORM_NOTES.md`.
+- Result: the extremal matrix bucket is now expressed as three cover patterns
+  on layers `{a,b}`, `{c,d}`, `{e,f}`, `{g}` with exact orientation counts.
+- Claim discipline: no `CLAIMS.md` row.

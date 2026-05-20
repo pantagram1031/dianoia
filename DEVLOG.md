@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-21T00:08:00+09:00
+
+- Continued P11 on `R013`.
+- Added rank normal forms to bucket-member records and regenerated the
+  extremal matrix-bucket artifact.
+- Added `RANK_NORMAL_FORM_NOTES.md`, rewriting the three cases using rank-layer
+  labels `{a,b}`, `{c,d}`, `{e,f}`, `{g}`.
+- The sublemma target is now label-stable: prove the common matrix bucket has
+  lower probability at least `14/39`, equality only in Case A.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:50:00+09:00
 
 - Continued P11 on `R013`.

@@ -23,6 +23,9 @@ python tools\poset_balance.py bucket-members `
   --output research-bank\R013\attempt-20260520\width3-rank2221-extremal-matrix-bucket-n7.json
 ```
 
+`RANK_NORMAL_FORM_NOTES.md` rewrites the three extracted profiles with stable
+rank-layer labels.
+
 Common signature:
 
 ```text
@@ -103,7 +106,7 @@ For this matrix bucket, the finite evidence suggests the following sublemma:
 The next proof move is to replace the computational labels with a small
 coordinate-free argument: choose the two bottom vertices, the two rank-1
 vertices, the two rank-2 vertices, and the top vertex; then split by the
-bottom-layer and rank-1 layer vertex-signature patterns above.
+rank-normal forms in `RANK_NORMAL_FORM_NOTES.md`.
 
 ## Claim Discipline
 

@@ -6,6 +6,24 @@ Immediate next step:
 Continue P11 ATTEMPTS. P10 is complete; R020 and R013 have produced
 `PARTIAL-PROGRESS`, not solved claims.
 
+Current R013 resume point:
+
+- `NEAR_UNPROCESSED_SLACK_NOTES.md` records the anti-overfitting correction:
+  U6 is componentwise-minimal but U1 is the probability-weakest unprocessed
+  vector class (`7/17`, gap `3/544` above `13/32`), so a naive monotonicity
+  proof from U6 is false.
+- `normal-form-cases/vector-near-unprocessed/` contains the U1-U5 named-case
+  files and `mechanism-batch-depth5.json`; all 15 near-threshold unprocessed
+  forms resolve by depth 5.
+- `MECHANISM_SIGNATURE_TABLE.md` combines the U6/P1-P8 dangerous block and
+  the U1-U5 weak unprocessed block: 37 forms resolved into 27
+  `forced-block`, 5 `balanced-core-plus-forced-first`, and 5
+  `balanced-core-with-forced-blocks`.
+- Next mathematical move: build a mechanism signature table over all 59 vector
+  classes, or prove local trigger lemmas for the three mechanism families
+  without referring to U/P class labels. Do not add more isolated buckets
+  unless they test a specific trigger hypothesis.
+
 Recommended next work:
 Do not keep expanding replay as a substitute for mathematics. Choose one:
 

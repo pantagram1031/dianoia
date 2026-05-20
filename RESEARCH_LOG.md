@@ -13,6 +13,24 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T11:15:00+09:00
+
+- Continued P11 on `R013` with the user's anti-overfitting concern treated as
+  a design constraint: turn case evidence into reusable mathematical
+  mechanisms rather than fitting a fixed benchmark.
+- Generated the U1-U5 near-threshold unprocessed vector-class ledger and
+  named-case files. These 5 classes contain 15 rank-normal forms.
+- Ran a depth-5 mechanism batch on those 15 forms; all 15 resolved:
+  12 `forced-block`, 2 `balanced-core-plus-forced-first`, and 1
+  `balanced-core-with-forced-blocks`.
+- Added `NEAR_UNPROCESSED_SLACK_NOTES.md`, recording that U6 is
+  componentwise-minimal but not probability-weakest; U1 has lower probability
+  `7/17`, only `3/544` above `13/32`.
+- Added `MECHANISM_SIGNATURE_TABLE.md`, combining 37 resolved forms from
+  U6/P1-P8 and U1-U5 into three mechanism families. This points to a
+  mechanism lemma as the next proof target.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T10:05:00+09:00
 
 - Continued P11 on `R013` by batch-reducing all U6/P1-P8 rank-normal forms to

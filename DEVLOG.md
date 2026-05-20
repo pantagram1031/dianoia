@@ -1,5 +1,27 @@
 # Devlog
 
+## 2026-05-21T11:15:00+09:00
+
+- Continued P11 on `R013`.
+- Preserved the anti-overfitting correction: benchmarks and finite batches are
+  calibration, while the work product should be reusable mathematical
+  mechanisms.
+- Generated and committed the U1-U5 near-threshold unprocessed form ledger and
+  15 named-case files.
+- Ran the depth-5 mechanism batch for U1-U5; all 15 forms resolved with 0
+  unresolved cases.
+- Added `NEAR_UNPROCESSED_SLACK_NOTES.md` and
+  `MECHANISM_SIGNATURE_TABLE.md`. The combined U6/P1-P8 plus U1-U5 evidence
+  now covers 37 forms: 27 `forced-block`, 5
+  `balanced-core-plus-forced-first`, and 5
+  `balanced-core-with-forced-blocks`.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, note.
+- Failed-session streak: 0.
+
 ## 2026-05-21T10:05:00+09:00
 
 - Continued P11 on `R013`.

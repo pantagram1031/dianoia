@@ -161,5 +161,14 @@ rank-normal forms by depth 5: 15 forced-block, 3 balanced-core-plus-forced-first
 and 4 balanced-core-with-forced-blocks. Next target: attack the 51 unprocessed
 vector classes with a dominance/injection/slack argument from U6 rather than
 enumerating more dangerous forms.
+`width3-rank2221-unprocessed-slack-summary.json` now shows all 51 unprocessed
+vector classes meet `13/32`, but it also refutes the naive monotonicity plan:
+U6 is componentwise-minimal while U1 is probability-weakest at `7/17`.
+`NEAR_UNPROCESSED_SLACK_NOTES.md` reduces the U1-U5 near-threshold block to 15
+rank-normal forms, all resolved by depth 5. `MECHANISM_SIGNATURE_TABLE.md`
+combines U6/P1-P8 and U1-U5 into 37 resolved forms across three mechanism
+families. Next target: build a mechanism signature table over all 59 vector
+classes or prove local trigger lemmas for the three mechanism families without
+referring to historical class labels.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

@@ -214,6 +214,15 @@ class PosetBalanceTest(unittest.TestCase):
                 json.dumps({"not": "a named case"}),
                 encoding="utf-8",
             )
+            (case_dir / "report.json").write_text(
+                json.dumps(
+                    {
+                        "cover_relations": ["a<c", "b<c"],
+                        "check_pairs": [{"pair": ["a", "b"]}],
+                    }
+                ),
+                encoding="utf-8",
+            )
             output = case_dir / "batch.json"
             with redirect_stdout(StringIO()):
                 code = pb.main(

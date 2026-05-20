@@ -859,7 +859,17 @@ def is_named_case_file(path: Path) -> bool:
         payload = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
         return False
-    return isinstance(payload, dict) and "cover_relations" in payload and "check_pairs" in payload
+    if not isinstance(payload, dict) or "cover_relations" not in payload or "check_pairs" not in payload:
+        return False
+    check_pairs = payload["check_pairs"]
+    if not isinstance(check_pairs, list):
+        return False
+    return all(
+        isinstance(pair, list)
+        and len(pair) == 2
+        and all(isinstance(label, str) for label in pair)
+        for pair in check_pairs
+    )
 
 
 def named_case_mechanism_batch_command(args: argparse.Namespace) -> int:

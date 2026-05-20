@@ -99,8 +99,29 @@ def build_search_query(
 def query(params: dict[str, str]) -> list[dict[str, object]]:
     url = API + "?" + urllib.parse.urlencode(params)
     req = urllib.request.Request(url, headers={"User-Agent": "dianoia-arxiv-connector/0.1"})
-    with urllib.request.urlopen(req, timeout=30) as response:
-        payload = response.read()
+    try:
+        with urllib.request.urlopen(req, timeout=30) as response:
+            payload = response.read()
+    except urllib.error.HTTPError as exc:
+        if exc.code == 429:
+            return [
+                {
+                    "status": "UNVERIFIED",
+                    "reason": "HTTP_429",
+                    "message": "arXiv API rate-limited this query; rerun later or use a separate source angle.",
+                    "query_url": url,
+                }
+            ]
+        raise
+    except TimeoutError:
+        return [
+            {
+                "status": "UNVERIFIED",
+                "reason": "TIMEOUT",
+                "message": "arXiv API timed out for this query; rerun later or use a separate source angle.",
+                "query_url": url,
+            }
+        ]
     root = ET.fromstring(payload)
     return [parse_entry(entry) for entry in root.findall("atom:entry", NS)]
 

@@ -1,6 +1,7 @@
 import argparse
 import importlib.util
 import unittest
+import urllib.error
 from pathlib import Path
 
 
@@ -75,6 +76,30 @@ class ArxivConnectorTest(unittest.TestCase):
         self.assertEqual("openness", result["query_meta"]["mode"])
         self.assertEqual([{"arxiv_id": "2601.00001"}], result["records"])
         self.assertIn("submittedDate:[202601010000 TO 202605202359]", result["query_meta"]["search_query"])
+
+    def test_search_reports_rate_limit_as_unverified_record(self) -> None:
+        def fake_urlopen(req, timeout):
+            raise urllib.error.HTTPError(req.full_url, 429, "Unknown Error", {}, None)
+
+        original = arxiv.urllib.request.urlopen
+        arxiv.urllib.request.urlopen = fake_urlopen
+        try:
+            result = arxiv.search(
+                argparse.Namespace(
+                    query="Frankl union closed sets conjecture",
+                    category="math.CO",
+                    from_date="2025-11-20",
+                    to_date=None,
+                    max_results=5,
+                    sort_by="relevance",
+                )
+            )
+        finally:
+            arxiv.urllib.request.urlopen = original
+
+        self.assertEqual("UNVERIFIED", result[0]["status"])
+        self.assertEqual("HTTP_429", result[0]["reason"])
+        self.assertIn("arXiv API rate-limited", result[0]["message"])
 
 
 if __name__ == "__main__":

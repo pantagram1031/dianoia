@@ -13,6 +13,19 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T10:05:00+09:00
+
+- Continued P11 on `R013` by batch-reducing all U6/P1-P8 rank-normal forms to
+  recurrence mechanisms.
+- Added batch mechanism-search tooling and fixed input filtering after report
+  JSONs were incorrectly detected as named-case files.
+- Generated `normal-form-cases/u6-p1-p8-mechanism-batch-depth5.json`; all 22
+  forms resolve by depth at most 5.
+- Added `ALL_DANGEROUS_FORM_MECHANISM_REDUCTION.md`; the remaining restricted
+  subcase gap is now the 51 unprocessed vector classes, not the dangerous
+  processed forms.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T09:25:00+09:00
 
 - Continued P11 on `R013` by converting the forced-block recurrence pattern

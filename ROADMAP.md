@@ -156,5 +156,10 @@ reduce to forced-block recurrence certificates, while P6 and P8 reduce to a
 balanced-core-plus-forced-first family. Next target: reduce all 22 U6/P1-P8
 rank-normal forms to these two mechanism schemas, then seek a dominance or
 exclusion argument for the 51 unprocessed vector classes.
+`ALL_DANGEROUS_FORM_MECHANISM_REDUCTION.md` now reduces all 22 U6/P1-P8
+rank-normal forms by depth 5: 15 forced-block, 3 balanced-core-plus-forced-first,
+and 4 balanced-core-with-forced-blocks. Next target: attack the 51 unprocessed
+vector classes with a dominance/injection/slack argument from U6 rather than
+enumerating more dangerous forms.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

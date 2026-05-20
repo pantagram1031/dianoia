@@ -1,5 +1,24 @@
 # Devlog
 
+## 2026-05-21T10:05:00+09:00
+
+- Continued P11 on `R013`.
+- Added `named-case-mechanism-search` and `named-case-mechanism-batch` tooling
+  for recurrence mechanism reduction across directories of named cases.
+- Fixed the batch detector so report JSON files with computed `check_pairs`
+  are not mistaken for named-case inputs.
+- Ran the batch reduction across all 22 U6/P1-P8 rank-normal forms with
+  `--max-depth 5`; all 22 resolved.
+- Added `ALL_DANGEROUS_FORM_MECHANISM_REDUCTION.md`: 15 forms reduce to
+  `forced-block`, 3 to `balanced-core-plus-forced-first`, and 4 to
+  `balanced-core-with-forced-blocks`.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, tooling, note.
+- Failed-session streak: 0.
+
 ## 2026-05-21T09:25:00+09:00
 
 - Continued P11 on `R013`.

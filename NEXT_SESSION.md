@@ -3,8 +3,8 @@
 Resume continuous improvement.
 
 Immediate next step:
-Finish the B6 dianoia-side run and compare it against the completed raw
-baseline in `C:\Users\SAMSUNG\Downloads\raw-attempt-7`.
+Continue P9 INFRA for the RESEARCH_CONTRIBUTION objective: build formal-check,
+openness-verification, and adversarial-novelty infrastructure.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -26,10 +26,15 @@ Current state:
   `README.md`, `ARCHITECTURE.md`, `EXAMPLES.md`, and `CHANGELOG.md`.
 
 Important:
+- Active goal changed to RESEARCH_CONTRIBUTION. Do not continue benchmark-only
+  work unless it directly supports research contribution infrastructure.
+- MASTERPIECE baseline is present, so the active phase is P9 INFRA.
+- Persistent research state files now include `RESEARCH_LOG.md`, `CLAIMS.md`,
+  and `research-bank/`.
 - `capability-test/MASTERPIECE.md` is baseline evidence, not a stop condition.
-- Live victory condition: 5 contamination-free novel VALUE_ADDED head-to-head
-  benchmarks against raw GPT-5.5 across at least 3 mathematical areas. B6+ rows
-  are the forward objective track.
+- Live victory condition: a verifiable math contribution that passes openness,
+  novelty, adversarial, and formal/computational gates, then halts
+  BLOCKED_ON_USER for external mathematician review.
 - B6 source is selected:
   `benchmark-bank/B6/SOURCE.md` and `benchmark-bank/B6/PROBLEM.md`.
 - B6 raw baseline is complete:
@@ -38,9 +43,8 @@ Important:
 - B6 has `benchmark-bank/B6/RUN-PARTIAL.md` and
   `benchmark-bank/B6/RAW-AUDIT.md`; do not create `BENCHMARK.md` row until the
   dianoia run and comparison artifacts exist.
-- Current continuous-improvement priority: add reproducibility tooling/runbook
-  so future B6+ rows prefer full fresh raw and dianoia runs and clearly label
-  weaker evidence.
+- Current priority: P9 infrastructure, then P10 curation of 20 verified-open
+  candidates across 4 areas.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
   smoke is `capability-test/BENCHMARK-RUN-WORKSPACE-PATHS-VERIFY-20260521.md`;
   warnings are expected for UNVERIFIED token accounting in B1-B5. It also

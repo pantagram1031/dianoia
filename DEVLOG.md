@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-21T02:05:00+09:00
+
+- Pivoted to the updated RESEARCH_CONTRIBUTION goal.
+- Initialized `RESEARCH_LOG.md`, `CLAIMS.md`, `research-bank/README.md`, and
+  `research-bank/INDEX.md`.
+- Updated `ROADMAP.md` and `NEXT_SESSION.md` with phases P9-P13 and P9 as the
+  current active phase.
+- Parked the uncommitted old-goal B6 completion tail; B6 source/raw baseline
+  commits remain as historical benchmark work, but no new benchmark-only work
+  should be prioritized under the updated goal.
+
+Self-audit:
+- Commits this session so far: 0 pushed, 1 pending.
+- Concrete progress category: infra, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-21T01:35:00+09:00
 
 - Selected B6, a contamination-free novel combinatorics benchmark from Bonamy,

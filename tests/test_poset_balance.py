@@ -76,6 +76,30 @@ class PosetBalanceTest(unittest.TestCase):
         self.assertEqual(["a", "b"], normal["minimal_elements"])
         self.assertEqual(["c"], normal["maximal_elements"])
 
+    def test_named_case_reports_named_pair_counts(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            case = Path(temp_dir) / "case.json"
+            output = Path(temp_dir) / "report.json"
+            case.write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b", "c"],
+                        "cover_relations": ["a<c", "b<c"],
+                        "check_pairs": [["a", "b"]],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(["named-case", str(case), "--output", str(output)])
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(2, payload["linear_extensions"])
+            self.assertEqual(["a<c", "b<c"], payload["cover_relations"])
+            self.assertEqual([1, 2], payload["check_pairs"][0]["first_before_second"])
+            self.assertEqual([1, 2], payload["check_pairs"][0]["second_before_first"])
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"

@@ -432,6 +432,52 @@ def load_poset(path: Path) -> Poset:
     return make_poset(n, relations)
 
 
+def parse_named_relation(raw: str, index_by_label: dict[str, int]) -> Relation:
+    if "<" not in raw:
+        raise ValueError(f"named relation must use '<': {raw!r}")
+    lower, upper = (part.strip() for part in raw.split("<", 1))
+    if lower not in index_by_label or upper not in index_by_label:
+        raise ValueError(f"named relation has unknown label: {raw!r}")
+    return index_by_label[lower], index_by_label[upper]
+
+
+def load_named_case(path: Path) -> tuple[Poset, list[str], list[list[str]]]:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError("named case file must be a JSON object")
+    labels = payload.get("labels")
+    if not isinstance(labels, list) or not all(
+        isinstance(label, str) for label in labels
+    ):
+        raise ValueError("named case file requires string labels")
+    if len(set(labels)) != len(labels):
+        raise ValueError("named case labels must be unique")
+    index_by_label = {label: index for index, label in enumerate(labels)}
+    raw_relations = payload.get("cover_relations", payload.get("relations", []))
+    if not isinstance(raw_relations, list) or not all(
+        isinstance(relation, str) for relation in raw_relations
+    ):
+        raise ValueError("named case file requires string cover_relations")
+    raw_pairs = payload.get("check_pairs", [])
+    if not isinstance(raw_pairs, list):
+        raise ValueError("named case file check_pairs must be a list")
+    check_pairs: list[list[str]] = []
+    for pair in raw_pairs:
+        if (
+            not isinstance(pair, list)
+            or len(pair) != 2
+            or not all(isinstance(item, str) for item in pair)
+        ):
+            raise ValueError(f"invalid named check pair: {pair!r}")
+        if pair[0] not in index_by_label or pair[1] not in index_by_label:
+            raise ValueError(f"named check pair has unknown label: {pair!r}")
+        check_pairs.append(pair)
+    relations = [
+        parse_named_relation(relation, index_by_label) for relation in raw_relations
+    ]
+    return make_poset(len(labels), relations), labels, check_pairs
+
+
 def all_labeled_posets(n: int) -> list[Poset]:
     """Enumerate labeled posets by orienting each unordered pair or leaving it free.
 
@@ -517,6 +563,55 @@ def all_unlabeled_posets(n: int) -> list[Poset]:
 
 def analyze_command(args: argparse.Namespace) -> int:
     print(json.dumps(balance_report(load_poset(args.poset)), indent=2, sort_keys=True))
+    return 0
+
+
+def named_case_command(args: argparse.Namespace) -> int:
+    poset, labels, check_pairs = load_named_case(args.case)
+    index_by_label = {label: index for index, label in enumerate(labels)}
+    total = count_linear_extensions(poset)
+    pair_reports: list[dict[str, object]] = []
+    for first, second in check_pairs:
+        first_index = index_by_label[first]
+        second_index = index_by_label[second]
+        first_before_second = count_extensions_with_order(
+            poset,
+            first_index,
+            second_index,
+        )
+        second_before_first = total - first_before_second
+        lower = min(first_before_second, second_before_first)
+        pair_reports.append(
+            {
+                "pair": [first, second],
+                "first_before_second": [
+                    first_before_second,
+                    total,
+                ],
+                "second_before_first": [
+                    second_before_first,
+                    total,
+                ],
+                "lower_orientation_probability": [lower, total],
+                "balanced": 3 * first_before_second <= 2 * total
+                and 3 * first_before_second >= total
+                or 3 * second_before_first <= 2 * total
+                and 3 * second_before_first >= total,
+            }
+        )
+    payload = {
+        "labels": labels,
+        "linear_extensions": total,
+        "width": width(poset),
+        "height": height(poset),
+        "cover_relations": named_edges(covers(poset), dict(enumerate(labels))),
+        "relations": named_edges(poset.less, dict(enumerate(labels))),
+        "check_pairs": pair_reports,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
     return 0
 
 
@@ -912,6 +1007,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     analyze_parser = subparsers.add_parser("analyze")
     analyze_parser.add_argument("poset", type=Path)
     analyze_parser.set_defaults(func=analyze_command)
+
+    named_case_parser = subparsers.add_parser("named-case")
+    named_case_parser.add_argument("case", type=Path)
+    named_case_parser.add_argument("--output", type=Path)
+    named_case_parser.set_defaults(func=named_case_command)
 
     exhaustive_parser = subparsers.add_parser("exhaustive-small")
     exhaustive_parser.add_argument("--max-n", type=int, default=5)

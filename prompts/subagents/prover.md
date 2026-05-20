@@ -18,10 +18,13 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 4. If the lemma claims finite-list completeness or residue-class exhaustion,
    consult `skills/coverage-systems/SKILL.md` and include the coverage
    certificate or uncovered-class gap in `proof.fml`.
-5. Attempt the proof in WN inside `proof.fml`.
-6. Mark every unclosed step with `[GAP: <missing> | suffices: <what would close>]`.
-7. If a contradiction or counterexample is found, write it precisely and set status `FALSIFIED`.
-8. Write `return.md` with status `PROVED`, `GAP`, or `FALSIFIED` and the artifact path.
+5. If the lemma has small boundary cases or equality endpoints that could
+   refute the statement, consult `skills/sanity-small-cases/SKILL.md` and
+   record the finite probe before attempting the general proof.
+6. Attempt the proof in WN inside `proof.fml`.
+7. Mark every unclosed step with `[GAP: <missing> | suffices: <what would close>]`.
+8. If a contradiction or counterexample is found, write it precisely and set status `FALSIFIED`.
+9. Write `return.md` with status `PROVED`, `GAP`, or `FALSIFIED` and the artifact path.
 
 [OUTPUTS]
 1. `proof.fml`.

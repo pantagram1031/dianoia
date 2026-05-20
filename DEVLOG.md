@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-20T20:20:00+09:00
+
+- Added fourth Phase 5 skill: `skills/sanity-small-cases/SKILL.md`.
+- Updated `skills/INDEX.md`.
+- Wired the skill into `prompts/subagents/sanity-checker.md` and
+  `prompts/subagents/prover.md`.
+- Updated ROADMAP/NEXT_SESSION skill counts.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: skill.
+- Failed-session streak: 0.
+
 ## 2026-05-20T20:12:00+09:00
 
 - Added third Phase 5 skill: `skills/arxiv-fetch/SKILL.md`.

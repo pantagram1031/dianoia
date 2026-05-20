@@ -1,0 +1,758 @@
+{
+  "applies": true,
+  "depth": 5,
+  "forced_first_total": 30,
+  "forced_second_total": 40,
+  "lemma_schema": [
+    "Partition linear extensions by the listed initial paths.",
+    "For each path, prove the terminal count by a direct residual-poset count.",
+    "Sum the terminal counts by forced orientation.",
+    "Use the lower orientation total as the certified probability lower bound."
+  ],
+  "lower_orientation": "first_before_second",
+  "lower_probability": [
+    30,
+    70
+  ],
+  "lower_total": 30,
+  "mechanism_type": "forced-block",
+  "obligations": [
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "e",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d",
+        "f",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "d",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "e",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "b",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "b",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "f",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "f",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "b",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "b",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "d",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "d",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "g",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "g",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b",
+        "f",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "b",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "b",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "e",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "e",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "f",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "f",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "f",
+        "b",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "f",
+        "c",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "f",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "d",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "e",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d",
+        "f",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ]
+    }
+  ],
+  "pair": [
+    "b",
+    "d"
+  ],
+  "root_split": {
+    "first_before_second": 30,
+    "second_before_first": 40,
+    "total": 70
+  },
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\u6-form-1-recurrence-depth5.json",
+  "split_counts": {
+    "0:1": 8,
+    "0:2": 16,
+    "1:0": 12,
+    "2:0": 9
+  },
+  "upper_total": 40
+}

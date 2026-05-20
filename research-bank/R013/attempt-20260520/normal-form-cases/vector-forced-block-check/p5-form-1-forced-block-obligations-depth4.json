@@ -1,0 +1,310 @@
+{
+  "applies": true,
+  "depth": 4,
+  "forced_first_total": 14,
+  "forced_second_total": 21,
+  "lemma_schema": [
+    "Partition linear extensions by the listed initial paths.",
+    "For each path, prove the terminal count by a direct residual-poset count.",
+    "Sum the terminal counts by forced orientation.",
+    "Use the lower orientation total as the certified probability lower bound."
+  ],
+  "lower_orientation": "first_before_second",
+  "lower_probability": [
+    14,
+    35
+  ],
+  "lower_total": 14,
+  "mechanism_type": "forced-block",
+  "obligations": [
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "f",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "f",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": false,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 1,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "g"
+      ]
+    },
+    {
+      "count": 2,
+      "counts_toward_lower_orientation": true,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "f",
+        "g"
+      ]
+    }
+  ],
+  "pair": [
+    "b",
+    "d"
+  ],
+  "root_split": {
+    "first_before_second": 14,
+    "second_before_first": 21,
+    "total": 35
+  },
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p5-form-1-recurrence-depth4.json",
+  "split_counts": {
+    "0:2": 3,
+    "0:3": 5,
+    "1:0": 4,
+    "2:0": 5
+  },
+  "upper_total": 21
+}

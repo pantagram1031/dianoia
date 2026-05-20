@@ -1,0 +1,806 @@
+{
+  "balanced_unseen_leaf_count": 0,
+  "depth": 5,
+  "forced_first_total": 30,
+  "forced_second_total": 40,
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "leaf_count": 45,
+  "leaves": [
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "e",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d",
+        "f",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "d",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "e",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "b",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "b",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "f",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d",
+        "f",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "b",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "b",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "d",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "d",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "g",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "e",
+        "g",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b",
+        "f",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "b",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "b",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "e",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "e",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "f"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "f",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c",
+        "f",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "f",
+        "b",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "f",
+        "c",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 1,
+      "total": 1
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "f",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "g"
+      ],
+      "second_before_first": 2,
+      "total": 2
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "d",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "d",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "e",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c",
+        "e",
+        "g"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "f"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 2,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d",
+        "c",
+        "e"
+      ],
+      "remaining_after_choice": [
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 2
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d",
+        "c",
+        "f"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    },
+    {
+      "first_before_second": 1,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d",
+        "f",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "e",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 1
+    }
+  ],
+  "mechanism_type": "forced-block",
+  "pair": [
+    "b",
+    "d"
+  ],
+  "root_first_before_second": 30,
+  "root_second_before_first": 40,
+  "root_total": 70,
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\u6-form-1-recurrence-depth5.json",
+  "split_counts": {
+    "0:1": 8,
+    "0:2": 16,
+    "1:0": 12,
+    "2:0": 9
+  },
+  "state_counts": {
+    "first_before_second": 21,
+    "second_before_first": 24
+  },
+  "unbalanced_unseen_leaf_count": 0,
+  "unseen_first_total": 0,
+  "unseen_second_total": 0,
+  "unseen_total": 0
+}

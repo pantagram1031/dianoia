@@ -1,0 +1,29 @@
+{
+  "case": "sixth-matrix-bucket",
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "b<e",
+    "b<f",
+    "c<g",
+    "d<e",
+    "d<f",
+    "e<g"
+  ],
+  "check_pairs": [
+    [
+      "e",
+      "c"
+    ]
+  ]
+}

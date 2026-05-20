@@ -1,5 +1,17 @@
 # Devlog
 
+## 2026-05-20T18:31:00+09:00
+
+- Wrote `DIAGNOSIS.md` with ranked BLOCKING/MAJOR/MINOR root causes.
+- Root cause R1: first-message routing lacks a closed-active guard before active-unit fallback.
+- Root cause R2: `prompts/prove.md` only protects fresh instantiation after it is invoked; it lacks stale-active supersession handling.
+- Confirmed `prompts/resume.md` has useful closed-problem guards, but they do not protect new statements routed elsewhere.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: fix/diagnosis.
+- Failed-session streak: 0.
+
 ## 2026-05-20T18:18:00+09:00
 
 - Wrote `capability-test/VERIFY_PRIOR.md`.

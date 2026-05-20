@@ -1,14 +1,16 @@
 # Next Session
 
-Resume Phase 1.
+Resume Phase 2.
 
 Immediate next step:
-Write DIAGNOSIS.md with ranked BLOCKING/MAJOR/MINOR root causes linked to
-file:line evidence.
+Implement the first DIAGNOSIS.md patch in severity order.
 
-Required investigations:
-- AGENTS.md routing under stale `.active`.
-- `prompts/prove.md` preconditions.
-- `prompts/resume.md` guard behavior from v4 patches.
-- Behavior when `.active` points to a `halt_flag=true` problem.
-- Behavior when `.active` is missing or corrupted.
+First patch target:
+- `prompts/prove.md`: add stale-active/closed-active handling, supersession
+  evidence, and postconditions that make the fake `halt_flag=true` smoke test
+  deterministic.
+
+Important:
+- `AGENTS.md` is constitutional. If the required smoke test cannot pass without
+  changing `AGENTS.md`, write `APPROVED_CHANGES.md` and `QUESTIONS.md`, then
+  halt BLOCKED_ON_USER.

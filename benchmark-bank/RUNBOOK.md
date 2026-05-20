@@ -60,6 +60,9 @@ answer. For B6 and later, each numbered item in `## Three Differences` must
 include both `artifact:` and `quote:` fields so `tools/verify_dianoia_state.py`
 can reject unsupported verdicts.
 
+The `## Verdict` value in `COMPARISON.md` must match the benchmark table's
+head-to-head verdict exactly.
+
 ## Token Accounting
 
 B1-B5 are allowed to retain `UNVERIFIED` token accounting as historical

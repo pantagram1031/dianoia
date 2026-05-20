@@ -103,6 +103,10 @@ VALUE_ADDED
 """
 
 
+def structured_comparison_text_with_verdict(verdict: str) -> str:
+    return structured_comparison_text().replace("VALUE_ADDED", verdict, 1)
+
+
 def run_text(run_class: str, known_weaknesses: str) -> str:
     return f"""# Run
 
@@ -334,6 +338,27 @@ class BenchmarkManifestVerifierTest(unittest.TestCase):
 
         self.assertFalse(
             any("VALUE_ADDED comparison difference" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_benchmark_verdict_must_match_comparison_verdict(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(temp_root, run_text("full-fresh", "none"))
+                write(
+                    temp_root / "benchmark-bank" / "B6" / "COMPARISON.md",
+                    structured_comparison_text_with_verdict("DEGRADED"),
+                )
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertTrue(
+            any("BENCHMARK verdict VALUE_ADDED does not match COMPARISON verdict DEGRADED" in item for item in result.fail),
             result.fail,
         )
 

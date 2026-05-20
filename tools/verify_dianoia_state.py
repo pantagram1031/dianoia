@@ -80,6 +80,14 @@ def section_body(text: str, heading: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def comparison_verdict(text: str) -> str:
+    body = section_body(text, "Verdict")
+    for verdict in ("VALUE_ADDED", "NEUTRAL", "DEGRADED"):
+        if re.search(rf"\b{verdict}\b", body):
+            return verdict
+    return ""
+
+
 def markdown_bullet_field(text: str, name: str) -> str:
     pattern = re.compile(rf"^\s*[-*]\s+{re.escape(name)}:\s*(.*)$", re.MULTILINE)
     match = pattern.search(text)
@@ -150,6 +158,13 @@ def check_benchmarks(result: CheckResult) -> None:
 
         source_text = read_text(source)
         comparison_text = read_text(comparison)
+        declared_verdict = comparison_verdict(comparison_text)
+        if not declared_verdict:
+            result.add_fail(f"{bid}: COMPARISON.md missing verdict")
+        elif declared_verdict != row["verdict"]:
+            result.add_fail(
+                f"{bid}: BENCHMARK verdict {row['verdict']} does not match COMPARISON verdict {declared_verdict}"
+            )
         for required in ("## Metadata", "## Modification", "## Area", "## Artifacts"):
             if required not in source_text:
                 result.add_fail(f"{bid}: SOURCE.md missing {required}")

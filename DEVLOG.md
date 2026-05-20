@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-21T01:05:00+09:00
+
+- Added a benchmark verdict consistency regression to
+  `tests/test_verify_dianoia_state.py`.
+- Extended `tools/verify_dianoia_state.py` to parse `COMPARISON.md`
+  `## Verdict` and fail if it disagrees with the `BENCHMARK.md` row verdict.
+- Updated `benchmark-bank/RUNBOOK.md`, `README.md`, and `NEXT_SESSION.md` with
+  the consistency rule.
+- Recorded smoke evidence in
+  `capability-test/BENCHMARK-VERDICT-CONSISTENCY-VERIFY-20260521.md`.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: benchmark, test.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:57:00+09:00
 
 - Added a B6+ source artifact path regression to

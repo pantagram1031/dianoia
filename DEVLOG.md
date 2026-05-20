@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-20T22:06:00+09:00
+
+- Added Phase 4 benchmark B5 in algebra from Caprace-Janssens-Thilmany 2026,
+  arXiv:2601.15266, Theorem 1.2 and Corollary 1.3.
+- Created raw baseline artifacts in
+  `C:\Users\SAMSUNG\Downloads\raw-attempt-6`.
+- Created dianoia-run artifacts in
+  `C:\Users\SAMSUNG\Downloads\dianoia-run\problems\b5-center-preserving-representations`.
+- Appended B5 to `BENCHMARK.md` as VALUE_ADDED and updated docs/state files.
+- Marked Phase 4 complete in `ROADMAP.md`.
+
+Self-audit:
+- Commits this session so far: 8 pushed, 1 pending.
+- Concrete progress category: benchmark.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:48:00+09:00
 
 - Added Phase 4 benchmark B4 in probability from Jana-Rani 2026,

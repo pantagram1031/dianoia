@@ -20,7 +20,7 @@ claim ledgers, adversarial review, specialist subagents, skills, and connectors.
 
 ## Current Benchmark Summary
 
-`BENCHMARK.md` currently has 4 accepted controlled comparisons:
+`BENCHMARK.md` currently has 5 accepted controlled comparisons:
 
 | ID | area | verdict | source |
 |----|------|---------|--------|
@@ -28,9 +28,9 @@ claim ledgers, adversarial review, specialist subagents, skills, and connectors.
 | B2 | combinatorics | VALUE_ADDED | Bai-Berczi 2026, arXiv:2604.11326 |
 | B3 | geometry | VALUE_ADDED | Samarakkody 2026, arXiv:2603.14663 |
 | B4 | probability | VALUE_ADDED | Jana-Rani 2026, arXiv:2604.26499 |
+| B5 | algebra | VALUE_ADDED | Caprace-Janssens-Thilmany 2026, arXiv:2601.15266 |
 
-MASTERPIECE is not complete. The benchmark bank still needs 1 more VALUE_ADDED
-rows; the distinct-area requirement is already satisfied.
+The benchmark and distinct-area requirements for MASTERPIECE are satisfied.
 
 ## Architecture
 

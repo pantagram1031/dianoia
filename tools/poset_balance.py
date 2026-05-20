@@ -1560,11 +1560,13 @@ def bucket_members_command(args: argparse.Namespace) -> int:
     return 0
 
 
-def cover_matrix_forms_command(args: argparse.Namespace) -> int:
-    shape = parse_rank_shape(args.rank_shape)
-    if shape is None:
-        raise ValueError("cover-matrix-forms requires --rank-shape")
-    matrix = parse_cover_matrix(args.cover_matrix)
+def cover_matrix_form_records(
+    shape: tuple[int, ...],
+    matrix: tuple[tuple[int, ...], ...],
+    *,
+    only_width: int | None = None,
+    only_height: int | None = None,
+) -> list[dict[str, object]]:
     if len(matrix) != len(shape):
         raise ValueError("cover matrix dimensions must match rank shape")
     layers = layered_items_from_shape(shape)
@@ -1601,12 +1603,13 @@ def cover_matrix_forms_command(args: argparse.Namespace) -> int:
         actual_covers = set(covers(poset))
         if actual_covers != set(relation_seed):
             continue
-        if args.width is not None and width(poset) != args.width:
+        if only_width is not None and width(poset) != only_width:
             continue
-        if args.height is not None and height(poset) != args.height:
+        if only_height is not None and height(poset) != only_height:
             continue
         normal = rank_normal_form(poset)
         key = tuple(normal["cover_relations"])
+        report = balance_report(poset)
         forms.setdefault(
             key,
             {
@@ -1616,11 +1619,24 @@ def cover_matrix_forms_command(args: argparse.Namespace) -> int:
                 "linear_extensions": count_linear_extensions(poset),
                 "width": width(poset),
                 "height": height(poset),
+                "best_pair": report["best_pair"],
                 "rank_normal_form": normal,
             },
         )
+    return [forms[key] for key in sorted(forms)]
 
-    records = [forms[key] for key in sorted(forms)]
+
+def cover_matrix_forms_command(args: argparse.Namespace) -> int:
+    shape = parse_rank_shape(args.rank_shape)
+    if shape is None:
+        raise ValueError("cover-matrix-forms requires --rank-shape")
+    matrix = parse_cover_matrix(args.cover_matrix)
+    records = cover_matrix_form_records(
+        shape,
+        matrix,
+        only_width=args.width,
+        only_height=args.height,
+    )
     payload = {
         "rank_shape": list(shape),
         "cover_matrix": [list(row) for row in matrix],
@@ -1633,6 +1649,96 @@ def cover_matrix_forms_command(args: argparse.Namespace) -> int:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
+def cover_matrix_from_vectors(
+    rank_count: int,
+    adjacent: Sequence[int],
+    skip: Sequence[int],
+) -> tuple[tuple[int, ...], ...]:
+    if len(adjacent) != rank_count - 1:
+        raise ValueError("adjacent vector length must be rank_count - 1")
+    expected_skip = (rank_count - 1) * (rank_count - 2) // 2
+    if len(skip) != expected_skip:
+        raise ValueError("skip vector has wrong length for rank_count")
+    matrix = [[0] * rank_count for _ in range(rank_count)]
+    for rank, value in enumerate(adjacent):
+        matrix[rank][rank + 1] = int(value)
+    skip_index = 0
+    for lower in range(rank_count):
+        for upper in range(lower + 2, rank_count):
+            matrix[lower][upper] = int(skip[skip_index])
+            skip_index += 1
+    return tuple(tuple(row) for row in matrix)
+
+
+def matrix_vector_form_ledger_command(args: argparse.Namespace) -> int:
+    shape = parse_rank_shape(args.rank_shape)
+    if shape is None:
+        raise ValueError("matrix-vector-form-ledger requires --rank-shape")
+    payload = json.loads(args.frontier.read_text(encoding="utf-8"))
+    records = list(payload["processed_classes"]) + list(payload["unprocessed_classes"])
+    by_id = {str(record["id"]): record for record in records}
+    requested_ids = [item.strip() for item in args.ids.split(",") if item.strip()]
+    class_ledgers: list[dict[str, object]] = []
+    for item_id in requested_ids:
+        if item_id not in by_id:
+            raise ValueError(f"class id {item_id!r} is not in frontier artifact")
+        record = by_id[item_id]
+        adjacent = [int(value) for value in record["adjacent_vector"]]
+        skip = [int(value) for value in record["skip_vector"]]
+        matrix = cover_matrix_from_vectors(len(shape), adjacent, skip)
+        forms = cover_matrix_form_records(
+            shape,
+            matrix,
+            only_width=args.width,
+            only_height=args.height,
+        )
+        min_lower: list[int] | None = None
+        for form in forms:
+            best_pair = form.get("best_pair")
+            if not isinstance(best_pair, dict):
+                continue
+            lower = best_pair.get("lower_orientation_probability")
+            if not isinstance(lower, list):
+                continue
+            if min_lower is None or Fraction(*lower) < Fraction(*min_lower):
+                min_lower = [int(lower[0]), int(lower[1])]
+        state = (
+            "processed"
+            if int(record.get("processed_bucket_count", 0)) > 0
+            else "unprocessed"
+        )
+        class_ledgers.append(
+            {
+                "id": item_id,
+                "state": state,
+                "adjacent_vector": adjacent,
+                "skip_vector": skip,
+                "cover_matrix": [list(row) for row in matrix],
+                "source_min_lower_orientation_probability": record[
+                    "min_lower_orientation_probability"
+                ],
+                "ledger_min_lower_orientation_probability": min_lower,
+                "form_count": len(forms),
+                "forms": forms,
+            }
+        )
+    out = {
+        "source": str(args.frontier),
+        "rank_shape": list(shape),
+        "width": args.width,
+        "height": args.height,
+        "ids": requested_ids,
+        "class_count": len(class_ledgers),
+        "total_form_count": sum(int(item["form_count"]) for item in class_ledgers),
+        "classes": class_ledgers,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
     return 0
 
 
@@ -1737,6 +1843,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     matrix_forms_parser.add_argument("--height", type=int)
     matrix_forms_parser.add_argument("--output", type=Path)
     matrix_forms_parser.set_defaults(func=cover_matrix_forms_command)
+
+    vector_forms_parser = subparsers.add_parser("matrix-vector-form-ledger")
+    vector_forms_parser.add_argument("frontier", type=Path)
+    vector_forms_parser.add_argument("--ids", required=True)
+    vector_forms_parser.add_argument("--rank-shape", required=True)
+    vector_forms_parser.add_argument("--width", type=int)
+    vector_forms_parser.add_argument("--height", type=int)
+    vector_forms_parser.add_argument("--output", type=Path)
+    vector_forms_parser.set_defaults(func=matrix_vector_form_ledger_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

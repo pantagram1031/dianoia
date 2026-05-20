@@ -650,6 +650,52 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(["P1"], deltas[(1, 0, 0)]["processed_ids"])
             self.assertEqual(["U2"], deltas[(1, 0, 1)]["unprocessed_ids"])
 
+    def test_matrix_vector_form_ledger_reconstructs_cover_matrix(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            frontier = Path(temp_dir) / "frontier.json"
+            output = Path(temp_dir) / "forms.json"
+            frontier.write_text(
+                json.dumps(
+                    {
+                        "processed_classes": [],
+                        "unprocessed_classes": [
+                            {
+                                "id": "U1",
+                                "adjacent_vector": [2, 1],
+                                "skip_vector": [0],
+                                "unprocessed_bucket_count": 1,
+                                "min_lower_orientation_probability": [1, 2],
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-vector-form-ledger",
+                        str(frontier),
+                        "--ids",
+                        "U1",
+                        "--rank-shape",
+                        "2,1,1",
+                        "--width",
+                        "2",
+                        "--height",
+                        "3",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(1, payload["class_count"])
+            self.assertEqual([[0, 2, 0], [0, 0, 1], [0, 0, 0]], payload["classes"][0]["cover_matrix"])
+            self.assertGreaterEqual(payload["classes"][0]["form_count"], 1)
+            self.assertIn("best_pair", payload["classes"][0]["forms"][0])
+
 
 if __name__ == "__main__":
     unittest.main()

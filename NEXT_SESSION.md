@@ -28,3 +28,6 @@ Important:
 - Current continuous-improvement priority: add reproducibility tooling/runbook
   so future B6+ rows prefer full fresh raw and dianoia runs and clearly label
   weaker evidence.
+- Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
+  smoke is `capability-test/STATE-VERIFY-20260520.md`; warnings are expected
+  for UNVERIFIED token accounting in B1-B5.

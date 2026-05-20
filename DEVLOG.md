@@ -1,5 +1,19 @@
 # Devlog
 
+## 2026-05-20T22:42:00+09:00
+
+- Added `tools/verify_dianoia_state.py` to check benchmark rows, skill
+  subagent references, connector wiring, and current docs/state files.
+- Ran the verifier successfully and recorded output in
+  `capability-test/STATE-VERIFY-20260520.md`.
+- Updated README/NEXT_SESSION with the verifier command and known token
+  accounting warnings.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:32:00+09:00
 
 - Reframed the former MASTERPIECE artifact as baseline evidence rather than a

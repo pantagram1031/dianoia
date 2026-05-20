@@ -13,6 +13,22 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T22:20:00+09:00
+
+- Closed the R020 replay gap by decoding Flammenkamp's standard notation for
+  `N=48`, `N=50`, and `N=52`.
+- Added local source snapshots, generated certificates, and verifier outputs
+  under `research-bank/R020/certificates/flammenkamp-n48*`,
+  `flammenkamp-n50*`, and `flammenkamp-n52*`.
+- Fresh replay command:
+  `python tools/no_three_in_line_frontier.py verify-dir research-bank/R020/certificates`
+  returned `ok: true` for all 14 certificates, covering every `N=47` through
+  `N=60`.
+- Alignment note: this remains gate-building, not a contribution. The next
+  R020 step must be an actual search/proof attempt or a switch to another
+  rank-A candidate if R020 is becoming solver-infrastructure work.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T22:07:00+09:00
 
 - Extended R020 replay from one certificate to a table-derived batch.

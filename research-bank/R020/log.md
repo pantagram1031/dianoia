@@ -39,3 +39,21 @@ candidate_id: R020
   yet been imported.
 - Claim discipline: still no `CLAIMS.md` row; this is replay coverage and
   verification infrastructure, not a new bound or construction.
+
+## 2026-05-20 P11 Replay Gap Closure
+
+- Added a tested Flammenkamp standard-notation decoder to
+  `tools/no_three_in_line_frontier.py`.
+- Imported and replayed Flammenkamp's encoded `rot4` configurations for
+  `N=48`, `N=50`, and `N=52`.
+- Stored source snapshots, generated JSON certificates, and verifier outputs:
+  `research-bank/R020/certificates/flammenkamp-n48*`,
+  `research-bank/R020/certificates/flammenkamp-n50*`, and
+  `research-bank/R020/certificates/flammenkamp-n52*`.
+- Batch replay now verifies all `N=47` through `N=60` certificates with
+  `ok: true`:
+  `python tools/no_three_in_line_frontier.py verify-dir research-bank/R020/certificates`.
+- Verdict remains `PARTIAL-PROGRESS`. This closes the known-certificate replay
+  gate; the next R020 work must attempt new mathematical movement, not more
+  source-format replay.
+- Claim discipline: still no `CLAIMS.md` row; no new result has been produced.

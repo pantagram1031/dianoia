@@ -1,5 +1,28 @@
 # Devlog
 
+## 2026-05-20T22:20:00+09:00
+
+- Continued P11 on `R020` no-three-in-line after user challenged overfitting
+  risk; preserved the verifier as an acceptance gate, not as the research
+  strategy.
+- Added and tested Flammenkamp standard-notation decoding in
+  `tools/no_three_in_line_frontier.py`.
+- Imported Flammenkamp source snapshots for `N=48`, `N=50`, and `N=52`;
+  generated JSON certificates and verification outputs under
+  `research-bank/R020/certificates/`.
+- Verified the completed local frontier replay:
+  `python tools/no_three_in_line_frontier.py verify-dir research-bank/R020/certificates`
+  returned `ok: true` for all 14 certificates covering `N=47` through `N=60`.
+- Updated R020 persistent state to require the next unit to be actual
+  mathematical attempt work rather than further replay expansion.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row because no new
+  mathematical result exists.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:07:00+09:00
 
 - Continued P11 on `R020` no-three-in-line.

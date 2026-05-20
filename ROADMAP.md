@@ -17,7 +17,7 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 8 | DEEPER RESEARCH | GATED | Requires 5 contamination-free novel VALUE_ADDED B6+ rows across 3 areas |
 | 9 | RESEARCH INFRA | COMPLETE | `connectors/lean/`, enhanced `connectors/arxiv/`, openness/novelty skills, research-state verifier, and candidate templates |
 | 10 | CURATION | COMPLETE | `research-bank/INDEX.md` records 20 `OPEN-VERIFIED` candidates across 10 areas |
-| 11 | ATTEMPTS | IN_PROGRESS | R020 recorded `PARTIAL-PROGRESS` with batch replay of Prellberg table certificates |
+| 11 | ATTEMPTS | IN_PROGRESS | R020 recorded `PARTIAL-PROGRESS` with replayed `N=47` through `N=60` certificates |
 | 12 | VERIFICATION GATE | PENDING | Mandatory for any SOLVED-CLAIM |
 | 13 | INTERMEDIATE WINS | PENDING | Draft note plus BLOCKED_ON_USER before any external claim |
 
@@ -34,7 +34,7 @@ for external mathematician review.
 |-------|--------|---------------|
 | P9 infra | COMPLETE | `connectors/lean/`, enhanced arXiv lookup, openness skill, adversarial novelty skill, `tools/verify_research_state.py`, `templates/research_candidate/` |
 | P10 curation | COMPLETE | `research-bank/INDEX.md` with 20 verified-open candidates across 10 areas |
-| P11 attempts | IN_PROGRESS | Continue R020 replay/search using `tools/no_three_in_line_frontier.py` and `tools/no_three_in_line_verify.py` |
+| P11 attempts | IN_PROGRESS | Use the completed R020 replay gate for an actual search/proof attempt, or switch rank-A candidate |
 | P12 verification | PENDING | `CLAIMS.md` rows with gates, confidence, and downgrade/blocked status |
 | P13 notes | PENDING | `research-bank/<id>/draft-note.md` for any intermediate win |
 
@@ -67,12 +67,11 @@ P11 ATTEMPTS. P10 curation is complete: `research-bank/INDEX.md` records 20
 `OPEN-VERIFIED` candidates across 10 areas, plus one `OPEN-WEAK` warm-up
 candidate (`research-bank/R001/`). R020 attempt work remains
 `PARTIAL-PROGRESS`: dianoia now has solver-independent no-three-in-line
-certificate verification plus batch replay of all Prellberg `Table 1.txt`
-entries available in the linked source (`N=47`, `N=49`, `N=51`, and `N=53`
-through `N=60`).
+certificate verification plus batch replay of every published certificate in
+the local frontier window `N=47` through `N=60`.
 
-Next R020 target: close the replay gap for `N=48`, `N=50`, and `N=52` from the
-Flammenkamp source referenced by Prellberg, then either attempt a bounded
-search beyond the frontier or switch to another rank A candidate
-(`research-bank/R013/` or `research-bank/R017/`) if the R020 search setup
-becomes too solver-dependent for a clean session.
+Next P11 target: stop expanding replay and run an actual mathematical attempt.
+Either use the R020 verifier as the acceptance gate for a bounded
+search/normalization experiment, or switch to another rank A candidate
+(`research-bank/R013/` or `research-bank/R017/`) if R020's next step is mostly
+external solver engineering rather than dianoia-level mathematical reasoning.

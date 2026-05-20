@@ -7,13 +7,8 @@ Continue P11 ATTEMPTS. P10 is complete; R020 has produced
 `PARTIAL-PROGRESS`, not a solved claim.
 
 Recommended next work:
-Continue `research-bank/R020/` no-three-in-line by closing the replay gap for
-`N=48`, `N=50`, and `N=52`, which Prellberg's `Table 1.txt` says are available
-from Flammenkamp's earlier page:
-
-`https://wwwhomes.uni-bielefeld.de/achim/no3in/readme.html`
-
-After that, choose one:
+Do not keep expanding R020 replay as a substitute for mathematics. The replay
+gate for `N=47` through `N=60` is now closed and verified. Choose one:
 
 - run a bounded search/normalization experiment toward `N=61`, or
 - switch to another rank A candidate (`R013` 1/3-2/3 posets or `R017`
@@ -35,6 +30,8 @@ Current state:
   - `research-bank/R020/certificates/prellberg-frontier-summary.json`
   - table-derived certificates and verification JSON for `N=47`, `N=49`,
     `N=51`, and `N=53` through `N=60`
+  - Flammenkamp source snapshots, certificates, and verification JSON for
+    `N=48`, `N=50`, and `N=52`
   - `research-bank/R020/attempt-20260520/`
 - `tools/verify_all.py` now runs:
   `python tools/no_three_in_line_frontier.py verify-dir research-bank/R020/certificates`.

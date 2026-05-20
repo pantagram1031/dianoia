@@ -100,6 +100,32 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual([1, 2], payload["check_pairs"][0]["first_before_second"])
             self.assertEqual([1, 2], payload["check_pairs"][0]["second_before_first"])
 
+    def test_named_case_recurrence_reports_root_split(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            case = Path(temp_dir) / "case.json"
+            output = Path(temp_dir) / "trace.json"
+            case.write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b", "c"],
+                        "cover_relations": ["a<c", "b<c"],
+                        "check_pairs": [["a", "b"]],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    ["named-case-recurrence", str(case), "--output", str(output)]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(2, payload["linear_extensions"])
+            self.assertEqual(1, payload["trace"]["first_before_second"])
+            self.assertEqual(1, payload["trace"]["second_before_first"])
+            self.assertEqual(["a", "b"], [item["choose"] for item in payload["trace"]["available"]])
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"

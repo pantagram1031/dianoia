@@ -114,6 +114,88 @@ def count_extensions_with_order(poset: Poset, before: int, after: int) -> int:
     return count(0)
 
 
+def extension_recurrence_trace(
+    poset: Poset,
+    labels: Sequence[str],
+    first: int,
+    second: int,
+) -> dict[str, object]:
+    prerequisites = poset.covers_mask()
+    full = (1 << poset.n) - 1
+
+    @cache
+    def solve(placed: int, relation_state: int) -> tuple[int, int]:
+        if placed == full:
+            if relation_state == 1:
+                return 1, 0
+            if relation_state == 2:
+                return 0, 1
+            raise ValueError("pair state unresolved at complete extension")
+        first_total = 0
+        second_total = 0
+        for item in range(poset.n):
+            bit = 1 << item
+            if placed & bit:
+                continue
+            if prerequisites[item] & ~placed:
+                continue
+            next_state = relation_state
+            if item == first and relation_state == 0:
+                next_state = 1
+            elif item == second and relation_state == 0:
+                next_state = 2
+            left, right = solve(placed | bit, next_state)
+            first_total += left
+            second_total += right
+        return first_total, second_total
+
+    @cache
+    def build(placed: int, relation_state: int) -> dict[str, object]:
+        first_total, second_total = solve(placed, relation_state)
+        available = []
+        for item in range(poset.n):
+            bit = 1 << item
+            if placed & bit:
+                continue
+            if prerequisites[item] & ~placed:
+                continue
+            next_state = relation_state
+            if item == first and relation_state == 0:
+                next_state = 1
+            elif item == second and relation_state == 0:
+                next_state = 2
+            child_first, child_second = solve(placed | bit, next_state)
+            available.append(
+                {
+                    "choose": labels[item],
+                    "remaining_after_choice": [
+                        labels[index]
+                        for index in range(poset.n)
+                        if not (placed | bit) & (1 << index)
+                    ],
+                    "pair_state_after_choice": ["unseen", "first_before_second", "second_before_first"][
+                        next_state
+                    ],
+                    "first_before_second": child_first,
+                    "second_before_first": child_second,
+                }
+            )
+        return {
+            "placed": [
+                labels[index] for index in range(poset.n) if placed & (1 << index)
+            ],
+            "pair_state": ["unseen", "first_before_second", "second_before_first"][
+                relation_state
+            ],
+            "first_before_second": first_total,
+            "second_before_first": second_total,
+            "available": available,
+        }
+
+    root = build(0, 0)
+    return root
+
+
 def width(poset: Poset) -> int:
     best = 0
     for mask in range(1, 1 << poset.n):
@@ -652,6 +734,33 @@ def named_case_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def named_case_recurrence_command(args: argparse.Namespace) -> int:
+    poset, labels, check_pairs = load_named_case(args.case)
+    if len(check_pairs) != 1:
+        raise ValueError("named-case-recurrence requires exactly one check_pair")
+    index_by_label = {label: index for index, label in enumerate(labels)}
+    first, second = check_pairs[0]
+    trace = extension_recurrence_trace(
+        poset,
+        labels,
+        index_by_label[first],
+        index_by_label[second],
+    )
+    payload = {
+        "labels": labels,
+        "pair": [first, second],
+        "linear_extensions": trace["first_before_second"]
+        + trace["second_before_first"],
+        "cover_relations": named_edges(covers(poset), dict(enumerate(labels))),
+        "trace": trace,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
 def exhaustive_command(args: argparse.Namespace) -> int:
     summary: list[dict[str, object]] = []
     counterexamples: list[dict[str, object]] = []
@@ -1125,6 +1234,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     named_case_parser.add_argument("case", type=Path)
     named_case_parser.add_argument("--output", type=Path)
     named_case_parser.set_defaults(func=named_case_command)
+
+    named_case_recurrence_parser = subparsers.add_parser("named-case-recurrence")
+    named_case_recurrence_parser.add_argument("case", type=Path)
+    named_case_recurrence_parser.add_argument("--output", type=Path)
+    named_case_recurrence_parser.set_defaults(func=named_case_recurrence_command)
 
     exhaustive_parser = subparsers.add_parser("exhaustive-small")
     exhaustive_parser.add_argument("--max-n", type=int, default=5)

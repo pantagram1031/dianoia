@@ -16,6 +16,7 @@ COMMANDS = [
     [sys.executable, "tools/verify_dianoia_state.py"],
     [sys.executable, "tools/verify_phase_loop.py"],
     [sys.executable, "tools/verify_routing_guards.py"],
+    [sys.executable, "tools/verify_connectors.py"],
 ]
 
 

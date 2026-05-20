@@ -94,6 +94,7 @@ Fresh problem statements always create a fresh problem slug, even if
 - Local baseline verifier: `python tools\verify_dianoia_state.py`.
 - Local phase-loop verifier: `python tools\verify_phase_loop.py`.
 - Local routing-guard verifier: `python tools\verify_routing_guards.py`.
+- Local connector contract verifier: `python tools\verify_connectors.py`.
 - Full local verifier: `python tools\verify_all.py`.
 - Five subagent-referenced skills:
   `arxiv-fetch`, `citation-discipline`, `coverage-systems`,

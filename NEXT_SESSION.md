@@ -35,8 +35,11 @@ Important:
   is `capability-test/PHASE-LOOP-VERIFY-20260520.md`.
 - Routing guard verifier exists: `python tools\verify_routing_guards.py`.
   Latest smoke is `capability-test/ROUTING-GUARDS-VERIFY-20260520.md`.
+- Connector contract verifier exists: `python tools\verify_connectors.py`.
+  Latest smoke is `capability-test/CONNECTOR-CONTRACT-VERIFY-20260520.md`.
 - Full verifier exists: `python tools\verify_all.py`. It now runs unit tests,
-  state verification, phase-loop verification, and routing-guard verification.
-  Latest smoke is `capability-test/ROUTING-GUARDS-VERIFY-20260520.md`.
+  state verification, phase-loop verification, routing-guard verification, and
+  connector contract verification. Latest smoke is
+  `capability-test/CONNECTOR-CONTRACT-VERIFY-20260520.md`.
 - B6+ benchmark format is governed by `benchmark-bank/RUNBOOK.md` and
   `templates/benchmark_case/`; the verifier fails B6+ rows missing `RUN.md`.

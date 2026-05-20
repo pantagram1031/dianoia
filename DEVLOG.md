@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-20T23:58:00+09:00
+
+- Added `tools/verify_connectors.py` to check connector README/example/server
+  files, Python compilation, JSON `search`/`fetch` CLI contracts, and
+  researcher subagent invocation.
+- Added `tests/test_verify_connectors.py` with regressions for missing examples
+  and missing subagent invocation.
+- Integrated connector contract verification into `tools/verify_all.py`.
+- Recorded smoke evidence in
+  `capability-test/CONNECTOR-CONTRACT-VERIFY-20260520.md`.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: connector, test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:48:00+09:00
 
 - Added `tools/verify_routing_guards.py` to check stale `.active`, closed-active,

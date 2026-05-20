@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-21T01:13:00+09:00
+
+- Added a B6+ run workspace path regression to
+  `tests/test_verify_dianoia_state.py`.
+- Extended `tools/verify_dianoia_state.py` so B6+ `RUN.md` raw and dianoia
+  workspace `Path:` fields must exist.
+- Updated `benchmark-bank/RUNBOOK.md`, `README.md`, and `NEXT_SESSION.md` with
+  the workspace path rule.
+- Recorded smoke evidence in
+  `capability-test/BENCHMARK-RUN-WORKSPACE-PATHS-VERIFY-20260521.md`.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: benchmark, test.
+- Failed-session streak: 0.
+
 ## 2026-05-21T01:05:00+09:00
 
 - Added a benchmark verdict consistency regression to

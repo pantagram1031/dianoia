@@ -39,6 +39,9 @@ Each `benchmark-bank/B<N>/` directory for `N >= 6` must contain:
 - `token_accounting`
 - `known_weaknesses`
 
+The `Raw Workspace` and `Dianoia Workspace` sections must each contain a
+`Path:` line resolving to an existing workspace.
+
 When a full fresh end-to-end dianoia run is not feasible, `RUN.md` must say
 `run_class: controlled-comparison` and name the limitation. Full fresh runs
 should say `run_class: full-fresh`.

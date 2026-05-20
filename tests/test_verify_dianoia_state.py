@@ -119,11 +119,11 @@ P
 
 ## Raw Workspace
 
-raw
+Path: raw
 
 ## Dianoia Workspace
 
-dianoia
+Path: dianoia
 
 ## Freshness Protocol
 
@@ -168,11 +168,11 @@ P
 
 ## Raw Workspace
 
-raw
+Path: raw
 
 ## Dianoia Workspace
 
-dianoia
+Path: dianoia
 
 ## Freshness Protocol
 
@@ -359,6 +359,24 @@ class BenchmarkManifestVerifierTest(unittest.TestCase):
 
         self.assertTrue(
             any("BENCHMARK verdict VALUE_ADDED does not match COMPARISON verdict DEGRADED" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_run_workspace_paths_must_exist(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(temp_root, run_text("full-fresh", "none").replace("Path: dianoia", "Path: missing-dianoia"))
+                write(temp_root / "benchmark-bank" / "B6" / "COMPARISON.md", structured_comparison_text())
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertTrue(
+            any("RUN.md Dianoia Workspace Path missing" in item for item in result.fail),
             result.fail,
         )
 

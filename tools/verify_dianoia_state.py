@@ -221,6 +221,12 @@ def check_benchmarks(result: CheckResult) -> None:
                         result.add_fail(
                             f"{bid}: controlled-comparison must name a concrete known weakness"
                         )
+                for section in ("Raw Workspace", "Dianoia Workspace"):
+                    value = manifest_field(section_body(run_text, section), "Path")
+                    if weak_blank(value):
+                        result.add_fail(f"{bid}: RUN.md {section} missing Path")
+                    elif not resolve_artifact_path(value).exists():
+                        result.add_fail(f"{bid}: RUN.md {section} Path missing: {value}")
                 token_section = section_body(run_text, "Token Accounting")
                 for label in ("Method:", "Raw tokens:", "Dianoia tokens:", "Uncertainty:"):
                     if label not in token_section:

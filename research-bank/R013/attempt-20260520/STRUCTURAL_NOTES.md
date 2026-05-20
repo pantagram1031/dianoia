@@ -38,6 +38,8 @@ Artifacts:
   the three rank-normal cases.
 - `RECURRENCE_LEDGER.md`: depth-2 minimal-element recurrence summaries for
   the three named cases.
+- `BRANCH_ENUMERATION_LEDGER.md`: hand enumeration of the residual depth-2
+  branch counts for the common matrix subcase.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -88,7 +90,8 @@ These are search signals only:
    `COVER_MATRIX_DERIVATION.md` derives the three normal forms from the common
    cover matrix, `NORMAL_FORM_COUNT_LEDGER.md` certifies their counts, and
    `RECURRENCE_LEDGER.md` now exposes two recurrence levels for a
-   hand-checkable branch proof.
+   hand-checkable branch proof. `BRANCH_ENUMERATION_LEDGER.md` now
+   hand-enumerates those residual branch counts for the common matrix subcase.
 5. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

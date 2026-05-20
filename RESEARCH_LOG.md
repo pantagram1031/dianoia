@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T01:32:00+09:00
+
+- Continued P11 on `R013` by writing a hand enumeration for the common
+  cover-matrix subcase.
+- New artifact:
+  `research-bank/R013/attempt-20260520/BRANCH_ENUMERATION_LEDGER.md`.
+- Finite signal: the residual depth-2 branch counts for Cases A/B/C reduce to
+  small chain/shuffle counts, yielding `14/39`, `14/33`, and `5/11`.
+- Claim discipline: this is a restricted subcase only; no `CLAIMS.md` row and
+  no P12 trigger.
+
 ## 2026-05-21T01:18:00+09:00
 
 - Continued P11 on `R013` by deepening the normal-form recurrence traces.

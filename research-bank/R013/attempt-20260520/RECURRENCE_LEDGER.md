@@ -130,8 +130,9 @@ example by applying the same minimal-element recurrence recursively until the
 remaining poset is a chain, a two-chain shuffle, or a previously counted small
 shape.
 
-Once those branch counts are written by hand, the common cover-matrix subcase
-will have a transparent finite proof:
+`BRANCH_ENUMERATION_LEDGER.md` supplies this hand enumeration for the depth-2
+residual branches. Together with `COVER_MATRIX_DERIVATION.md`, the common
+cover-matrix subcase now has a transparent finite proof:
 
 > Cases A/B/C have lower orientation probabilities `14/39`, `14/33`, and
 > `5/11`; therefore the subcase lower bound is `14/39`, attained only by

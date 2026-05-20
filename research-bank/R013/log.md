@@ -192,3 +192,14 @@ candidate_id: R013
   remaining work is to replace the residual branch totals with terminal
   chain/shuffle counts.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-21 P11 Attempt 1O
+
+- Added `BRANCH_ENUMERATION_LEDGER.md`.
+- Hand-enumerated the residual depth-2 branch counts for Cases A/B/C using
+  small chain/shuffle counts.
+- Result: the common cover-matrix subcase now has a transparent finite proof
+  that the three rank-normal forms have lower probabilities `14/39`,
+  `14/33`, and `5/11`, with equality only in Case A.
+- Claim discipline: no `CLAIMS.md` row; this remains a restricted subcase,
+  not a solution of R013.

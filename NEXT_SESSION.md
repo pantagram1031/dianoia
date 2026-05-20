@@ -22,8 +22,10 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   counts. `COVER_MATRIX_DERIVATION.md` derives the three normal forms from the
   cover matrix. `RECURRENCE_LEDGER.md` exposes depth-2 recurrence counts, with
   `case-a-recurrence-depth2.json`, `case-b-recurrence-depth2.json`, and
-  `case-c-recurrence-depth2.json`; next reduce the residual branch totals to
-  terminal chain/shuffle counts by hand;
+  `case-c-recurrence-depth2.json`; `BRANCH_ENUMERATION_LEDGER.md` reduces the
+  residual branch totals to terminal chain/shuffle counts. Next decide whether
+  this common cover-matrix subcase can be lifted to a broader width-3 lemma or
+  whether another matrix bucket should be hand-classified;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -76,6 +78,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/NORMAL_FORM_COUNT_LEDGER.md`
   - `research-bank/R013/attempt-20260520/RECURRENCE_LEDGER.md`
   - `research-bank/R013/attempt-20260520/COVER_MATRIX_DERIVATION.md`
+  - `research-bank/R013/attempt-20260520/BRANCH_ENUMERATION_LEDGER.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/normal-form-cases/`
   - `research-bank/R013/attempt-20260520/normal-form-cases/*-recurrence-depth2.json`

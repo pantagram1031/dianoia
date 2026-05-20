@@ -1,5 +1,19 @@
 # Devlog
 
+## 2026-05-21T01:32:00+09:00
+
+- Continued P11 on `R013`.
+- Added `BRANCH_ENUMERATION_LEDGER.md` to hand-enumerate the residual
+  depth-2 branch counts for Cases A/B/C.
+- The common cover-matrix subcase now has a transparent finite proof of the
+  three normal-form probabilities, but this is still not a solved claim.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T01:18:00+09:00
 
 - Continued P11 on `R013`.

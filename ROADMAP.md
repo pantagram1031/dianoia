@@ -89,10 +89,11 @@ and a fine 103-singleton split. `MATRIX_BUCKET_NOTES.md` now extracts the
 reproducible. `RANK_NORMAL_FORM_NOTES.md` now rewrites those cases with stable
 rank-layer labels, and `NORMAL_FORM_COUNT_LEDGER.md` certifies the three
 orientation counts from named case inputs. `COVER_MATRIX_DERIVATION.md` now
-derives the same three forms directly from the cover matrix. Next, replace the
-remaining recurrence branch counts with a hand enumeration before any novelty
-claim; `RECURRENCE_LEDGER.md` now exposes depth-2 recurrences for Cases A/B/C,
-and the next proof step is to reduce residual branch totals to terminal
-chain/shuffle counts.
+derives the same three forms directly from the cover matrix.
+`RECURRENCE_LEDGER.md` now exposes depth-2 recurrences for Cases A/B/C, and
+`BRANCH_ENUMERATION_LEDGER.md` reduces those residual branch totals to
+terminal chain/shuffle counts for the common cover-matrix subcase. Next decide
+whether this subcase can be lifted to a broader width-3 lemma or whether the
+next matrix bucket should be hand-classified.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

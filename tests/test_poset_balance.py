@@ -254,6 +254,58 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(2, comparison["left_leaf_count"])
             self.assertEqual(2, comparison["right_leaf_count"])
 
+    def test_recurrence_mechanism_summary_detects_balanced_core(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            recurrence = Path(temp_dir) / "trace.json"
+            output = Path(temp_dir) / "mechanism.json"
+            recurrence.write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b", "c"],
+                        "pair": ["a", "b"],
+                        "depth": 2,
+                        "trace": {
+                            "pair_state": "unseen",
+                            "first_before_second": 7,
+                            "second_before_first": 4,
+                            "available": [
+                                {
+                                    "choose": "a",
+                                    "pair_state_after_choice": "first_before_second",
+                                    "first_before_second": 3,
+                                    "second_before_first": 0,
+                                },
+                                {
+                                    "choose": "c",
+                                    "pair_state_after_choice": "unseen",
+                                    "first_before_second": 4,
+                                    "second_before_first": 4,
+                                },
+                            ],
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "recurrence-mechanism-summary",
+                        str(recurrence),
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual("balanced-core-plus-forced-first", payload["mechanism_type"])
+            self.assertEqual(3, payload["forced_first_total"])
+            self.assertEqual(0, payload["forced_second_total"])
+            self.assertEqual(4, payload["unseen_first_total"])
+            self.assertEqual(4, payload["unseen_second_total"])
+            self.assertEqual(1, payload["balanced_unseen_leaf_count"])
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"

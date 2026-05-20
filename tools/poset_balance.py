@@ -851,6 +851,85 @@ def recurrence_leaf_summary_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def recurrence_mechanism_summary(recurrence: dict[str, object], source: str) -> dict[str, object]:
+    leaves = recurrence_leaves(recurrence["trace"])
+    forced_first_total = 0
+    forced_second_total = 0
+    unseen_first_total = 0
+    unseen_second_total = 0
+    unseen_total = 0
+    balanced_unseen_count = 0
+    unbalanced_unseen_count = 0
+    split_counts: dict[str, int] = {}
+    state_counts: dict[str, int] = {}
+
+    for leaf in leaves:
+        first = int(leaf["first_before_second"])
+        second = int(leaf["second_before_first"])
+        total = int(leaf["total"])
+        state = str(leaf["pair_state"])
+        state_counts[state] = state_counts.get(state, 0) + 1
+        split_key = f"{first}:{second}"
+        split_counts[split_key] = split_counts.get(split_key, 0) + 1
+
+        if state == "first_before_second":
+            forced_first_total += total
+        elif state == "second_before_first":
+            forced_second_total += total
+        elif state == "unseen":
+            unseen_first_total += first
+            unseen_second_total += second
+            unseen_total += total
+            if first == second:
+                balanced_unseen_count += 1
+            else:
+                unbalanced_unseen_count += 1
+
+    if unseen_total == 0:
+        mechanism_type = "forced-block"
+    elif unbalanced_unseen_count == 0 and forced_second_total == 0:
+        mechanism_type = "balanced-core-plus-forced-first"
+    elif unbalanced_unseen_count == 0 and forced_first_total == 0:
+        mechanism_type = "balanced-core-plus-forced-second"
+    elif unbalanced_unseen_count == 0:
+        mechanism_type = "balanced-core-with-forced-blocks"
+    else:
+        mechanism_type = "mixed"
+
+    trace = recurrence["trace"]
+    return {
+        "source": source,
+        "labels": recurrence.get("labels"),
+        "pair": recurrence.get("pair"),
+        "depth": recurrence.get("depth"),
+        "leaf_count": len(leaves),
+        "root_first_before_second": trace["first_before_second"],
+        "root_second_before_first": trace["second_before_first"],
+        "root_total": int(trace["first_before_second"]) + int(trace["second_before_first"]),
+        "mechanism_type": mechanism_type,
+        "forced_first_total": forced_first_total,
+        "forced_second_total": forced_second_total,
+        "unseen_first_total": unseen_first_total,
+        "unseen_second_total": unseen_second_total,
+        "unseen_total": unseen_total,
+        "balanced_unseen_leaf_count": balanced_unseen_count,
+        "unbalanced_unseen_leaf_count": unbalanced_unseen_count,
+        "state_counts": state_counts,
+        "split_counts": split_counts,
+        "leaves": leaves,
+    }
+
+
+def recurrence_mechanism_summary_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.recurrence.read_text(encoding="utf-8"))
+    out = recurrence_mechanism_summary(payload, str(args.recurrence))
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
 def recurrence_leaf_compare_command(args: argparse.Namespace) -> int:
     left = json.loads(args.left.read_text(encoding="utf-8"))
     right = json.loads(args.right.read_text(encoding="utf-8"))
@@ -1958,6 +2037,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     leaf_summary_parser.add_argument("recurrence", type=Path)
     leaf_summary_parser.add_argument("--output", type=Path)
     leaf_summary_parser.set_defaults(func=recurrence_leaf_summary_command)
+
+    mechanism_parser = subparsers.add_parser("recurrence-mechanism-summary")
+    mechanism_parser.add_argument("recurrence", type=Path)
+    mechanism_parser.add_argument("--output", type=Path)
+    mechanism_parser.set_defaults(func=recurrence_mechanism_summary_command)
 
     leaf_compare_parser = subparsers.add_parser("recurrence-leaf-compare")
     leaf_compare_parser.add_argument("left", type=Path)

@@ -308,6 +308,82 @@
         ],
         "width": 3
       },
+      "rank_normal_form": {
+        "best_pair": {
+          "balanced": true,
+          "lower_orientation_probability": [
+            14,
+            39
+          ],
+          "pair": [
+            "c",
+            "b"
+          ],
+          "x_before_y": [
+            14,
+            39
+          ]
+        },
+        "cover_relations": [
+          "a<c",
+          "a<d",
+          "b<e",
+          "b<f",
+          "c<e",
+          "c<f",
+          "d<g",
+          "e<g"
+        ],
+        "label_by_item": {
+          "0": "c",
+          "1": "b",
+          "2": "d",
+          "3": "e",
+          "4": "f",
+          "5": "g",
+          "6": "a"
+        },
+        "maximal_elements": [
+          "f",
+          "g"
+        ],
+        "minimal_elements": [
+          "b",
+          "a"
+        ],
+        "rank_layers": [
+          [
+            "b",
+            "a"
+          ],
+          [
+            "c",
+            "d"
+          ],
+          [
+            "e",
+            "f"
+          ],
+          [
+            "g"
+          ]
+        ],
+        "relations": [
+          "a<c",
+          "a<d",
+          "a<e",
+          "a<f",
+          "a<g",
+          "b<e",
+          "b<f",
+          "b<g",
+          "c<e",
+          "c<f",
+          "c<g",
+          "d<g",
+          "e<g"
+        ]
+      },
       "relations": [
         [
           0,
@@ -662,6 +738,82 @@
         ],
         "width": 3
       },
+      "rank_normal_form": {
+        "best_pair": {
+          "balanced": true,
+          "lower_orientation_probability": [
+            14,
+            33
+          ],
+          "pair": [
+            "b",
+            "a"
+          ],
+          "x_before_y": [
+            19,
+            33
+          ]
+        },
+        "cover_relations": [
+          "a<c",
+          "a<e",
+          "a<f",
+          "b<d",
+          "c<g",
+          "d<e",
+          "d<f",
+          "e<g"
+        ],
+        "label_by_item": {
+          "0": "e",
+          "1": "c",
+          "2": "f",
+          "3": "b",
+          "4": "g",
+          "5": "a",
+          "6": "d"
+        },
+        "maximal_elements": [
+          "f",
+          "g"
+        ],
+        "minimal_elements": [
+          "b",
+          "a"
+        ],
+        "rank_layers": [
+          [
+            "b",
+            "a"
+          ],
+          [
+            "c",
+            "d"
+          ],
+          [
+            "e",
+            "f"
+          ],
+          [
+            "g"
+          ]
+        ],
+        "relations": [
+          "a<c",
+          "a<e",
+          "a<f",
+          "a<g",
+          "b<d",
+          "b<e",
+          "b<f",
+          "b<g",
+          "c<g",
+          "d<e",
+          "d<f",
+          "d<g",
+          "e<g"
+        ]
+      },
       "relations": [
         [
           0,
@@ -1015,6 +1167,82 @@
           ]
         ],
         "width": 3
+      },
+      "rank_normal_form": {
+        "best_pair": {
+          "balanced": true,
+          "lower_orientation_probability": [
+            5,
+            11
+          ],
+          "pair": [
+            "d",
+            "c"
+          ],
+          "x_before_y": [
+            6,
+            11
+          ]
+        },
+        "cover_relations": [
+          "a<c",
+          "a<d",
+          "b<e",
+          "b<f",
+          "c<e",
+          "c<g",
+          "d<f",
+          "f<g"
+        ],
+        "label_by_item": {
+          "0": "d",
+          "1": "e",
+          "2": "g",
+          "3": "a",
+          "4": "b",
+          "5": "c",
+          "6": "f"
+        },
+        "maximal_elements": [
+          "e",
+          "g"
+        ],
+        "minimal_elements": [
+          "a",
+          "b"
+        ],
+        "rank_layers": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "d",
+            "c"
+          ],
+          [
+            "e",
+            "f"
+          ],
+          [
+            "g"
+          ]
+        ],
+        "relations": [
+          "a<c",
+          "a<d",
+          "a<e",
+          "a<f",
+          "a<g",
+          "b<e",
+          "b<f",
+          "b<g",
+          "c<e",
+          "c<g",
+          "d<f",
+          "d<g",
+          "f<g"
+        ]
       },
       "relations": [
         [

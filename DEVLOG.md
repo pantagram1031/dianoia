@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T05:35:00+09:00
+
+- Continued P11 on `R013`.
+- Extended `matrix-feature-partition` with `--processed-threshold`.
+- Generated `width3-rank2221-all-matrix-feature-partition.json`.
+- Added `ALL_FEATURE_PARTITION_NOTES.md`; the all-bucket map has 53 feature
+  groups, 8 processed buckets, 59 unprocessed buckets, and 2 mixed feature
+  groups.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 1 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T05:15:00+09:00
 
 - Continued P11 on `R013`.

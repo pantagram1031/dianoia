@@ -48,7 +48,12 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   look for a dominance or local-degree lemma. `matrix-feature-partition` now
   exists in `tools/poset_balance.py`, and `FEATURE_PARTITION_NOTES.md`
   interprets the thresholded near-boundary partition. Next partition all 67
-  matrix buckets and mark processed/unprocessed feature classes;
+  matrix buckets and mark processed/unprocessed feature classes.
+  `width3-rank2221-all-matrix-feature-partition.json` and
+  `ALL_FEATURE_PARTITION_NOTES.md` now do this: 67 buckets, 53 feature groups,
+  8 processed buckets, 59 unprocessed buckets, and 2 mixed feature groups.
+  Next refine the feature key using exact adjacent/skip vectors or
+  shadowed-skip data to separate the mixed groups;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -113,6 +118,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/NEAR_BOUNDARY_SYNTHESIS.md`
   - `research-bank/R013/attempt-20260520/FEATURE_PARTITION_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-near-boundary-feature-partition.json`
+  - `research-bank/R013/attempt-20260520/ALL_FEATURE_PARTITION_NOTES.md`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-all-matrix-feature-partition.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`

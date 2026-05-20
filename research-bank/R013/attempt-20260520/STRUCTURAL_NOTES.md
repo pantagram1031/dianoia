@@ -62,6 +62,8 @@ Artifacts:
 - `FEATURE_PARTITION_NOTES.md`: interpretation of the thresholded matrix
   feature partition that separates the processed near-boundary buckets by
   cover-density and skip-cover features.
+- `ALL_FEATURE_PARTITION_NOTES.md`: interpretation of the all-67-bucket
+  partition with processed/unprocessed labels and mixed feature classes.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -125,6 +127,9 @@ These are search signals only:
    residual-count patterns. `FEATURE_PARTITION_NOTES.md` now interprets the
    thresholded feature partition. The next nontrivial target is to partition
    all 67 matrix buckets and mark which feature classes remain unprocessed.
+   `ALL_FEATURE_PARTITION_NOTES.md` now records that partition and identifies
+   two mixed feature groups; the next step is to refine the feature key using
+   exact adjacent/skip vectors or shadowed-skip data.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

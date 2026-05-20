@@ -2,6 +2,18 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 1Y
+
+- Extended `matrix-feature-partition` with processed-threshold labels.
+- Added
+  `research-bank/R013/attempt-20260520/width3-rank2221-all-matrix-feature-partition.json`,
+  covering all 67 matrix buckets.
+- Added `research-bank/R013/attempt-20260520/ALL_FEATURE_PARTITION_NOTES.md`.
+- Feature signal: the current coarse key yields 53 feature groups, including 2
+  mixed processed/unprocessed groups. Next proof-support step is to refine the
+  key using exact adjacent/skip vectors or shadowed-skip data.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 1X
 
 - Added `matrix-feature-partition` to `tools/poset_balance.py`.

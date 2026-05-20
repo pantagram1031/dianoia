@@ -13,6 +13,18 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T05:35:00+09:00
+
+- Continued P11 on `R013` by extending `matrix-feature-partition` with
+  processed-threshold labeling.
+- Generated
+  `width3-rank2221-all-matrix-feature-partition.json`, covering all 67 matrix
+  buckets and marking the 8 buckets processed through threshold `13/32`.
+- Added `ALL_FEATURE_PARTITION_NOTES.md`: the all-bucket partition has 53
+  feature groups, 8 processed buckets, 59 unprocessed buckets, and 2 mixed
+  feature groups.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T05:15:00+09:00
 
 - Continued P11 on `R013` by adding a matrix-feature partition command to

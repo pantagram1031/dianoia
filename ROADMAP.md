@@ -107,5 +107,9 @@ bucket. `NEAR_BOUNDARY_SYNTHESIS.md` now abstracts the completed buckets into
 residual-count patterns and proof obligations. `FEATURE_PARTITION_NOTES.md`
 interprets the thresholded feature partition; next target an all-bucket
 feature partition with processed/unprocessed labels.
+`ALL_FEATURE_PARTITION_NOTES.md` now records that all-67-bucket partition:
+53 feature groups, 8 processed buckets, 59 unprocessed buckets, and 2 mixed
+feature groups. Next target: refine the feature key using exact adjacent/skip
+vectors or shadowed-skip data to separate the mixed groups.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

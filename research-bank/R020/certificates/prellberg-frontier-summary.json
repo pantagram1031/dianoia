@@ -1,0 +1,83 @@
+{
+  "certificates": [
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n47.json",
+      "n": 47,
+      "ok": true,
+      "point_count": 94,
+      "verification": "research-bank/R020/certificates/prellberg-n47.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n49.json",
+      "n": 49,
+      "ok": true,
+      "point_count": 98,
+      "verification": "research-bank/R020/certificates/prellberg-n49.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n51.json",
+      "n": 51,
+      "ok": true,
+      "point_count": 102,
+      "verification": "research-bank/R020/certificates/prellberg-n51.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n53.json",
+      "n": 53,
+      "ok": true,
+      "point_count": 106,
+      "verification": "research-bank/R020/certificates/prellberg-n53.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n54.json",
+      "n": 54,
+      "ok": true,
+      "point_count": 108,
+      "verification": "research-bank/R020/certificates/prellberg-n54.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n55.json",
+      "n": 55,
+      "ok": true,
+      "point_count": 110,
+      "verification": "research-bank/R020/certificates/prellberg-n55.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n56.json",
+      "n": 56,
+      "ok": true,
+      "point_count": 112,
+      "verification": "research-bank/R020/certificates/prellberg-n56.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n57.json",
+      "n": 57,
+      "ok": true,
+      "point_count": 114,
+      "verification": "research-bank/R020/certificates/prellberg-n57.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n58.json",
+      "n": 58,
+      "ok": true,
+      "point_count": 116,
+      "verification": "research-bank/R020/certificates/prellberg-n58.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n59.json",
+      "n": 59,
+      "ok": true,
+      "point_count": 118,
+      "verification": "research-bank/R020/certificates/prellberg-n59.verify.json"
+    },
+    {
+      "certificate": "research-bank/R020/certificates/prellberg-n60.json",
+      "n": 60,
+      "ok": true,
+      "point_count": 120,
+      "verification": "research-bank/R020/certificates/prellberg-n60.verify.json"
+    }
+  ],
+  "ok": true,
+  "source_sha256": "6769b67a863590a1c777114e08a2e8057876c6d1d1cd4e2334014b4efe35ddeb"
+}

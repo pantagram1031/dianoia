@@ -515,6 +515,77 @@ class PosetBalanceTest(unittest.TestCase):
                 any("adjacent_vector=2,1|skip_vector=1" in key for key in keys)
             )
 
+    def test_matrix_vector_frontier_finds_minimal_unprocessed_classes(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            partition = Path(temp_dir) / "partition.json"
+            output = Path(temp_dir) / "frontier.json"
+            partition.write_text(
+                json.dumps(
+                    {
+                        "key_detail": "vector",
+                        "groups": [
+                            {
+                                "feature_key": "p",
+                                "features": {
+                                    "adjacent_vector": [1, 1],
+                                    "skip_vector": [0],
+                                },
+                                "bucket_count": 1,
+                                "profile_count": 1,
+                                "processed_bucket_count": 1,
+                                "unprocessed_bucket_count": 0,
+                                "min_lower_orientation_probability": [2, 5],
+                            },
+                            {
+                                "feature_key": "u-frontier",
+                                "features": {
+                                    "adjacent_vector": [2, 1],
+                                    "skip_vector": [0],
+                                },
+                                "bucket_count": 1,
+                                "profile_count": 1,
+                                "processed_bucket_count": 0,
+                                "unprocessed_bucket_count": 1,
+                                "min_lower_orientation_probability": [1, 2],
+                            },
+                            {
+                                "feature_key": "u-dominated",
+                                "features": {
+                                    "adjacent_vector": [3, 1],
+                                    "skip_vector": [0],
+                                },
+                                "bucket_count": 1,
+                                "profile_count": 1,
+                                "processed_bucket_count": 0,
+                                "unprocessed_bucket_count": 1,
+                                "min_lower_orientation_probability": [1, 2],
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-vector-frontier",
+                        str(partition),
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(1, payload["processed_class_count"])
+            self.assertEqual(2, payload["unprocessed_class_count"])
+            self.assertEqual(1, payload["unprocessed_frontier_count"])
+            self.assertEqual("U1", payload["unprocessed_frontier"][0]["id"])
+            dominated = payload["unprocessed_classes"][1]
+            self.assertFalse(dominated["is_unprocessed_frontier"])
+            self.assertEqual(["U1"], dominated["dominated_by_unprocessed"])
+            self.assertEqual(["P1"], payload["unprocessed_frontier"][0]["dominates_processed"])
+
 
 if __name__ == "__main__":
     unittest.main()

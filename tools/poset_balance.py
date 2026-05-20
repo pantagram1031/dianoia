@@ -1269,6 +1269,138 @@ def matrix_feature_partition_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def vector_from_feature_group(group: dict[str, object]) -> tuple[int, ...]:
+    features = group["features"]
+    if not isinstance(features, dict):
+        raise ValueError("feature group has no feature dictionary")
+    adjacent = features.get("adjacent_vector")
+    skip = features.get("skip_vector")
+    if not isinstance(adjacent, list) or not isinstance(skip, list):
+        raise ValueError("feature group has no adjacent_vector/skip_vector")
+    return tuple(int(value) for value in adjacent + skip)
+
+
+def vector_leq(left: Sequence[int], right: Sequence[int]) -> bool:
+    return all(a <= b for a, b in zip(left, right))
+
+
+def vector_l1_distance(left: Sequence[int], right: Sequence[int]) -> int:
+    return sum(abs(a - b) for a, b in zip(left, right))
+
+
+def matrix_vector_frontier_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.partition.read_text(encoding="utf-8"))
+    processed: list[dict[str, object]] = []
+    unprocessed: list[dict[str, object]] = []
+    mixed: list[dict[str, object]] = []
+    for group in payload["groups"]:
+        vector = vector_from_feature_group(group)
+        record = {
+            "feature_key": group["feature_key"],
+            "vector": list(vector),
+            "adjacent_vector": group["features"]["adjacent_vector"],
+            "skip_vector": group["features"]["skip_vector"],
+            "bucket_count": group["bucket_count"],
+            "profile_count": group["profile_count"],
+            "processed_bucket_count": group.get("processed_bucket_count", 0),
+            "unprocessed_bucket_count": group.get("unprocessed_bucket_count", 0),
+            "min_lower_orientation_probability": group[
+                "min_lower_orientation_probability"
+            ],
+        }
+        processed_count = int(record["processed_bucket_count"])
+        unprocessed_count = int(record["unprocessed_bucket_count"])
+        if processed_count and unprocessed_count:
+            mixed.append(record)
+        elif processed_count:
+            processed.append(record)
+        elif unprocessed_count:
+            unprocessed.append(record)
+
+    def sort_key(record: dict[str, object]) -> tuple[Fraction, list[int], str]:
+        return (
+            Fraction(*record["min_lower_orientation_probability"]),
+            list(record["vector"]),
+            str(record["feature_key"]),
+        )
+
+    processed.sort(key=sort_key)
+    unprocessed.sort(key=sort_key)
+    for index, record in enumerate(processed, start=1):
+        record["id"] = f"P{index}"
+    for index, record in enumerate(unprocessed, start=1):
+        record["id"] = f"U{index}"
+
+    analyzed_unprocessed: list[dict[str, object]] = []
+    for record in unprocessed:
+        vector = tuple(record["vector"])
+        dominated_by_unprocessed = [
+            other["id"]
+            for other in unprocessed
+            if other is not record
+            and vector_leq(tuple(other["vector"]), vector)
+            and tuple(other["vector"]) != vector
+        ]
+        dominates_processed = [
+            other["id"]
+            for other in processed
+            if vector_leq(tuple(other["vector"]), vector)
+        ]
+        dominated_by_processed = [
+            other["id"]
+            for other in processed
+            if vector_leq(vector, tuple(other["vector"]))
+        ]
+        nearest_processed: list[dict[str, object]] = []
+        if processed:
+            distances = [
+                (vector_l1_distance(vector, tuple(other["vector"])), other["id"])
+                for other in processed
+            ]
+            min_distance = min(distance for distance, _ in distances)
+            nearest_processed = [
+                {"id": item_id, "l1_distance": distance}
+                for distance, item_id in distances
+                if distance == min_distance
+            ]
+        enriched = dict(record)
+        enriched["dominated_by_unprocessed"] = dominated_by_unprocessed
+        enriched["is_unprocessed_frontier"] = not dominated_by_unprocessed
+        enriched["dominates_processed"] = dominates_processed
+        enriched["dominated_by_processed"] = dominated_by_processed
+        enriched["nearest_processed"] = nearest_processed
+        analyzed_unprocessed.append(enriched)
+
+    frontier = [
+        record
+        for record in analyzed_unprocessed
+        if record["is_unprocessed_frontier"]
+    ]
+    out = {
+        "source": str(args.partition),
+        "key_detail": payload.get("key_detail"),
+        "processed_class_count": len(processed),
+        "unprocessed_class_count": len(unprocessed),
+        "mixed_class_count": len(mixed),
+        "unprocessed_frontier_count": len(frontier),
+        "unprocessed_with_processed_below_count": sum(
+            1 for record in analyzed_unprocessed if record["dominates_processed"]
+        ),
+        "frontier_with_processed_below_count": sum(
+            1 for record in frontier if record["dominates_processed"]
+        ),
+        "processed_classes": processed,
+        "unprocessed_frontier": frontier,
+        "unprocessed_classes": analyzed_unprocessed,
+        "mixed_classes": mixed,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
 def bucket_members_command(args: argparse.Namespace) -> int:
     shape_filter = parse_rank_shape(args.rank_shape)
     records: list[dict[str, object]] = []
@@ -1472,6 +1604,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     )
     feature_parser.add_argument("--output", type=Path)
     feature_parser.set_defaults(func=matrix_feature_partition_command)
+
+    frontier_parser = subparsers.add_parser("matrix-vector-frontier")
+    frontier_parser.add_argument("partition", type=Path)
+    frontier_parser.add_argument("--output", type=Path)
+    frontier_parser.set_defaults(func=matrix_vector_frontier_command)
 
     bucket_parser = subparsers.add_parser("bucket-members")
     bucket_parser.add_argument("--max-n", type=int, default=7)

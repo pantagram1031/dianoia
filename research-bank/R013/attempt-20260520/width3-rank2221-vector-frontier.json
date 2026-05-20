@@ -1,0 +1,2867 @@
+{
+  "frontier_with_processed_below_count": 0,
+  "key_detail": "vector",
+  "mixed_class_count": 0,
+  "mixed_classes": [],
+  "processed_class_count": 8,
+  "processed_classes": [
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P1",
+      "min_lower_orientation_probability": [
+        14,
+        39
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 3,
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P2",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 6,
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "P3",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 4,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "P4",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        2,
+        3,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,3,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+      "id": "P5",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        2,
+        3,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=3,2,1|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P6",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        3,
+        2,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "P7",
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P8",
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "processed_bucket_count": 1,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 0,
+      "vector": [
+        3,
+        2,
+        1,
+        1,
+        0,
+        1
+      ]
+    }
+  ],
+  "source": "research-bank\\R013\\attempt-20260520\\width3-rank2221-all-matrix-feature-partition-vector.json",
+  "unprocessed_class_count": 51,
+  "unprocessed_classes": [
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U22"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U1",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        7,
+        17
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 2
+        },
+        {
+          "id": "P3",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 3,
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P6",
+        "P7",
+        "P8"
+      ],
+      "dominated_by_unprocessed": [
+        "U6"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U2",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        22,
+        53
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 1
+        },
+        {
+          "id": "P3",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 6,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [
+        "P1",
+        "P4",
+        "P6"
+      ],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U3",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        5,
+        12
+      ],
+      "nearest_processed": [
+        {
+          "id": "P1",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 3,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U5",
+        "U6",
+        "U7",
+        "U19",
+        "U23",
+        "U28",
+        "U31"
+      ],
+      "dominates_processed": [
+        "P3",
+        "P5"
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,3,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U4",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        8,
+        19
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P4",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P4"
+      ],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U6",
+        "U7"
+      ],
+      "dominates_processed": [
+        "P3"
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U5",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        14,
+        33
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 1
+        },
+        {
+          "id": "P4",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8"
+      ],
+      "dominated_by_unprocessed": [],
+      "dominates_processed": [],
+      "feature_key": "covers=5|adjacent=5|skip=0|adjacent_vector=2,2,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "id": "U6",
+      "is_unprocessed_frontier": true,
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 2
+        },
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P3",
+        "P4",
+        "P5",
+        "P7"
+      ],
+      "dominated_by_unprocessed": [
+        "U6"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,3,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+      "id": "U7",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 1
+        },
+        {
+          "id": "P5",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P4",
+        "P7"
+      ],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7",
+        "U13"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U8",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nearest_processed": [
+        {
+          "id": "P7",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P6"
+      ],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U6",
+        "U12",
+        "U24"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U9",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nearest_processed": [
+        {
+          "id": "P6",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U1",
+        "U2",
+        "U6",
+        "U12",
+        "U22",
+        "U24",
+        "U27"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,1,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U10",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        7,
+        16
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P6",
+        "P8"
+      ],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U13",
+        "U24"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U11",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P6",
+        "P8"
+      ],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U24"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U12",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [
+        "P1",
+        "P2",
+        "P4",
+        "P6",
+        "P7",
+        "P8"
+      ],
+      "dominated_by_unprocessed": [
+        "U6"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U13",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        4,
+        9
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7",
+        "U22"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U14",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        22,
+        49
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U1",
+        "U2",
+        "U6",
+        "U7",
+        "U14",
+        "U22"
+      ],
+      "dominates_processed": [
+        "P3"
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U15",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U12",
+        "U19",
+        "U24",
+        "U28",
+        "U43"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U16",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U13",
+        "U19",
+        "U28",
+        "U29"
+      ],
+      "dominates_processed": [
+        "P2"
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U17",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        5,
+        11
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        2,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U11",
+        "U12",
+        "U13",
+        "U16",
+        "U17",
+        "U19",
+        "U24",
+        "U28",
+        "U29",
+        "U43",
+        "U44"
+      ],
+      "dominates_processed": [
+        "P2",
+        "P8"
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U18",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        11,
+        24
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        2,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U28"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U19",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        6,
+        13
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 2
+        },
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 3,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U1",
+        "U2",
+        "U6",
+        "U13",
+        "U22",
+        "U26"
+      ],
+      "dominates_processed": [
+        "P2"
+      ],
+      "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U20",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        19,
+        41
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        1,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7",
+        "U14",
+        "U22",
+        "U28",
+        "U30"
+      ],
+      "dominates_processed": [
+        "P5"
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U21",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        7,
+        15
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U22",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        26,
+        55
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 3
+        },
+        {
+          "id": "P3",
+          "l1_distance": 3
+        },
+        {
+          "id": "P5",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U7",
+        "U19",
+        "U28"
+      ],
+      "dominates_processed": [
+        "P3",
+        "P5"
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U23",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        10,
+        21
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 1
+        },
+        {
+          "id": "P5",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P6",
+        "P8"
+      ],
+      "dominated_by_unprocessed": [
+        "U6"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=3,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "id": "U24",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        16,
+        33
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7",
+        "U8",
+        "U13",
+        "U14",
+        "U22",
+        "U26"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U25",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        22,
+        45
+      ],
+      "nearest_processed": [
+        {
+          "id": "P7",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        1,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U13",
+        "U22"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U26",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        25,
+        51
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        1,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U22",
+        "U24"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U27",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        27,
+        55
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P5"
+      ],
+      "dominated_by_unprocessed": [
+        "U6"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,2,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "id": "U28",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U13",
+        "U28"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U29",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U22",
+        "U28"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U30",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "bucket_count": 2,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U6",
+        "U19",
+        "U28"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U31",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P1",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 3,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 2,
+      "vector": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U6",
+        "U13",
+        "U17",
+        "U19",
+        "U28",
+        "U29",
+        "U31"
+      ],
+      "dominates_processed": [
+        "P1",
+        "P2"
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,2,2|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U32",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P1",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U1",
+        "U2",
+        "U6",
+        "U7",
+        "U8",
+        "U13",
+        "U14",
+        "U15",
+        "U20",
+        "U22",
+        "U25",
+        "U26"
+      ],
+      "dominates_processed": [
+        "P2",
+        "P3",
+        "P7"
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U33",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P7",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        1,
+        1,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,4,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+      "id": "U34",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7",
+        "U14",
+        "U22",
+        "U34"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U35",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 3
+        },
+        {
+          "id": "P5",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U7",
+        "U34"
+      ],
+      "dominates_processed": [
+        "P3"
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U36",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U1",
+        "U2",
+        "U6",
+        "U7",
+        "U14",
+        "U15",
+        "U22",
+        "U34",
+        "U35",
+        "U36"
+      ],
+      "dominates_processed": [
+        "P3"
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U37",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U5",
+        "U6",
+        "U7",
+        "U34",
+        "U36"
+      ],
+      "dominates_processed": [
+        "P3"
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U38",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P4",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7",
+        "U28",
+        "U34"
+      ],
+      "dominates_processed": [
+        "P5"
+      ],
+      "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=2,4,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+      "id": "U39",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U7",
+        "U14",
+        "U21",
+        "U22",
+        "U28",
+        "U30",
+        "U34",
+        "U35",
+        "U39"
+      ],
+      "dominates_processed": [
+        "P5"
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U40",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U6",
+        "U7",
+        "U19",
+        "U23",
+        "U28",
+        "U34",
+        "U36",
+        "U39"
+      ],
+      "dominates_processed": [
+        "P3",
+        "P5"
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U41",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U4",
+        "U5",
+        "U6",
+        "U7",
+        "U19",
+        "U23",
+        "U28",
+        "U31",
+        "U34",
+        "U36",
+        "U38",
+        "U39",
+        "U41"
+      ],
+      "dominates_processed": [
+        "P3",
+        "P5"
+      ],
+      "feature_key": "covers=10|adjacent=8|skip=2|adjacent_vector=2,4,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U42",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P3",
+          "l1_distance": 3
+        },
+        {
+          "id": "P4",
+          "l1_distance": 3
+        },
+        {
+          "id": "P5",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        4,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U24",
+        "U28"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=3,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "id": "U43",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U11",
+        "U13",
+        "U24",
+        "U28",
+        "U29",
+        "U43"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U44",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U22",
+        "U24",
+        "U27",
+        "U28",
+        "U30",
+        "U43"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U45",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U6",
+        "U9",
+        "U12",
+        "U16",
+        "U19",
+        "U24",
+        "U28",
+        "U31",
+        "U43"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U46",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P6",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U2",
+        "U3",
+        "U6",
+        "U9",
+        "U11",
+        "U12",
+        "U13",
+        "U16",
+        "U17",
+        "U18",
+        "U19",
+        "U24",
+        "U28",
+        "U29",
+        "U31",
+        "U32",
+        "U43",
+        "U44",
+        "U46"
+      ],
+      "dominates_processed": [
+        "P1",
+        "P2",
+        "P6",
+        "P8"
+      ],
+      "feature_key": "covers=10|adjacent=7|skip=3|adjacent_vector=3,2,2|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U47",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P6",
+          "l1_distance": 1
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        3,
+        2,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        4,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U24"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=4,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "id": "U48",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        4,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        4,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U11",
+        "U13",
+        "U24",
+        "U48"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=4,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U49",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        4,
+        2,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_vector": [
+        4,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U24",
+        "U28",
+        "U43",
+        "U48"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=4,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "id": "U50",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P5",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        4,
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_vector": [
+        4,
+        2,
+        2
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [],
+      "dominated_by_unprocessed": [
+        "U6",
+        "U11",
+        "U13",
+        "U24",
+        "U28",
+        "U29",
+        "U43",
+        "U44",
+        "U48",
+        "U49",
+        "U50"
+      ],
+      "dominates_processed": [],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=4,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U51",
+      "is_unprocessed_frontier": false,
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nearest_processed": [
+        {
+          "id": "P8",
+          "l1_distance": 3
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 1,
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        4,
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "unprocessed_frontier": [
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "bucket_count": 1,
+      "dominated_by_processed": [
+        "P1",
+        "P2",
+        "P3",
+        "P4",
+        "P5",
+        "P6",
+        "P7",
+        "P8"
+      ],
+      "dominated_by_unprocessed": [],
+      "dominates_processed": [],
+      "feature_key": "covers=5|adjacent=5|skip=0|adjacent_vector=2,2,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "id": "U6",
+      "is_unprocessed_frontier": true,
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nearest_processed": [
+        {
+          "id": "P2",
+          "l1_distance": 2
+        },
+        {
+          "id": "P3",
+          "l1_distance": 2
+        },
+        {
+          "id": "P5",
+          "l1_distance": 2
+        }
+      ],
+      "processed_bucket_count": 0,
+      "profile_count": 2,
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_bucket_count": 1,
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "unprocessed_frontier_count": 1,
+  "unprocessed_with_processed_below_count": 18
+}

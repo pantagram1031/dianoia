@@ -40,6 +40,8 @@ class PosetBalanceTest(unittest.TestCase):
         self.assertEqual(2, len(pb.all_unlabeled_posets(2)))
         self.assertEqual(5, len(pb.all_unlabeled_posets(3)))
         self.assertEqual(16, len(pb.all_unlabeled_posets(4)))
+        self.assertEqual(63, len(pb.all_unlabeled_posets(5)))
+        self.assertEqual(318, len(pb.all_unlabeled_posets(6)))
 
     def test_width_and_height_for_v_poset(self) -> None:
         poset = pb.make_poset(3, [(0, 2), (1, 2)])
@@ -73,6 +75,12 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(0, last["counterexample_count"])
             self.assertIn("width_distribution", last)
             self.assertIn("worst_by_width", last)
+
+    def test_one_point_extension_keeps_unlabeled_representatives(self) -> None:
+        levels = pb.all_unlabeled_posets_by_extension(4)
+
+        self.assertEqual([1, 2, 3, 4], list(levels))
+        self.assertEqual(16, len(levels[4]))
 
 
 if __name__ == "__main__":

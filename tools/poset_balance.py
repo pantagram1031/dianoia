@@ -237,7 +237,61 @@ def all_labeled_posets(n: int) -> list[Poset]:
     return posets
 
 
+def is_downset(poset: Poset, mask: int) -> bool:
+    for lower, upper in poset.less:
+        if mask & (1 << upper) and not mask & (1 << lower):
+            return False
+    return True
+
+
+def is_upset(poset: Poset, mask: int) -> bool:
+    for lower, upper in poset.less:
+        if mask & (1 << lower) and not mask & (1 << upper):
+            return False
+    return True
+
+
+def one_point_extensions(poset: Poset) -> list[Poset]:
+    new_item = poset.n
+    old_mask_limit = 1 << poset.n
+    extensions: dict[str, Poset] = {}
+    downsets = [mask for mask in range(old_mask_limit) if is_downset(poset, mask)]
+    upsets = [mask for mask in range(old_mask_limit) if is_upset(poset, mask)]
+
+    for down_mask in downsets:
+        for up_mask in upsets:
+            if down_mask & up_mask:
+                continue
+            relations = list(poset.less)
+            for item in range(poset.n):
+                if down_mask & (1 << item):
+                    relations.append((item, new_item))
+                if up_mask & (1 << item):
+                    relations.append((new_item, item))
+            try:
+                candidate = make_poset(poset.n + 1, relations)
+            except ValueError:
+                continue
+            extensions.setdefault(canonical_key(candidate), candidate)
+    return [extensions[key] for key in sorted(extensions)]
+
+
+def all_unlabeled_posets_by_extension(max_n: int) -> dict[int, list[Poset]]:
+    if max_n < 1:
+        return {}
+    levels: dict[int, list[Poset]] = {1: [Poset(n=1, less=frozenset())]}
+    for n in range(2, max_n + 1):
+        representatives: dict[str, Poset] = {}
+        for poset in levels[n - 1]:
+            for extension in one_point_extensions(poset):
+                representatives.setdefault(canonical_key(extension), extension)
+        levels[n] = [representatives[key] for key in sorted(representatives)]
+    return levels
+
+
 def all_unlabeled_posets(n: int) -> list[Poset]:
+    if n <= 6:
+        return all_unlabeled_posets_by_extension(n).get(n, [])
     representatives: dict[str, Poset] = {}
     for poset in all_labeled_posets(n):
         representatives.setdefault(canonical_key(poset), poset)

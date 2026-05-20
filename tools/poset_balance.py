@@ -1038,7 +1038,11 @@ def matrix_from_bucket_signature(signature: str) -> tuple[tuple[int, ...], ...]:
     return parse_cover_matrix(fields["cover_matrix"])
 
 
-def matrix_feature_record(bucket: dict[str, object]) -> dict[str, object]:
+def matrix_feature_record(
+    bucket: dict[str, object],
+    *,
+    key_detail: str = "coarse",
+) -> dict[str, object]:
     signature = str(bucket["signature"])
     matrix = matrix_from_bucket_signature(signature)
     size = len(matrix)
@@ -1049,7 +1053,13 @@ def matrix_feature_record(bucket: dict[str, object]) -> dict[str, object]:
         return matrix[row][column]
 
     adjacent_edges = sum(entry(rank, rank + 1) for rank in range(size - 1))
+    adjacent_vector = tuple(entry(rank, rank + 1) for rank in range(size - 1))
     skip_edges = sum(
+        entry(row, column)
+        for row in range(size)
+        for column in range(row + 2, size)
+    )
+    skip_vector = tuple(
         entry(row, column)
         for row in range(size)
         for column in range(row + 2, size)
@@ -1072,6 +1082,13 @@ def matrix_feature_record(bucket: dict[str, object]) -> dict[str, object]:
         f"adjacent={adjacent_edges}",
         f"skip={skip_edges}",
     ]
+    if key_detail == "vector":
+        key_parts.extend(
+            [
+                "adjacent_vector=" + ",".join(str(value) for value in adjacent_vector),
+                "skip_vector=" + ",".join(str(value) for value in skip_vector),
+            ]
+        )
     key_parts.extend(f"{key}={int(value)}" for key, value in sorted(flags.items()))
     return {
         "signature": signature,
@@ -1082,7 +1099,9 @@ def matrix_feature_record(bucket: dict[str, object]) -> dict[str, object]:
         "cover_matrix": [list(row) for row in matrix],
         "features": {
             "adjacent_edges": adjacent_edges,
+            "adjacent_vector": list(adjacent_vector),
             "skip_edges": skip_edges,
+            "skip_vector": list(skip_vector),
             **layer_features,
             **flags,
         },
@@ -1178,7 +1197,7 @@ def matrix_feature_partition_command(args: argparse.Namespace) -> int:
     )
     groups: dict[str, dict[str, object]] = {}
     for bucket in payload["buckets"]:
-        record = matrix_feature_record(bucket)
+        record = matrix_feature_record(bucket, key_detail=args.key_detail)
         lower = Fraction(*record["min_lower_orientation_probability"])
         if threshold is not None and lower > threshold:
             continue
@@ -1231,6 +1250,7 @@ def matrix_feature_partition_command(args: argparse.Namespace) -> int:
         "source": str(args.classes),
         "threshold": args.threshold,
         "processed_threshold": args.processed_threshold,
+        "key_detail": args.key_detail,
         "source_bucket_count": payload["bucket_count"],
         "included_bucket_count": sum(int(group["bucket_count"]) for group in group_list),
         "processed_bucket_count": sum(
@@ -1445,6 +1465,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     feature_parser.add_argument("classes", type=Path)
     feature_parser.add_argument("--threshold")
     feature_parser.add_argument("--processed-threshold")
+    feature_parser.add_argument(
+        "--key-detail",
+        choices=["coarse", "vector"],
+        default="coarse",
+    )
     feature_parser.add_argument("--output", type=Path)
     feature_parser.set_defaults(func=matrix_feature_partition_command)
 

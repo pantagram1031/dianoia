@@ -1,0 +1,6586 @@
+{
+  "group_count": 59,
+  "groups": [
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 3,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 3,
+            "skip_vector": [
+              2,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            14,
+            39
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,2,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 3,
+        "skip_vector": [
+          2,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        14,
+        39
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 3,
+      "profile_count": 3,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 6,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            2,
+            5
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,1,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 6,
+      "profile_count": 6,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 4,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            2,
+            5
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,1,0],[0,0,3,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 4,
+      "profile_count": 4,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,3,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              3,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            2,
+            5
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,0,0],[0,0,3,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,3,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          3,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 1,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 3,
+            "skip_vector": [
+              2,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            2,
+            5
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=2|cover_matrix=[[0,2,2,0],[0,0,3,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 3,
+        "skip_vector": [
+          2,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 1,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=3,2,1|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 3,
+            "skip_vector": [
+              2,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            2,
+            5
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=2|cover_matrix=[[0,3,2,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=3,2,1|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 3,
+        "skip_vector": [
+          2,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 1,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            13,
+            32
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,1,0],[0,0,3,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 2,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            13,
+            32
+          ],
+          "processed": true,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,3,1,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "processed_bucket_count": 1,
+      "processed_profile_count": 2,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 0,
+      "unprocessed_profile_count": 0
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            7,
+            17
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=3|cover_matrix=[[0,2,1,1],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        },
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            7,
+            15
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,1,1],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        7,
+        17
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 3,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 3
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 4,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            22,
+            53
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=3|cover_matrix=[[0,2,1,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        },
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            9,
+            20
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=2|cover_matrix=[[0,2,1,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        22,
+        53
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 6,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 6
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            5,
+            12
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,2,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        },
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            7,
+            15
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=3|cover_matrix=[[0,2,2,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        5,
+        12
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 3,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 3
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,3,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              3,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            8,
+            19
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=1|cover_matrix=[[0,2,2,0],[0,0,3,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,3,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          3,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        8,
+        19
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            14,
+            33
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,2,0],[0,0,3,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        14,
+        33
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=5|adjacent=5|skip=0|adjacent_vector=2,2,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            3,
+            7
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=5|mins=2|maxs=3|cover_matrix=[[0,2,0,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=5|adjacent=5|skip=0|adjacent_vector=2,2,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,3,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            3,
+            7
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=3|cover_matrix=[[0,2,0,0],[0,0,3,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,3,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            3,
+            7
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=3|cover_matrix=[[0,2,0,0],[0,0,3,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            3,
+            7
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=3|cover_matrix=[[0,3,2,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,1,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 1,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            7,
+            16
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=3|cover_matrix=[[0,3,1,1],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,1,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 1,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        7,
+        16
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            11,
+            25
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,3,0,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            11,
+            25
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=3|cover_matrix=[[0,3,1,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            4,
+            9
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=3|cover_matrix=[[0,2,0,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        },
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            9,
+            20
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=2|cover_matrix=[[0,2,0,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        4,
+        9
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            22,
+            49
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,0,1],[0,0,3,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        22,
+        49
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 1,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            14,
+            31
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,1,1],[0,0,3,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 1,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              3,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            14,
+            31
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,3,1,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          3,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 2,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              0,
+              1
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            5,
+            11
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=1|cover_matrix=[[0,2,1,0],[0,0,2,1],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          2,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 2,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          0,
+          1
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        5,
+        11
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              3,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 2,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              0,
+              1
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            11,
+            24
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=1|cover_matrix=[[0,3,1,0],[0,0,2,1],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          3,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 2,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          0,
+          1
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        11,
+        24
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            6,
+            13
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=1|cover_matrix=[[0,2,1,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        },
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            19,
+            40
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,1,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          2,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        6,
+        13
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 3,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 3
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 3,
+            "skip_vector": [
+              1,
+              1,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            19,
+            41
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,1,1],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 3,
+        "skip_vector": [
+          1,
+          1,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        19,
+        41
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              3,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            7,
+            15
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=1|cover_matrix=[[0,2,0,1],[0,0,3,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          3,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        7,
+        15
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            26,
+            55
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=2|cover_matrix=[[0,2,0,1],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        },
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            14,
+            29
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=3|cover_matrix=[[0,2,0,1],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        26,
+        55
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              3,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 3,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            10,
+            21
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=1|cover_matrix=[[0,2,1,0],[0,0,3,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          3,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 3,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        10,
+        21
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=3,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            16,
+            33
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=3|cover_matrix=[[0,3,0,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=3,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        16,
+        33
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 3,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              0,
+              1,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            22,
+            45
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,0,1],[0,0,3,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 3,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          0,
+          1,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        22,
+        45
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 5,
+            "adjacent_vector": [
+              2,
+              2,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              0,
+              1,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            25,
+            51
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,0,1],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 5,
+        "adjacent_vector": [
+          2,
+          2,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          0,
+          1,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        25,
+        51
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              3,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            27,
+            55
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=3|cover_matrix=[[0,3,0,1],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          3,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        27,
+        55
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=10|adjacent=7|skip=3|adjacent_vector=3,2,2|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              3,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 2,
+            "skip_edges": 3,
+            "skip_vector": [
+              2,
+              0,
+              1
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=10|mins=2|maxs=1|cover_matrix=[[0,3,2,0],[0,0,2,1],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=10|adjacent=7|skip=3|adjacent_vector=3,2,2|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          3,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 2,
+        "skip_edges": 3,
+        "skip_vector": [
+          2,
+          0,
+          1
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=10|adjacent=8|skip=2|adjacent_vector=2,4,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 8,
+            "adjacent_vector": [
+              2,
+              4,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=10|mins=2|maxs=1|cover_matrix=[[0,2,2,0],[0,0,4,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=10|adjacent=8|skip=2|adjacent_vector=2,4,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 8,
+        "adjacent_vector": [
+          2,
+          4,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,2,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=6|mins=2|maxs=2|cover_matrix=[[0,2,0,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,2,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          2,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=1|cover_matrix=[[0,2,0,0],[0,0,2,1],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          2,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          0,
+          1
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=1|cover_matrix=[[0,2,0,1],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        },
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,2,0,1],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          2,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,4,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              4,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=3|cover_matrix=[[0,2,0,0],[0,0,4,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,4,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          4,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=3,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              3,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=2|cover_matrix=[[0,3,0,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=3,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          3,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=4,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              4,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": false,
+            "r0_to_r1": 4,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=7|mins=2|maxs=3|cover_matrix=[[0,4,0,0],[0,0,2,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=4,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          4,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": false,
+        "r0_to_r1": 4,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 2,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=1|cover_matrix=[[0,2,2,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        },
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,2,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          2,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 3,
+      "unprocessed_bucket_count": 2,
+      "unprocessed_profile_count": 3
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              4,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,0,1],[0,0,4,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          4,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              4,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,1,0],[0,0,4,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          4,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              3,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=1|cover_matrix=[[0,3,0,0],[0,0,2,1],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          3,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          0,
+          1
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              3,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,3,0,1],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          3,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=4,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              4,
+              2,
+              1
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 4,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,4,0,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=4,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          4,
+          2,
+          1
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 4,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          0,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=2,4,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 8,
+            "adjacent_vector": [
+              2,
+              4,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,2,0,0],[0,0,4,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=2,4,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 8,
+        "adjacent_vector": [
+          2,
+          4,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=4,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 8,
+            "adjacent_vector": [
+              4,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": false,
+            "middle_dense": false,
+            "r0_to_r1": 4,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 0,
+            "skip_vector": [
+              0,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,4,0,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=4,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 8,
+        "adjacent_vector": [
+          4,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": false,
+        "middle_dense": false,
+        "r0_to_r1": 4,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 0,
+        "skip_vector": [
+          0,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 2,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,2,2|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              2,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 2,
+            "skip_edges": 3,
+            "skip_vector": [
+              2,
+              0,
+              1
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=1|cover_matrix=[[0,2,2,0],[0,0,2,1],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,2,2|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          2,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 2,
+        "skip_edges": 3,
+        "skip_vector": [
+          2,
+          0,
+          1
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 2,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 2
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              3,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 6,
+            "adjacent_vector": [
+              2,
+              3,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 1,
+            "r1_to_r2": 3,
+            "r1_to_r3": 1,
+            "r2_to_r3": 1,
+            "skip_edges": 3,
+            "skip_vector": [
+              1,
+              1,
+              1
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=2|cover_matrix=[[0,2,1,1],[0,0,3,1],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 6,
+        "adjacent_vector": [
+          2,
+          3,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 1,
+        "r1_to_r2": 3,
+        "r1_to_r3": 1,
+        "r2_to_r3": 1,
+        "skip_edges": 3,
+        "skip_vector": [
+          1,
+          1,
+          1
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              4,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 1,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              1,
+              1,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=2|cover_matrix=[[0,2,1,1],[0,0,4,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          4,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 1,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          1,
+          1,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              2,
+              4,
+              1
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 1,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": false
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=2|cover_matrix=[[0,2,2,0],[0,0,4,0],[0,0,0,1],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          2,
+          4,
+          1
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 1,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": false
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              3,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 7,
+            "adjacent_vector": [
+              3,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 3,
+            "r0_to_r2": 2,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 2,
+            "skip_vector": [
+              2,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=2|cover_matrix=[[0,3,2,0],[0,0,2,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 7,
+        "adjacent_vector": [
+          3,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 3,
+        "r0_to_r2": 2,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 2,
+        "skip_vector": [
+          2,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 8,
+            "adjacent_vector": [
+              2,
+              4,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 0,
+            "r0_to_r3": 1,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              1,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=1|cover_matrix=[[0,2,0,1],[0,0,4,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 8,
+        "adjacent_vector": [
+          2,
+          4,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 0,
+        "r0_to_r3": 1,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          1,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              2,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              4,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 8,
+            "adjacent_vector": [
+              2,
+              4,
+              2
+            ],
+            "bottom_dense": false,
+            "has_bottom_skip": true,
+            "has_middle_to_top_skip": false,
+            "has_skip_cover": true,
+            "middle_dense": true,
+            "r0_to_r1": 2,
+            "r0_to_r2": 1,
+            "r0_to_r3": 0,
+            "r1_to_r2": 4,
+            "r1_to_r3": 0,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              1,
+              0,
+              0
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=1|cover_matrix=[[0,2,1,0],[0,0,4,0],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 8,
+        "adjacent_vector": [
+          2,
+          4,
+          2
+        ],
+        "bottom_dense": false,
+        "has_bottom_skip": true,
+        "has_middle_to_top_skip": false,
+        "has_skip_cover": true,
+        "middle_dense": true,
+        "r0_to_r1": 2,
+        "r0_to_r2": 1,
+        "r0_to_r3": 0,
+        "r1_to_r2": 4,
+        "r1_to_r3": 0,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          1,
+          0,
+          0
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    },
+    {
+      "bucket_count": 1,
+      "buckets": [
+        {
+          "count": 1,
+          "cover_matrix": [
+            [
+              0,
+              4,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              2,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=4,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+          "features": {
+            "adjacent_edges": 8,
+            "adjacent_vector": [
+              4,
+              2,
+              2
+            ],
+            "bottom_dense": true,
+            "has_bottom_skip": false,
+            "has_middle_to_top_skip": true,
+            "has_skip_cover": true,
+            "middle_dense": false,
+            "r0_to_r1": 4,
+            "r0_to_r2": 0,
+            "r0_to_r3": 0,
+            "r1_to_r2": 2,
+            "r1_to_r3": 1,
+            "r2_to_r3": 2,
+            "skip_edges": 1,
+            "skip_vector": [
+              0,
+              0,
+              1
+            ],
+            "top_fed_by_two": true
+          },
+          "min_lower_orientation_probability": [
+            1,
+            2
+          ],
+          "processed": false,
+          "signature": "layers=2,2,2,1|covers=9|mins=2|maxs=1|cover_matrix=[[0,4,0,0],[0,0,2,1],[0,0,0,2],[0,0,0,0]]"
+        }
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=4,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "features": {
+        "adjacent_edges": 8,
+        "adjacent_vector": [
+          4,
+          2,
+          2
+        ],
+        "bottom_dense": true,
+        "has_bottom_skip": false,
+        "has_middle_to_top_skip": true,
+        "has_skip_cover": true,
+        "middle_dense": false,
+        "r0_to_r1": 4,
+        "r0_to_r2": 0,
+        "r0_to_r3": 0,
+        "r1_to_r2": 2,
+        "r1_to_r3": 1,
+        "r2_to_r3": 2,
+        "skip_edges": 1,
+        "skip_vector": [
+          0,
+          0,
+          1
+        ],
+        "top_fed_by_two": true
+      },
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_bucket_count": 0,
+      "processed_profile_count": 0,
+      "profile_count": 1,
+      "unprocessed_bucket_count": 1,
+      "unprocessed_profile_count": 1
+    }
+  ],
+  "included_bucket_count": 67,
+  "key_detail": "vector",
+  "processed_bucket_count": 8,
+  "processed_threshold": "13/32",
+  "source": "research-bank\\R013\\attempt-20260520\\width3-rank2221-matrix-shape-classes-n7.json",
+  "source_bucket_count": 67,
+  "threshold": null,
+  "unprocessed_bucket_count": 59
+}

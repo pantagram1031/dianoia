@@ -456,8 +456,64 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(1, payload["group_count"])
             features = payload["groups"][0]["features"]
             self.assertEqual(1, features["skip_edges"])
+            self.assertEqual([2, 1], features["adjacent_vector"])
+            self.assertEqual([1], features["skip_vector"])
             self.assertTrue(features["has_bottom_skip"])
             self.assertTrue(payload["groups"][0]["buckets"][0]["processed"])
+
+    def test_matrix_feature_partition_vector_key_splits_same_coarse_key(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            classes = Path(temp_dir) / "classes.json"
+            output = Path(temp_dir) / "features.json"
+            classes.write_text(
+                json.dumps(
+                    {
+                        "bucket_count": 2,
+                        "buckets": [
+                            {
+                                "signature": (
+                                    "layers=2,2,1|covers=4|mins=2|maxs=1|"
+                                    "cover_matrix=[[0,1,1],[0,0,2],[0,0,0]]"
+                                ),
+                                "count": 1,
+                                "min_lower_orientation_probability": [2, 5],
+                            },
+                            {
+                                "signature": (
+                                    "layers=2,2,1|covers=4|mins=2|maxs=1|"
+                                    "cover_matrix=[[0,2,1],[0,0,1],[0,0,0]]"
+                                ),
+                                "count": 1,
+                                "min_lower_orientation_probability": [2, 5],
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-feature-partition",
+                        str(classes),
+                        "--key-detail",
+                        "vector",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual("vector", payload["key_detail"])
+            self.assertEqual(2, payload["group_count"])
+            keys = {group["feature_key"] for group in payload["groups"]}
+            self.assertTrue(
+                any("adjacent_vector=1,2|skip_vector=1" in key for key in keys)
+            )
+            self.assertTrue(
+                any("adjacent_vector=2,1|skip_vector=1" in key for key in keys)
+            )
 
 
 if __name__ == "__main__":

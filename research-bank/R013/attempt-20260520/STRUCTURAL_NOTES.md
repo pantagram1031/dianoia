@@ -16,6 +16,9 @@ Artifacts:
 - `unlabeled-posets-n7.json`: canonical unlabeled check through seven elements.
 - `width3-unlabeled-n7.json`: focused width-3 canonical summary through seven
   elements.
+- `width3-extremals-n7.json`: top width-3 near-boundary profiles through seven
+  elements.
+- `WIDTH3_EXTREMAL_NOTES.md`: human-readable proof-target notes.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
 ## Exhaustive Small Evidence
@@ -52,7 +55,10 @@ These are search signals only:
    `1/3` by at least `1/39`.
 2. Add cover-graph/level-shape filters and compare the width-3 extremal
    examples at `n=5`, `n=6`, and `n=7`.
-3. Scale canonical generation to `n=8` only after further optimizing
+3. Start with the specific proof target in `WIDTH3_EXTREMAL_NOTES.md`:
+   classify width-3, height-4, rank-layer-shape `2,2,2,1` posets and determine
+   whether `14/39` is the extremal lower probability in that restricted class.
+4. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 
 ## Honesty Boundary

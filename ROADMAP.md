@@ -78,6 +78,8 @@ counterexample to the base 1/3-2/3 conjecture.
 Next P11 target: continue actual mathematical attempts rather than replay
 expansion. Prefer R013 structural lemma extraction around the exact small-data
 signals in `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`,
-especially width-3 separation and cover/level-shape analysis. R020 remains
-available if the next step is bounded search/proof work rather than external
-solver engineering.
+especially the width-3 proof target in
+`research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`: classify
+width-3, height-4, rank-layer-shape `2,2,2,1` posets and test whether `14/39`
+is extremal in that restricted class. R020 remains available if the next step
+is bounded search/proof work rather than external solver engineering.

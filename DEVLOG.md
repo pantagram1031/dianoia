@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T23:00:00+09:00
+
+- Continued P11 on `R013`.
+- Added `extremal-width` profiling to `tools/poset_balance.py`.
+- Generated `research-bank/R013/attempt-20260520/width3-extremals-n7.json`.
+- Added `WIDTH3_EXTREMAL_NOTES.md`, which turns the finite data into a concrete
+  next proof target without promoting it to a claim.
+- Wired a small extremal-profile check into `tools/verify_all.py`.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:48:00+09:00
 
 - Continued P11 on `R013`.

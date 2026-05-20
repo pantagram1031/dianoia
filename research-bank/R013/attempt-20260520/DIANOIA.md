@@ -25,7 +25,9 @@ it to test small posets exactly.
    unlabeled replay fast enough to reach seven elements.
 7. Added width/height filters and focused the width-3 frontier through seven
    elements.
-8. Wired the small-poset checks into `tools/verify_all.py`.
+8. Added an extremal width profiler and recorded the top width-3 near-boundary
+   profiles through seven elements.
+9. Wired the small-poset and extremal-profile checks into `tools/verify_all.py`.
 
 ## Verification
 
@@ -81,6 +83,20 @@ python tools\poset_balance.py exhaustive-unlabeled `
 
 Result: `counterexample_count: 0`; the worst best-pair lower probability at
 `n=7` is `14/39`.
+
+Extremal profile command:
+
+```powershell
+python tools\poset_balance.py extremal-width `
+  --max-n 7 `
+  --width 3 `
+  --limit 12 `
+  --output research-bank\R013\attempt-20260520\width3-extremals-n7.json
+```
+
+Result: the top profile is a seven-element width-3, height-4 poset with
+rank-layer sizes `2,2,2,1`, 39 linear extensions, and best-pair lower
+probability `14/39`.
 
 ## Outcome
 

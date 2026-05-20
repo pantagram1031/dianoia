@@ -55,3 +55,15 @@ candidate_id: R013
   best-pair lower probability is `14/39`, still separated from `1/3`.
 - Claim discipline: no `CLAIMS.md` row; the finite data suggests a restricted
   lemma target but does not prove it.
+
+## 2026-05-20 P11 Attempt 1D
+
+- Added an extremal profile command to `tools/poset_balance.py`.
+- Generated `research-bank/R013/attempt-20260520/width3-extremals-n7.json`,
+  the top 12 width-3 near-boundary profiles through seven elements.
+- Added `WIDTH3_EXTREMAL_NOTES.md` with a concrete restricted proof target:
+  classify width-3, height-4, rank-layer-shape `2,2,2,1` posets and test
+  whether `14/39` is the extremal lower probability in that class.
+- Wired a small extremal-profile smoke into `tools/verify_all.py`.
+- Claim discipline: no `CLAIMS.md` row; this is a proof target extracted from
+  exact finite evidence, not a solved claim.

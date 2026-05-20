@@ -10,7 +10,7 @@ verdict: PARTIAL-PROGRESS
 - Dianoia route: `PARTIAL-PROGRESS`; produced an exact finite-poset analyzer,
   tests, a replayed exhaustive labeled small-poset check through five elements,
   a canonical unlabeled check through seven elements, and a focused width-3
-  frontier summary.
+  frontier summary with extremal profiles.
 
 ## Exact Evidence
 
@@ -20,6 +20,8 @@ verdict: PARTIAL-PROGRESS
 - `research-bank/R013/attempt-20260520/unlabeled-posets-n6.json`
 - `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json`
 - `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`
+- `research-bank/R013/attempt-20260520/width3-extremals-n7.json`
+- `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
 - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
 - `tools/verify_all.py`
 
@@ -38,6 +40,8 @@ The unlabeled seven-element artifact reports:
 - width distribution: 1 chain, 224 width-2, 1060 width-3, 636 width-4,
   112 width-5, 11 width-6, and 1 antichain.
 - focused width-3 worst best-pair lower probability at `n=7`: `14/39`.
+- extremal profile proof target: width 3, height 4, rank-layer shape
+  `2,2,2,1`.
 
 ## Claim Discipline
 

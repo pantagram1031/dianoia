@@ -13,6 +13,19 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T23:00:00+09:00
+
+- Extracted R013 width-3 extremal profiles rather than merely extending
+  enumeration.
+- New artifact:
+  `research-bank/R013/attempt-20260520/width3-extremals-n7.json`.
+- New proof-target note:
+  `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`.
+- Finite signal: the strongest width-3 near-boundary profile through seven
+  elements has rank-layer shape `2,2,2,1`, 39 linear extensions, and lower
+  orientation probability `14/39`.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T22:48:00+09:00
 
 - Continued `R013` exact poset work.

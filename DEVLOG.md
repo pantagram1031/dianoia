@@ -1,5 +1,17 @@
 # Devlog
 
+## 2026-05-20T18:55:00+09:00
+
+- Determined Phase 2 cannot honestly complete with DIAGNOSIS R1 unresolved.
+- R1 requires `AGENTS.md` first-message routing changes, but `AGENTS.md` is constitutional under the active goal.
+- Wrote `APPROVED_CHANGES.md` with the requested routing guard.
+- Wrote `QUESTIONS.md` and marked ROADMAP Phase 2 as BLOCKED_ON_USER.
+
+Self-audit:
+- Commits this session so far: 5 pushed, 1 pending.
+- Concrete progress category: fix.
+- Failed-session streak: 0.
+
 ## 2026-05-20T18:48:00+09:00
 
 - Patched `prompts/resume.md` with explicit malformed `.active` handling and fresh-problem boundary text.

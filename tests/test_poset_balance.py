@@ -586,6 +586,70 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(["U1"], dominated["dominated_by_unprocessed"])
             self.assertEqual(["P1"], payload["unprocessed_frontier"][0]["dominates_processed"])
 
+    def test_matrix_vector_deltas_groups_classes_from_base(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            frontier = Path(temp_dir) / "frontier.json"
+            output = Path(temp_dir) / "deltas.json"
+            frontier.write_text(
+                json.dumps(
+                    {
+                        "processed_classes": [
+                            {
+                                "id": "P1",
+                                "feature_key": "p",
+                                "vector": [2, 1, 0],
+                                "adjacent_vector": [2, 1],
+                                "skip_vector": [0],
+                                "processed_bucket_count": 1,
+                                "min_lower_orientation_probability": [2, 5],
+                            }
+                        ],
+                        "unprocessed_classes": [
+                            {
+                                "id": "U1",
+                                "feature_key": "u-base",
+                                "vector": [1, 1, 0],
+                                "adjacent_vector": [1, 1],
+                                "skip_vector": [0],
+                                "unprocessed_bucket_count": 1,
+                                "min_lower_orientation_probability": [3, 7],
+                            },
+                            {
+                                "id": "U2",
+                                "feature_key": "u-next",
+                                "vector": [2, 1, 1],
+                                "adjacent_vector": [2, 1],
+                                "skip_vector": [1],
+                                "unprocessed_bucket_count": 1,
+                                "min_lower_orientation_probability": [1, 2],
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-vector-deltas",
+                        str(frontier),
+                        "--base-id",
+                        "U1",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual("U1", payload["base_id"])
+            self.assertEqual([1, 1, 0], payload["base_vector"])
+            self.assertEqual(3, payload["class_count"])
+            self.assertEqual(3, payload["nonnegative_from_base_count"])
+            deltas = {tuple(group["delta"]): group for group in payload["delta_groups"]}
+            self.assertEqual(["P1"], deltas[(1, 0, 0)]["processed_ids"])
+            self.assertEqual(["U2"], deltas[(1, 0, 1)]["unprocessed_ids"])
+
 
 if __name__ == "__main__":
     unittest.main()

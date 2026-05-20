@@ -1401,6 +1401,106 @@ def matrix_vector_frontier_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def matrix_vector_deltas_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.frontier.read_text(encoding="utf-8"))
+    records = list(payload["processed_classes"]) + list(payload["unprocessed_classes"])
+    by_id = {str(record["id"]): record for record in records}
+    if args.base_id not in by_id:
+        raise ValueError(f"base id {args.base_id!r} is not in frontier artifact")
+    base = by_id[args.base_id]
+    base_vector = tuple(int(value) for value in base["vector"])
+
+    groups: dict[str, dict[str, object]] = {}
+    class_records: list[dict[str, object]] = []
+    for record in records:
+        vector = tuple(int(value) for value in record["vector"])
+        delta = tuple(value - base_value for value, base_value in zip(vector, base_vector))
+        state = (
+            "processed"
+            if int(record.get("processed_bucket_count", 0)) > 0
+            else "unprocessed"
+        )
+        class_record = {
+            "id": record["id"],
+            "state": state,
+            "delta": list(delta),
+            "nonnegative_from_base": all(value >= 0 for value in delta),
+            "adjacent_delta": list(delta[:3]),
+            "skip_delta": list(delta[3:]),
+            "vector": record["vector"],
+            "adjacent_vector": record["adjacent_vector"],
+            "skip_vector": record["skip_vector"],
+            "min_lower_orientation_probability": record[
+                "min_lower_orientation_probability"
+            ],
+            "feature_key": record["feature_key"],
+        }
+        class_records.append(class_record)
+        group = groups.setdefault(
+            ",".join(str(value) for value in delta),
+            {
+                "delta": list(delta),
+                "adjacent_delta": list(delta[:3]),
+                "skip_delta": list(delta[3:]),
+                "processed_ids": [],
+                "unprocessed_ids": [],
+                "min_lower_orientation_probability": record[
+                    "min_lower_orientation_probability"
+                ],
+            },
+        )
+        group[f"{state}_ids"].append(record["id"])
+        if Fraction(*record["min_lower_orientation_probability"]) < Fraction(
+            *group["min_lower_orientation_probability"]
+        ):
+            group["min_lower_orientation_probability"] = record[
+                "min_lower_orientation_probability"
+            ]
+
+    delta_groups = sorted(
+        groups.values(),
+        key=lambda group: (
+            Fraction(*group["min_lower_orientation_probability"]),
+            group["delta"],
+        ),
+    )
+    out = {
+        "source": str(args.frontier),
+        "base_id": args.base_id,
+        "base_vector": list(base_vector),
+        "class_count": len(class_records),
+        "delta_group_count": len(delta_groups),
+        "processed_delta_group_count": sum(
+            1 for group in delta_groups if group["processed_ids"]
+        ),
+        "unprocessed_delta_group_count": sum(
+            1 for group in delta_groups if group["unprocessed_ids"]
+        ),
+        "mixed_delta_group_count": sum(
+            1
+            for group in delta_groups
+            if group["processed_ids"] and group["unprocessed_ids"]
+        ),
+        "nonnegative_from_base_count": sum(
+            1 for record in class_records if record["nonnegative_from_base"]
+        ),
+        "delta_groups": delta_groups,
+        "classes": sorted(
+            class_records,
+            key=lambda record: (
+                Fraction(*record["min_lower_orientation_probability"]),
+                record["state"],
+                record["id"],
+            ),
+        ),
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
 def bucket_members_command(args: argparse.Namespace) -> int:
     shape_filter = parse_rank_shape(args.rank_shape)
     records: list[dict[str, object]] = []
@@ -1609,6 +1709,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     frontier_parser.add_argument("partition", type=Path)
     frontier_parser.add_argument("--output", type=Path)
     frontier_parser.set_defaults(func=matrix_vector_frontier_command)
+
+    deltas_parser = subparsers.add_parser("matrix-vector-deltas")
+    deltas_parser.add_argument("frontier", type=Path)
+    deltas_parser.add_argument("--base-id", required=True)
+    deltas_parser.add_argument("--output", type=Path)
+    deltas_parser.set_defaults(func=matrix_vector_deltas_command)
 
     bucket_parser = subparsers.add_parser("bucket-members")
     bucket_parser.add_argument("--max-n", type=int, default=7)

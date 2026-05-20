@@ -1,0 +1,4388 @@
+{
+  "base_id": "U6",
+  "base_vector": [
+    2,
+    2,
+    1,
+    0,
+    0,
+    0
+  ],
+  "class_count": 59,
+  "classes": [
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P1",
+      "min_lower_orientation_probability": [
+        14,
+        39
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "state": "processed",
+      "vector": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P2",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "state": "processed",
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "P3",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "processed",
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "P4",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "state": "processed",
+      "vector": [
+        2,
+        3,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,3,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+      "id": "P5",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "processed",
+      "vector": [
+        2,
+        3,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=3,2,1|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P6",
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "state": "processed",
+      "vector": [
+        3,
+        2,
+        1,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "P7",
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "state": "processed",
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "P8",
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "state": "processed",
+      "vector": [
+        3,
+        2,
+        1,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U1",
+      "min_lower_orientation_probability": [
+        7,
+        17
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U2",
+      "min_lower_orientation_probability": [
+        22,
+        53
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U3",
+      "min_lower_orientation_probability": [
+        5,
+        12
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,3,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U4",
+      "min_lower_orientation_probability": [
+        8,
+        19
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U5",
+      "min_lower_orientation_probability": [
+        14,
+        33
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=5|adjacent=5|skip=0|adjacent_vector=2,2,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "id": "U6",
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,3,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+      "id": "U7",
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U8",
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U9",
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=3,2,1|skip_vector=1,1,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U10",
+      "min_lower_orientation_probability": [
+        7,
+        16
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U11",
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U12",
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U13",
+      "min_lower_orientation_probability": [
+        4,
+        9
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,3,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U14",
+      "min_lower_orientation_probability": [
+        22,
+        49
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U15",
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=1,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U16",
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=1,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U17",
+      "min_lower_orientation_probability": [
+        5,
+        11
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        2,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=1,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U18",
+      "min_lower_orientation_probability": [
+        11,
+        24
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "skip_vector": [
+        1,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        2,
+        1,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U19",
+      "min_lower_orientation_probability": [
+        6,
+        13
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=5|skip=3|adjacent_vector=2,2,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U20",
+      "min_lower_orientation_probability": [
+        19,
+        41
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        1,
+        1
+      ],
+      "skip_vector": [
+        1,
+        1,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U21",
+      "min_lower_orientation_probability": [
+        7,
+        15
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=6|adjacent=5|skip=1|adjacent_vector=2,2,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U22",
+      "min_lower_orientation_probability": [
+        26,
+        55
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,3,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U23",
+      "min_lower_orientation_probability": [
+        10,
+        21
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=3,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "id": "U24",
+      "min_lower_orientation_probability": [
+        16,
+        33
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,3,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U25",
+      "min_lower_orientation_probability": [
+        22,
+        45
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        1
+      ],
+      "skip_vector": [
+        0,
+        1,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "feature_key": "covers=7|adjacent=5|skip=2|adjacent_vector=2,2,1|skip_vector=0,1,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U26",
+      "min_lower_orientation_probability": [
+        25,
+        51
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        1
+      ],
+      "skip_vector": [
+        0,
+        1,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=3,2,1|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U27",
+      "min_lower_orientation_probability": [
+        27,
+        55
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=6|adjacent=6|skip=0|adjacent_vector=2,2,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "id": "U28",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,0,1|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U29",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=6|skip=1|adjacent_vector=2,2,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U30",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=6|skip=2|adjacent_vector=2,2,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U31",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        2,
+        2
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,2,2|skip_vector=2,0,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U32",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "feature_key": "covers=9|adjacent=6|skip=3|adjacent_vector=2,3,1|skip_vector=1,1,1|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U33",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        1,
+        1
+      ],
+      "skip_vector": [
+        1,
+        1,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=2,4,1|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=0",
+      "id": "U34",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U35",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        1,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=2,4,1|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U36",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        1,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=1,1,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U37",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        1,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=2,4,1|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=0",
+      "id": "U38",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        1,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=2,4,2|skip_vector=0,0,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=1|top_fed_by_two=1",
+      "id": "U39",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=0,1,0|bottom_dense=0|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U40",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=2,4,2|skip_vector=1,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U41",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        2,
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "adjacent_vector": [
+        2,
+        4,
+        2
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=10|adjacent=8|skip=2|adjacent_vector=2,4,2|skip_vector=2,0,0|bottom_dense=0|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=1|top_fed_by_two=1",
+      "id": "U42",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        2,
+        4,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=3,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "id": "U43",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U44",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=3,2,2|skip_vector=0,1,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U45",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "skip_vector": [
+        0,
+        1,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "feature_key": "covers=9|adjacent=7|skip=2|adjacent_vector=3,2,2|skip_vector=2,0,0|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=0|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U46",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        2,
+        2,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        3,
+        2,
+        2
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "feature_key": "covers=10|adjacent=7|skip=3|adjacent_vector=3,2,2|skip_vector=2,0,1|bottom_dense=1|has_bottom_skip=1|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U47",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "skip_vector": [
+        2,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        3,
+        2,
+        2,
+        2,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        4,
+        2,
+        1
+      ],
+      "delta": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=7|adjacent=7|skip=0|adjacent_vector=4,2,1|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=0",
+      "id": "U48",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        4,
+        2,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        0
+      ],
+      "adjacent_vector": [
+        4,
+        2,
+        1
+      ],
+      "delta": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "feature_key": "covers=8|adjacent=7|skip=1|adjacent_vector=4,2,1|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=0",
+      "id": "U49",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        4,
+        2,
+        1,
+        0,
+        0,
+        1
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        4,
+        2,
+        2
+      ],
+      "delta": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "feature_key": "covers=8|adjacent=8|skip=0|adjacent_vector=4,2,2|skip_vector=0,0,0|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=0|has_skip_cover=0|middle_dense=0|top_fed_by_two=1",
+      "id": "U50",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "skip_vector": [
+        0,
+        0,
+        0
+      ],
+      "state": "unprocessed",
+      "vector": [
+        4,
+        2,
+        2,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        1
+      ],
+      "adjacent_vector": [
+        4,
+        2,
+        2
+      ],
+      "delta": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "feature_key": "covers=9|adjacent=8|skip=1|adjacent_vector=4,2,2|skip_vector=0,0,1|bottom_dense=1|has_bottom_skip=0|has_middle_to_top_skip=1|has_skip_cover=1|middle_dense=0|top_fed_by_two=1",
+      "id": "U51",
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "nonnegative_from_base": true,
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "skip_vector": [
+        0,
+        0,
+        1
+      ],
+      "state": "unprocessed",
+      "vector": [
+        4,
+        2,
+        2,
+        0,
+        0,
+        1
+      ]
+    }
+  ],
+  "delta_group_count": 59,
+  "delta_groups": [
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        14,
+        39
+      ],
+      "processed_ids": [
+        "P1"
+      ],
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_ids": [
+        "P2"
+      ],
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_ids": [
+        "P3"
+      ],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_ids": [
+        "P4"
+      ],
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_ids": [
+        "P5"
+      ],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        2,
+        5
+      ],
+      "processed_ids": [
+        "P6"
+      ],
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "processed_ids": [
+        "P7"
+      ],
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        13,
+        32
+      ],
+      "processed_ids": [
+        "P8"
+      ],
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_ids": []
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        7,
+        17
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U1"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        22,
+        53
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U2"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        5,
+        12
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U3"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        8,
+        19
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U4"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        14,
+        33
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U5"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U6"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U7"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U8"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        3,
+        7
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U9"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        7,
+        16
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U10"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U11"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        11,
+        25
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U12"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        4,
+        9
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U13"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        22,
+        49
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U14"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U15"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        14,
+        31
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U16"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        5,
+        11
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U17"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        11,
+        24
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U18"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        6,
+        13
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U19"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        19,
+        41
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        1,
+        1
+      ],
+      "unprocessed_ids": [
+        "U20"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        7,
+        15
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U21"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        26,
+        55
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U22"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        1
+      ],
+      "delta": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        10,
+        21
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U23"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        16,
+        33
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U24"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        0,
+        1,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        22,
+        45
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        1
+      ],
+      "unprocessed_ids": [
+        "U25"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        0
+      ],
+      "delta": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        25,
+        51
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        1
+      ],
+      "unprocessed_ids": [
+        "U26"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        0
+      ],
+      "delta": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        27,
+        55
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U27"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U28"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U29"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U30"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U31"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        0,
+        1
+      ],
+      "delta": [
+        0,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U32"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        1,
+        0
+      ],
+      "delta": [
+        0,
+        1,
+        0,
+        1,
+        1,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        1,
+        1
+      ],
+      "unprocessed_ids": [
+        "U33"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U34"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U35"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U36"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        1,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U37"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        0
+      ],
+      "delta": [
+        0,
+        2,
+        0,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U38"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U39"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U40"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        1,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        1,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U41"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        0,
+        2,
+        1
+      ],
+      "delta": [
+        0,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U42"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U43"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U44"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        1,
+        0
+      ],
+      "unprocessed_ids": [
+        "U45"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U46"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        1,
+        0,
+        1
+      ],
+      "delta": [
+        1,
+        0,
+        1,
+        2,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        2,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U47"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        0
+      ],
+      "delta": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U48"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        0
+      ],
+      "delta": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U49"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        1
+      ],
+      "delta": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        0
+      ],
+      "unprocessed_ids": [
+        "U50"
+      ]
+    },
+    {
+      "adjacent_delta": [
+        2,
+        0,
+        1
+      ],
+      "delta": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "min_lower_orientation_probability": [
+        1,
+        2
+      ],
+      "processed_ids": [],
+      "skip_delta": [
+        0,
+        0,
+        1
+      ],
+      "unprocessed_ids": [
+        "U51"
+      ]
+    }
+  ],
+  "mixed_delta_group_count": 0,
+  "nonnegative_from_base_count": 59,
+  "processed_delta_group_count": 8,
+  "source": "research-bank\\R013\\attempt-20260520\\width3-rank2221-vector-frontier.json",
+  "unprocessed_delta_group_count": 51
+}

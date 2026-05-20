@@ -27,6 +27,7 @@ verdict: PARTIAL-PROGRESS
 - `research-bank/R013/attempt-20260520/width3-rank2221-shape-classes-n7.json`
 - `research-bank/R013/attempt-20260520/width3-rank2221-matrix-shape-classes-n7.json`
 - `research-bank/R013/attempt-20260520/width3-rank2221-fine-shape-classes-n7.json`
+- `research-bank/R013/attempt-20260520/width3-rank2221-extremal-matrix-bucket-n7.json`
 - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
 - `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`
 - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`

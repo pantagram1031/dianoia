@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T23:50:00+09:00
+
+- Continued P11 on `R013`.
+- Added `bucket-members` to `tools/poset_balance.py` so proof subcases can be
+  extracted reproducibly by signature.
+- Generated `width3-rank2221-extremal-matrix-bucket-n7.json`, the full
+  3-profile member list for the matrix bucket containing the `14/39` extremal.
+- Updated R013 notes to cite the command and artifact.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:30:00+09:00
 
 - Continued P11 on `R013`.

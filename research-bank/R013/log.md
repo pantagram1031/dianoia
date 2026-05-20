@@ -126,3 +126,13 @@ candidate_id: R013
   coordinate-free case split on the bottom-layer and rank-1 layer
   vertex-signature patterns.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-20 P11 Attempt 1I
+
+- Added `bucket-members` extraction to the exact poset tool.
+- Generated
+  `research-bank/R013/attempt-20260520/width3-rank2221-extremal-matrix-bucket-n7.json`.
+- The generated artifact records all three members of the extremal matrix
+  bucket, sorted by best lower orientation probability.
+- Updated `MATRIX_BUCKET_NOTES.md` to cite the exact generation command.
+- Claim discipline: no `CLAIMS.md` row.

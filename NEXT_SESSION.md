@@ -15,8 +15,9 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   rank-layer-shape `2,2,2,1` posets. The exact restricted artifact exists;
   matrix signatures reduce the `14/39` extremal bucket to 3 profiles and full
   per-layer vertex signatures isolate it as a singleton. `MATRIX_BUCKET_NOTES.md`
-  now lists the three profiles; next prove the equality subcase
-  coordinate-free; or
+  now lists the three profiles, and
+  `width3-rank2221-extremal-matrix-bucket-n7.json` records the reproducible
+  extraction; next prove the equality subcase coordinate-free; or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
 - switch to `R017` Graceful Tree Conjecture if both R013 and R020 become mostly
@@ -60,6 +61,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-shape-classes-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-matrix-shape-classes-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-fine-shape-classes-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-extremal-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
   - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
   - `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`

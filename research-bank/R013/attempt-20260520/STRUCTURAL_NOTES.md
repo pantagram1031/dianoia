@@ -27,6 +27,8 @@ Artifacts:
   buckets for the restricted class.
 - `width3-rank2221-fine-shape-classes-n7.json`: per-layer vertex-signature
   buckets for exact extremal identification.
+- `width3-rank2221-extremal-matrix-bucket-n7.json`: full member list for the
+  3-profile matrix bucket containing the `14/39` extremal.
 - `WIDTH3_EXTREMAL_NOTES.md`: human-readable proof-target notes.
 - `MATRIX_BUCKET_NOTES.md`: three-profile matrix-bucket case split for the
   current extremal subcase.

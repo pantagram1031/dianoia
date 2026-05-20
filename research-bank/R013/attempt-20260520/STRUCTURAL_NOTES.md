@@ -23,6 +23,10 @@ Artifacts:
 - `width3-rank2221-extremals-n7.json`: restricted extremal list.
 - `width3-rank2221-shape-classes-n7.json`: coarse signature buckets for the
   restricted class.
+- `width3-rank2221-matrix-shape-classes-n7.json`: inter-rank cover-matrix
+  buckets for the restricted class.
+- `width3-rank2221-fine-shape-classes-n7.json`: per-layer vertex-signature
+  buckets for exact extremal identification.
 - `WIDTH3_EXTREMAL_NOTES.md`: human-readable proof-target notes.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
@@ -65,9 +69,10 @@ These are search signals only:
    whether `14/39` is the extremal lower probability in that restricted class.
    The exact restricted run now confirms this for all 103 unlabeled profiles
    through `n=7`.
-4. Refine the coarse 12-bucket split using inter-layer cover matrices or
-   rank-layer vertex signatures; cover/min/max counts leave the extremal inside
-   a 24-profile bucket.
+4. Turn the matrix-signature split into a human proof skeleton: cover/min/max
+   counts leave the extremal inside a 24-profile bucket, inter-rank cover
+   matrices reduce it to a 3-profile bucket, and full per-layer vertex
+   signatures isolate it as a singleton.
 5. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

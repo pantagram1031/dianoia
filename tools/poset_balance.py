@@ -183,6 +183,55 @@ def rank_layers(poset: Poset) -> list[list[int]]:
     return [sorted(layers[index]) for index in sorted(layers)]
 
 
+def rank_index_by_item(poset: Poset) -> dict[int, int]:
+    return {
+        item: rank_index
+        for rank_index, layer in enumerate(rank_layers(poset))
+        for item in layer
+    }
+
+
+def cover_rank_matrix(poset: Poset) -> list[list[int]]:
+    layers = rank_layers(poset)
+    rank_index = rank_index_by_item(poset)
+    matrix = [[0 for _ in layers] for _ in layers]
+    for lower, upper in covers(poset):
+        matrix[rank_index[lower]][rank_index[upper]] += 1
+    return matrix
+
+
+def rank_layer_vertex_signatures(poset: Poset) -> list[list[list[object]]]:
+    layers = rank_layers(poset)
+    rank_index = rank_index_by_item(poset)
+    layer_count = len(layers)
+    cover_relations = covers(poset)
+    signatures_by_layer: list[list[list[object]]] = []
+    for layer in layers:
+        layer_signatures = []
+        for item in layer:
+            lower_covers_by_rank = [0] * layer_count
+            upper_covers_by_rank = [0] * layer_count
+            for lower, upper in cover_relations:
+                if upper == item:
+                    lower_covers_by_rank[rank_index[lower]] += 1
+                if lower == item:
+                    upper_covers_by_rank[rank_index[upper]] += 1
+            lower_count = sum(1 for lower, upper in poset.less if upper == item)
+            upper_count = sum(1 for lower, upper in poset.less if lower == item)
+            incomparable_count = poset.n - 1 - lower_count - upper_count
+            layer_signatures.append(
+                [
+                    lower_count,
+                    upper_count,
+                    incomparable_count,
+                    lower_covers_by_rank,
+                    upper_covers_by_rank,
+                ]
+            )
+        signatures_by_layer.append(sorted(layer_signatures))
+    return signatures_by_layer
+
+
 def structural_profile(poset: Poset) -> dict[str, object]:
     cover_relations = covers(poset)
     layers = rank_layers(poset)
@@ -195,9 +244,11 @@ def structural_profile(poset: Poset) -> dict[str, object]:
         "rank_layers": layers,
         "cover_relations": [list(pair) for pair in sorted(cover_relations)],
         "cover_edge_count": len(cover_relations),
+        "cover_rank_matrix": cover_rank_matrix(poset),
         "vertex_signatures": [
             list(vertex_signature(poset, item)) for item in range(poset.n)
         ],
+        "rank_layer_vertex_signatures": rank_layer_vertex_signatures(poset),
     }
 
 
@@ -618,6 +669,28 @@ def signature_bucket(profile: dict[str, object]) -> str:
     )
 
 
+def fine_signature_bucket(profile: dict[str, object]) -> str:
+    return "|".join(
+        [
+            matrix_signature_bucket(profile),
+            "layer_vertex_signatures="
+            + json.dumps(
+                profile["rank_layer_vertex_signatures"],
+                separators=(",", ":"),
+            ),
+        ]
+    )
+
+
+def matrix_signature_bucket(profile: dict[str, object]) -> str:
+    return "|".join(
+        [
+            signature_bucket(profile),
+            "cover_matrix=" + json.dumps(profile["cover_rank_matrix"], separators=(",", ":")),
+        ]
+    )
+
+
 def shape_classes_command(args: argparse.Namespace) -> int:
     shape_filter = parse_rank_shape(args.rank_shape)
     buckets: dict[str, dict[str, object]] = {}
@@ -635,7 +708,12 @@ def shape_classes_command(args: argparse.Namespace) -> int:
                 continue
             lower = Fraction(*best_pair["lower_orientation_probability"])
             profile = structural_profile(poset)
-            key = signature_bucket(profile)
+            if args.signature == "fine":
+                key = fine_signature_bucket(profile)
+            elif args.signature == "matrix":
+                key = matrix_signature_bucket(profile)
+            else:
+                key = signature_bucket(profile)
             bucket = buckets.setdefault(
                 key,
                 {
@@ -684,6 +762,7 @@ def shape_classes_command(args: argparse.Namespace) -> int:
         "width": args.width,
         "height": args.height,
         "rank_shape": list(shape_filter) if shape_filter else None,
+        "signature_mode": args.signature,
         "bucket_count": len(bucket_list),
         "total_posets": sum(int(bucket["count"]) for bucket in bucket_list),
         "buckets": bucket_list,
@@ -732,6 +811,11 @@ def main(argv: Sequence[str] | None = None) -> int:
     classes_parser.add_argument("--width", type=int, required=True)
     classes_parser.add_argument("--height", type=int)
     classes_parser.add_argument("--rank-shape")
+    classes_parser.add_argument(
+        "--signature",
+        choices=["coarse", "matrix", "fine"],
+        default="coarse",
+    )
     classes_parser.add_argument("--examples-per-bucket", type=int, default=2)
     classes_parser.add_argument("--output", type=Path)
     classes_parser.set_defaults(func=shape_classes_command)

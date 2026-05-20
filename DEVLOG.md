@@ -1,5 +1,22 @@
 # Devlog
 
+## 2026-05-20T23:18:00+09:00
+
+- Continued P11 on `R013`.
+- Added `cover_rank_matrix`, per-layer vertex signatures, and `--signature`
+  modes (`coarse`, `matrix`, `fine`) to `tools/poset_balance.py`.
+- Generated `width3-rank2221-matrix-shape-classes-n7.json` and
+  `width3-rank2221-fine-shape-classes-n7.json`.
+- Matrix signatures split the 103 restricted profiles into 67 buckets and
+  reduce the `14/39` extremal bucket from 24 profiles to 3. Fine signatures
+  split the class into 103 singleton buckets.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 4 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:05:00+09:00
 
 - Continued P11 on `R013`.

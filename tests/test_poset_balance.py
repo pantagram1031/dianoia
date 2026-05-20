@@ -52,6 +52,21 @@ class PosetBalanceTest(unittest.TestCase):
         self.assertEqual([[0, 1], [2]], pb.rank_layers(poset))
         self.assertEqual([0, 1], pb.minimal_elements(poset))
         self.assertEqual([2], pb.maximal_elements(poset))
+        self.assertEqual([[0, 2], [0, 0]], pb.cover_rank_matrix(poset))
+
+    def test_structural_profile_records_layer_vertex_signatures(self) -> None:
+        profile = pb.structural_profile(pb.make_poset(3, [(0, 2), (1, 2)]))
+
+        self.assertIn("cover_rank_matrix", profile)
+        self.assertIn("rank_layer_vertex_signatures", profile)
+        self.assertEqual([[0, 2], [0, 0]], profile["cover_rank_matrix"])
+        self.assertEqual(
+            [
+                [[0, 1, 1, [0, 0], [0, 1]], [0, 1, 1, [0, 0], [0, 1]]],
+                [[2, 0, 0, [2, 0], [0, 0]]],
+            ],
+            profile["rank_layer_vertex_signatures"],
+        )
 
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -179,6 +194,59 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertGreater(payload["bucket_count"], 0)
             self.assertGreater(payload["total_posets"], 0)
             self.assertIn("examples", payload["buckets"][0])
+
+    def test_shape_classes_fine_signature_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "classes.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "shape-classes",
+                        "--max-n",
+                        "5",
+                        "--width",
+                        "3",
+                        "--rank-shape",
+                        "2,2,1",
+                        "--signature",
+                        "fine",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual("fine", payload["signature_mode"])
+            self.assertGreater(payload["bucket_count"], 0)
+            self.assertIn("cover_matrix=", payload["buckets"][0]["signature"])
+
+    def test_shape_classes_matrix_signature_mode(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "classes.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "shape-classes",
+                        "--max-n",
+                        "5",
+                        "--width",
+                        "3",
+                        "--rank-shape",
+                        "2,2,1",
+                        "--signature",
+                        "matrix",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual("matrix", payload["signature_mode"])
+            self.assertGreater(payload["bucket_count"], 0)
+            self.assertIn("cover_matrix=", payload["buckets"][0]["signature"])
+            self.assertNotIn("layer_vertex_signatures=", payload["buckets"][0]["signature"])
 
 
 if __name__ == "__main__":

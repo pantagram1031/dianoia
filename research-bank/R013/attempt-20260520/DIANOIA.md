@@ -130,6 +130,38 @@ Result: 12 coarse buckets. The `14/39` extremal lies in the
 `layers=2,2,2,1|covers=8|mins=2|maxs=2` bucket, which still contains 24
 profiles.
 
+Restricted matrix-signature command:
+
+```powershell
+python tools\poset_balance.py shape-classes `
+  --max-n 7 `
+  --width 3 `
+  --height 4 `
+  --rank-shape 2,2,2,1 `
+  --signature matrix `
+  --examples-per-bucket 3 `
+  --output research-bank\R013\attempt-20260520\width3-rank2221-matrix-shape-classes-n7.json
+```
+
+Result: 67 matrix buckets. The `14/39` extremal lies in the bucket with cover
+matrix `[[0,2,2,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]`, which contains 3 profiles.
+
+Restricted fine-signature command:
+
+```powershell
+python tools\poset_balance.py shape-classes `
+  --max-n 7 `
+  --width 3 `
+  --height 4 `
+  --rank-shape 2,2,2,1 `
+  --signature fine `
+  --examples-per-bucket 3 `
+  --output research-bank\R013\attempt-20260520\width3-rank2221-fine-shape-classes-n7.json
+```
+
+Result: 103 fine buckets over 103 profiles. The `14/39` extremal bucket is a
+singleton.
+
 ## Outcome
 
 `PARTIAL-PROGRESS`. This is not a new mathematical contribution; the small

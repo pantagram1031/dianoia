@@ -37,6 +37,19 @@ COMMANDS = [
         "--limit",
         "1",
     ],
+    [
+        sys.executable,
+        "tools/poset_balance.py",
+        "shape-classes",
+        "--max-n",
+        "5",
+        "--width",
+        "3",
+        "--rank-shape",
+        "2,2,1",
+        "--signature",
+        "matrix",
+    ],
 ]
 
 

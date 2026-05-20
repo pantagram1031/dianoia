@@ -12,6 +12,9 @@ the proof-target class: width 3, height 4, rank-layer-shape `2,2,2,1`.
 `width3-rank2221-shape-classes-n7.json` groups the same restricted class by
 rank-layer shape, cover-edge count, number of minimal elements, and number of
 maximal elements.
+`width3-rank2221-matrix-shape-classes-n7.json` refines that split by the
+inter-rank cover matrix. `width3-rank2221-fine-shape-classes-n7.json` refines
+again by sorted per-layer vertex signatures.
 
 The command was:
 
@@ -43,6 +46,8 @@ Inside the restricted width-3, height-4, rank-layer-shape `2,2,2,1` class:
 - worst best-pair lower probability: `14/39`;
 - next worst lower probability: `2/5`.
 - coarse signature buckets: 12.
+- matrix signature buckets: 67.
+- fine signature buckets: 103.
 
 ## Shape Signal
 
@@ -73,6 +78,20 @@ layers=2,2,2,1|covers=8|mins=2|maxs=2
 This bucket has 24 profiles, so cover/min/max counts alone are not a
 human-checkable case split. The next split needs a finer invariant, likely the
 inter-layer cover matrix or the sequence of vertex signatures by rank layer.
+
+The matrix-signature refinement uses this cover-rank matrix for the `14/39`
+extremal:
+
+```text
+[[0,2,2,0],
+ [0,0,2,1],
+ [0,0,0,1],
+ [0,0,0,0]]
+```
+
+This matrix bucket has 3 profiles. The fully refined layer-vertex-signature
+bucket is a singleton, so it identifies the extremal exactly but is too fine
+to be the final human proof structure.
 
 ## Next Proof Attempt
 

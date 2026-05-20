@@ -13,6 +13,18 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T23:18:00+09:00
+
+- Added proof-relevant refinements for the R013 restricted width-3 target.
+- New artifacts:
+  `research-bank/R013/attempt-20260520/width3-rank2221-matrix-shape-classes-n7.json`
+  and
+  `research-bank/R013/attempt-20260520/width3-rank2221-fine-shape-classes-n7.json`.
+- Finite signal: matrix signatures split 103 profiles into 67 buckets and
+  reduce the `14/39` extremal bucket to 3 profiles; full per-layer vertex
+  signatures isolate the extremal as a singleton.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T23:05:00+09:00
 
 - Added coarse case-split grouping for the R013 restricted width-3 target.

@@ -97,3 +97,19 @@ candidate_id: R013
   case split, likely inter-layer cover matrices or rank-layer vertex-signature
   sequences.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-20 P11 Attempt 1G
+
+- Added proof-relevant rank-layer refinements to the exact poset tool:
+  inter-rank cover matrices and sorted per-layer vertex signatures.
+- Added `shape-classes --signature matrix` and `shape-classes --signature fine`.
+- Generated
+  `research-bank/R013/attempt-20260520/width3-rank2221-matrix-shape-classes-n7.json`
+  and
+  `research-bank/R013/attempt-20260520/width3-rank2221-fine-shape-classes-n7.json`.
+- Result: matrix signatures split the 103 restricted profiles into 67 buckets;
+  the `14/39` extremal bucket has 3 profiles and cover matrix
+  `[[0,2,2,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]`.
+- Result: full per-layer vertex signatures split the class into 103 singleton
+  buckets, identifying the extremal exactly but too finely for a final proof.
+- Claim discipline: no `CLAIMS.md` row.

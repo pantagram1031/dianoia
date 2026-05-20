@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T06:05:00+09:00
+
+- Continued P11 on `R013` by extracting the eight processed vector classes
+  into `PROCESSED_VECTOR_CLASSES.md`.
+- The table records each class' minimum lower probability, profile count,
+  adjacent vector, skip vector, and cover matrix.
+- Next mathematical target: prove a vector-class dichotomy that discharges
+  P1-P8 through existing ledgers and handles the remaining vector classes by a
+  placement-slack argument.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T05:50:00+09:00
 
 - Continued P11 on `R013` by refining the all-bucket feature partition with

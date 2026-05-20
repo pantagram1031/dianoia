@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T06:05:00+09:00
+
+- Continued P11 on `R013`.
+- Extracted the eight processed vector feature classes into
+  `PROCESSED_VECTOR_CLASSES.md`.
+- Named the next lemma target as a vector-class dichotomy: P1-P8 direct
+  certificate classes versus remaining classes with enough placement slack for
+  a uniform lower bound.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, note.
+- Failed-session streak: 0.
+
 ## 2026-05-21T05:50:00+09:00
 
 - Continued P11 on `R013`.

@@ -67,6 +67,8 @@ Artifacts:
 - `VECTOR_FEATURE_PARTITION_NOTES.md`: interpretation of the vector-detail
   partition; exact adjacent/skip vectors separate processed and unprocessed
   feature classes.
+- `PROCESSED_VECTOR_CLASSES.md`: compact P1-P8 table of processed vector
+  classes and the candidate vector-class dichotomy.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -137,6 +139,8 @@ These are search signals only:
    reduces mixed processed/unprocessed groups to zero. The next proof-support
    target is an eight-row processed vector-class table and a dominance argument
    for the vector classes outside that table.
+   `PROCESSED_VECTOR_CLASSES.md` now provides the P1-P8 table; the next
+   mathematical step is to prove or refute the vector-class dichotomy.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

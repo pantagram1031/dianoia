@@ -116,5 +116,9 @@ grouping separates the mixed classes: 59 vector feature groups and 0 mixed
 processed/unprocessed groups. Next target: extract the eight processed vector
 classes into a lemma table and attempt a vector-class dominance argument for
 the remaining classes.
+`PROCESSED_VECTOR_CLASSES.md` now extracts those eight processed vector classes
+as P1-P8 with minimum probabilities, profile counts, adjacent vectors, skip
+vectors, and cover matrices. Next target: prove or refute the candidate
+vector-class dichotomy.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

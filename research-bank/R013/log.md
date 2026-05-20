@@ -2,6 +2,14 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 2A
+
+- Added `research-bank/R013/attempt-20260520/PROCESSED_VECTOR_CLASSES.md`.
+- Extracted P1-P8 processed vector classes from the vector partition artifact.
+- Next proof-support target: prove or refute the vector-class dichotomy rather
+  than continue bucket replay.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 1Z
 
 - Added vector-detail grouping to `tools/poset_balance.py matrix-feature-partition`.

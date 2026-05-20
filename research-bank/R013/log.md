@@ -168,3 +168,13 @@ candidate_id: R013
 - Result: the common matrix, width 3, height 4, and rank shape `2,2,2,1`
   produce exactly three rank-normal forms, matching Cases A/B/C.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-21 P11 Attempt 1M
+
+- Added `named-case-recurrence` to expose first-step minimal-element
+  recurrences for named normal-form cases.
+- Generated recurrence traces for Cases A/B/C in `normal-form-cases/`.
+- Added `RECURRENCE_LEDGER.md`.
+- Result: the branch recurrences now show how `14/39`, `14/33`, and `5/11`
+  arise from root minimal choices.
+- Claim discipline: no `CLAIMS.md` row.

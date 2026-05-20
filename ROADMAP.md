@@ -90,7 +90,7 @@ reproducible. `RANK_NORMAL_FORM_NOTES.md` now rewrites those cases with stable
 rank-layer labels, and `NORMAL_FORM_COUNT_LEDGER.md` certifies the three
 orientation counts from named case inputs. `COVER_MATRIX_DERIVATION.md` now
 derives the same three forms directly from the cover matrix. Next, replace the
-remaining count replays with a hand recurrence/enumeration before any novelty
-claim.
+remaining recurrence branch counts with a hand enumeration before any novelty
+claim; `RECURRENCE_LEDGER.md` now exposes the first-step recurrences.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

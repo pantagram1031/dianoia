@@ -12,6 +12,9 @@ the extremal matrix bucket. Each case has:
 - a generated report from `python tools\poset_balance.py named-case`;
 - the pair count needed by `RANK_NORMAL_FORM_NOTES.md`.
 
+`RECURRENCE_LEDGER.md` refines these counts into first-step minimal-element
+recurrences.
+
 ## Replay Commands
 
 ```powershell

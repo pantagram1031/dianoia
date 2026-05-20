@@ -32,6 +32,7 @@ verdict: PARTIAL-PROGRESS
 - `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`
 - `research-bank/R013/attempt-20260520/RANK_NORMAL_FORM_NOTES.md`
 - `research-bank/R013/attempt-20260520/NORMAL_FORM_COUNT_LEDGER.md`
+- `research-bank/R013/attempt-20260520/RECURRENCE_LEDGER.md`
 - `research-bank/R013/attempt-20260520/COVER_MATRIX_DERIVATION.md`
 - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
 - `research-bank/R013/attempt-20260520/normal-form-cases/`
@@ -70,6 +71,8 @@ The unlabeled seven-element artifact reports:
   and `5/11` from named cover-relation inputs.
 - cover-matrix derivation: direct enumeration from the common matrix, width 3,
   height 4, and rank shape `2,2,2,1` gives exactly three normal forms.
+- recurrence traces: first-step minimal-element recurrences expose the branch
+  counts behind `14/39`, `14/33`, and `5/11`.
 
 ## Claim Discipline
 

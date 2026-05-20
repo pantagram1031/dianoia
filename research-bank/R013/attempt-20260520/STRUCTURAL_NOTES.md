@@ -36,6 +36,8 @@ Artifacts:
   matrix-bucket cases.
 - `NORMAL_FORM_COUNT_LEDGER.md`: replayable named-case count certificates for
   the three rank-normal cases.
+- `RECURRENCE_LEDGER.md`: minimal-element recurrence summaries for the three
+  named cases.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -84,7 +86,8 @@ These are search signals only:
    through `n=7`.
 4. Replace the remaining computational subcase with a hand proof:
    `COVER_MATRIX_DERIVATION.md` derives the three normal forms from the common
-   cover matrix, and `NORMAL_FORM_COUNT_LEDGER.md` certifies their counts.
+   cover matrix, `NORMAL_FORM_COUNT_LEDGER.md` certifies their counts, and
+   `RECURRENCE_LEDGER.md` starts the minimal-element recurrence proof.
 5. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

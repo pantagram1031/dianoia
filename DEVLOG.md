@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T01:01:00+09:00
+
+- Continued P11 on `R013`.
+- Added `named-case-recurrence` to expose minimal-element recurrence traces.
+- Generated `case-a-recurrence.json`, `case-b-recurrence.json`, and
+  `case-c-recurrence.json`.
+- Added `RECURRENCE_LEDGER.md`, summarizing the branch recurrences for the
+  three normal-form cases.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:43:00+09:00
 
 - Continued P11 on `R013`.

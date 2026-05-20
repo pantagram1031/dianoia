@@ -97,6 +97,18 @@ It is a singleton bucket. The pair `(c,d)` has counts `(18,12)` over `30`
 extensions, so the lower probability is `2/5`; `FIFTH_MATRIX_BUCKET_NOTES.md`
 gives the hand enumeration.
 
+The sixth-ranked bucket has also been extracted and replayed:
+
+- `width3-rank2221-sixth-matrix-bucket-n7.json`
+- `width3-rank2221-sixth-cover-matrix-forms-n7.json`
+- `normal-form-cases/case-sixth-bucket.json`
+- `SIXTH_MATRIX_BUCKET_NOTES.md`
+
+It is a singleton bucket. The pair `(e,c)` has counts `(12,18)` over `30`
+extensions, so the lower probability is `2/5`; `SIXTH_MATRIX_BUCKET_NOTES.md`
+gives the hand enumeration. During extraction, the correct signature was
+verified to have `covers=9`, matching the cover-matrix edge sum.
+
 ## Claim Discipline
 
 No `CLAIMS.md` row. This roadmap only organizes restricted finite subcases

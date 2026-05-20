@@ -2,6 +2,24 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 1T
+
+- Classified the sixth-ranked matrix bucket for the restricted width-3,
+  height-4, rank-shape `2,2,2,1` class.
+- Artifact:
+  `research-bank/R013/attempt-20260520/width3-rank2221-sixth-matrix-bucket-n7.json`
+  extracts the singleton bucket with signature
+  `layers=2,2,2,1|covers=9|mins=2|maxs=2|cover_matrix=[[0,3,2,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]`.
+- Artifact:
+  `research-bank/R013/attempt-20260520/width3-rank2221-sixth-cover-matrix-forms-n7.json`
+  derives the same singleton rank-normal form directly from the cover matrix.
+- Artifact:
+  `research-bank/R013/attempt-20260520/SIXTH_MATRIX_BUCKET_NOTES.md`
+  hand-counts the pair `(e,c)`, giving exact counts `(12,18)` over `30`
+  extensions and lower orientation probability `2/5`.
+- Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
+  subcase, not a proof of the published open problem.
+
 ## 2026-05-20 Curation
 
 - Added to P10 bank as `OPEN-VERIFIED`.

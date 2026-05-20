@@ -88,7 +88,12 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   `balanced-core-plus-forced-first`. `EARLY_VECTOR_MECHANISM_NOTES.md` tests
   P1/P2/P3 and finds that all three minimum forms also resolve by forced
   blocks at depth 3. Next write a forced-block lemma schema and test it on
-  P4/P5/P6 plus U6 before promoting any restricted finite-subcase claim;
+  P4/P5/P6 plus U6 before promoting any restricted finite-subcase claim.
+  `FORCED_BLOCK_SCHEMA_NOTES.md` now records that U6, P1, P2, P3, P4, P5, and
+  P7 reduce to forced-block recurrence certificates, while P6 and P8 reduce to
+  a balanced-core-plus-forced-first family. Next reduce all 22 U6/P1-P8
+  rank-normal forms to these two mechanism schemas, then seek a dominance or
+  exclusion argument for the 51 unprocessed vector classes;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or

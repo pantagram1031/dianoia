@@ -13,6 +13,18 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T09:25:00+09:00
+
+- Continued P11 on `R013` by converting the forced-block recurrence pattern
+  into generated terminal count obligations.
+- Tested P4/P5/P6 and U6. P4, P5, and U6 reduce to forced-block certificates
+  at depths 3, 4, and 5 respectively; P6 reduces to the same balanced-core
+  family as P8.
+- Added `FORCED_BLOCK_SCHEMA_NOTES.md`. The current restricted-subcase proof
+  plan is now two mechanism schemas plus a remaining dominance/exclusion
+  argument for unprocessed vector classes.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T08:45:00+09:00
 
 - Continued P11 on `R013` by turning depth-3 recurrence traces into a reusable

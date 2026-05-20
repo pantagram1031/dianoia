@@ -1,5 +1,24 @@
 # Devlog
 
+## 2026-05-21T09:25:00+09:00
+
+- Continued P11 on `R013`.
+- Added `recurrence-forced-block-obligations` to emit exact terminal count
+  obligations from any forced-block recurrence trace.
+- Tested the forced-block schema on P4/P5/P6 and U6:
+  - P4 resolves by forced blocks at depth 3.
+  - P5 resolves by forced blocks at depth 4.
+  - U6 resolves by forced blocks at depth 5.
+  - P6 matches the balanced-core family already seen in P8.
+- Added `FORCED_BLOCK_SCHEMA_NOTES.md` summarizing the two mechanism families
+  and remaining proof gaps.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, tooling, note.
+- Failed-session streak: 0.
+
 ## 2026-05-21T08:45:00+09:00
 
 - Continued P11 on `R013` with the anti-overfitting constraint made explicit:

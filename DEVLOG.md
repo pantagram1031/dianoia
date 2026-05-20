@@ -1,5 +1,16 @@
 # Devlog
 
+## 2026-05-20T19:51:00+09:00
+
+- Added second Phase 5 skill: `skills/coverage-systems/SKILL.md`.
+- Updated `skills/INDEX.md`.
+- Wired the skill into `prompts/subagents/sanity-checker.md` and `prompts/subagents/prover.md`.
+
+Self-audit:
+- Commits this session so far: 5 pushed, 1 pending.
+- Concrete progress category: skill.
+- Failed-session streak: 0.
+
 ## 2026-05-20T19:44:00+09:00
 
 - Added second Phase 6 connector: `connectors/oeis/`.

@@ -15,10 +15,13 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 3. If the lemma uses quadratic character primes or a Pollack/APSSV-style
    small-prime input, consult `skills/pollack-character/SKILL.md` and include
    an effectiveness/explicit-bound note in `proof.fml`.
-4. Attempt the proof in WN inside `proof.fml`.
-5. Mark every unclosed step with `[GAP: <missing> | suffices: <what would close>]`.
-6. If a contradiction or counterexample is found, write it precisely and set status `FALSIFIED`.
-7. Write `return.md` with status `PROVED`, `GAP`, or `FALSIFIED` and the artifact path.
+4. If the lemma claims finite-list completeness or residue-class exhaustion,
+   consult `skills/coverage-systems/SKILL.md` and include the coverage
+   certificate or uncovered-class gap in `proof.fml`.
+5. Attempt the proof in WN inside `proof.fml`.
+6. Mark every unclosed step with `[GAP: <missing> | suffices: <what would close>]`.
+7. If a contradiction or counterexample is found, write it precisely and set status `FALSIFIED`.
+8. Write `return.md` with status `PROVED`, `GAP`, or `FALSIFIED` and the artifact path.
 
 [OUTPUTS]
 1. `proof.fml`.

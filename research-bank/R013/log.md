@@ -218,3 +218,16 @@ candidate_id: R013
   `(14,21)` over `35` extensions, hence lower probability `2/5`.
 - Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
   subcase, not a solution of R013.
+
+## 2026-05-21 P11 Attempt 1Q
+
+- Extracted the third-ranked `2/5` matrix bucket to
+  `width3-rank2221-third-matrix-bucket-n7.json`.
+- Derived six rank-normal forms from the same cover matrix in
+  `width3-rank2221-third-cover-matrix-forms-n7.json`.
+- Added named replay and depth-2 recurrence artifacts for all six forms under
+  `normal-form-cases/case-third-bucket-*`.
+- Added `THIRD_MATRIX_BUCKET_NOTES.md`, recording exact generated counts and
+  a hand count for the equality form with lower probability `2/5`.
+- Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
+  subcase, not a solution of R013.

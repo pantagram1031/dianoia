@@ -64,6 +64,17 @@ Proof task:
 4. Hand-count a balanced pair achieving lower probability `2/5`: done in
    `SECOND_MATRIX_BUCKET_NOTES.md`.
 
+The third-ranked bucket has also been extracted and replayed:
+
+- `width3-rank2221-third-matrix-bucket-n7.json`
+- `width3-rank2221-third-cover-matrix-forms-n7.json`
+- `normal-form-cases/case-third-bucket-*.json`
+- `THIRD_MATRIX_BUCKET_NOTES.md`
+
+It has six rank-normal forms. Generated exact counts show bucket minimum
+`2/5`, attained only by one form; `THIRD_MATRIX_BUCKET_NOTES.md` hand-counts
+that equality form.
+
 ## Claim Discipline
 
 No `CLAIMS.md` row. This roadmap only organizes restricted finite subcases

@@ -95,8 +95,10 @@ derives the same three forms directly from the cover matrix.
 terminal chain/shuffle counts for the common cover-matrix subcase.
 `MATRIX_BUCKET_ROADMAP.md` ranks the remaining near-boundary matrix buckets,
 and `SECOND_MATRIX_BUCKET_NOTES.md` hand-classifies the singleton second bucket
-with lower probability `2/5`. Next target one of the remaining `2/5` buckets
-with 4-6 profiles, or try to abstract the two completed buckets into a
-broader width-3 lemma.
+with lower probability `2/5`. `THIRD_MATRIX_BUCKET_NOTES.md` now classifies
+the next six-profile `2/5` bucket with generated exact counts and a hand count
+for the equality form. Next target another remaining `2/5` bucket with 4
+profiles, or try to abstract the completed buckets into a broader width-3
+lemma.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

@@ -13,6 +13,21 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T02:42:00+09:00
+
+- Continued P11 on `R013` by classifying the third-ranked matrix bucket in
+  the restricted width-3, height-4, rank-shape `2,2,2,1` class.
+- New artifacts:
+  `width3-rank2221-third-matrix-bucket-n7.json`,
+  `width3-rank2221-third-cover-matrix-forms-n7.json`,
+  `normal-form-cases/case-third-bucket-*`, and
+  `THIRD_MATRIX_BUCKET_NOTES.md`.
+- Finite signal: the third bucket has six rank-normal forms; exact replay
+  counts show lower probability at least `2/5`, and the equality form is
+  hand-counted in the note.
+- Claim discipline: restricted subcase only; no `CLAIMS.md` row and no P12
+  trigger.
+
 ## 2026-05-21T02:05:00+09:00
 
 - Continued P11 on `R013` by ranking the restricted matrix buckets and

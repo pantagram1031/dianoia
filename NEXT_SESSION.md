@@ -3,7 +3,7 @@
 Resume parallel Phases 4-7.
 
 Immediate next step:
-Prepare the first Phase 4 benchmark-bank entry or add the third Phase 5 skill.
+Add the third Phase 5 skill or prepare benchmark B2 in a second math area.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -11,6 +11,7 @@ Current state:
 - `capability-test/PHASE2-SMOKE-agents-router.md` records router-level smoke
   evidence.
 - Phase 3 is complete with VALUE_ADDED in `capability-test/RETEST.md`.
+- Phase 4 has 1/5 VALUE_ADDED rows in `BENCHMARK.md`: B1 number theory.
 - Phase 5 has 1/5 skills: `skills/pollack-character/SKILL.md`, referenced by
   researcher and prover subagent prompts. It also has
   `skills/coverage-systems/SKILL.md`, referenced by sanity-checker and prover

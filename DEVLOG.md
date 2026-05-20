@@ -1,5 +1,17 @@
 # Devlog
 
+## 2026-05-20T20:02:00+09:00
+
+- Promoted the S_a Phase 3 VALUE_ADDED retest into benchmark-bank entry B1.
+- Added `benchmark-bank/B1/SOURCE.md` with 4-field source metadata and modification description.
+- Added `benchmark-bank/B1/COMPARISON.md` with three cited differences.
+- Appended B1 to `BENCHMARK.md`.
+
+Self-audit:
+- Commits this session so far: 0 pushed, 1 pending.
+- Concrete progress category: benchmark.
+- Failed-session streak: 0.
+
 ## 2026-05-20T19:51:00+09:00
 
 - Added second Phase 5 skill: `skills/coverage-systems/SKILL.md`.

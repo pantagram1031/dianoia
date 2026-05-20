@@ -18,6 +18,14 @@ COMMANDS = [
     [sys.executable, "tools/verify_routing_guards.py"],
     [sys.executable, "tools/verify_connectors.py"],
     [sys.executable, "tools/verify_research_state.py"],
+    [
+        sys.executable,
+        "tools/no_three_in_line_verify.py",
+        "research-bank/R020/certificates/prellberg-n47.json",
+        "--require-2n",
+        "--require-two-per-row",
+        "--require-two-per-column",
+    ],
 ]
 
 

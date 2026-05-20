@@ -11,5 +11,7 @@
 | R007 | Costa-Luu-Wood-Yip 2025 Hadwiger alpha(G)=2 examples | combinatorics | 2026-05-20 (OPEN-VERIFIED) | D | restricted graph-minor classes and near-complete-minor variants provide checkable partial-progress targets | CURATED-OPEN-VERIFIED |
 | R008 | Chamberland 2026 Erdos-Straus prime-structure paper | number theory | 2026-05-20 (OPEN-VERIFIED) | B | modular identity search and exact residue-cover certificates can produce bounded verified progress | CURATED-OPEN-VERIFIED |
 | R009 | Lonely Runner 2024 survey plus 2026 finite-case progress | number theory | 2026-05-20 (OPEN-VERIFIED) | B | fixed-runner certificate replay and variant-separation checks give concrete computational proof targets | CURATED-OPEN-VERIFIED |
+| R010 | Bansal 2026 Komlos discrepancy bounds and open-problem sources | probability | 2026-05-20 (OPEN-VERIFIED) | C | exact finite discrepancy certificates and restricted matrix classes can target bounded progress | CURATED-OPEN-VERIFIED |
+| R011 | Chen-Li-Xi-Xu 2026 Mahler dimension-three frontier papers | geometry | 2026-05-20 (OPEN-VERIFIED) | C | exact Hanner-polytope computations and local stability subclaims provide bounded geometric targets | CURATED-OPEN-VERIFIED |
 
-Current counted P10 progress: 8 `OPEN-VERIFIED` candidates across 5 areas.
+Current counted P10 progress: 10 `OPEN-VERIFIED` candidates across 6 areas.

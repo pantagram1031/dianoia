@@ -441,6 +441,8 @@ class PosetBalanceTest(unittest.TestCase):
                         str(classes),
                         "--threshold",
                         "2/5",
+                        "--processed-threshold",
+                        "2/5",
                         "--output",
                         str(output),
                     ]
@@ -449,10 +451,13 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(0, code)
             payload = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(1, payload["included_bucket_count"])
+            self.assertEqual(1, payload["processed_bucket_count"])
+            self.assertEqual(0, payload["unprocessed_bucket_count"])
             self.assertEqual(1, payload["group_count"])
             features = payload["groups"][0]["features"]
             self.assertEqual(1, features["skip_edges"])
             self.assertTrue(features["has_bottom_skip"])
+            self.assertTrue(payload["groups"][0]["buckets"][0]["processed"])
 
 
 if __name__ == "__main__":

@@ -1171,18 +1171,29 @@ def shape_classes_command(args: argparse.Namespace) -> int:
 def matrix_feature_partition_command(args: argparse.Namespace) -> int:
     payload = json.loads(args.classes.read_text(encoding="utf-8"))
     threshold = parse_fraction(args.threshold) if args.threshold else None
+    processed_threshold = (
+        parse_fraction(args.processed_threshold)
+        if args.processed_threshold
+        else None
+    )
     groups: dict[str, dict[str, object]] = {}
     for bucket in payload["buckets"]:
         record = matrix_feature_record(bucket)
         lower = Fraction(*record["min_lower_orientation_probability"])
         if threshold is not None and lower > threshold:
             continue
+        if processed_threshold is not None:
+            record["processed"] = lower <= processed_threshold
         group = groups.setdefault(
             str(record["feature_key"]),
             {
                 "feature_key": record["feature_key"],
                 "bucket_count": 0,
                 "profile_count": 0,
+                "processed_bucket_count": 0,
+                "unprocessed_bucket_count": 0,
+                "processed_profile_count": 0,
+                "unprocessed_profile_count": 0,
                 "min_lower_orientation_probability": record[
                     "min_lower_orientation_probability"
                 ],
@@ -1192,6 +1203,17 @@ def matrix_feature_partition_command(args: argparse.Namespace) -> int:
         )
         group["bucket_count"] = int(group["bucket_count"]) + 1
         group["profile_count"] = int(group["profile_count"]) + int(record["count"])
+        if processed_threshold is not None:
+            if record["processed"]:
+                group["processed_bucket_count"] = int(group["processed_bucket_count"]) + 1
+                group["processed_profile_count"] = (
+                    int(group["processed_profile_count"]) + int(record["count"])
+                )
+            else:
+                group["unprocessed_bucket_count"] = int(group["unprocessed_bucket_count"]) + 1
+                group["unprocessed_profile_count"] = (
+                    int(group["unprocessed_profile_count"]) + int(record["count"])
+                )
         if lower < Fraction(*group["min_lower_orientation_probability"]):
             group["min_lower_orientation_probability"] = record[
                 "min_lower_orientation_probability"
@@ -1208,8 +1230,15 @@ def matrix_feature_partition_command(args: argparse.Namespace) -> int:
     out = {
         "source": str(args.classes),
         "threshold": args.threshold,
+        "processed_threshold": args.processed_threshold,
         "source_bucket_count": payload["bucket_count"],
         "included_bucket_count": sum(int(group["bucket_count"]) for group in group_list),
+        "processed_bucket_count": sum(
+            int(group["processed_bucket_count"]) for group in group_list
+        ),
+        "unprocessed_bucket_count": sum(
+            int(group["unprocessed_bucket_count"]) for group in group_list
+        ),
         "group_count": len(group_list),
         "groups": group_list,
     }
@@ -1415,6 +1444,7 @@ def main(argv: Sequence[str] | None = None) -> int:
     feature_parser = subparsers.add_parser("matrix-feature-partition")
     feature_parser.add_argument("classes", type=Path)
     feature_parser.add_argument("--threshold")
+    feature_parser.add_argument("--processed-threshold")
     feature_parser.add_argument("--output", type=Path)
     feature_parser.set_defaults(func=matrix_feature_partition_command)
 

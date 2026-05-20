@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-21T00:57:00+09:00
+
+- Added a B6+ source artifact path regression to
+  `tests/test_verify_dianoia_state.py`.
+- Extended `tools/verify_dianoia_state.py` so B6+ `SOURCE.md` `## Artifacts`
+  must include existing raw baseline, dianoia run, and run manifest paths.
+- Updated `benchmark-bank/RUNBOOK.md`, `README.md`, and `NEXT_SESSION.md` with
+  the new verifier behavior.
+- Recorded smoke evidence in
+  `capability-test/BENCHMARK-SOURCE-ARTIFACT-PATHS-VERIFY-20260521.md`.
+
+Self-audit:
+- Commits this session so far: 0 pushed, 1 pending.
+- Concrete progress category: benchmark, test.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:40:00+09:00
 
 - Added B6+ token-accounting regressions to

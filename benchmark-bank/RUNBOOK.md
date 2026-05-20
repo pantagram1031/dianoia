@@ -22,6 +22,7 @@ Each `benchmark-bank/B<N>/` directory for `N >= 6` must contain:
 - source URL or identifier
 - modification description, if the benchmark is a modified statement
 - area tag
+- raw baseline, dianoia run, and run manifest artifact paths that exist
 
 ## Run Manifest Rules
 

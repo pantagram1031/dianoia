@@ -86,6 +86,16 @@ def markdown_bullet_field(text: str, name: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def clean_path_value(value: str) -> str:
+    return value.strip().strip("`").strip()
+
+
+def resolve_artifact_path(value: str) -> Path:
+    cleaned = clean_path_value(value)
+    path = Path(cleaned)
+    return path if path.is_absolute() else ROOT / path
+
+
 def numbered_items(text: str) -> list[str]:
     items: list[str] = []
     current: list[str] = []
@@ -148,6 +158,14 @@ def check_benchmarks(result: CheckResult) -> None:
             for field in ("Authors", "Year", "Title", "Exact statement reference"):
                 if weak_blank(markdown_bullet_field(metadata, field)):
                     result.add_fail(f"{bid}: SOURCE.md Metadata missing {field}")
+            artifacts = section_body(source_text, "Artifacts")
+            for field in ("Raw baseline", "Dianoia run", "Run manifest"):
+                value = markdown_bullet_field(artifacts, field)
+                if weak_blank(value):
+                    result.add_fail(f"{bid}: SOURCE.md Artifacts missing {field}")
+                    continue
+                if not resolve_artifact_path(value).exists():
+                    result.add_fail(f"{bid}: SOURCE.md Artifacts {field} path missing: {value}")
         if "VALUE_ADDED" in row["verdict"]:
             differences = section_body(comparison_text, "Three Differences")
             if not differences:

@@ -41,6 +41,7 @@ Controlled modification.
 
 - Raw baseline: raw
 - Dianoia run: dianoia
+- Run manifest: benchmark-bank/B6/RUN.md
 """
 
 
@@ -224,6 +225,8 @@ def make_repo(root: Path, b6_run: str) -> None:
         write(root / "benchmark-bank" / bid / "COMPARISON.md", comparison_text())
     write(root / "BENCHMARK.md", "\n".join(table) + "\n")
     write(root / "benchmark-bank" / "B6" / "RUN.md", b6_run)
+    (root / "raw").mkdir()
+    (root / "dianoia").mkdir()
 
 
 def mark_b6_tokens_unverified(root: Path) -> None:
@@ -277,6 +280,25 @@ class BenchmarkManifestVerifierTest(unittest.TestCase):
 
         self.assertTrue(
             any("SOURCE.md Metadata missing Exact statement reference" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_source_artifact_paths_must_exist(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(temp_root, run_text("full-fresh", "none"))
+                (temp_root / "raw").rmdir()
+                write(temp_root / "benchmark-bank" / "B6" / "COMPARISON.md", structured_comparison_text())
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertTrue(
+            any("SOURCE.md Artifacts Raw baseline path missing" in item for item in result.fail),
             result.fail,
         )
 

@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T19:44:00+09:00
+
+- Added second Phase 6 connector: `connectors/oeis/`.
+- Implemented `server.py` using Python stdlib and the public OEIS JSON endpoint.
+- Added README and example.
+- Wired the connector into `prompts/subagents/researcher.md`.
+- Verified `python connectors/oeis/server.py fetch A214583` exits 0 and emits
+  the expected S_a-adjacent OEIS sequence metadata.
+- Phase 6 connector count is now complete.
+
+Self-audit:
+- Commits this session so far: 4 pushed, 1 pending.
+- Concrete progress category: connector.
+- Failed-session streak: 0.
+
 ## 2026-05-20T19:36:00+09:00
 
 - Added first Phase 6 connector: `connectors/arxiv/`.

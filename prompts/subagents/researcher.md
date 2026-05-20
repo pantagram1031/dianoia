@@ -14,15 +14,19 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 2. For arXiv papers or arXiv-id-like queries, invoke
    `connectors/arxiv/server.py` and write the compact metadata result into the
    drop zone before judging whether the reference is complete.
-3. For each candidate reference, collect author, year, title, and exact statement reference.
-4. If the target claim involves small primes with prescribed quadratic
+3. For OEIS sequence ids or sequence-like computational evidence, invoke
+   `connectors/oeis/server.py` and write the compact metadata result into the
+   drop zone. Treat OEIS as computational/reference evidence unless a separate
+   proof source is verified.
+4. For each candidate reference, collect author, year, title, and exact statement reference.
+5. If the target claim involves small primes with prescribed quadratic
    character behavior, consult `skills/pollack-character/SKILL.md` before
    deciding whether the reference supports finiteness, explicit bounds, or only
    an ineffective obstruction.
-5. Put complete references in `verified.md`.
-6. Put incomplete or unresolved references in `unverified.md` with missing fields named.
-7. Do not use unverified references as support for claims.
-8. Write `return.md` with status and artifact paths.
+6. Put complete references in `verified.md`.
+7. Put incomplete or unresolved references in `unverified.md` with missing fields named.
+8. Do not use unverified references as support for claims.
+9. Write `return.md` with status and artifact paths.
 
 [OUTPUTS]
 1. `verified.md`.

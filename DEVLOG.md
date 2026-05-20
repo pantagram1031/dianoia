@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T08:05:00+09:00
+
+- Continued P11 on `R013`.
+- Generated depth-3 recurrences, leaf summaries, and a leaf comparison for
+  `p7-form-2` and `p8-form-1`.
+- Added `BOUNDARY_DEPTH3_NOTES.md`: P7 resolves into forced orientation leaves
+  at depth 3, while P8 decomposes into two forced-first blocks plus a balanced
+  `13/13` unseen core.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T07:45:00+09:00
 
 - Continued P11 on `R013`.

@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T08:05:00+09:00
+
+- Continued P11 on `R013` by expanding the P7/P8 boundary recurrence analysis
+  to depth 3.
+- Added depth-3 recurrence, leaf-summary, and comparison artifacts under
+  `normal-form-cases/vector-boundary/`.
+- Added `BOUNDARY_DEPTH3_NOTES.md`; P7 is explained by forced orientation
+  blocks, while P8 is explained by two forced-first blocks plus a balanced
+  unseen `13/13` core.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T07:45:00+09:00
 
 - Continued P11 on `R013` by flattening the P7/P8 boundary depth-2 recurrence

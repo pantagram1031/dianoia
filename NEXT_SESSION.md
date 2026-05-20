@@ -80,7 +80,12 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   `BOUNDARY_LEAF_COMPARISON_NOTES.md` now compares depth-2 leaves: P7 has four
   leaves with forced states and P8 has three unseen leaves, so a simple
   leaf-isomorphism proof is unlikely. Next compute depth-3 leaves or write a
-  direct recurrence identity for the common split;
+  direct recurrence identity for the common split.
+  `BOUNDARY_DEPTH3_NOTES.md` now gives the depth-3 target: P7 resolves into
+  forced orientation blocks totaling `19/13`, while P8 decomposes into two
+  forced-first blocks plus a balanced unseen `13/13` core. Next write separate
+  boundary lemmas for P7 form 2 and P8 form 1, then test whether P1/P2/P3 use
+  either mechanism;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -158,6 +163,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-u6-dangerous-form-ledger.json`
   - `research-bank/R013/attempt-20260520/BOUNDARY_RECURRENCE_NOTES.md`
   - `research-bank/R013/attempt-20260520/BOUNDARY_LEAF_COMPARISON_NOTES.md`
+  - `research-bank/R013/attempt-20260520/BOUNDARY_DEPTH3_NOTES.md`
   - `research-bank/R013/attempt-20260520/normal-form-cases/vector-boundary/`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`

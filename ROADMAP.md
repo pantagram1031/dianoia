@@ -142,5 +142,10 @@ seek a shared injection/pairing proof.
 leaves with forced first/second states, while P8 has three unseen leaves. A
 simple leaf-isomorphism proof is unlikely; next target depth-3 leaves or a
 direct recurrence identity.
+`BOUNDARY_DEPTH3_NOTES.md` now records the depth-3 result: P7 resolves into
+forced orientation blocks totaling `19/13`, while P8 decomposes into two
+forced-first blocks plus a balanced unseen `13/13` core. Next target: write
+separate boundary lemmas for P7 form 2 and P8 form 1, then check whether P1/P2/P3
+reuse either mechanism.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

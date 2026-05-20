@@ -2,6 +2,15 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 2G
+
+- Generated depth-3 recurrence and leaf artifacts for `p7-form-2` and
+  `p8-form-1`.
+- Added `research-bank/R013/attempt-20260520/BOUNDARY_DEPTH3_NOTES.md`.
+- Result: P7 resolves into forced orientation blocks; P8 has two forced-first
+  blocks plus a balanced unseen `13/13` core.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 2F
 
 - Added recurrence leaf-summary and leaf-compare tooling to

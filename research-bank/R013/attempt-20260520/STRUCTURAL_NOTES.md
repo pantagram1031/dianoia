@@ -81,6 +81,9 @@ Artifacts:
 - `BOUNDARY_LEAF_COMPARISON_NOTES.md`: flattened depth-2 leaf comparison for
   P7/P8, showing the common total split is not explained by a simple leaf
   isomorphism.
+- `BOUNDARY_DEPTH3_NOTES.md`: depth-3 recurrence interpretation splitting P7
+  into forced orientation blocks and P8 into forced-first blocks plus a
+  balanced unseen core.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -166,6 +169,8 @@ These are search signals only:
    common `19/13` split.
    `BOUNDARY_LEAF_COMPARISON_NOTES.md` shows a simple depth-2 leaf pairing is
    unlikely; next compute depth-3 leaves or write a direct recurrence identity.
+   `BOUNDARY_DEPTH3_NOTES.md` now supplies the depth-3 identity targets; next
+   write separate boundary lemmas and test P1/P2/P3 against the same mechanisms.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

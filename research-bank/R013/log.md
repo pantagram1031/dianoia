@@ -113,3 +113,16 @@ candidate_id: R013
 - Result: full per-layer vertex signatures split the class into 103 singleton
   buckets, identifying the extremal exactly but too finely for a final proof.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-20 P11 Attempt 1H
+
+- Extracted the actual three profiles in the matrix bucket containing the
+  `14/39` extremal.
+- Added `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`.
+- Result: the three profiles have best lower probabilities `14/39`, `14/33`,
+  and `5/11`; the equality candidate is isolated to one profile inside this
+  matrix bucket.
+- Next proof move: replace the label-dependent extraction with a
+  coordinate-free case split on the bottom-layer and rank-1 layer
+  vertex-signature patterns.
+- Claim discipline: no `CLAIMS.md` row.

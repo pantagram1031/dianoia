@@ -83,8 +83,8 @@ especially the width-3 proof target in
 width-3, height-4, rank-layer-shape `2,2,2,1` posets. The restricted class now
 has an exact artifact: 103 unlabeled profiles, worst lower probability
 `14/39`, next worst `2/5`, a coarse 12-bucket split, a matrix 67-bucket split,
-and a fine 103-singleton split. Next, turn the 3-profile matrix bucket
-containing the `14/39` extremal into a human proof case split before any
-novelty claim.
+and a fine 103-singleton split. `MATRIX_BUCKET_NOTES.md` now extracts the
+3-profile bucket containing the `14/39` extremal; next, prove the equality
+subcase coordinate-free before any novelty claim.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

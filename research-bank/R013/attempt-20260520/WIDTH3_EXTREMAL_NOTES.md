@@ -93,6 +93,11 @@ This matrix bucket has 3 profiles. The fully refined layer-vertex-signature
 bucket is a singleton, so it identifies the extremal exactly but is too fine
 to be the final human proof structure.
 
+`MATRIX_BUCKET_NOTES.md` records the three profiles in this matrix bucket:
+their best lower probabilities are `14/39`, `14/33`, and `5/11`. The immediate
+manual subgoal is to prove this 3-case bucket split without referring to the
+search labels.
+
 ## Next Proof Attempt
 
 The exact restricted-family check suggests the sharper finite lemma:

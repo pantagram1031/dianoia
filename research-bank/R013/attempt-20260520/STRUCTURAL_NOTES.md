@@ -28,6 +28,8 @@ Artifacts:
 - `width3-rank2221-fine-shape-classes-n7.json`: per-layer vertex-signature
   buckets for exact extremal identification.
 - `WIDTH3_EXTREMAL_NOTES.md`: human-readable proof-target notes.
+- `MATRIX_BUCKET_NOTES.md`: three-profile matrix-bucket case split for the
+  current extremal subcase.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
 ## Exhaustive Small Evidence
@@ -69,10 +71,9 @@ These are search signals only:
    whether `14/39` is the extremal lower probability in that restricted class.
    The exact restricted run now confirms this for all 103 unlabeled profiles
    through `n=7`.
-4. Turn the matrix-signature split into a human proof skeleton: cover/min/max
-   counts leave the extremal inside a 24-profile bucket, inter-rank cover
-   matrices reduce it to a 3-profile bucket, and full per-layer vertex
-   signatures isolate it as a singleton.
+4. Turn `MATRIX_BUCKET_NOTES.md` into a coordinate-free sublemma for the
+   3-profile matrix bucket: equality only in Case A, with Cases B and C giving
+   `14/33` and `5/11`.
 5. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

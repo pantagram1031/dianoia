@@ -14,8 +14,9 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   the concrete `WIDTH3_EXTREMAL_NOTES.md` target: classify width-3, height-4,
   rank-layer-shape `2,2,2,1` posets. The exact restricted artifact exists;
   matrix signatures reduce the `14/39` extremal bucket to 3 profiles and full
-  per-layer vertex signatures isolate it as a singleton. Next turn the
-  3-profile matrix bucket into a human proof case split; or
+  per-layer vertex signatures isolate it as a singleton. `MATRIX_BUCKET_NOTES.md`
+  now lists the three profiles; next prove the equality subcase
+  coordinate-free; or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
 - switch to `R017` Graceful Tree Conjecture if both R013 and R020 become mostly
@@ -61,6 +62,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-fine-shape-classes-n7.json`
   - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
   - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
+  - `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`
     `python tools/poset_balance.py exhaustive-unlabeled --max-n 5`, and a
     small matrix-signature `shape-classes` smoke.

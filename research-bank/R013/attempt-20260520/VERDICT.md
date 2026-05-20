@@ -28,6 +28,7 @@ verdict: PARTIAL-PROGRESS
 - `research-bank/R013/attempt-20260520/width3-rank2221-matrix-shape-classes-n7.json`
 - `research-bank/R013/attempt-20260520/width3-rank2221-fine-shape-classes-n7.json`
 - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
+- `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`
 - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
 - `tools/verify_all.py`
 
@@ -55,6 +56,8 @@ The unlabeled seven-element artifact reports:
 - matrix case split: 67 buckets; the `14/39` extremal is in a 3-profile bucket.
 - full per-layer vertex-signature split: 103 singleton buckets; this identifies
   the extremal but is too fine to serve as a final proof.
+- matrix-bucket proof note: the 3-profile bucket has best lower probabilities
+  `14/39`, `14/33`, and `5/11`, suggesting equality only in the first case.
 
 ## Claim Discipline
 

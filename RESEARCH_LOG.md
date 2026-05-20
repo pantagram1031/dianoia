@@ -13,6 +13,15 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T23:30:00+09:00
+
+- Extracted the three-profile matrix bucket for the R013 `14/39` extremal.
+- New artifact:
+  `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`.
+- Finite signal: within that bucket the three best lower probabilities are
+  `14/39`, `14/33`, and `5/11`, so equality appears isolated to one profile.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T23:18:00+09:00
 
 - Added proof-relevant refinements for the R013 restricted width-3 target.

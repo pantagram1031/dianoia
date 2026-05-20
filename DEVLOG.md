@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-20T23:30:00+09:00
+
+- Continued P11 on `R013`.
+- Extracted the three profiles in the matrix bucket containing the `14/39`
+  extremal.
+- Added `MATRIX_BUCKET_NOTES.md` with the three case profiles and the next
+  coordinate-free sublemma target.
+- The three cases have best lower probabilities `14/39`, `14/33`, and `5/11`;
+  this remains finite proof-work, not a claim.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 5 pushed before this log update.
+- Concrete progress category: attempt, note, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:18:00+09:00
 
 - Continued P11 on `R013`.

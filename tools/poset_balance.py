@@ -201,6 +201,22 @@ def structural_profile(poset: Poset) -> dict[str, object]:
     }
 
 
+def parse_rank_shape(raw: str | None) -> tuple[int, ...] | None:
+    if raw is None:
+        return None
+    try:
+        shape = tuple(int(part) for part in raw.split(",") if part.strip())
+    except ValueError as exc:
+        raise ValueError(f"rank shape must be comma-separated integers: {raw!r}") from exc
+    if not shape or any(part <= 0 for part in shape):
+        raise ValueError(f"rank shape must contain positive integers: {raw!r}")
+    return shape
+
+
+def rank_shape(poset: Poset) -> tuple[int, ...]:
+    return tuple(len(layer) for layer in rank_layers(poset))
+
+
 def vertex_signature(poset: Poset, item: int) -> tuple[int, int, int, int, int]:
     cover_relations = covers(poset)
     lower_count = sum(1 for lower, upper in poset.less if upper == item)
@@ -489,12 +505,15 @@ def filtered_posets(
     *,
     only_width: int | None = None,
     only_height: int | None = None,
+    only_rank_shape: tuple[int, ...] | None = None,
 ) -> list[Poset]:
     filtered: list[Poset] = []
     for poset in posets:
         if only_width is not None and width(poset) != only_width:
             continue
         if only_height is not None and height(poset) != only_height:
+            continue
+        if only_rank_shape is not None and rank_shape(poset) != only_rank_shape:
             continue
         filtered.append(poset)
     return filtered
@@ -503,11 +522,13 @@ def filtered_posets(
 def exhaustive_unlabeled_command(args: argparse.Namespace) -> int:
     summary: list[dict[str, object]] = []
     counterexample_count = 0
+    shape_filter = parse_rank_shape(args.rank_shape)
     for n in range(2, args.max_n + 1):
         posets = filtered_posets(
             all_unlabeled_posets(n),
             only_width=args.width,
             only_height=args.height,
+            only_rank_shape=shape_filter,
         )
         item = {"n": n, **summarize_posets(posets)}
         counterexample_count += int(item["counterexample_count"])
@@ -521,6 +542,7 @@ def exhaustive_unlabeled_command(args: argparse.Namespace) -> int:
         "filters": {
             "width": args.width,
             "height": args.height,
+            "rank_shape": list(shape_filter) if shape_filter else None,
         },
         "summary": summary,
         "counterexample_count": counterexample_count,
@@ -534,11 +556,13 @@ def exhaustive_unlabeled_command(args: argparse.Namespace) -> int:
 
 def extremal_width_command(args: argparse.Namespace) -> int:
     records: list[dict[str, object]] = []
+    shape_filter = parse_rank_shape(args.rank_shape)
     for n in range(2, args.max_n + 1):
         posets = filtered_posets(
             all_unlabeled_posets(n),
             only_width=args.width,
             only_height=args.height,
+            only_rank_shape=shape_filter,
         )
         for poset in posets:
             if not poset.incomparable_pairs():
@@ -571,6 +595,7 @@ def extremal_width_command(args: argparse.Namespace) -> int:
         "max_n": args.max_n,
         "width": args.width,
         "height": args.height,
+        "rank_shape": list(shape_filter) if shape_filter else None,
         "record_count": len(records),
         "limit": args.limit,
         "records": records[: args.limit],
@@ -602,12 +627,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     unlabeled_parser.add_argument("--output", type=Path)
     unlabeled_parser.add_argument("--width", type=int)
     unlabeled_parser.add_argument("--height", type=int)
+    unlabeled_parser.add_argument("--rank-shape")
     unlabeled_parser.set_defaults(func=exhaustive_unlabeled_command)
 
     extremal_parser = subparsers.add_parser("extremal-width")
     extremal_parser.add_argument("--max-n", type=int, default=7)
     extremal_parser.add_argument("--width", type=int, required=True)
     extremal_parser.add_argument("--height", type=int)
+    extremal_parser.add_argument("--rank-shape")
     extremal_parser.add_argument("--limit", type=int, default=10)
     extremal_parser.add_argument("--output", type=Path)
     extremal_parser.set_defaults(func=extremal_width_command)

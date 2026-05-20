@@ -48,6 +48,7 @@ class PosetBalanceTest(unittest.TestCase):
 
         self.assertEqual(2, pb.width(poset))
         self.assertEqual(2, pb.height(poset))
+        self.assertEqual((2, 1), pb.rank_shape(poset))
         self.assertEqual([[0, 1], [2]], pb.rank_layers(poset))
         self.assertEqual([0, 1], pb.minimal_elements(poset))
         self.assertEqual([2], pb.maximal_elements(poset))
@@ -105,6 +106,29 @@ class PosetBalanceTest(unittest.TestCase):
             payload = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(3, payload["filters"]["width"])
             self.assertEqual(29, payload["summary"][-1]["total_posets"])
+
+    def test_exhaustive_unlabeled_can_filter_rank_shape(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "summary.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "exhaustive-unlabeled",
+                        "--max-n",
+                        "5",
+                        "--width",
+                        "3",
+                        "--rank-shape",
+                        "2,2,1",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual([2, 2, 1], payload["filters"]["rank_shape"])
+            self.assertGreater(payload["summary"][-1]["total_posets"], 0)
 
     def test_extremal_width_records_profiles(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

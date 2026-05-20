@@ -13,6 +13,19 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T21:31:00+09:00
+
+- Added four counted P10 `OPEN-VERIFIED` candidates:
+  - `R012`: Caccetta-Haggkvist conjecture, combinatorics, rank B.
+  - `R013`: 1/3-2/3 conjecture for finite posets, order theory, rank A.
+  - `R014`: Artin primitive root conjecture, number theory, rank C.
+  - `R015`: Erdos-Szekeres happy ending conjecture, geometry, rank B.
+- Current P10 progress: 14/20 `OPEN-VERIFIED` candidates across 7/4 required
+  areas. Need 6 more candidates before P11 scale-up.
+- Selection bias note: this batch added two rank-B computational combinatorics
+  candidates and one rank-A exact poset candidate, improving the bank's
+  practical P11 attack surface.
+
 ## 2026-05-20T21:22:00+09:00
 
 - Added four counted P10 `OPEN-VERIFIED` candidates:

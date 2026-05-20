@@ -1,5 +1,23 @@
 # Devlog
 
+## 2026-05-20T21:31:00+09:00
+
+- Continued P10 CURATION from a clean, synced `main`.
+- Added four counted `OPEN-VERIFIED` candidates:
+  - `R012` Caccetta-Haggkvist conjecture, combinatorics, rank B.
+  - `R013` 1/3-2/3 conjecture for finite posets, order theory, rank A.
+  - `R014` Artin primitive root conjecture, number theory, rank C.
+  - `R015` Erdos-Szekeres happy ending conjecture, geometry, rank B.
+- Used live source checks plus arXiv connector sweeps for recent closure
+  searches; no closure candidates were found by the narrow connector queries.
+- Advanced P10 from 10/20 across 6 areas to 14/20 across 7 areas.
+- Updated persistent handoff/state files with the new count and next priority.
+
+Self-audit:
+- Commits this session: 3 pushed.
+- Concrete progress category: curation, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:22:00+09:00
 
 - Continued P10 CURATION after syncing `main`.

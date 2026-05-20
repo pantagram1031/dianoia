@@ -60,7 +60,7 @@ Important:
   Bonamy-Groenland-Johnston-Morrison-Scott Conjecture 8.4. It is not counted
   toward the 20 verified-open target until broader independent openness sources
   are added.
-- P10 counted state: 10/20 `OPEN-VERIFIED` candidates across 6/4 required
+- P10 counted state: 14/20 `OPEN-VERIFIED` candidates across 7/4 required
   areas:
   - `research-bank/R002/`: perfect cuboid, number theory, rank C.
   - `research-bank/R003/`: Kakeya set conjecture in dimensions `n >= 4`, real
@@ -77,6 +77,14 @@ Important:
   - `research-bank/R010/`: Komlos discrepancy conjecture, probability, rank C.
   - `research-bank/R011/`: symmetric Mahler conjecture in dimensions `n >= 4`,
     geometry, rank C.
+  - `research-bank/R012/`: Caccetta-Haggkvist conjecture, combinatorics,
+    rank B.
+  - `research-bank/R013/`: 1/3-2/3 conjecture for finite posets, order theory,
+    rank A.
+  - `research-bank/R014/`: Artin primitive root conjecture, number theory,
+    rank C.
+  - `research-bank/R015/`: Erdos-Szekeres happy ending conjecture, geometry,
+    rank B.
 - `tools/verify_research_state.py` now reports P10 counts and rejects
   `OPEN-VERIFIED` index rows whose candidate `OPENNESS.md` status disagrees.
 - `connectors/arxiv/server.py` now returns explicit `UNVERIFIED` records for
@@ -84,7 +92,7 @@ Important:
   instead of treating failed searches as evidence of closure.
 - Next concrete deliverable: add at least 2-3 more `OPEN-VERIFIED` candidates,
   prioritizing higher-tractability rank A/B targets and exact-checkable
-  subtargets. P10 still needs 10 more counted candidates before P11 scale-up.
+  subtargets. P10 still needs 6 more counted candidates before P11 scale-up.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
   smoke is `capability-test/BENCHMARK-RUN-WORKSPACE-PATHS-VERIFY-20260521.md`;
   warnings are expected for UNVERIFIED token accounting in B1-B5. It also

@@ -1,5 +1,22 @@
 # Devlog
 
+## 2026-05-21T06:45:00+09:00
+
+- Continued P11 on `R013`.
+- Added `matrix-vector-deltas` and generated
+  `width3-rank2221-vector-deltas-from-u6.json`.
+- Added `VECTOR_DELTA_CLASSIFICATION.md`: all 59 vector classes are
+  nonnegative deltas from U6, with 8 processed/dangerous delta groups, 51
+  unprocessed delta groups, and 0 mixed delta groups.
+- The next proof target is now a concrete dangerous-delta exclusion lemma
+  instead of a vague dominance argument.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T06:25:00+09:00
 
 - Continued P11 on `R013`.

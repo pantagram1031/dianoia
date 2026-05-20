@@ -125,5 +125,10 @@ classes have one minimal frontier U6 with vector `(2,2,1;0,0,0)` and minimum
 lower probability `3/7`. The naive componentwise dominance story is false;
 next target is a skip-addition classification from U6 to identify dangerous
 placements.
+`VECTOR_DELTA_CLASSIFICATION.md` now classifies all 59 vector classes as
+nonnegative deltas from U6, with 8 processed dangerous delta groups, 51
+unprocessed delta groups, and 0 mixed delta groups. Next target: construct
+human-checkable count/recurrence ledgers for U6 and the dangerous deltas, then
+attempt a uniform exclusion/injection argument for all other deltas.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

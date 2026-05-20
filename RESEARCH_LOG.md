@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T06:45:00+09:00
+
+- Continued P11 on `R013` by turning the U6 frontier into a vector-delta
+  classification.
+- Generated `width3-rank2221-vector-deltas-from-u6.json`: all 59 vector
+  classes are nonnegative deltas from U6; there are 8 processed delta groups,
+  51 unprocessed delta groups, and 0 mixed delta groups.
+- Added `VECTOR_DELTA_CLASSIFICATION.md`, naming the eight dangerous deltas and
+  the next restricted lemma target.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T06:25:00+09:00
 
 - Continued P11 on `R013` by adding vector-frontier analysis for the

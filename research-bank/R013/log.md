@@ -2,6 +2,17 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 2C
+
+- Added `matrix-vector-deltas` to `tools/poset_balance.py`.
+- Added
+  `research-bank/R013/attempt-20260520/width3-rank2221-vector-deltas-from-u6.json`.
+- Added `research-bank/R013/attempt-20260520/VECTOR_DELTA_CLASSIFICATION.md`.
+- Result: all 59 vector classes are nonnegative deltas from U6, with 8
+  processed dangerous delta groups, 51 unprocessed delta groups, and no mixed
+  delta groups.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 2B
 
 - Added `matrix-vector-frontier` to `tools/poset_balance.py`.

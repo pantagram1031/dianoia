@@ -63,7 +63,12 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   `VECTOR_FRONTIER_NOTES.md` now refines this: the 51 unprocessed vector
   classes have a single minimal frontier U6 with vector `(2,2,1;0,0,0)` and
   minimum lower probability `3/7`; next build a skip-addition table from U6 to
-  distinguish dangerous P1-P8 placements from slack placements;
+  distinguish dangerous P1-P8 placements from slack placements.
+  `VECTOR_DELTA_CLASSIFICATION.md` now does this: all 59 vector classes are
+  nonnegative deltas from U6, with 8 processed dangerous deltas, 51
+  unprocessed deltas, and 0 mixed delta groups. Next construct
+  human-checkable count/recurrence ledgers for U6 and the dangerous deltas,
+  then attempt a uniform exclusion/injection proof for other deltas;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -135,6 +140,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/PROCESSED_VECTOR_CLASSES.md`
   - `research-bank/R013/attempt-20260520/VECTOR_FRONTIER_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-vector-frontier.json`
+  - `research-bank/R013/attempt-20260520/VECTOR_DELTA_CLASSIFICATION.md`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-vector-deltas-from-u6.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`

@@ -1,4 +1,4 @@
-# AGENTS — Codex CLI auto-context
+# AGENTS - Codex CLI auto-context
 
 ## Mandatory reads at session start
 1. IDENTITY.md
@@ -11,22 +11,35 @@
 
 ## First-message routing (no slash commands required)
 
-A. Default — new problem statement
-   → prompts/prove.md with the message as $1
+A. Default - new problem statement
+   -> prompts/prove.md with the message as $1
 
 B. "resume" | "continue" (case-insensitive)
-   → prompts/resume.md against active slug
+   -> prompts/resume.md against active slug
 
 C. "halt" | "stop"
-   → prompts/halt.md (wind-down)
+   -> prompts/halt.md (wind-down)
 
 D. "muse" | "consult <specialist>" | "audit"
-   → corresponding prompt
+   -> corresponding prompt
 
 E. "verbose" | "quiet"
-   → toggle MSP narration in session_state
+   -> toggle MSP narration in session_state
 
-F. Otherwise → input to active unit or clarification for active problem.
+E2. Before route F, if problems/.active exists, validate the active pointer:
+   - If problems/.active is malformed, has zero or multiple slugs, points to a
+     missing slug directory, or points to a slug missing session_state.md, treat
+     a non-command user message as a fresh problem statement:
+     -> prompts/prove.md with the message as $1
+   - If problems/<slug>/session_state.md has halt_flag=true and halt_reason is
+     SUCCESS-MEANINGFUL, FAILURE-AMBITION-GAP, or any reason other than
+     BLOCKED-ITERATE, the active problem is closed. Treat a non-command user
+     message as a fresh problem statement:
+     -> prompts/prove.md with the message as $1
+   - Do not append fresh problem content to a closed active problem.
+     Supersession evidence is written by prompts/prove.md.
+
+F. Otherwise -> input to active unit or clarification for active problem.
    Never free chat.
 
 ## Reaffirmation

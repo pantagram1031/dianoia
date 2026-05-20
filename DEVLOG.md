@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-20T19:02:00+09:00
+
+- User approved the constitutional `AGENTS.md` routing change.
+- Patched `AGENTS.md` route E2 so closed or malformed active pointers route fresh non-command problem statements to `prompts/prove.md`.
+- Updated `APPROVED_CHANGES.md` with approval evidence and removed `QUESTIONS.md` because the BLOCKED_ON_USER state is resolved.
+- Ran router-level smoke in `dianoia-run`; fake closed active `fake-halted-router-20260520-181546` routed to fresh slug `prove-that-for-fixed-positive-integer-a7f651`, with `problem.md`, `intake.md`, active pointer update, and supersession evidence.
+- Marked Phase 2 COMPLETE and Phase 3 IN_PROGRESS.
+
+Self-audit:
+- Commits this session so far: 0 this turn, pending first commit.
+- Concrete progress category: fix.
+- Failed-session streak: 0.
+
 ## 2026-05-20T18:55:00+09:00
 
 - Determined Phase 2 cannot honestly complete with DIAGNOSIS R1 unresolved.

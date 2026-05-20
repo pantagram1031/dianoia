@@ -10,8 +10,8 @@ Recommended next work:
 Do not keep expanding replay as a substitute for mathematics. Choose one:
 
 - continue `R013` by extracting a structural lemma candidate from
-  `STRUCTURAL_NOTES.md`, adding width/thinness filters, or speeding up
-  canonical generation before attempting `n=7`; or
+  `STRUCTURAL_NOTES.md`, especially the width-3 separation signal and
+  cover/level-shape analysis; or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
 - switch to `R017` Graceful Tree Conjecture if both R013 and R020 become mostly
@@ -47,6 +47,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/small-posets-n5.json`
   - `research-bank/R013/attempt-20260520/unlabeled-posets-n5.json`
   - `research-bank/R013/attempt-20260520/unlabeled-posets-n6.json`
+  - `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`
   - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`
     and `python tools/poset_balance.py exhaustive-unlabeled --max-n 5`.

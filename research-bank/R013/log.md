@@ -41,3 +41,17 @@ candidate_id: R013
   in this range.
 - Claim discipline: no `CLAIMS.md` row; these are exact finite observations
   and next-attempt guides, not a new theorem.
+
+## 2026-05-20 P11 Attempt 1C
+
+- Optimized canonical keys with invariant vertex blocks; targeted poset tests
+  dropped from roughly 53 seconds to under 4 seconds on the local machine.
+- Extended exact canonical replay through all 2045 unlabeled seven-element
+  posets:
+  `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json`.
+- Added width/height filters and a focused width-3 replay:
+  `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`.
+- New finite signal: no counterexamples through `n=7`; width 3 worst
+  best-pair lower probability is `14/39`, still separated from `1/3`.
+- Claim discipline: no `CLAIMS.md` row; the finite data suggests a restricted
+  lemma target but does not prove it.

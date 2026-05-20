@@ -13,6 +13,19 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T22:48:00+09:00
+
+- Continued `R013` exact poset work.
+- Speeded canonical generation using invariant vertex blocks, then extended
+  canonical unlabeled replay through seven elements.
+- Artifacts:
+  `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json` and
+  `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`.
+- Finite signal: no counterexample across 2044 non-chain unlabeled posets on
+  up to seven elements; width 3's worst best-pair lower probability at `n=7`
+  is `14/39`.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T22:38:00+09:00
 
 - Scaled `R013` from labeled small checks to canonical unlabeled family

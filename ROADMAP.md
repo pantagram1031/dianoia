@@ -17,7 +17,7 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 8 | DEEPER RESEARCH | GATED | Requires 5 contamination-free novel VALUE_ADDED B6+ rows across 3 areas |
 | 9 | RESEARCH INFRA | COMPLETE | `connectors/lean/`, enhanced `connectors/arxiv/`, openness/novelty skills, research-state verifier, and candidate templates |
 | 10 | CURATION | COMPLETE | `research-bank/INDEX.md` records 20 `OPEN-VERIFIED` candidates across 10 areas |
-| 11 | ATTEMPTS | IN_PROGRESS | R020 and R013 recorded `PARTIAL-PROGRESS`; R013 has unlabeled exact replay through `n=6` |
+| 11 | ATTEMPTS | IN_PROGRESS | R020 and R013 recorded `PARTIAL-PROGRESS`; R013 has unlabeled exact replay through `n=7` |
 | 12 | VERIFICATION GATE | PENDING | Mandatory for any SOLVED-CLAIM |
 | 13 | INTERMEDIATE WINS | PENDING | Draft note plus BLOCKED_ON_USER before any external claim |
 
@@ -72,12 +72,12 @@ the local frontier window `N=47` through `N=60`.
 
 R013 is now also `PARTIAL-PROGRESS`: dianoia has exact finite-poset validation,
 linear-extension counting, exhaustive labeled-poset replay through five
-elements, and canonical unlabeled replay through six elements with no
+elements, and canonical unlabeled replay through seven elements with no
 counterexample to the base 1/3-2/3 conjecture.
 
 Next P11 target: continue actual mathematical attempts rather than replay
 expansion. Prefer R013 structural lemma extraction around the exact small-data
-signals in `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`, or scale
-canonical generation only after speeding up the canonical-key path. R020
-remains available if the next step is bounded search/proof work rather than
-external solver engineering.
+signals in `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`,
+especially width-3 separation and cover/level-shape analysis. R020 remains
+available if the next step is bounded search/proof work rather than external
+solver engineering.

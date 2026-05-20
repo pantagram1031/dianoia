@@ -9,7 +9,8 @@ verdict: PARTIAL-PROGRESS
   replayable artifact.
 - Dianoia route: `PARTIAL-PROGRESS`; produced an exact finite-poset analyzer,
   tests, a replayed exhaustive labeled small-poset check through five elements,
-  and a canonical unlabeled check through six elements.
+  a canonical unlabeled check through seven elements, and a focused width-3
+  frontier summary.
 
 ## Exact Evidence
 
@@ -17,6 +18,8 @@ verdict: PARTIAL-PROGRESS
 - `tests/test_poset_balance.py`
 - `research-bank/R013/attempt-20260520/small-posets-n5.json`
 - `research-bank/R013/attempt-20260520/unlabeled-posets-n6.json`
+- `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json`
+- `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`
 - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
 - `tools/verify_all.py`
 
@@ -28,12 +31,13 @@ The small-poset artifact reports:
 - `n=5`: 4231 labeled posets, 4111 non-chains.
 - `counterexample_count: 0`.
 
-The unlabeled six-element artifact reports:
+The unlabeled seven-element artifact reports:
 
-- `n=6`: 318 unlabeled posets, 317 non-chains.
+- `n=7`: 2045 unlabeled posets, 2044 non-chains.
 - `counterexample_count: 0`.
-- width distribution: 1 chain, 74 width-2, 170 width-3, 63 width-4, 9 width-5,
-  and 1 antichain.
+- width distribution: 1 chain, 224 width-2, 1060 width-3, 636 width-4,
+  112 width-5, 11 width-6, and 1 antichain.
+- focused width-3 worst best-pair lower probability at `n=7`: `14/39`.
 
 ## Claim Discipline
 

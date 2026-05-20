@@ -5,7 +5,7 @@ status: OBSERVATION-NOT-CLAIM
 
 ## Scope
 
-The exact check in this attempt covers unlabeled finite posets through six
+The exact check in this attempt covers unlabeled finite posets through seven
 elements. It is not a novel theorem and it does not affect `CLAIMS.md`.
 
 Artifacts:
@@ -13,6 +13,9 @@ Artifacts:
 - `small-posets-n5.json`: labeled check through five elements.
 - `unlabeled-posets-n5.json`: canonical unlabeled check through five elements.
 - `unlabeled-posets-n6.json`: canonical unlabeled check through six elements.
+- `unlabeled-posets-n7.json`: canonical unlabeled check through seven elements.
+- `width3-unlabeled-n7.json`: focused width-3 canonical summary through seven
+  elements.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
 ## Exhaustive Small Evidence
@@ -26,27 +29,31 @@ The canonical unlabeled run reports:
 | 4 | 16 | 15 | 0 |
 | 5 | 63 | 62 | 0 |
 | 6 | 318 | 317 | 0 |
+| 7 | 2045 | 2044 | 0 |
 
 ## Structural Signals
 
 These are search signals only:
 
 - Width 2 is the tight small-family source: the worst best-pair probability
-  reaches exactly `1/3` in the `n=3`, `n=4`, `n=5`, and `n=6` summaries.
+  reaches exactly `1/3` in the `n=3` through `n=7` summaries.
 - Width 3 remains separated from the boundary in the small data: the worst
-  best-pair lower probability is `4/11` for `n=5` and `n=6`.
-- Width at least 4 is very loose in this small range: the worst best-pair
+  best-pair lower probability is `4/11` for `n=5` and `n=6`, and `14/39` for
+  `n=7`.
+- Width 4 first shows nontrivial slack at `n=7`: the worst best-pair lower
+  probability is `79/197`.
+- Width at least 5 is very loose in this small range: the worst best-pair
   lower probability recorded by the canonical run is `1/2`.
 
 ## Next Mathematical Moves
 
-1. Scale canonical generation to `n=7` only if runtime is acceptable or after
-   improving canonical-key speed.
-2. Add class filters for width, height, and cover graph shape so dianoia can
-   ask structural questions rather than merely enumerate.
-3. Try to prove the observed high-width looseness for a restricted class, or
-   deliberately search for the smallest width-3 family with lower probability
-   closer to `1/3` than `4/11`.
+1. Try to prove a restricted width-3 separation lemma suggested by the data:
+   for small width-3 posets the best balanced pair appears bounded away from
+   `1/3` by at least `1/39`.
+2. Add cover-graph/level-shape filters and compare the width-3 extremal
+   examples at `n=5`, `n=6`, and `n=7`.
+3. Scale canonical generation to `n=8` only after further optimizing
+   canonical-key speed or adding targeted filters.
 
 ## Honesty Boundary
 

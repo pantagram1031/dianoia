@@ -1,5 +1,23 @@
 # Devlog
 
+## 2026-05-20T22:48:00+09:00
+
+- Continued P11 on `R013`.
+- Optimized canonical poset keys with invariant vertex blocks, cutting targeted
+  poset test runtime from about 53 seconds to under 4 seconds locally.
+- Extended exact unlabeled replay through all 2045 seven-element posets:
+  `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json`.
+- Added width/height filters and wrote
+  `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`.
+- New finite signal: width 3 has no counterexample through `n=7`, and its
+  worst best-pair lower probability is `14/39`, still above `1/3`.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:38:00+09:00
 
 - Continued P11 on `R013` 1/3-2/3 posets.

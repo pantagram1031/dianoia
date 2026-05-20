@@ -114,6 +114,22 @@ python tools\poset_balance.py exhaustive-unlabeled `
 Result: 103 unlabeled profiles, no counterexamples, and worst best-pair lower
 probability `14/39`.
 
+Restricted shape-class command:
+
+```powershell
+python tools\poset_balance.py shape-classes `
+  --max-n 7 `
+  --width 3 `
+  --height 4 `
+  --rank-shape 2,2,2,1 `
+  --examples-per-bucket 3 `
+  --output research-bank\R013\attempt-20260520\width3-rank2221-shape-classes-n7.json
+```
+
+Result: 12 coarse buckets. The `14/39` extremal lies in the
+`layers=2,2,2,1|covers=8|mins=2|maxs=2` bucket, which still contains 24
+profiles.
+
 ## Outcome
 
 `PARTIAL-PROGRESS`. This is not a new mathematical contribution; the small

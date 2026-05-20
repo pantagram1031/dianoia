@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T23:05:00+09:00
+
+- Continued P11 on `R013`.
+- Added `shape-classes` grouping to `tools/poset_balance.py`.
+- Generated `width3-rank2221-shape-classes-n7.json`.
+- Found 12 coarse buckets for the 103 restricted profiles; the `14/39`
+  extremal sits in a 24-profile bucket, so the next proof split needs a finer
+  invariant.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:01:00+09:00
 
 - Continued P11 on `R013`.

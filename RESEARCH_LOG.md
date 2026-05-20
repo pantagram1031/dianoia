@@ -13,6 +13,15 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T23:05:00+09:00
+
+- Added coarse case-split grouping for the R013 restricted width-3 target.
+- New artifact:
+  `research-bank/R013/attempt-20260520/width3-rank2221-shape-classes-n7.json`.
+- Finite signal: 12 coarse buckets; the `14/39` extremal is in a 24-profile
+  bucket with signature `layers=2,2,2,1|covers=8|mins=2|maxs=2`.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T23:01:00+09:00
 
 - Classified the R013 width-3, height-4, rank-layer-shape `2,2,2,1`

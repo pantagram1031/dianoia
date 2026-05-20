@@ -9,6 +9,9 @@ status: OBSERVATION-NOT-CLAIM
 seven elements with smallest best-pair lower-orientation probabilities.
 `width3-rank2221-n7.json` and `width3-rank2221-extremals-n7.json` restrict to
 the proof-target class: width 3, height 4, rank-layer-shape `2,2,2,1`.
+`width3-rank2221-shape-classes-n7.json` groups the same restricted class by
+rank-layer shape, cover-edge count, number of minimal elements, and number of
+maximal elements.
 
 The command was:
 
@@ -39,6 +42,7 @@ Inside the restricted width-3, height-4, rank-layer-shape `2,2,2,1` class:
 - counterexamples to the base 1/3-2/3 condition: 0;
 - worst best-pair lower probability: `14/39`;
 - next worst lower probability: `2/5`.
+- coarse signature buckets: 12.
 
 ## Shape Signal
 
@@ -60,6 +64,16 @@ This looks like a coupled ladder/fork shape: two lower choices feed two middle
 choices, one side continues into a top element, and the extra minimal element
 links into both the balanced-pair side and the side branch.
 
+The coarse signature bucket containing the `14/39` extremal is:
+
+```text
+layers=2,2,2,1|covers=8|mins=2|maxs=2
+```
+
+This bucket has 24 profiles, so cover/min/max counts alone are not a
+human-checkable case split. The next split needs a finer invariant, likely the
+inter-layer cover matrix or the sequence of vertex signatures by rank layer.
+
 ## Next Proof Attempt
 
 The exact restricted-family check suggests the sharper finite lemma:
@@ -69,10 +83,10 @@ The exact restricted-family check suggests the sharper finite lemma:
 > or it is isomorphic to the unique recorded extremal profile whose best lower
 > probability is `14/39`.
 
-This is not yet a theorem. The next required work is to verify uniqueness
-under the same canonical key, produce a small human-checkable case split for
-the 103 restricted profiles, and compare against known width/thin poset
-literature before any novelty claim.
+This is not yet a theorem. The current exact artifacts indicate a unique
+`14/39` extremal in the restricted class and a next worst value `2/5`, but the
+proof still needs a human-checkable case split and comparison against known
+width/thin poset literature before any novelty claim.
 
 ## Claim Discipline
 

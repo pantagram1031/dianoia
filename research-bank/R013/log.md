@@ -83,3 +83,17 @@ candidate_id: R013
   probability after `14/39` is `2/5`.
 - Claim discipline: no `CLAIMS.md` row; this sharpens the restricted proof
   target but does not prove novelty or a theorem.
+
+## 2026-05-20 P11 Attempt 1F
+
+- Added a coarse shape-class grouping command.
+- Generated
+  `research-bank/R013/attempt-20260520/width3-rank2221-shape-classes-n7.json`.
+- Result: the 103 restricted profiles split into 12 buckets by rank-layer
+  shape, cover-edge count, minimal-element count, and maximal-element count.
+- The `14/39` extremal sits in the bucket
+  `layers=2,2,2,1|covers=8|mins=2|maxs=2`, which contains 24 profiles.
+- Interpretation: the restricted target is sharper, but a proof needs a finer
+  case split, likely inter-layer cover matrices or rank-layer vertex-signature
+  sequences.
+- Claim discipline: no `CLAIMS.md` row.

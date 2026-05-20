@@ -24,6 +24,7 @@ verdict: PARTIAL-PROGRESS
 - `research-bank/R013/attempt-20260520/width3-extremals-n7.json`
 - `research-bank/R013/attempt-20260520/width3-rank2221-n7.json`
 - `research-bank/R013/attempt-20260520/width3-rank2221-extremals-n7.json`
+- `research-bank/R013/attempt-20260520/width3-rank2221-shape-classes-n7.json`
 - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
 - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
 - `tools/verify_all.py`
@@ -47,6 +48,8 @@ The unlabeled seven-element artifact reports:
   `2,2,2,1`.
 - restricted target class: 103 unlabeled profiles, no counterexamples, worst
   best-pair lower probability `14/39`, next worst `2/5`.
+- coarse case split: 12 buckets; the `14/39` extremal is in a 24-profile
+  bucket, so a finer invariant is still needed.
 
 ## Claim Discipline
 

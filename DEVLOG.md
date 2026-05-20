@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T21:48:00+09:00
+
+- Added Phase 4 benchmark B4 in probability from Jana-Rani 2026,
+  arXiv:2604.26499, Theorem 2.6.
+- Created raw baseline artifacts in
+  `C:\Users\SAMSUNG\Downloads\raw-attempt-5`.
+- Created dianoia-run artifacts in
+  `C:\Users\SAMSUNG\Downloads\dianoia-run\problems\b4-random-matrix-clt`.
+- Appended B4 to `BENCHMARK.md` as VALUE_ADDED and updated docs/state files.
+
+Self-audit:
+- Commits this session so far: 7 pushed, 1 pending.
+- Concrete progress category: benchmark.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:28:00+09:00
 
 - Added Phase 4 benchmark B3 in geometry from Samarakkody 2026,

@@ -13,11 +13,12 @@
   `capability-test/RETEST.md`.
 - Phase 4: promoted the S_a retest into benchmark B1 under
   `benchmark-bank/B1/`, added B2 for Bai-Berczi properly colored trees, and
-  added B3 for Samarakkody's isoperimetric formalization.
+  added B3 for Samarakkody's isoperimetric formalization, and added B4 for
+  Jana-Rani random-matrix CLT scope checking.
 - Phase 5: added five referenced skills under `skills/`.
 - Phase 6: added working arXiv and OEIS connectors under `connectors/`.
 - Phase 7: refreshed README, architecture, examples, and changelog docs to
-  reflect the current repository state through B3.
+  reflect the current repository state through B4.
 
 - iter-1 | dimensions: 2 Verifying | B1 scoped Phase 5 review ordering to the reviewed artifact instead of only 04-develop.
 - iter-2 | dimensions: 2 Verifying, 3 Attempting | B2 wired Persona D into Phase 5 review and reviewer subagent contract.

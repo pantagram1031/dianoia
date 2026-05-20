@@ -10,6 +10,8 @@
   into Researcher.
 - Added research-state verification and candidate templates to prepare P10
   curation and P12 claim gates.
+- Fixed arXiv multi-word query precision after live smoke testing and seeded
+  `research-bank/R001/` as an `OPEN-WEAK` warm-up candidate.
 
 ## 2026-05-21 Continuous Objective Refresh
 

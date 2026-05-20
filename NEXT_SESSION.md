@@ -55,6 +55,11 @@ Important:
 - Current priority: P10 curation of 20 verified-open candidates across 4
   areas. Use `templates/research_candidate/` for each candidate and preserve
   openness search metadata.
+- P10 seed state: `research-bank/R001/` exists as an `OPEN-WEAK`
+  combinatorics warm-up candidate for the directed-3-cycle special case of
+  Bonamy-Groenland-Johnston-Morrison-Scott Conjecture 8.4. It is not counted
+  toward the 20 verified-open target until broader independent openness sources
+  are added.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
   smoke is `capability-test/BENCHMARK-RUN-WORKSPACE-PATHS-VERIFY-20260521.md`;
   warnings are expected for UNVERIFIED token accounting in B1-B5. It also

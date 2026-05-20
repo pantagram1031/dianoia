@@ -10,10 +10,14 @@
 - Added `templates/research_candidate/` and updated `research-bank/README.md`,
   `ROADMAP.md`, `NEXT_SESSION.md`, and `RESEARCH_LOG.md`.
 - Marked P9 INFRA complete and P10 CURATION in progress.
+- Fixed arXiv multi-word search precision after live smoke exposed broad
+  irrelevant results.
+- Added `research-bank/R001/` as an `OPEN-WEAK` P10 warm-up candidate and
+  updated `research-bank/INDEX.md`.
 
 Self-audit:
-- Commits this session so far: 2 pushed, 1 pending.
-- Concrete progress category: infra, verify, doc.
+- Commits this session so far: 4 pushed, 1 pending.
+- Concrete progress category: infra, verify, doc, curation.
 - Failed-session streak: 0.
 
 ## 2026-05-21T02:24:00+09:00

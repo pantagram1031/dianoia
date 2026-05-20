@@ -68,3 +68,6 @@ least four mathematical areas. For each candidate, copy
 `templates/research_candidate/`, run the openness and novelty skills, preserve
 arXiv `query_meta` when used, and do not promote to P11 unless openness is
 current within seven days.
+
+Current P10 count: 0 `OPEN-VERIFIED` candidates; 1 `OPEN-WEAK` warm-up
+candidate (`research-bank/R001/`) in combinatorics.

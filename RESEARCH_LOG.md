@@ -22,6 +22,12 @@ Current objective:
 - Added `templates/research_candidate/` for P10 candidate curation and P12
   novelty/claim gates.
 - Marked P9 INFRA complete and opened P10 CURATION as the current priority.
+- Fixed arXiv multi-word search precision after a live openness-search smoke
+  returned unrelated records.
+- Added `research-bank/R001/` as an `OPEN-WEAK` combinatorics warm-up candidate:
+  the directed-3-cycle special case of the locally finite tournament
+  perturbation conjecture. It is not counted toward the 20 verified-open P10
+  target.
 
 ## 2026-05-21T02:05:00+09:00
 

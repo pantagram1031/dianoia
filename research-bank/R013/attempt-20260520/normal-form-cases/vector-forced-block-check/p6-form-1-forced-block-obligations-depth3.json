@@ -1,0 +1,11 @@
+{
+  "applies": false,
+  "depth": 3,
+  "mechanism_type": "balanced-core-plus-forced-first",
+  "pair": [
+    "c",
+    "e"
+  ],
+  "reason": "mechanism_type is balanced-core-plus-forced-first, not forced-block",
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p6-form-1-recurrence-depth3.json"
+}

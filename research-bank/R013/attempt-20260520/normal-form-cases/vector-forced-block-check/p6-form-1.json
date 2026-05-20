@@ -1,0 +1,31 @@
+{
+  "case": "p6-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "e"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "b<e",
+    "b<f",
+    "c<g",
+    "d<e",
+    "d<f",
+    "e<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "P6",
+  "source_form_index": 1
+}

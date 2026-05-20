@@ -1,0 +1,89 @@
+{
+  "case_count": 5,
+  "cases": [
+    {
+      "case": "u6-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U6",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        3,
+        7
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\u6-form-1.json"
+    },
+    {
+      "case": "u6-form-2",
+      "check_pair": [
+        "d",
+        "f"
+      ],
+      "class": "U6",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        31,
+        63
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\u6-form-2.json"
+    },
+    {
+      "case": "p4-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "P4",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p4-form-1.json"
+    },
+    {
+      "case": "p5-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "P5",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p5-form-1.json"
+    },
+    {
+      "case": "p6-form-1",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "P6",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p6-form-1.json"
+    }
+  ],
+  "ids": [
+    "P4",
+    "P5",
+    "P6",
+    "U6"
+  ],
+  "source": "research-bank\\R013\\attempt-20260520\\width3-rank2221-u6-dangerous-form-ledger.json",
+  "written": [
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\u6-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\u6-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p4-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p5-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p6-form-1.json"
+  ]
+}

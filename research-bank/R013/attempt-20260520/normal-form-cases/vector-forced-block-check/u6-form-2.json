@@ -1,0 +1,27 @@
+{
+  "case": "u6-form-2",
+  "check_pairs": [
+    [
+      "d",
+      "f"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "b<d",
+    "c<e",
+    "c<f",
+    "e<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U6",
+  "source_form_index": 2
+}

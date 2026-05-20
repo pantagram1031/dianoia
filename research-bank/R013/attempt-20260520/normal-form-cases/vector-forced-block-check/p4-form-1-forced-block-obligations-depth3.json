@@ -1,0 +1,165 @@
+{
+  "applies": true,
+  "depth": 3,
+  "forced_first_total": 18,
+  "forced_second_total": 12,
+  "lemma_schema": [
+    "Partition linear extensions by the listed initial paths.",
+    "For each path, prove the terminal count by a direct residual-poset count.",
+    "Sum the terminal counts by forced orientation.",
+    "Use the lower orientation total as the certified probability lower bound."
+  ],
+  "lower_orientation": "second_before_first",
+  "lower_probability": [
+    12,
+    30
+  ],
+  "lower_total": 12,
+  "mechanism_type": "forced-block",
+  "obligations": [
+    {
+      "count": 5,
+      "counts_toward_lower_orientation": false,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": true,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "b",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 5,
+      "counts_toward_lower_orientation": false,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": false,
+      "orientation": "first_before_second",
+      "path": [
+        "a",
+        "c",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": true,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": true,
+      "orientation": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 5,
+      "counts_toward_lower_orientation": false,
+      "orientation": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "f",
+        "g"
+      ]
+    },
+    {
+      "count": 3,
+      "counts_toward_lower_orientation": true,
+      "orientation": "second_before_first",
+      "path": [
+        "b",
+        "a",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "e",
+        "f",
+        "g"
+      ]
+    }
+  ],
+  "pair": [
+    "c",
+    "d"
+  ],
+  "root_split": {
+    "first_before_second": 18,
+    "second_before_first": 12,
+    "total": 30
+  },
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\p4-form-1-recurrence-depth3.json",
+  "split_counts": {
+    "0:3": 4,
+    "3:0": 1,
+    "5:0": 3
+  },
+  "upper_total": 18
+}

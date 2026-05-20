@@ -1,0 +1,11 @@
+{
+  "applies": false,
+  "depth": 3,
+  "mechanism_type": "mixed",
+  "pair": [
+    "b",
+    "d"
+  ],
+  "reason": "mechanism_type is mixed, not forced-block",
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-forced-block-check\\u6-form-1-recurrence-depth3.json"
+}

@@ -138,6 +138,26 @@ class ResearchStateVerifierTest(unittest.TestCase):
 
         self.assertTrue(any("P10 progress: 1 OPEN-VERIFIED candidates across 1 areas" in item for item in result.ok), result.ok)
 
+    def test_index_open_verified_requires_matching_openness_file(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_valid_research_state(root)
+            write(
+                root / "research-bank" / "INDEX.md",
+                """| id | source | area | openness verified date | tractability rank | why dianoia adds value | status |
+|----|--------|------|------------------------|-------------------|------------------------|--------|
+| R002 | source | number theory | 2026-05-20 (OPEN-VERIFIED) | B | useful | CURATED-OPEN-VERIFIED |
+""",
+            )
+            write(root / "research-bank" / "R002" / "SOURCE.md", "status: OPEN-VERIFIED\n")
+            write(root / "research-bank" / "R002" / "OPENNESS.md", "status: OPEN-WEAK\n")
+            write(root / "research-bank" / "R002" / "TRACTABILITY.md", "rank: B\n")
+            write(root / "research-bank" / "R002" / "log.md", "current_status: CURATED-OPEN-WEAK\n")
+
+            result = research_state.check_research_state(root)
+
+        self.assertTrue(any("R002 index says OPEN-VERIFIED but OPENNESS.md status is OPEN-WEAK" in failure for failure in result.fail), result.fail)
+
 
 if __name__ == "__main__":
     unittest.main()

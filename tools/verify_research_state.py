@@ -87,6 +87,11 @@ def research_bank_stats(index_text: str) -> ResearchBankStats:
     return ResearchBankStats(open_verified=open_verified, open_verified_areas=areas)
 
 
+def simple_field(text: str, name: str) -> str:
+    match = re.search(rf"^{re.escape(name)}:\s*(.*?)\s*$", text, re.MULTILINE)
+    return match.group(1).strip() if match else ""
+
+
 def check_phase_state(result: CheckResult, root: Path) -> None:
     roadmap = require_file(result, root, "ROADMAP.md")
     if not roadmap:
@@ -219,6 +224,24 @@ def check_candidate_dirs(result: CheckResult, root: Path) -> None:
         for filename in ("SOURCE.md", "OPENNESS.md", "TRACTABILITY.md", "log.md"):
             if not (candidate / filename).exists():
                 result.add_fail(f"research candidate {candidate.name} missing {filename}")
+
+    index_path = bank / "INDEX.md"
+    if not index_path.exists():
+        return
+    for row in markdown_table_rows(read_text(index_path)):
+        candidate_id = row.get("id", "").strip()
+        if not candidate_id:
+            continue
+        row_status = row.get("status", "").upper()
+        openness_path = bank / candidate_id / "OPENNESS.md"
+        if "OPEN-VERIFIED" not in row_status or not openness_path.exists():
+            continue
+        openness_status = simple_field(read_text(openness_path), "status")
+        if openness_status != "OPEN-VERIFIED":
+            result.add_fail(
+                f"{candidate_id} index says OPEN-VERIFIED but OPENNESS.md status is "
+                f"{openness_status or 'MISSING'}"
+            )
 
 
 def check_templates(result: CheckResult, root: Path) -> None:

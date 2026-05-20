@@ -107,6 +107,37 @@ class ResearchStateVerifierTest(unittest.TestCase):
         self.assertTrue(any("R001 missing TRACTABILITY.md" in failure for failure in result.fail), result.fail)
         self.assertTrue(any("R001 missing log.md" in failure for failure in result.fail), result.fail)
 
+    def test_research_bank_stats_count_only_open_verified_rows(self) -> None:
+        index_text = """# Research Bank Index
+
+| id | source | area | openness verified date | tractability rank | why dianoia adds value | status |
+|----|--------|------|------------------------|-------------------|------------------------|--------|
+| R001 | source | combinatorics | 2026-05-20 (OPEN-WEAK) | A | warm-up | CURATED-OPEN-WEAK |
+| R002 | source | number theory | 2026-05-20 | B | useful | OPEN-VERIFIED |
+| R003 | source | algebra | 2026-05-20 | B | useful | CURATED-OPEN-VERIFIED |
+"""
+
+        stats = research_state.research_bank_stats(index_text)
+
+        self.assertEqual(2, stats.open_verified)
+        self.assertEqual({"number theory", "algebra"}, stats.open_verified_areas)
+
+    def test_p10_progress_message_reports_verified_count_and_areas(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write_valid_research_state(root)
+            write(
+                root / "research-bank" / "INDEX.md",
+                """| id | source | area | openness verified date | tractability rank | why dianoia adds value | status |
+|----|--------|------|------------------------|-------------------|------------------------|--------|
+| R002 | source | number theory | 2026-05-20 | B | useful | OPEN-VERIFIED |
+""",
+            )
+
+            result = research_state.check_research_state(root)
+
+        self.assertTrue(any("P10 progress: 1 OPEN-VERIFIED candidates across 1 areas" in item for item in result.ok), result.ok)
+
 
 if __name__ == "__main__":
     unittest.main()

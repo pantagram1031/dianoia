@@ -33,6 +33,12 @@ class CheckResult:
         self.fail.append(message)
 
 
+@dataclass
+class ResearchBankStats:
+    open_verified: int
+    open_verified_areas: set[str]
+
+
 def read_text(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
@@ -51,6 +57,34 @@ def table_header_cells(text: str) -> list[str]:
         if line.startswith("|") and "---" not in line:
             return [cell.strip().lower() for cell in line.strip().strip("|").split("|")]
     return []
+
+
+def markdown_table_rows(text: str) -> list[dict[str, str]]:
+    lines = [line for line in text.splitlines() if line.startswith("|")]
+    if len(lines) < 2:
+        return []
+    headers = [cell.strip().lower() for cell in lines[0].strip().strip("|").split("|")]
+    rows: list[dict[str, str]] = []
+    for line in lines[2:]:
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) != len(headers):
+            continue
+        rows.append(dict(zip(headers, cells, strict=True)))
+    return rows
+
+
+def research_bank_stats(index_text: str) -> ResearchBankStats:
+    open_verified = 0
+    areas: set[str] = set()
+    for row in markdown_table_rows(index_text):
+        status = row.get("status", "").upper()
+        openness = row.get("openness verified date", "").upper()
+        if "OPEN-VERIFIED" in status and "OPEN-WEAK" not in status and "OPEN-WEAK" not in openness:
+            open_verified += 1
+            area = row.get("area", "").strip()
+            if area:
+                areas.add(area)
+    return ResearchBankStats(open_verified=open_verified, open_verified_areas=areas)
 
 
 def check_phase_state(result: CheckResult, root: Path) -> None:
@@ -127,6 +161,12 @@ def check_state_files(result: CheckResult, root: Path) -> None:
         ):
             if column not in table_header_cells(text):
                 result.add_fail(f"{name} missing research-bank column: {column}")
+    if bank_index:
+        stats = research_bank_stats(bank_index)
+        result.add_ok(
+            f"P10 progress: {stats.open_verified} OPEN-VERIFIED candidates across "
+            f"{len(stats.open_verified_areas)} areas"
+        )
 
 
 def check_infra_wiring(result: CheckResult, root: Path) -> None:

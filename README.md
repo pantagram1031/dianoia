@@ -30,7 +30,10 @@ claim ledgers, adversarial review, specialist subagents, skills, and connectors.
 | B4 | probability | VALUE_ADDED | Jana-Rani 2026, arXiv:2604.26499 |
 | B5 | algebra | VALUE_ADDED | Caprace-Janssens-Thilmany 2026, arXiv:2601.15266 |
 
-The benchmark and distinct-area requirements for MASTERPIECE are satisfied.
+The old MASTERPIECE benchmark and distinct-area requirements are satisfied, but
+they are now a baseline rather than a terminal claim. Continuing work focuses on
+more reproducible benchmark rows, stronger phase-loop checks, and evidence that
+dianoia improves on fresh problems rather than only curated comparisons.
 
 ## Architecture
 
@@ -97,8 +100,9 @@ Fresh problem statements always create a fresh problem slug, even if
 
 ## Roadmap
 
-The authoritative tracker is `ROADMAP.md`. Current priorities are Phase 4
-benchmark expansion and keeping Phase 7 docs synchronized as the system changes.
+The authoritative tracker is `ROADMAP.md`. Current priorities are benchmark
+reproducibility, B6+ expansion, phase-loop regression checks, and keeping docs
+synchronized as the system changes.
 
 ## License
 

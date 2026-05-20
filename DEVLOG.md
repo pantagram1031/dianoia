@@ -1,5 +1,17 @@
 # Devlog
 
+## 2026-05-20T22:32:00+09:00
+
+- Reframed the former MASTERPIECE artifact as baseline evidence rather than a
+  terminal stop condition.
+- Updated `ROADMAP.md`, `NEXT_SESSION.md`, and `README.md` to point future work
+  at continuous improvement, benchmark reproducibility, and B6+ expansion.
+
+Self-audit:
+- Commits this session so far: 0 pushed, 1 pending.
+- Concrete progress category: doc-refresh.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:20:00+09:00
 
 - Verified MASTERPIECE evidence conditions:

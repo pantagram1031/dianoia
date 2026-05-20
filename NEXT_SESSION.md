@@ -1,9 +1,9 @@
 # Next Session
 
-Resume parallel Phases 4-7.
+Resume continuous improvement.
 
 Immediate next step:
-Goal evidence is complete in `capability-test/MASTERPIECE.md`.
+Harden benchmark reproducibility before adding B6.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -11,7 +11,7 @@ Current state:
 - `capability-test/PHASE2-SMOKE-agents-router.md` records router-level smoke
   evidence.
 - Phase 3 is complete with VALUE_ADDED in `capability-test/RETEST.md`.
-- Phase 4 is complete with 5/5 VALUE_ADDED rows in `BENCHMARK.md`: B1 number
+- Prior MASTERPIECE baseline is complete with 5/5 VALUE_ADDED rows in `BENCHMARK.md`: B1 number
   theory, B2 combinatorics, B3 geometry, B4 probability, and B5 algebra.
 - Phase 5 is complete with 5/5 skills: `skills/pollack-character/SKILL.md`,
   `skills/coverage-systems/SKILL.md`, `skills/arxiv-fetch/SKILL.md`,
@@ -24,5 +24,7 @@ Current state:
   `README.md`, `ARCHITECTURE.md`, `EXAMPLES.md`, and `CHANGELOG.md`.
 
 Important:
-- MASTERPIECE evidence conditions are satisfied and recorded in
-  `capability-test/MASTERPIECE.md`.
+- `capability-test/MASTERPIECE.md` is baseline evidence, not a stop condition.
+- Current continuous-improvement priority: add reproducibility tooling/runbook
+  so future B6+ rows prefer full fresh raw and dianoia runs and clearly label
+  weaker evidence.

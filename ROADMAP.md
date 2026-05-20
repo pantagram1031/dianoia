@@ -16,6 +16,23 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 7 | DOCS | COMPLETE | README.md, ARCHITECTURE.md, EXAMPLES.md, CHANGELOG.md current as of B5/Phase 5/Phase 6 |
 | 8 | DEEPER RESEARCH | GATED | Requires 5 VALUE_ADDED rows across 3 areas |
 
+## Continuous Improvement Track
+
+The former MASTERPIECE checklist is now a baseline, not a terminal state.
+Ongoing work should keep improving dianoia's capability, honesty, and
+reproducibility.
+
+| Track | Status | Next Evidence |
+|-------|--------|---------------|
+| Benchmark expansion | IN_PROGRESS | Add B6+ with full fresh raw and dianoia artifacts when feasible |
+| Benchmark reproducibility | IN_PROGRESS | Add verifier/runbook/templates that reject weak or simulated rows |
+| Phase-loop reliability | IN_PROGRESS | Regression checks for routing, checkpoint, Reviewer D, and subagent fire |
+| Skills/connectors | WATCH | Add or revise only when benchmark evidence shows a reusable need |
+| Docs | WATCH | Keep README/ARCHITECTURE/EXAMPLES/CHANGELOG synced after substantive changes |
+| Deeper research | READY-BUT-GATED-BY-JUDGMENT | Begin only with honest reports and no publishable claim without user approval |
+
 ## Current Priority
 
-MASTERPIECE evidence is written in `capability-test/MASTERPIECE.md`.
+Harden benchmark reproducibility before adding B6: local verification should
+make it obvious which rows are full fresh runs, which are weaker controlled
+comparisons, and which evidence is missing.

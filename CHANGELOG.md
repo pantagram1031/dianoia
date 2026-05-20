@@ -19,6 +19,10 @@
   verification.
 - Added counted `OPEN-VERIFIED` candidates R002-R004, bringing P10 to 3/20
   candidates across 3/4 required areas.
+- Hardened arXiv connector search failure reporting so rate limits and
+  timeouts are explicit `UNVERIFIED` evidence instead of silent crashes.
+- Added counted `OPEN-VERIFIED` candidates R005-R007, bringing P10 to 6/20
+  candidates across 5/4 required areas.
 
 ## 2026-05-21 Continuous Objective Refresh
 

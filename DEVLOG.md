@@ -1,5 +1,23 @@
 # Devlog
 
+## 2026-05-20T21:12:00+09:00
+
+- Hardened `connectors/arxiv/server.py` so rate limits and timeouts return
+  explicit `UNVERIFIED` records instead of crashing openness searches.
+- Added regression coverage for arXiv HTTP 429 handling.
+- Curated three additional counted `OPEN-VERIFIED` candidates:
+  - `R005` Frankl's union-closed sets conjecture, combinatorics, rank B.
+  - `R006` Hadwiger-Nelson chromatic number of the plane, geometry, rank C.
+  - `R007` Hadwiger's graph-minor conjecture, combinatorics, rank D.
+- Advanced P10 from 3/20 across 3 areas to 6/20 across 5 areas.
+- Ran `python tools\verify_all.py`; all 33 tests and all state/verifier checks
+  passed. Historical B1-B5 token-accounting warnings remain expected.
+
+Self-audit:
+- Commits this session: 3 pushed.
+- Concrete progress category: infra fix, curation, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T20:56:00+09:00
 
 - Added P10 verifier counting for `OPEN-VERIFIED` candidates and distinct

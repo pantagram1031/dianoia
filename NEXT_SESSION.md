@@ -3,9 +3,9 @@
 Resume continuous improvement.
 
 Immediate next step:
-Begin P10 CURATION for the RESEARCH_CONTRIBUTION objective: seed
-`research-bank/` with verified-open candidates across at least four
-mathematical areas.
+Continue P10 CURATION for the RESEARCH_CONTRIBUTION objective: add more
+`OPEN-VERIFIED` research-bank candidates, prioritizing tractable rank A/B
+targets and maintaining area diversity.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -60,16 +60,27 @@ Important:
   Bonamy-Groenland-Johnston-Morrison-Scott Conjecture 8.4. It is not counted
   toward the 20 verified-open target until broader independent openness sources
   are added.
-- P10 counted state: 3/20 `OPEN-VERIFIED` candidates across 3/4 required
+- P10 counted state: 6/20 `OPEN-VERIFIED` candidates across 5/4 required
   areas:
   - `research-bank/R002/`: perfect cuboid, number theory, rank C.
   - `research-bank/R003/`: Kakeya set conjecture in dimensions `n >= 4`, real
     analysis, rank D.
   - `research-bank/R004/`: Koethe conjecture, algebra, rank D.
+  - `research-bank/R005/`: Frankl's union-closed sets conjecture,
+    combinatorics, rank B.
+  - `research-bank/R006/`: Hadwiger-Nelson chromatic number of the plane,
+    geometry, rank C.
+  - `research-bank/R007/`: Hadwiger's graph-minor conjecture,
+    combinatorics, rank D.
 - `tools/verify_research_state.py` now reports P10 counts and rejects
   `OPEN-VERIFIED` index rows whose candidate `OPENNESS.md` status disagrees.
-- Next concrete deliverable: add more `OPEN-VERIFIED` candidates, prioritizing
-  the missing fourth area and higher-tractability rank A/B candidates.
+- `connectors/arxiv/server.py` now returns explicit `UNVERIFIED` records for
+  HTTP 429 and timeout failures; preserve those records in openness trails
+  instead of treating failed searches as evidence of closure.
+- Next concrete deliverable: add at least 2-3 more `OPEN-VERIFIED` candidates,
+  prioritizing higher-tractability rank A/B targets in probability, geometry,
+  algebra, and combinatorics. P10 still needs 14 more counted candidates before
+  P11 scale-up.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
   smoke is `capability-test/BENCHMARK-RUN-WORKSPACE-PATHS-VERIFY-20260521.md`;
   warnings are expected for UNVERIFIED token accounting in B1-B5. It also

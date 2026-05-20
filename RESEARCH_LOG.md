@@ -13,6 +13,19 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T21:12:00+09:00
+
+- Hardened the arXiv connector's search path against live API instability:
+  HTTP 429 and timeout failures now become explicit `UNVERIFIED` records with
+  query URLs, preserving honesty in openness trails.
+- Added three counted P10 `OPEN-VERIFIED` candidates:
+  - `R005`: Frankl's union-closed sets conjecture, combinatorics, rank B.
+  - `R006`: Hadwiger-Nelson chromatic number of the plane, geometry, rank C.
+  - `R007`: Hadwiger's graph-minor conjecture, combinatorics, rank D.
+- Current P10 progress: 6/20 `OPEN-VERIFIED` candidates across 5/4 required
+  areas. Need 14 more candidates; area diversity gate is satisfied but should
+  keep broadening.
+
 ## 2026-05-20T20:34:00+09:00
 
 - Enhanced `connectors/arxiv/` with category/date-bounded search and an

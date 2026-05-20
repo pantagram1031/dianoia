@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import html
 import json
 import re
@@ -16,6 +17,8 @@ import xml.etree.ElementTree as ET
 
 API = "https://export.arxiv.org/api/query"
 NS = {"atom": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
+OPENNESS_TERMS = ('"open problem"', '"open question"', "conjecture", "unsolved")
+SORT_CHOICES = ("relevance", "lastUpdatedDate", "submittedDate")
 
 
 def text(node: ET.Element | None) -> str:
@@ -44,6 +47,48 @@ def parse_entry(entry: ET.Element) -> dict[str, object]:
         "abstract": text(entry.find("atom:summary", NS)),
         "links": links,
     }
+
+
+def normalize_date(value: str, *, end_of_day: bool = False) -> str:
+    try:
+        parsed = dt.date.fromisoformat(value)
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(f"date must be YYYY-MM-DD: {value}") from exc
+    suffix = "2359" if end_of_day else "0000"
+    return parsed.strftime("%Y%m%d") + suffix
+
+
+def normalize_arxiv_id(value: str) -> str:
+    value = value.strip()
+    if "/abs/" in value:
+        value = value.rstrip("/").split("/abs/", 1)[1]
+    if "/pdf/" in value:
+        value = value.rstrip("/").split("/pdf/", 1)[1]
+    return value.removesuffix(".pdf")
+
+
+def field_clause(field: str, value: str) -> str:
+    return f"{field}:{value.strip()}"
+
+
+def build_search_query(
+    query_text: str,
+    *,
+    category: str | None = None,
+    from_date: str | None = None,
+    to_date: str | None = None,
+    openness: bool = False,
+) -> str:
+    clauses = [field_clause("all", query_text)]
+    if category:
+        clauses.append(field_clause("cat", category))
+    if from_date or to_date:
+        start = normalize_date(from_date or "1991-08-14")
+        stop = normalize_date(to_date or dt.date.today().isoformat(), end_of_day=True)
+        clauses.append(f"submittedDate:[{start} TO {stop}]")
+    if openness:
+        clauses.append("(" + " OR ".join(field_clause("all", term) for term in OPENNESS_TERMS) + ")")
+    return " AND ".join(clauses)
 
 
 def query(params: dict[str, str]) -> list[dict[str, object]]:
@@ -93,22 +138,60 @@ def fetch_abs_page(arxiv_id: str) -> dict[str, object]:
 def search(args: argparse.Namespace) -> list[dict[str, object]]:
     return query(
         {
-            "search_query": f"all:{args.query}",
+            "search_query": build_search_query(
+                args.query,
+                category=args.category,
+                from_date=args.from_date,
+                to_date=args.to_date,
+            ),
             "start": "0",
             "max_results": str(args.max_results),
-            "sortBy": "relevance",
+            "sortBy": args.sort_by,
             "sortOrder": "descending",
         }
     )
 
 
 def fetch(args: argparse.Namespace) -> list[dict[str, object]]:
+    arxiv_id = normalize_arxiv_id(args.arxiv_id)
     try:
-        return query({"id_list": args.arxiv_id, "max_results": "1"})
+        return query({"id_list": arxiv_id, "max_results": "1"})
     except urllib.error.HTTPError as exc:
         if exc.code == 429:
-            return [fetch_abs_page(args.arxiv_id)]
+            return [fetch_abs_page(arxiv_id)]
         raise
+
+
+def openness(args: argparse.Namespace) -> dict[str, object]:
+    search_query = build_search_query(
+        args.query,
+        category=args.category,
+        from_date=args.from_date,
+        to_date=args.to_date,
+        openness=True,
+    )
+    records = query(
+        {
+            "search_query": search_query,
+            "start": "0",
+            "max_results": str(args.max_results),
+            "sortBy": args.sort_by,
+            "sortOrder": "descending",
+        }
+    )
+    return {
+        "query_meta": {
+            "mode": "openness",
+            "query": args.query,
+            "category": args.category or "",
+            "from_date": args.from_date or "",
+            "to_date": args.to_date or "",
+            "search_query": search_query,
+            "openness_terms": list(OPENNESS_TERMS),
+            "note": "Search lead only; openness requires three independent source angles.",
+        },
+        "records": records,
+    }
 
 
 def main(argv: list[str]) -> int:
@@ -120,11 +203,24 @@ def main(argv: list[str]) -> int:
     search_parser = sub.add_parser("search", help="Search arXiv records")
     search_parser.add_argument("query")
     search_parser.add_argument("--max-results", type=int, default=5)
+    search_parser.add_argument("--category", help="Optional arXiv category such as math.NT")
+    search_parser.add_argument("--from-date", help="Earliest submitted date, YYYY-MM-DD")
+    search_parser.add_argument("--to-date", help="Latest submitted date, YYYY-MM-DD")
+    search_parser.add_argument("--sort-by", choices=SORT_CHOICES, default="relevance")
     search_parser.set_defaults(func=search)
 
     fetch_parser = sub.add_parser("fetch", help="Fetch one arXiv id")
     fetch_parser.add_argument("arxiv_id")
     fetch_parser.set_defaults(func=fetch)
+
+    openness_parser = sub.add_parser("openness", help="Search recent arXiv records for open-problem leads")
+    openness_parser.add_argument("query")
+    openness_parser.add_argument("--max-results", type=int, default=10)
+    openness_parser.add_argument("--category", help="Optional arXiv category such as math.CO")
+    openness_parser.add_argument("--from-date", help="Earliest submitted date, YYYY-MM-DD")
+    openness_parser.add_argument("--to-date", help="Latest submitted date, YYYY-MM-DD")
+    openness_parser.add_argument("--sort-by", choices=SORT_CHOICES, default="submittedDate")
+    openness_parser.set_defaults(func=openness)
 
     args = parser.parse_args(argv)
     records = args.func(args)

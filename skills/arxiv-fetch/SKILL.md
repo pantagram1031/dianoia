@@ -13,6 +13,8 @@ whose exact statement reference must be verified before use.
   theorem, proposition, lemma, section, or page reference.
 - The arXiv Atom API rate-limits and the fallback abstract page must be used
   without pretending it proves more than it does.
+- A research-bank candidate needs date-bounded arXiv search over recent papers
+  or category-bounded searches such as `math.CO` and `math.NT`.
 
 ## When Not To Use
 
@@ -27,7 +29,9 @@ whose exact statement reference must be verified before use.
 1. Normalize the input into either an arXiv id such as `2604.06609` or an arXiv
    abstract URL.
 2. Invoke `connectors/arxiv/server.py fetch <id-or-url>` from the repo root and
-   save the compact result in the subagent drop zone.
+   save the compact result in the subagent drop zone. For source discovery, use
+   `search <query> --category <cat> --from-date <YYYY-MM-DD>`. For open-problem
+   leads, use `openness <query> --category <cat> --from-date <YYYY-MM-DD>`.
 3. Extract author, year, title, arXiv id, version/date when present, and abstract
    summary.
 4. Separately verify the exact statement reference. Metadata can identify a
@@ -40,6 +44,9 @@ whose exact statement reference must be verified before use.
    are present. Use it as search lead otherwise.
 7. For benchmark-bank sources, copy the citation fields and modification note
    into `benchmark-bank/B<N>/SOURCE.md`.
+8. For research-bank candidates, copy the connector `query_meta` into
+   `OPENNESS.md` or the candidate log so the date window and search terms are
+   reproducible.
 
 ## Examples
 
@@ -53,6 +60,12 @@ Expected use:
 
 ```text
 python connectors/arxiv/server.py fetch 2604.06609
+```
+
+Recent-source search:
+
+```text
+python connectors/arxiv/server.py openness "chromatic threshold" --category math.CO --from-date 2025-11-20 --max-results 5
 ```
 
 Then record:

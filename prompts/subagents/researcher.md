@@ -15,7 +15,8 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
    `connectors/arxiv/server.py` and write the compact metadata result into the
    drop zone before judging whether the reference is complete. Consult
    `skills/arxiv-fetch/SKILL.md` to separate metadata, fallback abstract-page
-   evidence, and exact statement verification.
+   evidence, date-bounded search leads, openness query metadata, and exact
+   statement verification.
 3. For OEIS sequence ids or sequence-like computational evidence, invoke
    `connectors/oeis/server.py` and write the compact metadata result into the
    drop zone. Treat OEIS as computational/reference evidence unless a separate
@@ -27,7 +28,9 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 5. For any research-bank candidate, published-as-open problem, conjecture,
    bound-improvement target, or possible `CLAIMS.md` promotion, consult
    `skills/openness-verification/SKILL.md`. Require at least three independent
-   openness angles and mark stale or incomplete checks `UNVERIFIED`.
+   openness angles and mark stale or incomplete checks `UNVERIFIED`. When
+   arXiv is one angle, invoke `connectors/arxiv/server.py openness` with an
+   explicit `--from-date` window and save its `query_meta`.
 6. For any candidate contribution or novelty-sensitive claim, consult
    `skills/adversarial-novelty-check/SKILL.md` and gather search evidence for
    renamed, generalized, specialized, dual, or recently solved versions.

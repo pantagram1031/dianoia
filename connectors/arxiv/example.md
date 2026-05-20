@@ -17,3 +17,21 @@ Expected use by researcher subagent:
 
 Observed smoke output may include `"source": "arxiv_abs_fallback"` if the Atom
 API rate-limits.
+
+## Recent openness-lead search
+
+Command:
+
+```powershell
+python connectors/arxiv/server.py openness "induced saturation" --category math.CO --from-date 2025-11-20 --max-results 5
+```
+
+Expected use by researcher subagent:
+
+1. Save the full JSON object, including `query_meta`, in the research-bank or
+   claim-review drop zone.
+2. Treat returned records as leads for the third openness angle, not as a final
+   openness verdict.
+3. Pair the arXiv search with the original problem source and an independent
+   survey, problem-list, citation trail, or author-page check before writing
+   `OPEN-VERIFIED`.

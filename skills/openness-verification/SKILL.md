@@ -30,6 +30,9 @@ research-claim gate.
    - recent survey, monograph, or problem collection;
    - recent search over arXiv/MathSciNet-like metadata, author pages, seminar
      notes, or citation trails from the last six months when available.
+   Use `connectors/arxiv/server.py openness <query> --from-date <YYYY-MM-DD>`
+   for the arXiv angle when the target plausibly lives in recent preprints, and
+   preserve the returned `query_meta`.
 3. For each source, record author, year, title, exact location, URL or local
    artifact path, search date, and relationship to the target statement.
 4. Search for equivalent names, dual formulations, complements, parameter
@@ -64,4 +67,3 @@ status: LIKELY-CLOSED
 reason: a 2026 preprint proves a stronger theorem under the same hypotheses
 action: do not add to research-bank as open; cite as background instead
 ```
-

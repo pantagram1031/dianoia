@@ -3,8 +3,7 @@
 Resume parallel Phases 4-7.
 
 Immediate next step:
-If the goal is still active, verify MASTERPIECE evidence and write
-`capability-test/MASTERPIECE.md`.
+Goal evidence is complete in `capability-test/MASTERPIECE.md`.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -25,5 +24,5 @@ Current state:
   `README.md`, `ARCHITECTURE.md`, `EXAMPLES.md`, and `CHANGELOG.md`.
 
 Important:
-- MASTERPIECE evidence conditions appear satisfied; final verification and
-  `capability-test/MASTERPIECE.md` remain.
+- MASTERPIECE evidence conditions are satisfied and recorded in
+  `capability-test/MASTERPIECE.md`.

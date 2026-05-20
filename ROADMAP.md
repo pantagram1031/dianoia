@@ -18,6 +18,4 @@ Initialized: 2026-05-20T17:54:05+09:00
 
 ## Current Priority
 
-All MASTERPIECE evidence conditions are satisfied. Write
-`capability-test/MASTERPIECE.md` with citations to BENCHMARK, skills,
-connectors, and docs evidence.
+MASTERPIECE evidence is written in `capability-test/MASTERPIECE.md`.

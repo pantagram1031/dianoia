@@ -8,6 +8,17 @@ Continue P11 ATTEMPTS. P10 is complete; R020 and R013 have produced
 
 Current R013 resume point:
 
+- `ALL_VECTOR_MECHANISM_REDUCTION.md` is now the main resume artifact. It
+  records that all 59 adjacent/skip vector classes expand to 103 rank-normal
+  forms, and all 103 resolve by depth 5 with 0 unresolved cases.
+- Mechanism counts: 55 `forced-block`, 31
+  `balanced-core-plus-forced-first`, 1
+  `balanced-core-plus-forced-second`, and 16
+  `balanced-core-with-forced-blocks`.
+- Immediate next mathematical move: fold the plus-forced-first/second variants
+  into one orientation-symmetric schema, then write a human-checkable
+  mechanism theorem and an independent coverage check for the vector-class
+  decomposition.
 - `NEAR_UNPROCESSED_SLACK_NOTES.md` records the anti-overfitting correction:
   U6 is componentwise-minimal but U1 is the probability-weakest unprocessed
   vector class (`7/17`, gap `3/544` above `13/32`), so a naive monotonicity

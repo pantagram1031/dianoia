@@ -428,3 +428,22 @@ candidate_id: R013
   hand count for `(c,d)` with lower probability `2/5`.
 - Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
   subcase, not a solution of R013.
+
+## 2026-05-21 P11 Attempt 1T
+
+- Expanded the adjacent/skip vector-class mechanism analysis to the whole
+  width-3, height-4, rank-layer-shape `2,2,2,1` restricted universe.
+- Generated `width3-rank2221-all-vector-form-ledger.json`; all 59 vector
+  classes expand to 103 rank-normal forms.
+- Generated named cases under `normal-form-cases/vector-all/`.
+- Ran `named-case-mechanism-batch` with `--max-depth 5` over all 103 named
+  forms. All 103 resolved, with 0 unresolved cases.
+- Mechanism counts: 55 `forced-block`, 31
+  `balanced-core-plus-forced-first`, 1
+  `balanced-core-plus-forced-second`, and 16
+  `balanced-core-with-forced-blocks`.
+- Added `ALL_VECTOR_MECHANISM_REDUCTION.md`. The next target is a
+  human-checkable mechanism theorem plus independent vector-decomposition
+  coverage verification.
+- Claim discipline: no `CLAIMS.md` row; this is strong proof-support for a
+  restricted finite subcase, not yet a verified contribution.

@@ -1,5 +1,22 @@
 # Devlog
 
+## 2026-05-21T11:55:00+09:00
+
+- Continued P11 on `R013`.
+- Generated the all-vector form ledger for all 59 adjacent/skip vector
+  classes; it contains 103 rank-normal forms.
+- Generated `normal-form-cases/vector-all/` and ran a depth-5 mechanism batch.
+- Added `ALL_VECTOR_MECHANISM_REDUCTION.md`: all 103 forms resolve, with
+  counts 55 `forced-block`, 31 `balanced-core-plus-forced-first`, 1
+  `balanced-core-plus-forced-second`, and 16
+  `balanced-core-with-forced-blocks`.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note.
+- Failed-session streak: 0.
+
 ## 2026-05-21T11:15:00+09:00
 
 - Continued P11 on `R013`.

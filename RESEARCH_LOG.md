@@ -13,6 +13,24 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T11:55:00+09:00
+
+- Continued P11 on `R013` by expanding the recurrence mechanism reduction to
+  all 59 adjacent/skip vector classes in the width-3, height-4,
+  rank-layer-shape `2,2,2,1` finite-poset subproblem.
+- Generated `width3-rank2221-all-vector-form-ledger.json`; the 59 vector
+  classes expand to 103 rank-normal forms.
+- Generated `normal-form-cases/vector-all/` and ran the depth-5 mechanism
+  batch across all 103 forms.
+- Result: all 103 forms resolved with 0 unresolved cases: 55 `forced-block`,
+  31 `balanced-core-plus-forced-first`, 1
+  `balanced-core-plus-forced-second`, and 16
+  `balanced-core-with-forced-blocks`.
+- Added `ALL_VECTOR_MECHANISM_REDUCTION.md`. The next proof target is now a
+  human-checkable mechanism theorem plus independent coverage check, not more
+  isolated bucket enumeration.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T11:15:00+09:00
 
 - Continued P11 on `R013` with the user's anti-overfitting concern treated as

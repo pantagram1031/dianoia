@@ -170,5 +170,12 @@ combines U6/P1-P8 and U1-U5 into 37 resolved forms across three mechanism
 families. Next target: build a mechanism signature table over all 59 vector
 classes or prove local trigger lemmas for the three mechanism families without
 referring to historical class labels.
+`ALL_VECTOR_MECHANISM_REDUCTION.md` now completes that all-vector mechanism
+scan: the 59 vector classes expand to 103 rank-normal forms, and all 103
+resolve by depth 5 into forced blocks, orientation-symmetric balanced-core plus
+forced-side cases, or balanced cores with forced blocks. Next target: convert
+the generated coverage into a human-checkable mechanism theorem and verify
+independently that the vector-class decomposition covers the whole restricted
+rank-2221 class.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

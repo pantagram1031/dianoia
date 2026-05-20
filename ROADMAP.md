@@ -134,5 +134,9 @@ attempt a uniform exclusion/injection argument for all other deltas.
 ledger: U6 plus P1-P8 reduce to 22 rank-normal forms, with ledger minima
 matching source minima. Next target: extract named case files or recurrence
 ledgers for the boundary classes P7/P8 and compare their count identities.
+`BOUNDARY_RECURRENCE_NOTES.md` now does this for the two `13/32` boundary
+forms: `p7-form-2` and `p8-form-1` both split as `19/13` out of 32, but with
+different first-branch distributions. Next target: compare depth-2 leaves and
+seek a shared injection/pairing proof.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

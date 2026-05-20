@@ -72,7 +72,11 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   `U6_DANGEROUS_FORM_LEDGER_NOTES.md` now records the first such ledger:
   U6 plus P1-P8 reduce to 22 rank-normal forms, with source minima matching
   ledger minima. Next extract named case files or recurrence ledgers for the
-  boundary classes P7/P8 and compare their count identities;
+  boundary classes P7/P8 and compare their count identities.
+  `BOUNDARY_RECURRENCE_NOTES.md` now extracts the P7/P8 boundary cases:
+  `p7-form-2` and `p8-form-1` both attain `13/32` via a `19/13` split out of
+  32, with different depth-1 branch distributions. Next compare depth-2 leaves
+  and attempt a shared injection/pairing proof;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -148,6 +152,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-vector-deltas-from-u6.json`
   - `research-bank/R013/attempt-20260520/U6_DANGEROUS_FORM_LEDGER_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-u6-dangerous-form-ledger.json`
+  - `research-bank/R013/attempt-20260520/BOUNDARY_RECURRENCE_NOTES.md`
+  - `research-bank/R013/attempt-20260520/normal-form-cases/vector-boundary/`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`

@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-21T07:25:00+09:00
+
+- Continued P11 on `R013`.
+- Added `matrix-vector-named-cases` and extracted P7/P8 boundary forms into
+  `normal-form-cases/vector-boundary/`.
+- Generated named-case reports and depth-2 recurrence traces for the two
+  actual `13/32` boundary forms: `p7-form-2` and `p8-form-1`.
+- Added `BOUNDARY_RECURRENCE_NOTES.md`: both boundary forms have total split
+  `19/13` out of 32, but the branch distribution differs.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T07:05:00+09:00
 
 - Continued P11 on `R013`.

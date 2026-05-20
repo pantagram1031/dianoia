@@ -13,6 +13,16 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T07:25:00+09:00
+
+- Continued P11 on `R013` by extracting P7/P8 boundary forms from the vector
+  form ledger into named-case JSON files.
+- Generated reports and depth-2 recurrences for `p7-form-2` and `p8-form-1`,
+  the two forms attaining `13/32`.
+- Added `BOUNDARY_RECURRENCE_NOTES.md`: both boundary forms realize a `19/13`
+  split out of 32 linear extensions, with different first-branch distributions.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T07:05:00+09:00
 
 - Continued P11 on `R013` by generating a rank-normal-form ledger for U6 and

@@ -2,6 +2,16 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 2E
+
+- Added `matrix-vector-named-cases` to `tools/poset_balance.py`.
+- Extracted P7/P8 forms into
+  `research-bank/R013/attempt-20260520/normal-form-cases/vector-boundary/`.
+- Generated named-case reports and depth-2 recurrence traces for the two
+  `13/32` forms.
+- Added `research-bank/R013/attempt-20260520/BOUNDARY_RECURRENCE_NOTES.md`.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 2D
 
 - Added `matrix-vector-form-ledger` to `tools/poset_balance.py`.

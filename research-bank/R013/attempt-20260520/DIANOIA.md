@@ -19,7 +19,9 @@ it to test small posets exactly.
    small labeled-poset counts, and exhaustive checking through four elements.
 4. Ran the exact labeled-poset enumeration through five elements and wrote:
    `research-bank/R013/attempt-20260520/small-posets-n5.json`.
-5. Wired the small-poset check into `tools/verify_all.py`.
+5. Added canonical unlabeled-family summaries through six elements using a
+   poset-native one-point extension generator.
+6. Wired the small-poset checks into `tools/verify_all.py`.
 
 ## Verification
 
@@ -41,6 +43,17 @@ python tools\poset_balance.py exhaustive-small `
 
 Result: `counterexample_count: 0` across all labeled non-chain posets through
 five elements.
+
+Canonical unlabeled check:
+
+```powershell
+python tools\poset_balance.py exhaustive-unlabeled `
+  --max-n 6 `
+  --output research-bank\R013\attempt-20260520\unlabeled-posets-n6.json
+```
+
+Result: `counterexample_count: 0` across all unlabeled non-chain posets through
+six elements.
 
 ## Outcome
 

@@ -1,5 +1,24 @@
 # Devlog
 
+## 2026-05-20T22:38:00+09:00
+
+- Continued P11 on `R013` 1/3-2/3 posets.
+- Replaced duplicate-heavy labeled exploration with isomorphism-aware
+  unlabeled summaries.
+- Added a one-point extension generator using downsets/upsets, which reached
+  all 318 unlabeled six-element posets.
+- Stored `research-bank/R013/attempt-20260520/unlabeled-posets-n6.json`.
+- Added `STRUCTURAL_NOTES.md` to separate finite search signals from claims:
+  width-2 examples hit the `1/3` boundary, width-3 examples remain at least
+  `4/11` in the small data, and wider small examples are loose.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row because this is exact
+  finite evidence, not a novel theorem.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:28:00+09:00
 
 - Pivoted from R020 replay to a second rank-A P11 candidate, `R013`

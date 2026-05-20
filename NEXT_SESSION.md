@@ -9,8 +9,9 @@ Continue P11 ATTEMPTS. P10 is complete; R020 and R013 have produced
 Recommended next work:
 Do not keep expanding replay as a substitute for mathematics. Choose one:
 
-- continue `R013` by improving exact poset generation beyond labeled `n=5`,
-  adding width/thinness filters, or extracting a structural lemma candidate; or
+- continue `R013` by extracting a structural lemma candidate from
+  `STRUCTURAL_NOTES.md`, adding width/thinness filters, or speeding up
+  canonical generation before attempting `n=7`; or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
 - switch to `R017` Graceful Tree Conjecture if both R013 and R020 become mostly
@@ -44,7 +45,11 @@ Current state:
   - `research-bank/R013/attempt-20260520/DIANOIA.md`
   - `research-bank/R013/attempt-20260520/VERDICT.md`
   - `research-bank/R013/attempt-20260520/small-posets-n5.json`
-  - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`.
+  - `research-bank/R013/attempt-20260520/unlabeled-posets-n5.json`
+  - `research-bank/R013/attempt-20260520/unlabeled-posets-n6.json`
+  - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
+  - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`
+    and `python tools/poset_balance.py exhaustive-unlabeled --max-n 5`.
 - No `CLAIMS.md` row exists for R020 because no new mathematical result has
   been produced. No `CLAIMS.md` row exists for R013 for the same reason.
 

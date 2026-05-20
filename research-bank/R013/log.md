@@ -24,3 +24,20 @@ candidate_id: R013
   `2 <= n <= 5`.
 - Claim discipline: no `CLAIMS.md` row added because this is a small-case
   sanity baseline and verification gate, not a novel result.
+
+## 2026-05-20 P11 Attempt 1B
+
+- Added isomorphism-aware unlabeled poset summaries to avoid overfitting the
+  attempt to duplicate labelings.
+- Added a poset-native one-point extension generator based on downsets and
+  upsets, then used it to enumerate all 318 unlabeled six-element posets.
+- Artifact:
+  `research-bank/R013/attempt-20260520/unlabeled-posets-n6.json` reports
+  `counterexample_count: 0` across 317 non-chain unlabeled six-element posets.
+- Structural notes:
+  `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md` records finite
+  search signals: width-2 examples hit the `1/3` boundary, width-3 examples
+  remain at least `4/11` in the small data, and width >= 4 examples are loose
+  in this range.
+- Claim discipline: no `CLAIMS.md` row; these are exact finite observations
+  and next-attempt guides, not a new theorem.

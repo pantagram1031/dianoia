@@ -13,6 +13,19 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T22:38:00+09:00
+
+- Scaled `R013` from labeled small checks to canonical unlabeled family
+  summaries.
+- Added poset-native one-point extension generation using downsets and upsets.
+- New artifact:
+  `research-bank/R013/attempt-20260520/unlabeled-posets-n6.json` covers all
+  318 unlabeled six-element posets and reports `counterexample_count: 0`.
+- Structural note:
+  `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md` records finite
+  search signals and explicitly marks them `OBSERVATION-NOT-CLAIM`.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T22:28:00+09:00
 
 - Opened a second rank-A P11 attempt on `R013`, the 1/3-2/3 conjecture for

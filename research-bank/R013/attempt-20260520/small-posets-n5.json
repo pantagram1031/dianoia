@@ -1,0 +1,44 @@
+{
+  "counterexample_count": 0,
+  "counterexamples": [],
+  "max_n": 5,
+  "summary": [
+    {
+      "labeled_posets": 3,
+      "n": 2,
+      "non_chain_posets": 1
+    },
+    {
+      "labeled_posets": 19,
+      "n": 3,
+      "non_chain_posets": 13
+    },
+    {
+      "labeled_posets": 219,
+      "n": 4,
+      "non_chain_posets": 195
+    },
+    {
+      "labeled_posets": 4231,
+      "n": 5,
+      "non_chain_posets": 4111
+    }
+  ],
+  "worst_best_pair": {
+    "lower_orientation_probability": [
+      1,
+      3
+    ],
+    "n": 3,
+    "pair": [
+      0,
+      2
+    ],
+    "relations": [
+      [
+        1,
+        0
+      ]
+    ]
+  }
+}

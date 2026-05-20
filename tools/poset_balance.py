@@ -1,0 +1,267 @@
+#!/usr/bin/env python3
+"""Exact linear-extension checks for finite poset balancing experiments."""
+
+from __future__ import annotations
+
+import argparse
+import itertools
+import json
+from dataclasses import dataclass
+from fractions import Fraction
+from functools import cache
+from pathlib import Path
+from typing import Iterable, Sequence
+
+
+Relation = tuple[int, int]
+
+
+@dataclass(frozen=True)
+class Poset:
+    n: int
+    less: frozenset[Relation]
+
+    def covers_mask(self) -> tuple[int, ...]:
+        prerequisites = [0] * self.n
+        for lower, upper in self.less:
+            prerequisites[upper] |= 1 << lower
+        return tuple(prerequisites)
+
+    def incomparable_pairs(self) -> list[Relation]:
+        pairs: list[Relation] = []
+        for x in range(self.n):
+            for y in range(x + 1, self.n):
+                if (x, y) not in self.less and (y, x) not in self.less:
+                    pairs.append((x, y))
+        return pairs
+
+
+def transitive_closure(n: int, relations: Iterable[Relation]) -> frozenset[Relation]:
+    reach = [[False] * n for _ in range(n)]
+    for lower, upper in relations:
+        if not (0 <= lower < n and 0 <= upper < n):
+            raise ValueError(f"relation outside {n}-element poset: {(lower, upper)}")
+        if lower == upper:
+            raise ValueError(f"reflexive relation is not allowed: {(lower, upper)}")
+        reach[lower][upper] = True
+
+    for mid in range(n):
+        for lower in range(n):
+            if reach[lower][mid]:
+                for upper in range(n):
+                    reach[lower][upper] = reach[lower][upper] or reach[mid][upper]
+
+    for item in range(n):
+        if reach[item][item]:
+            raise ValueError("relations contain a cycle")
+
+    return frozenset(
+        (lower, upper)
+        for lower in range(n)
+        for upper in range(n)
+        if reach[lower][upper]
+    )
+
+
+def make_poset(n: int, relations: Iterable[Sequence[int]]) -> Poset:
+    return Poset(n=n, less=transitive_closure(n, (tuple(pair) for pair in relations)))
+
+
+def count_linear_extensions(poset: Poset) -> int:
+    prerequisites = poset.covers_mask()
+    full = (1 << poset.n) - 1
+
+    @cache
+    def count(placed: int) -> int:
+        if placed == full:
+            return 1
+        total = 0
+        for item in range(poset.n):
+            bit = 1 << item
+            if placed & bit:
+                continue
+            if prerequisites[item] & ~placed:
+                continue
+            total += count(placed | bit)
+        return total
+
+    return count(0)
+
+
+def count_extensions_with_order(poset: Poset, before: int, after: int) -> int:
+    prerequisites = poset.covers_mask()
+    full = (1 << poset.n) - 1
+
+    @cache
+    def count(placed: int) -> int:
+        if placed & (1 << after) and not placed & (1 << before):
+            return 0
+        if placed == full:
+            return 1
+        total = 0
+        for item in range(poset.n):
+            bit = 1 << item
+            if placed & bit:
+                continue
+            if prerequisites[item] & ~placed:
+                continue
+            total += count(placed | bit)
+        return total
+
+    return count(0)
+
+
+def balance_report(poset: Poset) -> dict[str, object]:
+    total = count_linear_extensions(poset)
+    pairs: list[dict[str, object]] = []
+    balanced_pairs: list[dict[str, object]] = []
+    best_pair: dict[str, object] | None = None
+    best_distance: Fraction | None = None
+
+    for x, y in poset.incomparable_pairs():
+        xy_count = count_extensions_with_order(poset, x, y)
+        probability = Fraction(xy_count, total)
+        reverse = Fraction(total - xy_count, total)
+        lower_probability = min(probability, reverse)
+        pair_payload = {
+            "pair": [x, y],
+            "x_before_y": [probability.numerator, probability.denominator],
+            "lower_orientation_probability": [
+                lower_probability.numerator,
+                lower_probability.denominator,
+            ],
+            "balanced": Fraction(1, 3) <= probability <= Fraction(2, 3)
+            or Fraction(1, 3) <= reverse <= Fraction(2, 3),
+        }
+        pairs.append(pair_payload)
+        if pair_payload["balanced"]:
+            balanced_pairs.append(pair_payload)
+        distance = abs(probability - Fraction(1, 2))
+        if best_distance is None or distance < best_distance:
+            best_distance = distance
+            best_pair = pair_payload
+
+    return {
+        "n": poset.n,
+        "relations": [list(pair) for pair in sorted(poset.less)],
+        "linear_extensions": total,
+        "incomparable_pair_count": len(pairs),
+        "balanced_pair_count": len(balanced_pairs),
+        "has_balanced_pair": bool(balanced_pairs),
+        "best_pair": best_pair,
+        "pairs": pairs,
+    }
+
+
+def load_poset(path: Path) -> Poset:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(payload, dict):
+        raise ValueError("poset file must be a JSON object")
+    n = payload.get("n")
+    relations = payload.get("relations", [])
+    if not isinstance(n, int):
+        raise ValueError("poset file requires integer n")
+    if not isinstance(relations, list):
+        raise ValueError("poset file requires list relations")
+    return make_poset(n, relations)
+
+
+def all_labeled_posets(n: int) -> list[Poset]:
+    """Enumerate labeled posets by orienting each unordered pair or leaving it free.
+
+    This simple generator is intentionally bounded to small n; it canonicalizes
+    by transitive closure so duplicate relation presentations collapse.
+    """
+    unordered_pairs = list(itertools.combinations(range(n), 2))
+    seen: set[frozenset[Relation]] = set()
+    posets: list[Poset] = []
+    for states in itertools.product((-1, 0, 1), repeat=len(unordered_pairs)):
+        relations: list[Relation] = []
+        for state, (x, y) in zip(states, unordered_pairs):
+            if state == -1:
+                relations.append((y, x))
+            elif state == 1:
+                relations.append((x, y))
+        try:
+            closure = transitive_closure(n, relations)
+        except ValueError:
+            continue
+        if closure in seen:
+            continue
+        seen.add(closure)
+        posets.append(Poset(n=n, less=closure))
+    return posets
+
+
+def analyze_command(args: argparse.Namespace) -> int:
+    print(json.dumps(balance_report(load_poset(args.poset)), indent=2, sort_keys=True))
+    return 0
+
+
+def exhaustive_command(args: argparse.Namespace) -> int:
+    summary: list[dict[str, object]] = []
+    counterexamples: list[dict[str, object]] = []
+    worst: dict[str, object] | None = None
+    for n in range(2, args.max_n + 1):
+        posets = all_labeled_posets(n)
+        non_chains = 0
+        for poset in posets:
+            if not poset.incomparable_pairs():
+                continue
+            non_chains += 1
+            report = balance_report(poset)
+            if not report["has_balanced_pair"]:
+                counterexamples.append(report)
+            best_pair = report["best_pair"]
+            if isinstance(best_pair, dict):
+                lower = Fraction(*best_pair["lower_orientation_probability"])
+                if worst is None or lower < Fraction(*worst["lower_orientation_probability"]):
+                    worst = {
+                        "n": n,
+                        "relations": report["relations"],
+                        "pair": best_pair["pair"],
+                        "lower_orientation_probability": best_pair[
+                            "lower_orientation_probability"
+                        ],
+                    }
+        summary.append(
+            {
+                "n": n,
+                "labeled_posets": len(posets),
+                "non_chain_posets": non_chains,
+            }
+        )
+    payload = {
+        "max_n": args.max_n,
+        "summary": summary,
+        "counterexample_count": len(counterexamples),
+        "counterexamples": counterexamples[: args.max_counterexamples],
+        "worst_best_pair": worst,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0 if not counterexamples else 1
+
+
+def main(argv: Sequence[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    analyze_parser = subparsers.add_parser("analyze")
+    analyze_parser.add_argument("poset", type=Path)
+    analyze_parser.set_defaults(func=analyze_command)
+
+    exhaustive_parser = subparsers.add_parser("exhaustive-small")
+    exhaustive_parser.add_argument("--max-n", type=int, default=5)
+    exhaustive_parser.add_argument("--max-counterexamples", type=int, default=3)
+    exhaustive_parser.add_argument("--output", type=Path)
+    exhaustive_parser.set_defaults(func=exhaustive_command)
+
+    args = parser.parse_args(argv)
+    return args.func(args)
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,5 +1,17 @@
 # Devlog
 
+## 2026-05-20T23:36:00+09:00
+
+- Added `tools/verify_all.py` to run unit tests, state verifier, and phase-loop
+  verifier from one command.
+- Recorded smoke evidence in `capability-test/VERIFY-ALL-20260520.md`.
+- Updated README/NEXT_SESSION with the full verifier command.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:25:00+09:00
 
 - Added `tools/verify_phase_loop.py` to check phase/review order, checkpoint

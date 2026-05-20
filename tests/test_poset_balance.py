@@ -82,6 +82,27 @@ class PosetBalanceTest(unittest.TestCase):
         self.assertEqual([1, 2, 3, 4], list(levels))
         self.assertEqual(16, len(levels[4]))
 
+    def test_exhaustive_unlabeled_can_filter_width(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "summary.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "exhaustive-unlabeled",
+                        "--max-n",
+                        "5",
+                        "--width",
+                        "3",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(3, payload["filters"]["width"])
+            self.assertEqual(29, payload["summary"][-1]["total_posets"])
+
 
 if __name__ == "__main__":
     unittest.main()

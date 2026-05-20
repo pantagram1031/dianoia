@@ -433,11 +433,31 @@ def summarize_posets(posets: Iterable[Poset]) -> dict[str, object]:
     }
 
 
+def filtered_posets(
+    posets: Iterable[Poset],
+    *,
+    only_width: int | None = None,
+    only_height: int | None = None,
+) -> list[Poset]:
+    filtered: list[Poset] = []
+    for poset in posets:
+        if only_width is not None and width(poset) != only_width:
+            continue
+        if only_height is not None and height(poset) != only_height:
+            continue
+        filtered.append(poset)
+    return filtered
+
+
 def exhaustive_unlabeled_command(args: argparse.Namespace) -> int:
     summary: list[dict[str, object]] = []
     counterexample_count = 0
     for n in range(2, args.max_n + 1):
-        posets = all_unlabeled_posets(n)
+        posets = filtered_posets(
+            all_unlabeled_posets(n),
+            only_width=args.width,
+            only_height=args.height,
+        )
         item = {"n": n, **summarize_posets(posets)}
         counterexample_count += int(item["counterexample_count"])
         if args.max_counterexamples >= 0:
@@ -447,6 +467,10 @@ def exhaustive_unlabeled_command(args: argparse.Namespace) -> int:
     payload = {
         "max_n": args.max_n,
         "mode": "unlabeled-canonical",
+        "filters": {
+            "width": args.width,
+            "height": args.height,
+        },
         "summary": summary,
         "counterexample_count": counterexample_count,
     }
@@ -475,6 +499,8 @@ def main(argv: Sequence[str] | None = None) -> int:
     unlabeled_parser.add_argument("--max-n", type=int, default=5)
     unlabeled_parser.add_argument("--max-counterexamples", type=int, default=3)
     unlabeled_parser.add_argument("--output", type=Path)
+    unlabeled_parser.add_argument("--width", type=int)
+    unlabeled_parser.add_argument("--height", type=int)
     unlabeled_parser.set_defaults(func=exhaustive_unlabeled_command)
 
     args = parser.parse_args(argv)

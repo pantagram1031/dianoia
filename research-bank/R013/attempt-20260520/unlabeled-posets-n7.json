@@ -1,0 +1,754 @@
+{
+  "counterexample_count": 0,
+  "max_n": 7,
+  "mode": "unlabeled-canonical",
+  "summary": [
+    {
+      "counterexample_count": 0,
+      "counterexamples": [],
+      "height_distribution": {
+        "1": 1,
+        "2": 1
+      },
+      "n": 2,
+      "non_chain_posets": 1,
+      "total_posets": 2,
+      "width_distribution": {
+        "1": 1,
+        "2": 1
+      },
+      "worst_by_width": {
+        "2": {
+          "height": 1,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": []
+        }
+      }
+    },
+    {
+      "counterexample_count": 0,
+      "counterexamples": [],
+      "height_distribution": {
+        "1": 1,
+        "2": 3,
+        "3": 1
+      },
+      "n": 3,
+      "non_chain_posets": 4,
+      "total_posets": 5,
+      "width_distribution": {
+        "1": 1,
+        "2": 3,
+        "3": 1
+      },
+      "worst_by_width": {
+        "2": {
+          "height": 2,
+          "lower_orientation_probability": [
+            1,
+            3
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": [
+            [
+              2,
+              0
+            ]
+          ]
+        },
+        "3": {
+          "height": 1,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": []
+        }
+      }
+    },
+    {
+      "counterexample_count": 0,
+      "counterexamples": [],
+      "height_distribution": {
+        "1": 1,
+        "2": 8,
+        "3": 6,
+        "4": 1
+      },
+      "n": 4,
+      "non_chain_posets": 15,
+      "total_posets": 16,
+      "width_distribution": {
+        "1": 1,
+        "2": 9,
+        "3": 5,
+        "4": 1
+      },
+      "worst_by_width": {
+        "2": {
+          "height": 3,
+          "lower_orientation_probability": [
+            1,
+            3
+          ],
+          "pair": [
+            1,
+            2
+          ],
+          "relations": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        "3": {
+          "height": 2,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            1,
+            2
+          ],
+          "relations": [
+            [
+              3,
+              0
+            ]
+          ]
+        },
+        "4": {
+          "height": 1,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": []
+        }
+      }
+    },
+    {
+      "counterexample_count": 0,
+      "counterexamples": [],
+      "height_distribution": {
+        "1": 1,
+        "2": 20,
+        "3": 31,
+        "4": 10,
+        "5": 1
+      },
+      "n": 5,
+      "non_chain_posets": 62,
+      "total_posets": 63,
+      "width_distribution": {
+        "1": 1,
+        "2": 25,
+        "3": 29,
+        "4": 7,
+        "5": 1
+      },
+      "worst_by_width": {
+        "2": {
+          "height": 4,
+          "lower_orientation_probability": [
+            1,
+            3
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        },
+        "3": {
+          "height": 3,
+          "lower_orientation_probability": [
+            4,
+            11
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ]
+          ]
+        },
+        "4": {
+          "height": 2,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            1,
+            2
+          ],
+          "relations": [
+            [
+              4,
+              0
+            ]
+          ]
+        },
+        "5": {
+          "height": 1,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": []
+        }
+      }
+    },
+    {
+      "counterexample_count": 0,
+      "counterexamples": [],
+      "height_distribution": {
+        "1": 1,
+        "2": 55,
+        "3": 162,
+        "4": 84,
+        "5": 15,
+        "6": 1
+      },
+      "n": 6,
+      "non_chain_posets": 317,
+      "total_posets": 318,
+      "width_distribution": {
+        "1": 1,
+        "2": 74,
+        "3": 170,
+        "4": 63,
+        "5": 9,
+        "6": 1
+      },
+      "worst_by_width": {
+        "2": {
+          "height": 4,
+          "lower_orientation_probability": [
+            1,
+            3
+          ],
+          "pair": [
+            0,
+            2
+          ],
+          "relations": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              2
+            ]
+          ]
+        },
+        "3": {
+          "height": 4,
+          "lower_orientation_probability": [
+            4,
+            11
+          ],
+          "pair": [
+            1,
+            2
+          ],
+          "relations": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              0
+            ]
+          ]
+        },
+        "4": {
+          "height": 3,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            2,
+            3
+          ],
+          "relations": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              5,
+              1
+            ]
+          ]
+        },
+        "5": {
+          "height": 2,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            1,
+            2
+          ],
+          "relations": [
+            [
+              5,
+              0
+            ]
+          ]
+        },
+        "6": {
+          "height": 1,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": []
+        }
+      }
+    },
+    {
+      "counterexample_count": 0,
+      "counterexamples": [],
+      "height_distribution": {
+        "1": 1,
+        "2": 163,
+        "3": 940,
+        "4": 734,
+        "5": 185,
+        "6": 21,
+        "7": 1
+      },
+      "n": 7,
+      "non_chain_posets": 2044,
+      "total_posets": 2045,
+      "width_distribution": {
+        "1": 1,
+        "2": 224,
+        "3": 1060,
+        "4": 636,
+        "5": 112,
+        "6": 11,
+        "7": 1
+      },
+      "worst_by_width": {
+        "2": {
+          "height": 5,
+          "lower_orientation_probability": [
+            1,
+            3
+          ],
+          "pair": [
+            1,
+            3
+          ],
+          "relations": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              6,
+              4
+            ]
+          ]
+        },
+        "3": {
+          "height": 4,
+          "lower_orientation_probability": [
+            14,
+            39
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": [
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              0,
+              5
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              6,
+              5
+            ]
+          ]
+        },
+        "4": {
+          "height": 3,
+          "lower_orientation_probability": [
+            79,
+            197
+          ],
+          "pair": [
+            0,
+            3
+          ],
+          "relations": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              6,
+              5
+            ]
+          ]
+        },
+        "5": {
+          "height": 3,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            2,
+            3
+          ],
+          "relations": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              6,
+              1
+            ]
+          ]
+        },
+        "6": {
+          "height": 2,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            1,
+            2
+          ],
+          "relations": [
+            [
+              6,
+              0
+            ]
+          ]
+        },
+        "7": {
+          "height": 1,
+          "lower_orientation_probability": [
+            1,
+            2
+          ],
+          "pair": [
+            0,
+            1
+          ],
+          "relations": []
+        }
+      }
+    }
+  ]
+}

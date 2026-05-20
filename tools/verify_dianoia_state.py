@@ -65,6 +65,26 @@ def parse_benchmark_rows() -> list[dict[str, str]]:
     return rows
 
 
+def manifest_field(text: str, name: str) -> str:
+    pattern = re.compile(rf"^{re.escape(name)}:\s*(.*)$", re.MULTILINE)
+    match = pattern.search(text)
+    return match.group(1).strip() if match else ""
+
+
+def section_body(text: str, heading: str) -> str:
+    pattern = re.compile(
+        rf"^## {re.escape(heading)}\s*$([\s\S]*?)(?=^## |\Z)",
+        re.MULTILINE,
+    )
+    match = pattern.search(text)
+    return match.group(1).strip() if match else ""
+
+
+def weak_blank(value: str) -> bool:
+    normalized = value.strip().lower()
+    return normalized in {"", "none", "n/a", "na", "no", "unknown", "tbd"}
+
+
 def check_benchmarks(result: CheckResult) -> None:
     try:
         rows = parse_benchmark_rows()
@@ -117,6 +137,21 @@ def check_benchmarks(result: CheckResult) -> None:
                 ):
                     if required not in run_text:
                         result.add_fail(f"{bid}: RUN.md missing {required}")
+                run_class = manifest_field(run_text, "run_class")
+                if run_class not in {"full-fresh", "controlled-comparison"}:
+                    result.add_fail(
+                        f"{bid}: run_class must be full-fresh or controlled-comparison"
+                    )
+                if run_class == "controlled-comparison":
+                    weaknesses = section_body(run_text, "Known Weaknesses")
+                    if weak_blank(weaknesses):
+                        result.add_fail(
+                            f"{bid}: controlled-comparison must name a concrete known weakness"
+                        )
+                token_section = section_body(run_text, "Token Accounting")
+                for label in ("Method:", "Raw tokens:", "Dianoia tokens:", "Uncertainty:"):
+                    if label not in token_section:
+                        result.add_fail(f"{bid}: RUN.md Token Accounting missing {label}")
         if "UNVERIFIED" in row["tokens"]:
             result.add_warn(f"{bid}: token accounting is UNVERIFIED")
 

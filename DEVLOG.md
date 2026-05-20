@@ -1,5 +1,19 @@
 # Devlog
 
+## 2026-05-20T23:12:00+09:00
+
+- Added unit tests for B6+ benchmark manifest validation in
+  `tests/test_verify_dianoia_state.py`.
+- Tightened `tools/verify_dianoia_state.py` to reject unknown B6+ `run_class`
+  values and controlled comparisons without concrete known weaknesses.
+- Verified `python -m unittest discover -s tests` and
+  `python tools\verify_dianoia_state.py`.
+
+Self-audit:
+- Commits this session so far: 0 pushed, 1 pending.
+- Concrete progress category: test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:55:00+09:00
 
 - Added `benchmark-bank/RUNBOOK.md` to require B6+ run manifests and stricter

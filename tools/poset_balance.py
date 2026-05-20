@@ -139,18 +139,55 @@ def height(poset: Poset) -> int:
     return max((chain_from(item) for item in range(poset.n)), default=0)
 
 
+def covers(poset: Poset) -> frozenset[Relation]:
+    cover_relations: set[Relation] = set()
+    for lower, upper in poset.less:
+        if not any(
+            (lower, middle) in poset.less and (middle, upper) in poset.less
+            for middle in range(poset.n)
+        ):
+            cover_relations.add((lower, upper))
+    return frozenset(cover_relations)
+
+
+def vertex_signature(poset: Poset, item: int) -> tuple[int, int, int, int, int]:
+    cover_relations = covers(poset)
+    lower_count = sum(1 for lower, upper in poset.less if upper == item)
+    upper_count = sum(1 for lower, upper in poset.less if lower == item)
+    lower_cover_count = sum(1 for lower, upper in cover_relations if upper == item)
+    upper_cover_count = sum(1 for lower, upper in cover_relations if lower == item)
+    incomparable_count = poset.n - 1 - lower_count - upper_count
+    return (
+        lower_count,
+        upper_count,
+        lower_cover_count,
+        upper_cover_count,
+        incomparable_count,
+    )
+
+
 def relabeled_key(poset: Poset, permutation: Sequence[int]) -> str:
     bits: list[str] = []
     for lower in range(poset.n):
         for upper in range(poset.n):
             if lower == upper:
                 continue
-            bits.append("1" if (permutation[lower], permutation[upper]) in poset.less else "0")
+            bits.append(
+                "1" if (permutation[lower], permutation[upper]) in poset.less else "0"
+            )
     return "".join(bits)
 
 
 def canonical_key(poset: Poset) -> str:
-    return min(relabeled_key(poset, permutation) for permutation in itertools.permutations(range(poset.n)))
+    blocks_by_signature: dict[tuple[int, int, int, int, int], list[int]] = {}
+    for item in range(poset.n):
+        blocks_by_signature.setdefault(vertex_signature(poset, item), []).append(item)
+    blocks = [blocks_by_signature[key] for key in sorted(blocks_by_signature)]
+    block_permutations = [itertools.permutations(block) for block in blocks]
+    return min(
+        relabeled_key(poset, tuple(itertools.chain.from_iterable(permutation_blocks)))
+        for permutation_blocks in itertools.product(*block_permutations)
+    )
 
 
 def balance_report(poset: Poset) -> dict[str, object]:
@@ -290,12 +327,7 @@ def all_unlabeled_posets_by_extension(max_n: int) -> dict[int, list[Poset]]:
 
 
 def all_unlabeled_posets(n: int) -> list[Poset]:
-    if n <= 6:
-        return all_unlabeled_posets_by_extension(n).get(n, [])
-    representatives: dict[str, Poset] = {}
-    for poset in all_labeled_posets(n):
-        representatives.setdefault(canonical_key(poset), poset)
-    return [representatives[key] for key in sorted(representatives)]
+    return all_unlabeled_posets_by_extension(n).get(n, [])
 
 
 def analyze_command(args: argparse.Namespace) -> int:

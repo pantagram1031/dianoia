@@ -69,3 +69,5 @@ baseline rows. For B6+, token accounting must be one of:
 - `UNVERIFIED` plus a named blocker and a plan to remove the blocker
 
 The verifier warns on `UNVERIFIED` tokens and fails B6+ rows missing `RUN.md`.
+For B6 and later, any `UNVERIFIED` token field must be paired with `Blocker:`
+and `Removal plan:` lines in `RUN.md`.

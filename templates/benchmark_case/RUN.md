@@ -60,6 +60,10 @@ Dianoia tokens:
 
 Uncertainty:
 
+Blocker: none
+
+Removal plan: none
+
 ## Known Weaknesses
 
 List any limitation that affects how strongly the benchmark should be

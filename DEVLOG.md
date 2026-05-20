@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-21T00:40:00+09:00
+
+- Added B6+ token-accounting regressions to
+  `tests/test_verify_dianoia_state.py`.
+- Extended `tools/verify_dianoia_state.py` so any B6+ `UNVERIFIED` token field
+  must have nonblank `Blocker:` and `Removal plan:` lines in `RUN.md`.
+- Updated `templates/benchmark_case/RUN.md` and `benchmark-bank/RUNBOOK.md`
+  with the required fields.
+- Recorded smoke evidence in
+  `capability-test/BENCHMARK-TOKEN-UNVERIFIED-VERIFY-20260521.md`.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: benchmark, test.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:31:00+09:00
 
 - Added B6+ comparison evidence regressions to

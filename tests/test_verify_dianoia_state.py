@@ -151,6 +151,56 @@ Uncertainty: +/- 25
 """
 
 
+def run_text_unverified_tokens(token_extra: str = "") -> str:
+    return f"""# Run
+
+benchmark_id: B6
+run_class: full-fresh
+
+## Problem Statement
+
+P
+
+## Raw Workspace
+
+raw
+
+## Dianoia Workspace
+
+dianoia
+
+## Freshness Protocol
+
+fresh
+
+## Commands Or Manual Steps
+
+steps
+
+## Subagent Fire Audit
+
+| subagent | expected | fired | evidence |
+|----------|----------|-------|----------|
+
+## Reviewer Fire Audit
+
+| persona | expected | fired | evidence |
+|---------|----------|-------|----------|
+
+## Token Accounting
+
+Method: UNVERIFIED
+Raw tokens: UNVERIFIED
+Dianoia tokens: UNVERIFIED
+Uncertainty: UNVERIFIED
+{token_extra}
+
+## Known Weaknesses
+
+none
+"""
+
+
 def make_repo(root: Path, b6_run: str) -> None:
     rows = [
         ("B1", "number theory"),
@@ -174,6 +224,12 @@ def make_repo(root: Path, b6_run: str) -> None:
         write(root / "benchmark-bank" / bid / "COMPARISON.md", comparison_text())
     write(root / "BENCHMARK.md", "\n".join(table) + "\n")
     write(root / "benchmark-bank" / "B6" / "RUN.md", b6_run)
+
+
+def mark_b6_tokens_unverified(root: Path) -> None:
+    text = (root / "BENCHMARK.md").read_text(encoding="utf-8")
+    text = text.replace("| B6 | algebra | source | raw | dianoia | VALUE_ADDED | 123 |", "| B6 | algebra | source | raw | dianoia | VALUE_ADDED | UNVERIFIED |")
+    write(root / "BENCHMARK.md", text)
 
 
 class BenchmarkManifestVerifierTest(unittest.TestCase):
@@ -256,6 +312,50 @@ class BenchmarkManifestVerifierTest(unittest.TestCase):
 
         self.assertFalse(
             any("VALUE_ADDED comparison difference" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_unverified_tokens_require_blocker_and_plan(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(temp_root, run_text_unverified_tokens())
+                write(temp_root / "benchmark-bank" / "B6" / "COMPARISON.md", structured_comparison_text())
+                mark_b6_tokens_unverified(temp_root)
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertTrue(
+            any("UNVERIFIED token accounting must name Blocker and Removal plan" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_unverified_tokens_accept_blocker_and_plan(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(
+                    temp_root,
+                    run_text_unverified_tokens(
+                        "Blocker: runtime did not expose token logs\n"
+                        "Removal plan: rerun with explicit transcript token counter\n"
+                    ),
+                )
+                write(temp_root / "benchmark-bank" / "B6" / "COMPARISON.md", structured_comparison_text())
+                mark_b6_tokens_unverified(temp_root)
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertFalse(
+            any("UNVERIFIED token accounting must name Blocker and Removal plan" in item for item in result.fail),
             result.fail,
         )
 

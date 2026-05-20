@@ -192,6 +192,13 @@ def check_benchmarks(result: CheckResult) -> None:
                 for label in ("Method:", "Raw tokens:", "Dianoia tokens:", "Uncertainty:"):
                     if label not in token_section:
                         result.add_fail(f"{bid}: RUN.md Token Accounting missing {label}")
+                if "UNVERIFIED" in row["tokens"].upper() or "UNVERIFIED" in token_section.upper():
+                    if weak_blank(manifest_field(token_section, "Blocker")) or weak_blank(
+                        manifest_field(token_section, "Removal plan")
+                    ):
+                        result.add_fail(
+                            f"{bid}: UNVERIFIED token accounting must name Blocker and Removal plan"
+                        )
         if "UNVERIFIED" in row["tokens"]:
             result.add_warn(f"{bid}: token accounting is UNVERIFIED")
 

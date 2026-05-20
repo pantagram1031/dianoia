@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-20T19:20:00+09:00
+
+- Created `raw-attempt-2/` fresh baseline for S_a.
+- Ran dianoia-side Phase 3 retest in `dianoia-run` with deliberately stale closed `.active`.
+- Patched router selected `prompts/prove.md`, created fresh slug `p3-sa-finiteness-apssv-2026`, wrote phase artifacts, subagent returns, Reviewer D files, and result.
+- Wrote `capability-test/RETEST.md` with machinery-fire audit and VALUE_ADDED verdict backed by three cited differences.
+- Marked Phase 3 COMPLETE: VALUE_ADDED and opened parallel Phases 4-7.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: benchmark/fix validation.
+- Failed-session streak: 0.
+
 ## 2026-05-20T19:02:00+09:00
 
 - User approved the constitutional `AGENTS.md` routing change.

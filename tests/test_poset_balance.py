@@ -156,6 +156,30 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual([1, 33], record["gap_above_one_third"])
             self.assertIn("rank_layer_sizes", record["profile"])
 
+    def test_shape_classes_groups_profiles(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "classes.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "shape-classes",
+                        "--max-n",
+                        "5",
+                        "--width",
+                        "3",
+                        "--rank-shape",
+                        "2,2,1",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertGreater(payload["bucket_count"], 0)
+            self.assertGreater(payload["total_posets"], 0)
+            self.assertIn("examples", payload["buckets"][0])
+
 
 if __name__ == "__main__":
     unittest.main()

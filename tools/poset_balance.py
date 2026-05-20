@@ -607,6 +607,94 @@ def extremal_width_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def signature_bucket(profile: dict[str, object]) -> str:
+    return "|".join(
+        [
+            "layers=" + ",".join(str(item) for item in profile["rank_layer_sizes"]),
+            f"covers={profile['cover_edge_count']}",
+            f"mins={len(profile['minimal_elements'])}",
+            f"maxs={len(profile['maximal_elements'])}",
+        ]
+    )
+
+
+def shape_classes_command(args: argparse.Namespace) -> int:
+    shape_filter = parse_rank_shape(args.rank_shape)
+    buckets: dict[str, dict[str, object]] = {}
+    for n in range(2, args.max_n + 1):
+        posets = filtered_posets(
+            all_unlabeled_posets(n),
+            only_width=args.width,
+            only_height=args.height,
+            only_rank_shape=shape_filter,
+        )
+        for poset in posets:
+            report = balance_report(poset)
+            best_pair = report["best_pair"]
+            if not isinstance(best_pair, dict):
+                continue
+            lower = Fraction(*best_pair["lower_orientation_probability"])
+            profile = structural_profile(poset)
+            key = signature_bucket(profile)
+            bucket = buckets.setdefault(
+                key,
+                {
+                    "signature": key,
+                    "count": 0,
+                    "min_lower_orientation_probability": [
+                        lower.numerator,
+                        lower.denominator,
+                    ],
+                    "examples": [],
+                },
+            )
+            bucket["count"] = int(bucket["count"]) + 1
+            current_min = Fraction(*bucket["min_lower_orientation_probability"])
+            if lower < current_min:
+                bucket["min_lower_orientation_probability"] = [
+                    lower.numerator,
+                    lower.denominator,
+                ]
+                bucket["examples"] = []
+            if (
+                lower == Fraction(*bucket["min_lower_orientation_probability"])
+                and len(bucket["examples"]) < args.examples_per_bucket
+            ):
+                bucket["examples"].append(
+                    {
+                        "n": n,
+                        "lower_orientation_probability": [
+                            lower.numerator,
+                            lower.denominator,
+                        ],
+                        "best_pair": best_pair,
+                        "relations": report["relations"],
+                        "profile": profile,
+                    }
+                )
+    bucket_list = sorted(
+        buckets.values(),
+        key=lambda bucket: (
+            Fraction(*bucket["min_lower_orientation_probability"]),
+            bucket["signature"],
+        ),
+    )
+    payload = {
+        "max_n": args.max_n,
+        "width": args.width,
+        "height": args.height,
+        "rank_shape": list(shape_filter) if shape_filter else None,
+        "bucket_count": len(bucket_list),
+        "total_posets": sum(int(bucket["count"]) for bucket in bucket_list),
+        "buckets": bucket_list,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -638,6 +726,15 @@ def main(argv: Sequence[str] | None = None) -> int:
     extremal_parser.add_argument("--limit", type=int, default=10)
     extremal_parser.add_argument("--output", type=Path)
     extremal_parser.set_defaults(func=extremal_width_command)
+
+    classes_parser = subparsers.add_parser("shape-classes")
+    classes_parser.add_argument("--max-n", type=int, default=7)
+    classes_parser.add_argument("--width", type=int, required=True)
+    classes_parser.add_argument("--height", type=int)
+    classes_parser.add_argument("--rank-shape")
+    classes_parser.add_argument("--examples-per-bucket", type=int, default=2)
+    classes_parser.add_argument("--output", type=Path)
+    classes_parser.set_defaults(func=shape_classes_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

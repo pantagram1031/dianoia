@@ -1,0 +1,170 @@
+{
+  "depth": 3,
+  "first_before_second": 19,
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "leaf_count": 8,
+  "leaves": [
+    {
+      "first_before_second": 5,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 5
+    },
+    {
+      "first_before_second": 3,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 3
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 5,
+      "total": 5
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 4,
+      "total": 4
+    },
+    {
+      "first_before_second": 3,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "d",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 3
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "d",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 4,
+      "total": 4
+    },
+    {
+      "first_before_second": 5,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 5
+    },
+    {
+      "first_before_second": 3,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 3
+    }
+  ],
+  "pair": [
+    "b",
+    "c"
+  ],
+  "second_before_first": 13,
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-boundary\\p7-form-2-recurrence-depth3.json",
+  "state_totals": {
+    "first_before_second": {
+      "first_before_second": 19,
+      "second_before_first": 0,
+      "total": 19
+    },
+    "second_before_first": {
+      "first_before_second": 0,
+      "second_before_first": 13,
+      "total": 13
+    }
+  }
+}

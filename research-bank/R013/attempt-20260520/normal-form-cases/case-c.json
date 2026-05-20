@@ -1,0 +1,15 @@
+{
+  "case": "C",
+  "labels": ["a", "b", "c", "d", "e", "f", "g"],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "b<f",
+    "c<e",
+    "c<g",
+    "d<f",
+    "f<g"
+  ],
+  "check_pairs": [["c", "d"]]
+}

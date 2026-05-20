@@ -581,6 +581,7 @@ def named_case_command(args: argparse.Namespace) -> int:
         )
         second_before_first = total - first_before_second
         lower = min(first_before_second, second_before_first)
+        lower_probability = Fraction(lower, total)
         pair_reports.append(
             {
                 "pair": [first, second],
@@ -592,7 +593,10 @@ def named_case_command(args: argparse.Namespace) -> int:
                     second_before_first,
                     total,
                 ],
-                "lower_orientation_probability": [lower, total],
+                "lower_orientation_probability": [
+                    lower_probability.numerator,
+                    lower_probability.denominator,
+                ],
                 "balanced": 3 * first_before_second <= 2 * total
                 and 3 * first_before_second >= total
                 or 3 * second_before_first <= 2 * total

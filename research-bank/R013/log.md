@@ -2,6 +2,17 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 2B
+
+- Added `matrix-vector-frontier` to `tools/poset_balance.py`.
+- Added `research-bank/R013/attempt-20260520/width3-rank2221-vector-frontier.json`.
+- Added `research-bank/R013/attempt-20260520/VECTOR_FRONTIER_NOTES.md`.
+- Result: the 51 unprocessed vector classes have a unique minimal frontier U6
+  with adjacent `(2,2,1)`, skip `(0,0,0)`, and minimum lower probability `3/7`.
+- The naive componentwise dominance story is false; next target is
+  skip-addition classification from U6.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 2A
 
 - Added `research-bank/R013/attempt-20260520/PROCESSED_VECTOR_CLASSES.md`.

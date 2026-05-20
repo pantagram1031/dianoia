@@ -69,6 +69,9 @@ Artifacts:
   feature classes.
 - `PROCESSED_VECTOR_CLASSES.md`: compact P1-P8 table of processed vector
   classes and the candidate vector-class dichotomy.
+- `VECTOR_FRONTIER_NOTES.md`: componentwise vector-frontier analysis showing
+  a unique minimal unprocessed frontier U6 and refuting the naive dominance
+  story.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -141,6 +144,9 @@ These are search signals only:
    for the vector classes outside that table.
    `PROCESSED_VECTOR_CLASSES.md` now provides the P1-P8 table; the next
    mathematical step is to prove or refute the vector-class dichotomy.
+   `VECTOR_FRONTIER_NOTES.md` refines this: prove the no-skip frontier U6, then
+   classify skip additions into dangerous P1-P8 placements versus slack
+   placements.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

@@ -13,6 +13,18 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T06:25:00+09:00
+
+- Continued P11 on `R013` by adding vector-frontier analysis for the
+  all-bucket vector partition.
+- Generated `width3-rank2221-vector-frontier.json`: 8 processed classes, 51
+  unprocessed classes, 0 mixed classes, and exactly 1 minimal unprocessed
+  frontier class.
+- Added `VECTOR_FRONTIER_NOTES.md`; the unique unprocessed frontier is U6 with
+  adjacent vector `(2,2,1)`, skip vector `(0,0,0)`, and minimum lower
+  probability `3/7`.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T06:05:00+09:00
 
 - Continued P11 on `R013` by extracting the eight processed vector classes

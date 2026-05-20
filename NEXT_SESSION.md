@@ -59,7 +59,11 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   mixed processed/unprocessed groups. Next extract the eight processed vector
   classes into a compact lemma table and attempt a vector-class dominance
   proof for the remaining classes. `PROCESSED_VECTOR_CLASSES.md` now extracts
-  P1-P8 and names the next proof target as a vector-class dichotomy;
+  P1-P8 and names the next proof target as a vector-class dichotomy.
+  `VECTOR_FRONTIER_NOTES.md` now refines this: the 51 unprocessed vector
+  classes have a single minimal frontier U6 with vector `(2,2,1;0,0,0)` and
+  minimum lower probability `3/7`; next build a skip-addition table from U6 to
+  distinguish dangerous P1-P8 placements from slack placements;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -129,6 +133,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/VECTOR_FEATURE_PARTITION_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-all-matrix-feature-partition-vector.json`
   - `research-bank/R013/attempt-20260520/PROCESSED_VECTOR_CLASSES.md`
+  - `research-bank/R013/attempt-20260520/VECTOR_FRONTIER_NOTES.md`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-vector-frontier.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`

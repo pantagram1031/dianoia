@@ -120,5 +120,10 @@ the remaining classes.
 as P1-P8 with minimum probabilities, profile counts, adjacent vectors, skip
 vectors, and cover matrices. Next target: prove or refute the candidate
 vector-class dichotomy.
+`VECTOR_FRONTIER_NOTES.md` now refines the dichotomy: unprocessed vector
+classes have one minimal frontier U6 with vector `(2,2,1;0,0,0)` and minimum
+lower probability `3/7`. The naive componentwise dominance story is false;
+next target is a skip-addition classification from U6 to identify dangerous
+placements.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

@@ -1,5 +1,22 @@
 # Devlog
 
+## 2026-05-21T06:25:00+09:00
+
+- Continued P11 on `R013`.
+- Added `matrix-vector-frontier` to analyze componentwise vector order among
+  processed and unprocessed feature classes.
+- Generated `width3-rank2221-vector-frontier.json`.
+- Added `VECTOR_FRONTIER_NOTES.md`: the unprocessed vector classes have a
+  single minimal frontier U6 with adjacent `(2,2,1)` and skip `(0,0,0)`, so the
+  naive processed-class dominance story is false; the next target is a
+  skip-addition classification from U6.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 1 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T06:05:00+09:00
 
 - Continued P11 on `R013`.

@@ -1,0 +1,28 @@
+{
+  "case": "eighth-matrix-bucket-1",
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "b<e",
+    "c<g",
+    "d<e",
+    "d<f",
+    "f<g"
+  ],
+  "check_pairs": [
+    [
+      "c",
+      "f"
+    ]
+  ]
+}

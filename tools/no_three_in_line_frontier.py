@@ -15,6 +15,21 @@ from typing import Sequence
 import no_three_in_line_verify as nti
 
 
+FLAMMENKAMP_ALPHABET = (
+    "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    "#$%&@?!()[]<>{}=*+|-/~^_:;,."
+)
+FLAMMENKAMP_SYMMETRIES = {
+    ".": "iden",
+    ":": "rot2",
+    "/": "dia1",
+    "-": "ort1",
+    "o": "rot4",
+    "c": "rct4",
+    "x": "dia2",
+    "+": "ort2",
+    "*": "full",
+}
 TABLE_ENTRY_RE = re.compile(
     r"\bN\s*=\s*(\d+)\s*:\s*(\[.*?\])(?=\s*N\s*=|\s*Configurations\b|\s*$)",
     re.DOTALL,
@@ -60,6 +75,45 @@ def certificate_payload(
 
 def certificate_path(output_dir: Path, n: int) -> Path:
     return output_dir / f"prellberg-n{n}.json"
+
+
+def flammenkamp_certificate_path(output_dir: Path, n: int) -> Path:
+    return output_dir / f"flammenkamp-n{n}.json"
+
+
+def decode_flammenkamp_configuration(line: str, n: int) -> tuple[str, list[nti.Point]]:
+    """Decode one Flammenkamp standard-notation configuration line.
+
+    The first character records the symmetry class.  The remaining characters
+    are column positions for selected markers, ordered row by row from top to
+    bottom and left to right.  A full 2n-point solution therefore has exactly
+    two encoded column characters for each row.
+    """
+    encoded = line.strip()
+    expected_length = 1 + 2 * n
+    if len(encoded) != expected_length:
+        raise ValueError(
+            f"Flammenkamp line for n={n} must have length {expected_length}, "
+            f"got {len(encoded)}"
+        )
+    symmetry = encoded[0]
+    if symmetry not in FLAMMENKAMP_SYMMETRIES:
+        raise ValueError(f"unknown Flammenkamp symmetry marker: {symmetry!r}")
+
+    points: list[nti.Point] = []
+    for row in range(n):
+        for offset in (0, 1):
+            char = encoded[1 + 2 * row + offset]
+            try:
+                column = FLAMMENKAMP_ALPHABET.index(char)
+            except ValueError as exc:
+                raise ValueError(f"unknown Flammenkamp coordinate character: {char!r}") from exc
+            if column >= n:
+                raise ValueError(
+                    f"encoded column {column} from {char!r} is outside n={n}"
+                )
+            points.append((column, row))
+    return symmetry, points
 
 
 def verify_certificate(path: Path) -> nti.VerificationResult:
@@ -122,6 +176,72 @@ def extract_command(args: argparse.Namespace) -> int:
     return 0 if all(item["ok"] for item in summary) else 1
 
 
+def flammenkamp_payload(
+    n: int,
+    points: Sequence[nti.Point],
+    *,
+    symmetry: str,
+    source_url: str,
+    source_sha256: str,
+    retrieved_date: str,
+    line_index: int,
+) -> dict[str, object]:
+    return {
+        "n": n,
+        "points": [list(point) for point in points],
+        "source": {
+            "url": source_url,
+            "paper": "Achim Flammenkamp, The No-Three-in-Line Problem",
+            "source_sha256": source_sha256,
+            "entry": (
+                f"line {line_index}; symmetry marker {symmetry!r} "
+                f"({FLAMMENKAMP_SYMMETRIES[symmetry]})"
+            ),
+            "retrieved_date": retrieved_date,
+        },
+    }
+
+
+def flammenkamp_command(args: argparse.Namespace) -> int:
+    encoded_bytes = args.encoded_file.read_bytes()
+    source_sha256 = hashlib.sha256(encoded_bytes).hexdigest()
+    lines = [line.strip() for line in encoded_bytes.decode("ascii").splitlines() if line.strip()]
+    if args.line_index < 1 or args.line_index > len(lines):
+        raise ValueError(
+            f"line-index must be in [1, {len(lines)}], got {args.line_index}"
+        )
+
+    symmetry, points = decode_flammenkamp_configuration(lines[args.line_index - 1], args.n)
+    cert_path = flammenkamp_certificate_path(args.output_dir, args.n)
+    write_json(
+        cert_path,
+        flammenkamp_payload(
+            args.n,
+            points,
+            symmetry=symmetry,
+            source_url=args.source_url,
+            source_sha256=source_sha256,
+            retrieved_date=args.retrieved_date,
+            line_index=args.line_index,
+        ),
+    )
+    result = verify_certificate(cert_path)
+    verify_path = cert_path.with_suffix(".verify.json")
+    write_json(verify_path, nti.result_payload(result))
+    payload = {
+        "ok": result.ok,
+        "certificate": cert_path.as_posix(),
+        "verification": verify_path.as_posix(),
+        "grid_size": result.grid_size,
+        "point_count": result.point_count,
+        "source_sha256": source_sha256,
+        "line_index": args.line_index,
+        "symmetry": FLAMMENKAMP_SYMMETRIES[symmetry],
+    }
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0 if result.ok else 1
+
+
 def verify_dir_command(args: argparse.Namespace) -> int:
     certificate_paths = sorted(args.certificate_dir.glob(args.pattern))
     certificate_paths = [path for path in certificate_paths if ".verify" not in path.name]
@@ -157,9 +277,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     extract_parser.add_argument("--retrieved-date", required=True)
     extract_parser.set_defaults(func=extract_command)
 
+    flammenkamp_parser = subparsers.add_parser("flammenkamp")
+    flammenkamp_parser.add_argument("encoded_file", type=Path)
+    flammenkamp_parser.add_argument("--n", type=int, required=True)
+    flammenkamp_parser.add_argument("--output-dir", type=Path, required=True)
+    flammenkamp_parser.add_argument("--source-url", required=True)
+    flammenkamp_parser.add_argument("--retrieved-date", required=True)
+    flammenkamp_parser.add_argument("--line-index", type=int, default=1)
+    flammenkamp_parser.set_defaults(func=flammenkamp_command)
+
     verify_parser = subparsers.add_parser("verify-dir")
     verify_parser.add_argument("certificate_dir", type=Path)
-    verify_parser.add_argument("--pattern", default="prellberg-n*.json")
+    verify_parser.add_argument("--pattern", default="*-n*.json")
     verify_parser.set_defaults(func=verify_dir_command)
 
     args = parser.parse_args(argv)

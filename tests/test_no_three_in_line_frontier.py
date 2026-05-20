@@ -37,6 +37,12 @@ class NoThreeInLineFrontierTest(unittest.TestCase):
         self.assertEqual([2], list(entries))
         self.assertEqual(4, len(entries[2]))
 
+    def test_decode_flammenkamp_configuration(self) -> None:
+        symmetry, points = frontier.decode_flammenkamp_configuration(".0101", 2)
+
+        self.assertEqual(".", symmetry)
+        self.assertEqual([(0, 0), (1, 0), (0, 1), (1, 1)], points)
+
     def test_extract_command_writes_and_verifies_certificates(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)
@@ -65,6 +71,34 @@ class NoThreeInLineFrontierTest(unittest.TestCase):
             )
             self.assertTrue(summary["ok"], summary)
             self.assertEqual(2, len(summary["certificates"]))
+
+    def test_flammenkamp_command_writes_and_verifies_certificate(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            encoded = root / "n2_iden"
+            encoded.write_text(".0101\n", encoding="ascii")
+
+            with redirect_stdout(StringIO()) as stdout:
+                code = frontier.main(
+                    [
+                        "flammenkamp",
+                        str(encoded),
+                        "--n",
+                        "2",
+                        "--output-dir",
+                        str(root / "certificates"),
+                        "--source-url",
+                        "https://example.test/n2_iden",
+                        "--retrieved-date",
+                        "2026-05-20",
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(stdout.getvalue())
+            self.assertTrue(payload["ok"], payload)
+            certificate = root / "certificates" / "flammenkamp-n2.json"
+            self.assertTrue(certificate.exists())
 
     def test_verify_dir_rejects_bad_certificate(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:

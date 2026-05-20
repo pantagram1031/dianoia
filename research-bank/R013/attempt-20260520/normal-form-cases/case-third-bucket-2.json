@@ -1,0 +1,27 @@
+{
+  "case": "third-matrix-bucket-2",
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "c<e",
+    "c<f",
+    "d<g",
+    "f<g"
+  ],
+  "check_pairs": [
+    [
+      "b",
+      "c"
+    ]
+  ]
+}

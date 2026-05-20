@@ -1,0 +1,134 @@
+{
+  "cover_relations": [
+    "a<c",
+    "a<e",
+    "b<d",
+    "c<g",
+    "d<e",
+    "d<f",
+    "e<g"
+  ],
+  "depth": 2,
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "linear_extensions": 35,
+  "pair": [
+    "a",
+    "b"
+  ],
+  "trace": {
+    "available": [
+      {
+        "choose": "a",
+        "first_before_second": 14,
+        "pair_state_after_choice": "first_before_second",
+        "remaining_after_choice": [
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g"
+        ],
+        "second_before_first": 0,
+        "subtrace": {
+          "available": [
+            {
+              "choose": "b",
+              "first_before_second": 11,
+              "pair_state_after_choice": "first_before_second",
+              "remaining_after_choice": [
+                "c",
+                "d",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 0
+            },
+            {
+              "choose": "c",
+              "first_before_second": 3,
+              "pair_state_after_choice": "first_before_second",
+              "remaining_after_choice": [
+                "b",
+                "d",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 0
+            }
+          ],
+          "first_before_second": 14,
+          "pair_state": "first_before_second",
+          "placed": [
+            "a"
+          ],
+          "second_before_first": 0
+        }
+      },
+      {
+        "choose": "b",
+        "first_before_second": 0,
+        "pair_state_after_choice": "second_before_first",
+        "remaining_after_choice": [
+          "a",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g"
+        ],
+        "second_before_first": 21,
+        "subtrace": {
+          "available": [
+            {
+              "choose": "a",
+              "first_before_second": 0,
+              "pair_state_after_choice": "second_before_first",
+              "remaining_after_choice": [
+                "c",
+                "d",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 11
+            },
+            {
+              "choose": "d",
+              "first_before_second": 0,
+              "pair_state_after_choice": "second_before_first",
+              "remaining_after_choice": [
+                "a",
+                "c",
+                "e",
+                "f",
+                "g"
+              ],
+              "second_before_first": 10
+            }
+          ],
+          "first_before_second": 0,
+          "pair_state": "second_before_first",
+          "placed": [
+            "b"
+          ],
+          "second_before_first": 21
+        }
+      }
+    ],
+    "first_before_second": 14,
+    "pair_state": "unseen",
+    "placed": [],
+    "second_before_first": 21
+  }
+}

@@ -9,5 +9,7 @@
 | R005 | Bouchard 2025 lattice formulation of Frankl's union-closed sets conjecture | combinatorics | 2026-05-20 (OPEN-VERIFIED) | B | exact search and lattice-side filters can target small certified exclusions without claiming the full conjecture | CURATED-OPEN-VERIFIED |
 | R006 | Hadwiger-Nelson chromatic number of the plane status sources | geometry | 2026-05-20 (OPEN-VERIFIED) | C | finite unit-distance graph certificates give reproducible lower-bound and minimization subtargets | CURATED-OPEN-VERIFIED |
 | R007 | Costa-Luu-Wood-Yip 2025 Hadwiger alpha(G)=2 examples | combinatorics | 2026-05-20 (OPEN-VERIFIED) | D | restricted graph-minor classes and near-complete-minor variants provide checkable partial-progress targets | CURATED-OPEN-VERIFIED |
+| R008 | Chamberland 2026 Erdos-Straus prime-structure paper | number theory | 2026-05-20 (OPEN-VERIFIED) | B | modular identity search and exact residue-cover certificates can produce bounded verified progress | CURATED-OPEN-VERIFIED |
+| R009 | Lonely Runner 2024 survey plus 2026 finite-case progress | number theory | 2026-05-20 (OPEN-VERIFIED) | B | fixed-runner certificate replay and variant-separation checks give concrete computational proof targets | CURATED-OPEN-VERIFIED |
 
-Current counted P10 progress: 6 `OPEN-VERIFIED` candidates across 4 areas.
+Current counted P10 progress: 8 `OPEN-VERIFIED` candidates across 5 areas.

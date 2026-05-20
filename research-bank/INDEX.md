@@ -21,5 +21,7 @@
 | R017 | 2026 graceful-tree spider partials and current status sources | graph theory | 2026-05-20 (OPEN-VERIFIED) | A | exact graceful-labeling search can synthesize and verify narrow new tree-family lemmas | CURATED-OPEN-VERIFIED |
 | R018 | Hadwiger-Boltyanski illumination status and 2026 cap-body partials | geometry | 2026-05-20 (OPEN-VERIFIED) | C | finite polytope illumination certificates can target restricted convex-body classes | CURATED-OPEN-VERIFIED |
 | R019 | Montgomery Latin-square transversal survey and RBS open-problem status | design theory | 2026-05-20 (OPEN-VERIFIED) | B | exact Latin-square and rainbow-matching checks can target restricted odd-order families | CURATED-OPEN-VERIFIED |
+| R020 | 2026 no-three-in-line CSP frontier and current exact-status sources | discrete geometry | 2026-05-20 (OPEN-VERIFIED) | A | exact grid-point certificates and line checks make finite-frontier progress replayable | CURATED-OPEN-VERIFIED |
+| R021 | Erdos-Gyarfas power-of-two cycle open-problem and partial-status sources | graph theory | 2026-05-20 (OPEN-VERIFIED) | B | bounded graph generation and exact power-of-two cycle witnesses give certificate targets | CURATED-OPEN-VERIFIED |
 
-Current counted P10 progress: 18 `OPEN-VERIFIED` candidates across 9 areas.
+Current counted P10 progress: 20 `OPEN-VERIFIED` candidates across 10 areas.

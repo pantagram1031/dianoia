@@ -150,6 +150,57 @@ def covers(poset: Poset) -> frozenset[Relation]:
     return frozenset(cover_relations)
 
 
+def minimal_elements(poset: Poset) -> list[int]:
+    return [
+        item
+        for item in range(poset.n)
+        if not any(upper == item for _, upper in poset.less)
+    ]
+
+
+def maximal_elements(poset: Poset) -> list[int]:
+    return [
+        item
+        for item in range(poset.n)
+        if not any(lower == item for lower, _ in poset.less)
+    ]
+
+
+def rank_layers(poset: Poset) -> list[list[int]]:
+    rank_by_item: dict[int, int] = {}
+
+    def rank(item: int) -> int:
+        if item not in rank_by_item:
+            rank_by_item[item] = max(
+                (rank(lower) + 1 for lower, upper in poset.less if upper == item),
+                default=0,
+            )
+        return rank_by_item[item]
+
+    layers: dict[int, list[int]] = {}
+    for item in range(poset.n):
+        layers.setdefault(rank(item), []).append(item)
+    return [sorted(layers[index]) for index in sorted(layers)]
+
+
+def structural_profile(poset: Poset) -> dict[str, object]:
+    cover_relations = covers(poset)
+    layers = rank_layers(poset)
+    return {
+        "width": width(poset),
+        "height": height(poset),
+        "minimal_elements": minimal_elements(poset),
+        "maximal_elements": maximal_elements(poset),
+        "rank_layer_sizes": [len(layer) for layer in layers],
+        "rank_layers": layers,
+        "cover_relations": [list(pair) for pair in sorted(cover_relations)],
+        "cover_edge_count": len(cover_relations),
+        "vertex_signatures": [
+            list(vertex_signature(poset, item)) for item in range(poset.n)
+        ],
+    }
+
+
 def vertex_signature(poset: Poset, item: int) -> tuple[int, int, int, int, int]:
     cover_relations = covers(poset)
     lower_count = sum(1 for lower, upper in poset.less if upper == item)
@@ -481,6 +532,56 @@ def exhaustive_unlabeled_command(args: argparse.Namespace) -> int:
     return 0 if counterexample_count == 0 else 1
 
 
+def extremal_width_command(args: argparse.Namespace) -> int:
+    records: list[dict[str, object]] = []
+    for n in range(2, args.max_n + 1):
+        posets = filtered_posets(
+            all_unlabeled_posets(n),
+            only_width=args.width,
+            only_height=args.height,
+        )
+        for poset in posets:
+            if not poset.incomparable_pairs():
+                continue
+            report = balance_report(poset)
+            best_pair = report["best_pair"]
+            if not isinstance(best_pair, dict):
+                continue
+            lower = Fraction(*best_pair["lower_orientation_probability"])
+            gap = lower - Fraction(1, 3)
+            records.append(
+                {
+                    "n": n,
+                    "lower_orientation_probability": [lower.numerator, lower.denominator],
+                    "gap_above_one_third": [gap.numerator, gap.denominator],
+                    "best_pair": best_pair,
+                    "relations": report["relations"],
+                    "linear_extensions": report["linear_extensions"],
+                    "profile": structural_profile(poset),
+                }
+            )
+    records.sort(
+        key=lambda item: (
+            Fraction(*item["lower_orientation_probability"]),
+            item["n"],
+            len(item["relations"]),
+        )
+    )
+    payload = {
+        "max_n": args.max_n,
+        "width": args.width,
+        "height": args.height,
+        "record_count": len(records),
+        "limit": args.limit,
+        "records": records[: args.limit],
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -502,6 +603,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     unlabeled_parser.add_argument("--width", type=int)
     unlabeled_parser.add_argument("--height", type=int)
     unlabeled_parser.set_defaults(func=exhaustive_unlabeled_command)
+
+    extremal_parser = subparsers.add_parser("extremal-width")
+    extremal_parser.add_argument("--max-n", type=int, default=7)
+    extremal_parser.add_argument("--width", type=int, required=True)
+    extremal_parser.add_argument("--height", type=int)
+    extremal_parser.add_argument("--limit", type=int, default=10)
+    extremal_parser.add_argument("--output", type=Path)
+    extremal_parser.set_defaults(func=extremal_width_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

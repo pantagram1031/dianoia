@@ -48,6 +48,9 @@ class PosetBalanceTest(unittest.TestCase):
 
         self.assertEqual(2, pb.width(poset))
         self.assertEqual(2, pb.height(poset))
+        self.assertEqual([[0, 1], [2]], pb.rank_layers(poset))
+        self.assertEqual([0, 1], pb.minimal_elements(poset))
+        self.assertEqual([2], pb.maximal_elements(poset))
 
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -102,6 +105,32 @@ class PosetBalanceTest(unittest.TestCase):
             payload = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(3, payload["filters"]["width"])
             self.assertEqual(29, payload["summary"][-1]["total_posets"])
+
+    def test_extremal_width_records_profiles(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "extremal.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "extremal-width",
+                        "--max-n",
+                        "5",
+                        "--width",
+                        "3",
+                        "--limit",
+                        "1",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(1, len(payload["records"]))
+            record = payload["records"][0]
+            self.assertEqual([4, 11], record["lower_orientation_probability"])
+            self.assertEqual([1, 33], record["gap_above_one_third"])
+            self.assertIn("rank_layer_sizes", record["profile"])
 
 
 if __name__ == "__main__":

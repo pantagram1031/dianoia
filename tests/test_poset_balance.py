@@ -164,6 +164,74 @@ class PosetBalanceTest(unittest.TestCase):
                 [item["choose"] for item in root_choices[0]["subtrace"]["available"]],
             )
 
+    def test_named_case_mechanism_search_finds_forced_block(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            case = Path(temp_dir) / "case.json"
+            output = Path(temp_dir) / "mechanism.json"
+            case.write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b", "c"],
+                        "cover_relations": ["a<c", "b<c"],
+                        "check_pairs": [["a", "b"]],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "named-case-mechanism-search",
+                        str(case),
+                        "--max-depth",
+                        "2",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertTrue(payload["found"])
+            self.assertEqual("forced-block", payload["mechanism_type"])
+            self.assertEqual(1, payload["found_depth"])
+            self.assertIn("forced_block_obligations", payload)
+
+    def test_named_case_mechanism_batch_ignores_non_case_json(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            case_dir = Path(temp_dir)
+            (case_dir / "case.json").write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b", "c"],
+                        "cover_relations": ["a<c", "b<c"],
+                        "check_pairs": [["a", "b"]],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            (case_dir / "summary.json").write_text(
+                json.dumps({"not": "a named case"}),
+                encoding="utf-8",
+            )
+            output = case_dir / "batch.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "named-case-mechanism-batch",
+                        str(case_dir),
+                        "--max-depth",
+                        "2",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(1, payload["case_count"])
+            self.assertEqual({"forced-block": 1}, payload["by_mechanism"])
+
     def test_recurrence_leaf_summary_flattens_nested_trace(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             recurrence = Path(temp_dir) / "trace.json"

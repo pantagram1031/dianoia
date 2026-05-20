@@ -746,28 +746,159 @@ def named_case_recurrence_command(args: argparse.Namespace) -> int:
     poset, labels, check_pairs = load_named_case(args.case)
     if len(check_pairs) != 1:
         raise ValueError("named-case-recurrence requires exactly one check_pair")
-    index_by_label = {label: index for index, label in enumerate(labels)}
-    first, second = check_pairs[0]
-    trace = extension_recurrence_trace(
+    payload = named_case_recurrence_payload(
         poset,
         labels,
-        index_by_label[first],
-        index_by_label[second],
-        max_depth=args.depth,
+        check_pairs[0],
+        args.depth,
     )
-    payload = {
-        "labels": labels,
-        "pair": [first, second],
-        "depth": args.depth,
-        "linear_extensions": trace["first_before_second"]
-        + trace["second_before_first"],
-        "cover_relations": named_edges(covers(poset), dict(enumerate(labels))),
-        "trace": trace,
-    }
     if args.output:
         args.output.parent.mkdir(parents=True, exist_ok=True)
         args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
+def named_case_recurrence_payload(
+    poset: Poset,
+    labels: Sequence[str],
+    check_pair: Sequence[str],
+    depth: int,
+) -> dict[str, object]:
+    index_by_label = {label: index for index, label in enumerate(labels)}
+    first, second = check_pair
+    trace = extension_recurrence_trace(
+        poset,
+        list(labels),
+        index_by_label[first],
+        index_by_label[second],
+        max_depth=depth,
+    )
+    return {
+        "labels": list(labels),
+        "pair": [first, second],
+        "depth": depth,
+        "linear_extensions": trace["first_before_second"]
+        + trace["second_before_first"],
+        "cover_relations": named_edges(covers(poset), dict(enumerate(list(labels)))),
+        "trace": trace,
+    }
+
+
+def named_case_mechanism_search(case: Path, max_depth: int) -> dict[str, object]:
+    poset, labels, check_pairs = load_named_case(case)
+    if len(check_pairs) != 1:
+        raise ValueError("named-case-mechanism-search requires exactly one check_pair")
+    depth_records: list[dict[str, object]] = []
+    found: dict[str, object] | None = None
+    for depth in range(1, max_depth + 1):
+        recurrence = named_case_recurrence_payload(poset, labels, check_pairs[0], depth)
+        mechanism = recurrence_mechanism_summary(recurrence, str(case))
+        record = {
+            "depth": depth,
+            "mechanism_type": mechanism["mechanism_type"],
+            "root_first_before_second": mechanism["root_first_before_second"],
+            "root_second_before_first": mechanism["root_second_before_first"],
+            "root_total": mechanism["root_total"],
+            "leaf_count": mechanism["leaf_count"],
+            "state_counts": mechanism["state_counts"],
+            "split_counts": mechanism["split_counts"],
+            "balanced_unseen_leaf_count": mechanism["balanced_unseen_leaf_count"],
+            "unbalanced_unseen_leaf_count": mechanism["unbalanced_unseen_leaf_count"],
+        }
+        depth_records.append(record)
+        if mechanism["mechanism_type"] in {
+            "forced-block",
+            "balanced-core-plus-forced-first",
+            "balanced-core-plus-forced-second",
+            "balanced-core-with-forced-blocks",
+        }:
+            found = record
+            break
+
+    first = int(depth_records[-1]["root_first_before_second"])
+    second = int(depth_records[-1]["root_second_before_first"])
+    total = int(depth_records[-1]["root_total"])
+    lower = min(first, second)
+    out = {
+        "case": str(case),
+        "labels": labels,
+        "pair": list(check_pairs[0]),
+        "max_depth": max_depth,
+        "found": found is not None,
+        "found_depth": found["depth"] if found else None,
+        "mechanism_type": found["mechanism_type"] if found else depth_records[-1]["mechanism_type"],
+        "lower_probability": [lower, total],
+        "depth_records": depth_records,
+    }
+    if found and found["mechanism_type"] == "forced-block":
+        recurrence = named_case_recurrence_payload(
+            poset,
+            labels,
+            check_pairs[0],
+            int(found["depth"]),
+        )
+        out["forced_block_obligations"] = recurrence_forced_block_obligations(
+            recurrence,
+            str(case),
+        )
+    return out
+
+
+def named_case_mechanism_search_command(args: argparse.Namespace) -> int:
+    out = named_case_mechanism_search(args.case, args.max_depth)
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
+def is_named_case_file(path: Path) -> bool:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return False
+    return isinstance(payload, dict) and "cover_relations" in payload and "check_pairs" in payload
+
+
+def named_case_mechanism_batch_command(args: argparse.Namespace) -> int:
+    case_paths: list[Path] = []
+    for case_dir in args.case_dirs:
+        case_paths.extend(
+            path
+            for path in sorted(case_dir.glob("*.json"))
+            if is_named_case_file(path)
+        )
+    seen: set[str] = set()
+    records: list[dict[str, object]] = []
+    for case in case_paths:
+        key = str(case)
+        if key in seen:
+            continue
+        seen.add(key)
+        records.append(named_case_mechanism_search(case, args.max_depth))
+
+    by_mechanism: dict[str, int] = {}
+    unresolved: list[str] = []
+    for record in records:
+        mechanism = str(record["mechanism_type"])
+        by_mechanism[mechanism] = by_mechanism.get(mechanism, 0) + 1
+        if not record["found"]:
+            unresolved.append(str(record["case"]))
+    out = {
+        "case_dirs": [str(path) for path in args.case_dirs],
+        "case_count": len(records),
+        "max_depth": args.max_depth,
+        "found_count": len(records) - len(unresolved),
+        "unresolved": unresolved,
+        "by_mechanism": by_mechanism,
+        "cases": records,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
     return 0
 
 
@@ -2111,6 +2242,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     named_case_recurrence_parser.add_argument("--depth", type=int, default=1)
     named_case_recurrence_parser.add_argument("--output", type=Path)
     named_case_recurrence_parser.set_defaults(func=named_case_recurrence_command)
+
+    mechanism_search_parser = subparsers.add_parser("named-case-mechanism-search")
+    mechanism_search_parser.add_argument("case", type=Path)
+    mechanism_search_parser.add_argument("--max-depth", type=int, default=5)
+    mechanism_search_parser.add_argument("--output", type=Path)
+    mechanism_search_parser.set_defaults(func=named_case_mechanism_search_command)
+
+    mechanism_batch_parser = subparsers.add_parser("named-case-mechanism-batch")
+    mechanism_batch_parser.add_argument("case_dirs", nargs="+", type=Path)
+    mechanism_batch_parser.add_argument("--max-depth", type=int, default=5)
+    mechanism_batch_parser.add_argument("--output", type=Path)
+    mechanism_batch_parser.set_defaults(func=named_case_mechanism_batch_command)
 
     leaf_summary_parser = subparsers.add_parser("recurrence-leaf-summary")
     leaf_summary_parser.add_argument("recurrence", type=Path)

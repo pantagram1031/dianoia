@@ -1,0 +1,30 @@
+{
+  "case": "p7-form-1",
+  "check_pairs": [
+    [
+      "b",
+      "c"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "c<e",
+    "c<f",
+    "d<e",
+    "d<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "P7",
+  "source_form_index": 1
+}

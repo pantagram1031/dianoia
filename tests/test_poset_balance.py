@@ -696,6 +696,59 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertGreaterEqual(payload["classes"][0]["form_count"], 1)
             self.assertIn("best_pair", payload["classes"][0]["forms"][0])
 
+    def test_matrix_vector_named_cases_extracts_ledger_forms(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            ledger = Path(temp_dir) / "ledger.json"
+            output_dir = Path(temp_dir) / "cases"
+            summary = Path(temp_dir) / "summary.json"
+            ledger.write_text(
+                json.dumps(
+                    {
+                        "classes": [
+                            {
+                                "id": "P7",
+                                "forms": [
+                                    {
+                                        "rank_normal_form": {
+                                            "label_by_item": {
+                                                "0": "a",
+                                                "1": "b",
+                                            },
+                                            "cover_relations": ["a<b"],
+                                            "best_pair": {
+                                                "pair": ["a", "b"],
+                                                "lower_orientation_probability": [1, 2],
+                                            },
+                                        }
+                                    }
+                                ],
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-vector-named-cases",
+                        str(ledger),
+                        "--ids",
+                        "P7",
+                        "--output-dir",
+                        str(output_dir),
+                        "--summary",
+                        str(summary),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(summary.read_text(encoding="utf-8"))
+            self.assertEqual(1, payload["case_count"])
+            case_payload = json.loads((output_dir / "p7-form-1.json").read_text(encoding="utf-8"))
+            self.assertEqual("P7", case_payload["source_class"])
+            self.assertEqual([["a", "b"]], case_payload["check_pairs"])
+
 
 if __name__ == "__main__":
     unittest.main()

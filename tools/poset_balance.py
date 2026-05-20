@@ -1742,6 +1742,64 @@ def matrix_vector_form_ledger_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def matrix_vector_named_cases_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.ledger.read_text(encoding="utf-8"))
+    requested_ids = {item.strip() for item in args.ids.split(",") if item.strip()}
+    if not requested_ids:
+        raise ValueError("matrix-vector-named-cases requires at least one id")
+    args.output_dir.mkdir(parents=True, exist_ok=True)
+    written: list[str] = []
+    summary: list[dict[str, object]] = []
+    for class_record in payload["classes"]:
+        class_id = str(class_record["id"])
+        if class_id not in requested_ids:
+            continue
+        for index, form in enumerate(class_record["forms"], start=1):
+            normal = form["rank_normal_form"]
+            best_pair = normal.get("best_pair")
+            if not isinstance(best_pair, dict) or not isinstance(best_pair.get("pair"), list):
+                raise ValueError(f"class {class_id} form {index} has no named best pair")
+            case_name = f"{class_id.lower()}-form-{index}"
+            case_payload = {
+                "case": case_name,
+                "source_class": class_id,
+                "source_form_index": index,
+                "labels": list(normal["label_by_item"].values()),
+                "cover_relations": normal["cover_relations"],
+                "check_pairs": [best_pair["pair"]],
+            }
+            output = args.output_dir / f"{case_name}.json"
+            output.write_text(json.dumps(case_payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+            written.append(str(output))
+            summary.append(
+                {
+                    "case": case_name,
+                    "class": class_id,
+                    "form_index": index,
+                    "check_pair": best_pair["pair"],
+                    "lower_orientation_probability": best_pair[
+                        "lower_orientation_probability"
+                    ],
+                    "path": str(output),
+                }
+            )
+    missing = sorted(requested_ids - {item["class"] for item in summary})
+    if missing:
+        raise ValueError(f"requested ids not found in ledger: {', '.join(missing)}")
+    out = {
+        "source": str(args.ledger),
+        "ids": sorted(requested_ids),
+        "case_count": len(summary),
+        "cases": summary,
+        "written": written,
+    }
+    if args.summary:
+        args.summary.parent.mkdir(parents=True, exist_ok=True)
+        args.summary.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -1852,6 +1910,13 @@ def main(argv: Sequence[str] | None = None) -> int:
     vector_forms_parser.add_argument("--height", type=int)
     vector_forms_parser.add_argument("--output", type=Path)
     vector_forms_parser.set_defaults(func=matrix_vector_form_ledger_command)
+
+    vector_cases_parser = subparsers.add_parser("matrix-vector-named-cases")
+    vector_cases_parser.add_argument("ledger", type=Path)
+    vector_cases_parser.add_argument("--ids", required=True)
+    vector_cases_parser.add_argument("--output-dir", type=Path, required=True)
+    vector_cases_parser.add_argument("--summary", type=Path)
+    vector_cases_parser.set_defaults(func=matrix_vector_named_cases_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

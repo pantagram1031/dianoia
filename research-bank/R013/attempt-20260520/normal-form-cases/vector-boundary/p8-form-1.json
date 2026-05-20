@@ -1,0 +1,30 @@
+{
+  "case": "p8-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "e"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "b<e",
+    "c<g",
+    "d<e",
+    "d<f",
+    "e<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "P8",
+  "source_form_index": 1
+}

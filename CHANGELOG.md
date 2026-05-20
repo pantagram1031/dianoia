@@ -37,6 +37,9 @@
 - Replayed Prellberg's published `N=47` certificate with exact integer
   collinearity checks.
 - Wired the replay into `tools/verify_all.py`.
+- Added a batch replay harness and replayed all Prellberg table entries
+  present in the linked supplement through `N=60`.
+- Updated `tools/verify_all.py` to run the R020 batch replay.
 
 ## 2026-05-21 Continuous Objective Refresh
 

@@ -13,6 +13,20 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T22:07:00+09:00
+
+- Extended R020 replay from one certificate to a table-derived batch.
+- Batch replay evidence:
+  `research-bank/R020/certificates/prellberg-frontier-summary.json` reports
+  `ok: true` for 11 certificates: `N=47`, `N=49`, `N=51`, and `N=53` through
+  `N=60`.
+- Full verification now runs:
+  `python tools/no_three_in_line_frontier.py verify-dir research-bank/R020/certificates`.
+- Remaining gap: Prellberg's source table references `N=48`, `N=50`, and
+  `N=52` from Flammenkamp's page; those are not yet locally replayed.
+- Claim discipline: no new mathematical result, no `CLAIMS.md` row, no P12
+  trigger.
+
 ## 2026-05-20T21:58:00+09:00
 
 - Opened P11 with `R020` no-three-in-line.

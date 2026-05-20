@@ -1,5 +1,25 @@
 # Devlog
 
+## 2026-05-20T22:07:00+09:00
+
+- Continued P11 on `R020` no-three-in-line.
+- Added `tools/no_three_in_line_frontier.py`, a batch harness for extracting
+  and replaying published table certificates.
+- Added unit tests in `tests/test_no_three_in_line_frontier.py`, including the
+  source-table trailing-prose edge case.
+- Replayed all Prellberg `Table 1.txt` entries available from the linked
+  supplement: `N=47`, `N=49`, `N=51`, and `N=53` through `N=60`.
+- Stored the source table snapshot, generated certificates, verification JSON,
+  and summary under `research-bank/R020/certificates/`.
+- Updated `tools/verify_all.py` so full verification runs the batch replay.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row because this is
+  published certificate replay, not a new result.
+
+Self-audit:
+- Commits this session: 4 pushed.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:58:00+09:00
 
 - Began P11 ATTEMPTS with `R020` no-three-in-line, following the P10 handoff.

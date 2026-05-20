@@ -15,7 +15,10 @@ from typing import Sequence
 import no_three_in_line_verify as nti
 
 
-TABLE_ENTRY_RE = re.compile(r"\bN\s*=\s*(\d+)\s*:\s*(\[.*?\])(?=\s*N\s*=|\s*$)", re.DOTALL)
+TABLE_ENTRY_RE = re.compile(
+    r"\bN\s*=\s*(\d+)\s*:\s*(\[.*?\])(?=\s*N\s*=|\s*Configurations\b|\s*$)",
+    re.DOTALL,
+)
 
 
 def extract_table_entries(text: str) -> dict[int, list[nti.Point]]:

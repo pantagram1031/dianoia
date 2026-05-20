@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-05-21 Continuous Objective Refresh
+
+- Re-centered ROADMAP, README, BENCHMARK, NEXT_SESSION, and DECISIONS on the
+  forward objective: 5 contamination-free novel VALUE_ADDED head-to-head
+  benchmarks against raw GPT-5.5 across at least 3 mathematical areas.
+- Clarified that B1-B5 remain historical baseline evidence, not current victory
+  evidence.
+
 ## 2026-05-20 MASTERPIECE Workstream
 
 - Phase 0: added `capability-test/VERIFY_PRIOR.md`, showing the earlier S_a

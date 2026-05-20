@@ -1,6 +1,13 @@
 # Benchmark
 
-Controlled comparison rows accepted for the MASTERPIECE goal.
+Controlled comparison ledger.
+
+B1-B5 are historical baseline rows from the first MASTERPIECE workstream. They
+remain useful evidence for routing fixes, verifier design, and benchmark
+formats, but they are not the forward victory condition. The live objective is
+to produce 5 contamination-free novel VALUE_ADDED head-to-head benchmarks
+against raw GPT-5.5 across at least 3 mathematical areas. B6+ rows are the
+forward objective track and must satisfy `benchmark-bank/RUNBOOK.md`.
 
 | ID | area | source | raw verdict | dianoia verdict | head-to-head | tokens | artifact paths |
 |----|------|--------|-------------|-----------------|--------------|--------|----------------|

@@ -3,7 +3,8 @@
 Resume continuous improvement.
 
 Immediate next step:
-Harden benchmark reproducibility before adding B6.
+Finish B6+ reproducibility gates, then start the first contamination-free novel
+B6 benchmark against raw GPT-5.5.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -11,8 +12,9 @@ Current state:
 - `capability-test/PHASE2-SMOKE-agents-router.md` records router-level smoke
   evidence.
 - Phase 3 is complete with VALUE_ADDED in `capability-test/RETEST.md`.
-- Prior MASTERPIECE baseline is complete with 5/5 VALUE_ADDED rows in `BENCHMARK.md`: B1 number
-  theory, B2 combinatorics, B3 geometry, B4 probability, and B5 algebra.
+- Prior MASTERPIECE baseline has 5/5 VALUE_ADDED rows in `BENCHMARK.md`: B1
+  number theory, B2 combinatorics, B3 geometry, B4 probability, and B5 algebra.
+  These are historical baseline rows, not the current victory condition.
 - Phase 5 is complete with 5/5 skills: `skills/pollack-character/SKILL.md`,
   `skills/coverage-systems/SKILL.md`, `skills/arxiv-fetch/SKILL.md`,
   `skills/sanity-small-cases/SKILL.md`, and
@@ -25,6 +27,9 @@ Current state:
 
 Important:
 - `capability-test/MASTERPIECE.md` is baseline evidence, not a stop condition.
+- Live victory condition: 5 contamination-free novel VALUE_ADDED head-to-head
+  benchmarks against raw GPT-5.5 across at least 3 mathematical areas. B6+ rows
+  are the forward objective track.
 - Current continuous-improvement priority: add reproducibility tooling/runbook
   so future B6+ rows prefer full fresh raw and dianoia runs and clearly label
   weaker evidence.

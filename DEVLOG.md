@@ -1,5 +1,19 @@
 # Devlog
 
+## 2026-05-21T01:18:00+09:00
+
+- Applied the user's refreshed operating prompt to durable repo state without
+  editing protected constitutional anchors.
+- Added `DECISIONS.md` entry D-003: B1-B5 are historical baseline rows; B6+
+  is the forward contamination-free novel benchmark objective track.
+- Updated `BENCHMARK.md`, `ROADMAP.md`, `README.md`, `NEXT_SESSION.md`, and
+  `CHANGELOG.md` to align with the live victory condition.
+
+Self-audit:
+- Commits this session so far: 3 pushed, 1 pending.
+- Concrete progress category: doc, benchmark.
+- Failed-session streak: 0.
+
 ## 2026-05-21T01:13:00+09:00
 
 - Added a B6+ run workspace path regression to

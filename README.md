@@ -20,7 +20,8 @@ claim ledgers, adversarial review, specialist subagents, skills, and connectors.
 
 ## Current Benchmark Summary
 
-`BENCHMARK.md` currently has 5 accepted controlled comparisons:
+`BENCHMARK.md` currently has 5 accepted controlled comparisons from the
+historical baseline workstream:
 
 | ID | area | verdict | source |
 |----|------|---------|--------|
@@ -30,10 +31,12 @@ claim ledgers, adversarial review, specialist subagents, skills, and connectors.
 | B4 | probability | VALUE_ADDED | Jana-Rani 2026, arXiv:2604.26499 |
 | B5 | algebra | VALUE_ADDED | Caprace-Janssens-Thilmany 2026, arXiv:2601.15266 |
 
-The old MASTERPIECE benchmark and distinct-area requirements are satisfied, but
-they are now a baseline rather than a terminal claim. Continuing work focuses on
-more reproducible benchmark rows, stronger phase-loop checks, and evidence that
-dianoia improves on fresh problems rather than only curated comparisons.
+These rows are baseline rather than a terminal claim and are not the current
+victory condition. The live objective is 5 contamination-free novel VALUE_ADDED
+head-to-head benchmarks against raw GPT-5.5 across at least 3 mathematical
+areas. B6+ is the forward objective track, with stricter run manifests, source
+metadata, artifact paths, verdict consistency, quoted difference evidence, and
+token-accounting rules.
 
 ## Architecture
 
@@ -110,9 +113,10 @@ Fresh problem statements always create a fresh problem slug, even if
 
 ## Roadmap
 
-The authoritative tracker is `ROADMAP.md`. Current priorities are benchmark
-reproducibility, B6+ expansion, phase-loop regression checks, and keeping docs
-synchronized as the system changes.
+The authoritative tracker is `ROADMAP.md`. Current priorities are finishing B6+
+reproducibility gates, running contamination-free novel B6+ comparisons,
+phase-loop regression checks, and keeping docs synchronized as the system
+changes.
 
 ## License
 

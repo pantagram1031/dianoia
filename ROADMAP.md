@@ -138,5 +138,9 @@ ledgers for the boundary classes P7/P8 and compare their count identities.
 forms: `p7-form-2` and `p8-form-1` both split as `19/13` out of 32, but with
 different first-branch distributions. Next target: compare depth-2 leaves and
 seek a shared injection/pairing proof.
+`BOUNDARY_LEAF_COMPARISON_NOTES.md` now compares depth-2 leaves: P7 has four
+leaves with forced first/second states, while P8 has three unseen leaves. A
+simple leaf-isomorphism proof is unlikely; next target depth-3 leaves or a
+direct recurrence identity.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

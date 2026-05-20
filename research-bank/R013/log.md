@@ -2,6 +2,17 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 2F
+
+- Added recurrence leaf-summary and leaf-compare tooling to
+  `tools/poset_balance.py`.
+- Added depth-2 leaf summaries and a P7/P8 comparison artifact under
+  `normal-form-cases/vector-boundary/`.
+- Added `research-bank/R013/attempt-20260520/BOUNDARY_LEAF_COMPARISON_NOTES.md`.
+- Result: P7/P8 share total split `19/13`, but their depth-2 leaves are not
+  isomorphic.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 2E
 
 - Added `matrix-vector-named-cases` to `tools/poset_balance.py`.

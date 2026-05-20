@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T07:45:00+09:00
+
+- Continued P11 on `R013`.
+- Added recurrence leaf-summary and leaf-compare tooling.
+- Generated depth-2 leaf summaries for `p7-form-2` and `p8-form-1`, plus
+  `p7-p8-leaf-comparison.json`.
+- Added `BOUNDARY_LEAF_COMPARISON_NOTES.md`: the two boundary cases share the
+  same total `19/13` split but have non-isomorphic depth-2 leaf structure.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 1 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T07:25:00+09:00
 
 - Continued P11 on `R013`.

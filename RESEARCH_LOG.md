@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T07:45:00+09:00
+
+- Continued P11 on `R013` by flattening the P7/P8 boundary depth-2 recurrence
+  traces into leaf summaries.
+- Added `p7-form-2-leaves.json`, `p8-form-1-leaves.json`, and
+  `p7-p8-leaf-comparison.json`.
+- Added `BOUNDARY_LEAF_COMPARISON_NOTES.md`; the result refutes a simple
+  leaf-isomorphism proof and points to either depth-3 refinement or a direct
+  recurrence identity.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T07:25:00+09:00
 
 - Continued P11 on `R013` by extracting P7/P8 boundary forms from the vector

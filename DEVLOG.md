@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T23:25:00+09:00
+
+- Added `tools/verify_phase_loop.py` to check phase/review order, checkpoint
+  discipline, Reviewer D gated phases, subagent contracts, and checkpoint
+  citation/ledger evidence fields.
+- Added `tests/test_verify_phase_loop.py`, including a regression for missing
+  Reviewer D intake coverage.
+- Recorded smoke evidence in `capability-test/PHASE-LOOP-VERIFY-20260520.md`.
+- Updated README/NEXT_SESSION with the phase-loop verifier command.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:12:00+09:00
 
 - Added unit tests for B6+ benchmark manifest validation in

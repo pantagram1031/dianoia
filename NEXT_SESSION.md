@@ -31,5 +31,7 @@ Important:
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
   smoke is `capability-test/STATE-VERIFY-20260520.md`; warnings are expected
   for UNVERIFIED token accounting in B1-B5.
+- Phase-loop verifier exists: `python tools\verify_phase_loop.py`. Latest smoke
+  is `capability-test/PHASE-LOOP-VERIFY-20260520.md`.
 - B6+ benchmark format is governed by `benchmark-bank/RUNBOOK.md` and
   `templates/benchmark_case/`; the verifier fails B6+ rows missing `RUN.md`.

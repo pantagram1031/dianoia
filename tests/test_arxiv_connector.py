@@ -21,17 +21,27 @@ class ArxivConnectorTest(unittest.TestCase):
             to_date="2026-05-20",
         )
 
-        self.assertIn("all:finite induced saturated graphs", query)
+        self.assertIn("all:finite", query)
+        self.assertIn("all:induced", query)
+        self.assertIn("all:saturated", query)
+        self.assertIn("all:graphs", query)
         self.assertIn("cat:math.CO", query)
         self.assertIn("submittedDate:[202511010000 TO 202605202359]", query)
 
     def test_build_openness_query_adds_research_lead_terms(self) -> None:
         query = arxiv.build_search_query("chromatic threshold", openness=True)
 
-        self.assertIn("all:chromatic threshold", query)
+        self.assertIn("all:chromatic", query)
+        self.assertIn("all:threshold", query)
         self.assertIn('all:"open problem"', query)
         self.assertIn("all:conjecture", query)
         self.assertIn(" OR ", query)
+
+    def test_quoted_user_phrases_are_preserved(self) -> None:
+        query = arxiv.build_search_query('"locally finite perturbation" tournament')
+
+        self.assertIn('all:"locally finite perturbation"', query)
+        self.assertIn("all:tournament", query)
 
     def test_normalize_arxiv_id_accepts_abs_and_pdf_urls(self) -> None:
         self.assertEqual("2604.06609", arxiv.normalize_arxiv_id("https://arxiv.org/abs/2604.06609"))

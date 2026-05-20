@@ -71,6 +71,11 @@ def field_clause(field: str, value: str) -> str:
     return f"{field}:{value.strip()}"
 
 
+def query_clauses(query_text: str) -> list[str]:
+    parts = re.findall(r'"[^"]+"|\S+', query_text.strip())
+    return [field_clause("all", part) for part in parts] or [field_clause("all", query_text)]
+
+
 def build_search_query(
     query_text: str,
     *,
@@ -79,7 +84,7 @@ def build_search_query(
     to_date: str | None = None,
     openness: bool = False,
 ) -> str:
-    clauses = [field_clause("all", query_text)]
+    clauses = query_clauses(query_text)
     if category:
         clauses.append(field_clause("cat", category))
     if from_date or to_date:

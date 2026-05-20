@@ -13,6 +13,16 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T00:25:00+09:00
+
+- Added named-case count certificates for the R013 rank-normal forms.
+- New artifacts:
+  `research-bank/R013/attempt-20260520/normal-form-cases/` and
+  `research-bank/R013/attempt-20260520/NORMAL_FORM_COUNT_LEDGER.md`.
+- Finite signal: each normal-form orientation count can now be replayed from
+  named cover relations, not arbitrary search labels.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-21T00:08:00+09:00
 
 - Added rank-normal-form evidence for the R013 extremal matrix bucket.

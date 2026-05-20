@@ -8,6 +8,8 @@ status: OBSERVATION-NOT-CLAIM
 This note rewrites the extremal matrix bucket from
 `width3-rank2221-extremal-matrix-bucket-n7.json` in rank-layer normal form.
 The point is to remove arbitrary search labels before trying a hand proof.
+`NORMAL_FORM_COUNT_LEDGER.md` gives replayable named-case count certificates
+for the three cases below.
 
 Fix rank layers of sizes `2,2,2,1`, written as:
 
@@ -43,6 +45,7 @@ Exact count:
 - balanced pair: `{b,c}`
 - orientation counts: `c<b` in `14/39`, `b<c` in `25/39`
 - lower orientation probability: `14/39`
+- replay: `normal-form-cases/case-a-report.json`
 
 ### Case B
 
@@ -58,6 +61,7 @@ Exact count:
 - balanced pair: `{a,b}`
 - orientation counts: `b<a` in `19/33`, `a<b` in `14/33`
 - lower orientation probability: `14/33`
+- replay: `normal-form-cases/case-b-report.json`
 
 ### Case C
 
@@ -73,6 +77,7 @@ Exact count:
 - balanced pair: `{c,d}`
 - orientation counts: `d<c` in `6/11`, `c<d` in `5/11`
 - lower orientation probability: `5/11`
+- replay: `normal-form-cases/case-c-report.json`
 
 ## Sublemma Target
 

@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T00:25:00+09:00
+
+- Continued P11 on `R013`.
+- Added `named-case` analysis for small named posets.
+- Added normal-form Case A/B/C input files and generated reports in
+  `normal-form-cases/`.
+- Added `NORMAL_FORM_COUNT_LEDGER.md`, tying each normal form to replayable
+  orientation counts.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:08:00+09:00
 
 - Continued P11 on `R013`.

@@ -18,7 +18,9 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   now lists the three profiles, and
   `width3-rank2221-extremal-matrix-bucket-n7.json` records the reproducible
   extraction. `RANK_NORMAL_FORM_NOTES.md` rewrites those cases using stable
-  rank-layer labels; next prove the equality subcase coordinate-free; or
+  rank-layer labels. `NORMAL_FORM_COUNT_LEDGER.md` certifies the named-case
+  counts; next derive the three normal forms from the cover matrix and prove
+  the equality subcase coordinate-free; or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
 - switch to `R017` Graceful Tree Conjecture if both R013 and R020 become mostly
@@ -67,6 +69,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
   - `research-bank/R013/attempt-20260520/MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/RANK_NORMAL_FORM_NOTES.md`
+  - `research-bank/R013/attempt-20260520/NORMAL_FORM_COUNT_LEDGER.md`
+  - `research-bank/R013/attempt-20260520/normal-form-cases/`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`
     `python tools/poset_balance.py exhaustive-unlabeled --max-n 5`, and a
     small matrix-signature `shape-classes` smoke.

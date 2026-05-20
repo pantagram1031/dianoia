@@ -147,3 +147,13 @@ candidate_id: R013
 - Result: the extremal matrix bucket is now expressed as three cover patterns
   on layers `{a,b}`, `{c,d}`, `{e,f}`, `{g}` with exact orientation counts.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-21 P11 Attempt 1K
+
+- Added `named-case` analysis to `tools/poset_balance.py`.
+- Added named normal-form inputs and generated reports under
+  `research-bank/R013/attempt-20260520/normal-form-cases/`.
+- Added `NORMAL_FORM_COUNT_LEDGER.md`.
+- Result: Case A/B/C orientation counts are now replayable from named
+  cover-relation inputs: `14/39`, `14/33`, and `5/11`.
+- Claim discipline: no `CLAIMS.md` row.

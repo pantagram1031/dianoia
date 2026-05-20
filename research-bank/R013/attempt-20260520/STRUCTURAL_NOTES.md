@@ -34,6 +34,9 @@ Artifacts:
   current extremal subcase.
 - `RANK_NORMAL_FORM_NOTES.md`: rank-layer normal-form rewrite of the three
   matrix-bucket cases.
+- `NORMAL_FORM_COUNT_LEDGER.md`: replayable named-case count certificates for
+  the three rank-normal cases.
+- `normal-form-cases/`: named case inputs and generated count reports.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
 ## Exhaustive Small Evidence

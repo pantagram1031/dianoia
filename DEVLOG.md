@@ -1,5 +1,22 @@
 # Devlog
 
+## 2026-05-21T08:45:00+09:00
+
+- Continued P11 on `R013` with the anti-overfitting constraint made explicit:
+  convert recurrence observations into reusable mechanism tooling, not a
+  special-case benchmark script.
+- Added `recurrence-mechanism-summary` to `tools/poset_balance.py` with a unit
+  test for balanced-core detection.
+- Generated P7/P8 mechanism artifacts and `BOUNDARY_MECHANISM_NOTES.md`.
+- Extracted P1/P2/P3 named forms, generated depth-3 recurrence mechanisms for
+  their minimum forms, and added `EARLY_VECTOR_MECHANISM_NOTES.md`.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 3 pushed before this log update.
+- Concrete progress category: attempt, tooling, note.
+- Failed-session streak: 0.
+
 ## 2026-05-21T08:05:00+09:00
 
 - Continued P11 on `R013`.

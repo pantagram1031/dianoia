@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T08:45:00+09:00
+
+- Continued P11 on `R013` by turning depth-3 recurrence traces into a reusable
+  mechanism classifier: forced blocks, balanced residual cores, or mixed cases.
+- Added P7/P8 mechanism summaries. P7 is `forced-block`; P8 is
+  `balanced-core-plus-forced-first`.
+- Tested transfer on the P1/P2/P3 dangerous minima. P1, P2, and P3 also resolve
+  at depth 3 by forced blocks, suggesting a lemma schema rather than a
+  P7/P8-specific explanation.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T08:05:00+09:00
 
 - Continued P11 on `R013` by expanding the P7/P8 boundary recurrence analysis

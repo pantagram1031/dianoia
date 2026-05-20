@@ -83,9 +83,12 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   direct recurrence identity for the common split.
   `BOUNDARY_DEPTH3_NOTES.md` now gives the depth-3 target: P7 resolves into
   forced orientation blocks totaling `19/13`, while P8 decomposes into two
-  forced-first blocks plus a balanced unseen `13/13` core. Next write separate
-  boundary lemmas for P7 form 2 and P8 form 1, then test whether P1/P2/P3 use
-  either mechanism;
+  forced-first blocks plus a balanced unseen `13/13` core.
+  `BOUNDARY_MECHANISM_NOTES.md` classifies P7 as `forced-block` and P8 as
+  `balanced-core-plus-forced-first`. `EARLY_VECTOR_MECHANISM_NOTES.md` tests
+  P1/P2/P3 and finds that all three minimum forms also resolve by forced
+  blocks at depth 3. Next write a forced-block lemma schema and test it on
+  P4/P5/P6 plus U6 before promoting any restricted finite-subcase claim;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or

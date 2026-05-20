@@ -232,6 +232,73 @@ def rank_layer_vertex_signatures(poset: Poset) -> list[list[list[object]]]:
     return signatures_by_layer
 
 
+def rank_layer_labels(layers: Sequence[Sequence[int]]) -> list[list[str]]:
+    names = list("abcdefghijklmnopqrstuvwxyz")
+    if sum(len(layer) for layer in layers) > len(names):
+        return [
+            [f"r{rank_index}_{item_index}" for item_index, _ in enumerate(layer)]
+            for rank_index, layer in enumerate(layers)
+        ]
+    offset = 0
+    labels: list[list[str]] = []
+    for layer in layers:
+        labels.append(names[offset : offset + len(layer)])
+        offset += len(layer)
+    return labels
+
+
+def named_edges(edges: Iterable[Relation], label_by_item: dict[int, str]) -> list[str]:
+    return sorted(f"{label_by_item[lower]}<{label_by_item[upper]}" for lower, upper in edges)
+
+
+def rank_normal_form(poset: Poset) -> dict[str, object]:
+    layers = rank_layers(poset)
+    label_layers = rank_layer_labels(layers)
+    best_key: tuple[list[str], list[str]] | None = None
+    best_labels: dict[int, str] | None = None
+    for layer_permutation in itertools.product(
+        *(itertools.permutations(layer) for layer in layers)
+    ):
+        label_by_item: dict[int, str] = {}
+        for rank_index, layer in enumerate(layer_permutation):
+            for label, item in zip(label_layers[rank_index], layer):
+                label_by_item[item] = label
+        cover_key = named_edges(covers(poset), label_by_item)
+        relation_key = named_edges(poset.less, label_by_item)
+        key = (cover_key, relation_key)
+        if best_key is None or key < best_key:
+            best_key = key
+            best_labels = label_by_item
+
+    if best_labels is None:
+        raise ValueError("cannot normalize an empty label assignment")
+    report = balance_report(poset)
+    best_pair = report["best_pair"]
+    named_best_pair: dict[str, object] | None = None
+    if isinstance(best_pair, dict):
+        x, y = best_pair["pair"]
+        named_best_pair = {
+            "pair": [best_labels[x], best_labels[y]],
+            "x_before_y": best_pair["x_before_y"],
+            "lower_orientation_probability": best_pair[
+                "lower_orientation_probability"
+            ],
+            "balanced": best_pair["balanced"],
+        }
+    return {
+        "rank_layers": [
+            [best_labels[item] for item in layer]
+            for layer in layers
+        ],
+        "label_by_item": {str(item): best_labels[item] for item in range(poset.n)},
+        "cover_relations": named_edges(covers(poset), best_labels),
+        "relations": named_edges(poset.less, best_labels),
+        "minimal_elements": [best_labels[item] for item in minimal_elements(poset)],
+        "maximal_elements": [best_labels[item] for item in maximal_elements(poset)],
+        "best_pair": named_best_pair,
+    }
+
+
 def structural_profile(poset: Poset) -> dict[str, object]:
     cover_relations = covers(poset)
     layers = rank_layers(poset)
@@ -810,6 +877,7 @@ def bucket_members_command(args: argparse.Namespace) -> int:
                     "relations": report["relations"],
                     "linear_extensions": report["linear_extensions"],
                     "profile": profile,
+                    "rank_normal_form": rank_normal_form(poset),
                     "signature": signature,
                 }
             )

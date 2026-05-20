@@ -68,6 +68,14 @@ class PosetBalanceTest(unittest.TestCase):
             profile["rank_layer_vertex_signatures"],
         )
 
+    def test_rank_normal_form_uses_layer_labels(self) -> None:
+        normal = pb.rank_normal_form(pb.make_poset(3, [(0, 2), (1, 2)]))
+
+        self.assertEqual([["a", "b"], ["c"]], normal["rank_layers"])
+        self.assertEqual(["a<c", "b<c"], normal["cover_relations"])
+        self.assertEqual(["a", "b"], normal["minimal_elements"])
+        self.assertEqual(["c"], normal["maximal_elements"])
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"
@@ -280,6 +288,8 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(bucket, payload["bucket"])
             self.assertEqual(1, payload["record_count"])
             self.assertEqual([4, 11], payload["records"][0]["lower_orientation_probability"])
+            self.assertIn("rank_normal_form", payload["records"][0])
+            self.assertIn("cover_relations", payload["records"][0]["rank_normal_form"])
 
 
 if __name__ == "__main__":

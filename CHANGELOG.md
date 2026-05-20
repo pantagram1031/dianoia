@@ -1,5 +1,23 @@
 # Changelog
 
+## 2026-05-20 MASTERPIECE Workstream
+
+- Phase 0: added `capability-test/VERIFY_PRIOR.md`, showing the earlier S_a
+  experiment was not a fair test because stale `.active` state prevented the
+  fresh phase loop from firing.
+- Phase 1: added `DIAGNOSIS.md` with ranked root causes and success criteria.
+- Phase 2: fixed stale-active routing in `prompts/prove.md`,
+  `prompts/resume.md`, `prompts/00-intake.md`, and approved `AGENTS.md`
+  routing; added smoke artifacts under `capability-test/`.
+- Phase 3: retested the S_a problem and recorded VALUE_ADDED in
+  `capability-test/RETEST.md`.
+- Phase 4: promoted the S_a retest into benchmark B1 under
+  `benchmark-bank/B1/` and `BENCHMARK.md`.
+- Phase 5: added five referenced skills under `skills/`.
+- Phase 6: added working arXiv and OEIS connectors under `connectors/`.
+- Phase 7: refreshed README, architecture, examples, and changelog docs to
+  reflect the current repository state.
+
 - iter-1 | dimensions: 2 Verifying | B1 scoped Phase 5 review ordering to the reviewed artifact instead of only 04-develop.
 - iter-2 | dimensions: 2 Verifying, 3 Attempting | B2 wired Persona D into Phase 5 review and reviewer subagent contract.
 - iter-3 | dimensions: 2 Verifying, 7 Organizing materials | M1 made Phase 5 review inputs depend on the artifact phase so intake review does not require survey.md.

@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-20T20:45:00+09:00
+
+- Refreshed Phase 7 documentation: `README.md`, `ARCHITECTURE.md`,
+  `EXAMPLES.md`, and `CHANGELOG.md`.
+- Documented the current B1 benchmark summary, phase loop, MSP, v4 invariants,
+  meaningfulness gate, subagent flow, connectors, skills, and S_a walkthrough.
+- Marked Phase 7 complete in `ROADMAP.md`.
+
+Self-audit:
+- Commits this session so far: 4 pushed, 1 pending.
+- Concrete progress category: doc-refresh.
+- Failed-session streak: 0.
+
 ## 2026-05-20T20:29:00+09:00
 
 - Added fifth Phase 5 skill: `skills/citation-discipline/SKILL.md`.

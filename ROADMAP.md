@@ -13,10 +13,11 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 4 | EXPAND BENCHMARK BANK | IN_PROGRESS | 1/5 VALUE_ADDED rows across 1 area |
 | 5 | BUILD SKILLS | COMPLETE | 5/5 skills added and referenced by subagent prompts |
 | 6 | BUILD CONNECTORS | COMPLETE | 2/2 connectors added: arxiv, oeis |
-| 7 | DOCS | IN_PROGRESS | README.md stale; ARCHITECTURE.md absent |
+| 7 | DOCS | COMPLETE | README.md, ARCHITECTURE.md, EXAMPLES.md, CHANGELOG.md current as of B1/Phase 5/Phase 6 |
 | 8 | DEEPER RESEARCH | GATED | Requires 5 VALUE_ADDED rows across 3 areas |
 
 ## Current Priority
 
-Proceed with parallel Phases 4, 5, and 7. Phase 6 connector count is complete.
-Phase 4 needs 4 more VALUE_ADDED rows across at least 2 additional areas.
+Proceed with Phase 4 benchmark expansion. Phases 5, 6, and 7 are complete for
+the current repository state. Phase 4 needs 4 more VALUE_ADDED rows across at
+least 2 additional areas.

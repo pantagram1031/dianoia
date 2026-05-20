@@ -3,7 +3,7 @@
 Resume parallel Phases 4-7.
 
 Immediate next step:
-Prepare benchmark B2 in a second math area or begin Phase 7 docs refresh.
+Prepare benchmark B2 in a second math area.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -19,8 +19,11 @@ Current state:
   subagent prompt.
 - Phase 6 has 2/2 connectors: `connectors/arxiv/` and `connectors/oeis/`,
   both referenced by the researcher subagent prompt.
+- Phase 7 docs are current as of B1 plus completed Phase 5/6:
+  `README.md`, `ARCHITECTURE.md`, `EXAMPLES.md`, and `CHANGELOG.md`.
 
 Important:
 - MASTERPIECE still needs >=5 VALUE_ADDED benchmark rows across >=3 areas,
   >=5 skills referenced by subagents, >=2 connectors used by subagents, and
-  current README.md plus ARCHITECTURE.md.
+  current README.md plus ARCHITECTURE.md. Only the benchmark condition remains
+  incomplete right now.

@@ -1,30 +1,102 @@
 # dianoia
 
-Plato's word for the cognitive mode of mathematicians (Republic VI, 511d): the
-discursive reasoning from hypotheses down to conclusions. This repo is dianoia
-made operational — a Codex CLI workflow that attempts open mathematical problems
-with rigor, append-only ledgers, phase-gated adversarial self-review, and
-specialist personas.
+dianoia is a Codex CLI workflow for serious mathematical investigation. It
+turns a problem statement into a disk-backed research run with phase artifacts,
+claim ledgers, adversarial review, specialist subagents, skills, and connectors.
 
-## What this is
-- A set of prompts, templates, and conventions for Codex CLI.
-- Not a library. Not an autonomous agent. A workflow.
+## What This Is
 
-## What this is not
-- A solver. It does not promise solutions.
-- A chatbot. Outputs are mathematics.
+- A prompt, template, connector, and skill system for math problem attempts.
+- A workflow that favors traceable claims over fluent answers.
+- A benchmarked experiment in whether agentic scaffolding adds value over a raw
+  one-shot attempt.
 
-## Quick start
-1. Clone.
-2. `cd dianoia && codex`
-3. Type your problem. Example: `prove the riemann hypothesis`
-4. Stop with `halt`. Continue with `resume`.
+## What This Is Not
 
-## Output discipline
-- Every claim lives in `problems/<slug>/claim_ledger.md` (append-only).
-- Every phase closes with adversarial review (Phase 5).
-- All recovery state on disk; no chat-memory dependence.
-- Minimal Speech Protocol: silent by default.
+- Not a theorem prover or a guarantee of solved open problems.
+- Not a chatbot workflow; ordinary conversation is routed into problem runs.
+- Not a license to overclaim: unsupported results are recorded as gaps,
+  obstructions, or unverified references.
+
+## Current Benchmark Summary
+
+`BENCHMARK.md` currently has 1 accepted controlled comparison:
+
+| ID | area | verdict | source |
+|----|------|---------|--------|
+| B1 | number theory | VALUE_ADDED | APSSV 2026, arXiv:2604.06609 |
+
+MASTERPIECE is not complete. The benchmark bank still needs 4 more VALUE_ADDED
+rows across at least 2 additional mathematical areas.
+
+## Architecture
+
+```mermaid
+flowchart TD
+    User["Problem statement or resume"] --> Router["AGENTS routing"]
+    Router --> Prove["prompts/prove.md"]
+    Router --> Resume["prompts/resume.md"]
+    Prove --> Intake["00-intake"]
+    Intake --> Review0["05-review A/B/C/D"]
+    Review0 --> Survey["01-survey"]
+    Survey --> Review1["05-review A/B/C"]
+    Review1 --> Perspective["02-perspective"]
+    Perspective --> Review2["05-review A/B/C"]
+    Review2 --> Hypothesize["03-hypothesize"]
+    Hypothesize --> Review3["05-review A/B/C/D"]
+    Review3 --> Develop["04-develop"]
+    Develop --> Review4["05-review A/B/C/D"]
+    Review4 --> Consolidate["06-consolidate"]
+    Consolidate --> Review5["05-review A/B/C/D"]
+    Review5 --> Halt["halt.md"]
+    Survey --> Researcher["researcher subagent"]
+    Develop --> Prover["prover subagent"]
+    Hypothesize --> Sanity["sanity-checker subagent"]
+    Researcher --> Connectors["arXiv/OEIS connectors"]
+    Researcher --> Skills["skills/*/SKILL.md"]
+```
+
+See `ARCHITECTURE.md` for the detailed phase loop, MSP discipline, v4
+invariants, meaningfulness gate, and subagent contracts.
+
+## Quick Start
+
+1. Start Codex in the repository root.
+2. Type a mathematical problem statement.
+3. Use `resume` to continue the active run.
+4. Use `halt` to wind down the active run.
+
+Fresh problem statements always create a fresh problem slug, even if
+`problems/.active` points to a closed or malformed run.
+
+## Key Paths
+
+- `prompts/`: phase prompts and first-message routing targets.
+- `prompts/subagents/`: bounded contracts for researcher, reviewer, prover,
+  sanity-checker, surveyor, muser, and specialist-factory work.
+- `templates/`: skeleton files for new problem runs.
+- `problems/`: active and historical problem artifacts.
+- `skills/`: reusable math/research procedures used by subagent prompts.
+- `connectors/`: local wrappers for external reference lookup.
+- `benchmark-bank/`: controlled comparison sources and comparisons.
+- `capability-test/`: audit and smoke-test evidence.
+
+## Current Capabilities
+
+- Stale `.active` guards for fresh problem routing and resume/intake safety.
+- Five subagent-referenced skills:
+  `arxiv-fetch`, `citation-discipline`, `coverage-systems`,
+  `pollack-character`, and `sanity-small-cases`.
+- Two working connectors:
+  `connectors/arxiv/server.py` and `connectors/oeis/server.py`.
+- Phase 0-3 evidence showing the original S_a retest moved from unfair
+  DEGRADED baseline to VALUE_ADDED after routing fixes.
+
+## Roadmap
+
+The authoritative tracker is `ROADMAP.md`. Current priorities are Phase 4
+benchmark expansion and keeping Phase 7 docs synchronized as the system changes.
 
 ## License
+
 MIT

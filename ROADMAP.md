@@ -6,8 +6,8 @@ Initialized: 2026-05-20T17:54:05+09:00
 
 | Phase | Name | Status | Evidence |
 |-------|------|--------|----------|
-| 0 | VERIFY PRIOR EXPERIMENT | IN_PROGRESS | capability-test/VERIFY_PRIOR.md pending |
-| 1 | DIAGNOSE | PENDING | DIAGNOSIS.md pending |
+| 0 | VERIFY PRIOR EXPERIMENT | COMPLETE | capability-test/VERIFY_PRIOR.md |
+| 1 | DIAGNOSE | IN_PROGRESS | DIAGNOSIS.md pending |
 | 2 | FIX | PENDING | prompts/templates patches pending |
 | 3 | RE-TEST SAME PROBLEM | PENDING | capability-test/RETEST.md pending |
 | 4 | EXPAND BENCHMARK BANK | BLOCKED_BY_PHASE_3 | BENCHMARK.md initialized |
@@ -18,5 +18,6 @@ Initialized: 2026-05-20T17:54:05+09:00
 
 ## Current Priority
 
-Complete Phase 0 by writing capability-test/VERIFY_PRIOR.md with the requested
-timeline reconstruction, machinery-fire audit, and fairness verdict.
+Begin Phase 1 diagnosis. Required focus: stale `.active` handling, `prove.md`
+preconditions, `resume.md` closed-problem guards, and behavior when `.active`
+is halted, missing, or corrupted.

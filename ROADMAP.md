@@ -97,8 +97,9 @@ terminal chain/shuffle counts for the common cover-matrix subcase.
 and `SECOND_MATRIX_BUCKET_NOTES.md` hand-classifies the singleton second bucket
 with lower probability `2/5`. `THIRD_MATRIX_BUCKET_NOTES.md` now classifies
 the next six-profile `2/5` bucket with generated exact counts and a hand count
-for the equality form. Next target another remaining `2/5` bucket with 4
-profiles, or try to abstract the completed buckets into a broader width-3
+for the equality form. `FOURTH_MATRIX_BUCKET_NOTES.md` now classifies the next
+four-profile `2/5` bucket similarly. Next target another remaining singleton
+`2/5` bucket, or try to abstract the completed buckets into a broader width-3
 lemma.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

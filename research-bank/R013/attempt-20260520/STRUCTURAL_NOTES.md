@@ -46,6 +46,8 @@ Artifacts:
   count, giving lower orientation probability `2/5`.
 - `THIRD_MATRIX_BUCKET_NOTES.md`: six-form third-bucket derivation with exact
   replay counts and a hand count for the equality form.
+- `FOURTH_MATRIX_BUCKET_NOTES.md`: four-form fourth-bucket derivation with
+  exact replay counts and a hand count for the equality form.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -100,9 +102,10 @@ These are search signals only:
    hand-enumerates those residual branch counts for the common matrix subcase.
 5. Continue the matrix-bucket proof queue: `SECOND_MATRIX_BUCKET_NOTES.md`
    handles the singleton `2/5` bucket; `THIRD_MATRIX_BUCKET_NOTES.md` handles
-   the next six-profile `2/5` bucket. The next nontrivial target is another
-   remaining `2/5` bucket with 4 profiles, or an abstraction of the completed
-   buckets into a width-3 lemma candidate.
+   the next six-profile `2/5` bucket; `FOURTH_MATRIX_BUCKET_NOTES.md` handles
+   the next four-profile `2/5` bucket. The next nontrivial target is another
+   remaining singleton `2/5` bucket or an abstraction of the completed buckets
+   into a width-3 lemma candidate.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

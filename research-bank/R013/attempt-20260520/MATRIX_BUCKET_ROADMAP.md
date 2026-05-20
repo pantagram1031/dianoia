@@ -75,6 +75,17 @@ It has six rank-normal forms. Generated exact counts show bucket minimum
 `2/5`, attained only by one form; `THIRD_MATRIX_BUCKET_NOTES.md` hand-counts
 that equality form.
 
+The fourth-ranked bucket has also been extracted and replayed:
+
+- `width3-rank2221-fourth-matrix-bucket-n7.json`
+- `width3-rank2221-fourth-cover-matrix-forms-n7.json`
+- `normal-form-cases/case-fourth-bucket-*.json`
+- `FOURTH_MATRIX_BUCKET_NOTES.md`
+
+It has four rank-normal forms. Generated exact counts show bucket minimum
+`2/5`, attained only by one form; `FOURTH_MATRIX_BUCKET_NOTES.md` hand-counts
+that equality form.
+
 ## Claim Discipline
 
 No `CLAIMS.md` row. This roadmap only organizes restricted finite subcases

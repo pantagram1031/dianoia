@@ -436,6 +436,58 @@ class PosetBalanceTest(unittest.TestCase):
             ]
             self.assertEqual([[ "b" ]], [item["path"] for item in lower_obligations])
 
+    def test_matrix_vector_slack_summary_ranks_weakest_classes(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            deltas = Path(temp_dir) / "deltas.json"
+            output = Path(temp_dir) / "slack.json"
+            deltas.write_text(
+                json.dumps(
+                    {
+                        "classes": [
+                            {
+                                "id": "U0",
+                                "state": "unprocessed",
+                                "vector": [0, 0],
+                                "min_lower_orientation_probability": [3, 7],
+                            },
+                            {
+                                "id": "U1",
+                                "state": "unprocessed",
+                                "vector": [1, 0],
+                                "min_lower_orientation_probability": [7, 17],
+                            },
+                            {
+                                "id": "P1",
+                                "state": "processed",
+                                "vector": [0, 1],
+                                "min_lower_orientation_probability": [1, 3],
+                            },
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-vector-slack-summary",
+                        str(deltas),
+                        "--threshold",
+                        "13/32",
+                        "--limit",
+                        "1",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertTrue(payload["all_meet_threshold"])
+            self.assertEqual(["U0"], payload["componentwise_minimal_ids"])
+            self.assertEqual("U1", payload["weakest"][0]["id"])
+            self.assertEqual([3, 544], payload["weakest"][0]["gap_above_threshold"])
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"

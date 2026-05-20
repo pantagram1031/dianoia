@@ -1935,6 +1935,69 @@ def matrix_vector_deltas_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def vector_leq(left: Sequence[int], right: Sequence[int]) -> bool:
+    return all(int(a) <= int(b) for a, b in zip(left, right))
+
+
+def matrix_vector_slack_summary_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.deltas.read_text(encoding="utf-8"))
+    threshold = Fraction(args.threshold)
+    records = [record for record in payload["classes"] if record["state"] == args.state]
+    for record in records:
+        lower = Fraction(*record["min_lower_orientation_probability"])
+        record["gap_above_threshold"] = [
+            (lower - threshold).numerator,
+            (lower - threshold).denominator,
+        ]
+        record["meets_threshold"] = lower >= threshold
+
+    sorted_records = sorted(
+        records,
+        key=lambda record: (
+            Fraction(*record["min_lower_orientation_probability"]),
+            str(record["id"]),
+        ),
+    )
+    minimal_ids: list[str] = []
+    for record in records:
+        vector = [int(value) for value in record["vector"]]
+        has_smaller = False
+        for other in records:
+            if other["id"] == record["id"]:
+                continue
+            other_vector = [int(value) for value in other["vector"]]
+            if vector_leq(other_vector, vector) and other_vector != vector:
+                has_smaller = True
+                break
+        if not has_smaller:
+            minimal_ids.append(str(record["id"]))
+
+    by_probability: dict[str, int] = {}
+    for record in records:
+        lower_key = "/".join(str(value) for value in record["min_lower_orientation_probability"])
+        by_probability[lower_key] = by_probability.get(lower_key, 0) + 1
+
+    weakest = sorted_records[: args.limit]
+    out = {
+        "source": str(args.deltas),
+        "state": args.state,
+        "threshold": [threshold.numerator, threshold.denominator],
+        "class_count": len(records),
+        "all_meet_threshold": all(record["meets_threshold"] for record in records),
+        "below_threshold_ids": [
+            str(record["id"]) for record in records if not record["meets_threshold"]
+        ],
+        "componentwise_minimal_ids": sorted(minimal_ids),
+        "weakest": weakest,
+        "by_probability": dict(sorted(by_probability.items(), key=lambda item: Fraction(item[0]))),
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
 def bucket_members_command(args: argparse.Namespace) -> int:
     shape_filter = parse_rank_shape(args.rank_shape)
     records: list[dict[str, object]] = []
@@ -2346,6 +2409,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     deltas_parser.add_argument("--base-id", required=True)
     deltas_parser.add_argument("--output", type=Path)
     deltas_parser.set_defaults(func=matrix_vector_deltas_command)
+
+    slack_parser = subparsers.add_parser("matrix-vector-slack-summary")
+    slack_parser.add_argument("deltas", type=Path)
+    slack_parser.add_argument("--threshold", default="13/32")
+    slack_parser.add_argument("--state", default="unprocessed")
+    slack_parser.add_argument("--limit", type=int, default=12)
+    slack_parser.add_argument("--output", type=Path)
+    slack_parser.set_defaults(func=matrix_vector_slack_summary_command)
 
     bucket_parser = subparsers.add_parser("bucket-members")
     bucket_parser.add_argument("--max-n", type=int, default=7)

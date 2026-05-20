@@ -13,6 +13,21 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T22:28:00+09:00
+
+- Opened a second rank-A P11 attempt on `R013`, the 1/3-2/3 conjecture for
+  finite posets, to avoid overfitting the active research loop to R020's grid
+  geometry.
+- Added exact finite-poset machinery in `tools/poset_balance.py`: transitive
+  closure validation, exact linear-extension counts, exact rational
+  balanced-pair probabilities, and small labeled-poset enumeration.
+- Attempt artifact:
+  `research-bank/R013/attempt-20260520/small-posets-n5.json` reports no
+  counterexample through all labeled non-chain posets on up to five elements.
+- Verification evidence:
+  `tests/test_poset_balance.py` and the `tools/verify_all.py` R013 check.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T22:20:00+09:00
 
 - Closed the R020 replay gap by decoding Flammenkamp's standard notation for

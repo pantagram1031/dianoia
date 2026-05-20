@@ -17,7 +17,7 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 8 | DEEPER RESEARCH | GATED | Requires 5 contamination-free novel VALUE_ADDED B6+ rows across 3 areas |
 | 9 | RESEARCH INFRA | COMPLETE | `connectors/lean/`, enhanced `connectors/arxiv/`, openness/novelty skills, research-state verifier, and candidate templates |
 | 10 | CURATION | COMPLETE | `research-bank/INDEX.md` records 20 `OPEN-VERIFIED` candidates across 10 areas |
-| 11 | ATTEMPTS | IN_PROGRESS | R020 recorded `PARTIAL-PROGRESS` with replayed `N=47` through `N=60` certificates |
+| 11 | ATTEMPTS | IN_PROGRESS | R020 and R013 recorded `PARTIAL-PROGRESS`; R013 has exact small-poset replay through `n=5` |
 | 12 | VERIFICATION GATE | PENDING | Mandatory for any SOLVED-CLAIM |
 | 13 | INTERMEDIATE WINS | PENDING | Draft note plus BLOCKED_ON_USER before any external claim |
 
@@ -34,7 +34,7 @@ for external mathematician review.
 |-------|--------|---------------|
 | P9 infra | COMPLETE | `connectors/lean/`, enhanced arXiv lookup, openness skill, adversarial novelty skill, `tools/verify_research_state.py`, `templates/research_candidate/` |
 | P10 curation | COMPLETE | `research-bank/INDEX.md` with 20 verified-open candidates across 10 areas |
-| P11 attempts | IN_PROGRESS | Use the completed R020 replay gate for an actual search/proof attempt, or switch rank-A candidate |
+| P11 attempts | IN_PROGRESS | Scale R013 exact poset attempt or use completed R020 replay gate for actual search/proof work |
 | P12 verification | PENDING | `CLAIMS.md` rows with gates, confidence, and downgrade/blocked status |
 | P13 notes | PENDING | `research-bank/<id>/draft-note.md` for any intermediate win |
 
@@ -70,8 +70,12 @@ candidate (`research-bank/R001/`). R020 attempt work remains
 certificate verification plus batch replay of every published certificate in
 the local frontier window `N=47` through `N=60`.
 
-Next P11 target: stop expanding replay and run an actual mathematical attempt.
-Either use the R020 verifier as the acceptance gate for a bounded
-search/normalization experiment, or switch to another rank A candidate
-(`research-bank/R013/` or `research-bank/R017/`) if R020's next step is mostly
-external solver engineering rather than dianoia-level mathematical reasoning.
+R013 is now also `PARTIAL-PROGRESS`: dianoia has exact finite-poset validation,
+linear-extension counting, and exhaustive labeled-poset replay through five
+elements with no counterexample to the base 1/3-2/3 conjecture.
+
+Next P11 target: continue actual mathematical attempts rather than replay
+expansion. Prefer scaling R013 via better canonical generation, width/thinness
+filters, or structural lemma extraction; alternatively use the R020 verifier as
+the acceptance gate for bounded search/proof work if the next step is not
+mostly external solver engineering.

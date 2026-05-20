@@ -3,16 +3,18 @@
 Resume the RESEARCH_CONTRIBUTION objective.
 
 Immediate next step:
-Continue P11 ATTEMPTS. P10 is complete; R020 has produced
-`PARTIAL-PROGRESS`, not a solved claim.
+Continue P11 ATTEMPTS. P10 is complete; R020 and R013 have produced
+`PARTIAL-PROGRESS`, not solved claims.
 
 Recommended next work:
-Do not keep expanding R020 replay as a substitute for mathematics. The replay
-gate for `N=47` through `N=60` is now closed and verified. Choose one:
+Do not keep expanding replay as a substitute for mathematics. Choose one:
 
-- run a bounded search/normalization experiment toward `N=61`, or
-- switch to another rank A candidate (`R013` 1/3-2/3 posets or `R017`
-  Graceful Tree Conjecture) if R020 search requires unavailable solver setup.
+- continue `R013` by improving exact poset generation beyond labeled `n=5`,
+  adding width/thinness filters, or extracting a structural lemma candidate; or
+- return to `R020` only for bounded search/proof work accepted by the verifier,
+  not for more source-format replay; or
+- switch to `R017` Graceful Tree Conjecture if both R013 and R020 become mostly
+  solver engineering.
 
 Current state:
 - Active goal: RESEARCH_CONTRIBUTION. Do not mark complete unless a real
@@ -35,8 +37,16 @@ Current state:
   - `research-bank/R020/attempt-20260520/`
 - `tools/verify_all.py` now runs:
   `python tools/no_three_in_line_frontier.py verify-dir research-bank/R020/certificates`.
+- R013 artifacts now include:
+  - `tools/poset_balance.py`
+  - `tests/test_poset_balance.py`
+  - `research-bank/R013/attempt-20260520/RAW.md`
+  - `research-bank/R013/attempt-20260520/DIANOIA.md`
+  - `research-bank/R013/attempt-20260520/VERDICT.md`
+  - `research-bank/R013/attempt-20260520/small-posets-n5.json`
+  - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`.
 - No `CLAIMS.md` row exists for R020 because no new mathematical result has
-  been produced.
+  been produced. No `CLAIMS.md` row exists for R013 for the same reason.
 
 Operational reminders:
 - Run `git fetch; git pull origin main --rebase` first.

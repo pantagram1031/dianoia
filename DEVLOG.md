@@ -1,5 +1,26 @@
 # Devlog
 
+## 2026-05-20T22:28:00+09:00
+
+- Pivoted from R020 replay to a second rank-A P11 candidate, `R013`
+  1/3-2/3 posets, to keep dianoia's research behavior general across
+  mathematical areas and certificate types.
+- Added `tools/poset_balance.py` for exact finite-poset validation,
+  linear-extension counting, balanced-pair probabilities, and bounded labeled
+  poset enumeration.
+- Added `tests/test_poset_balance.py`.
+- Ran an exact exhaustive check through `n=5` and stored
+  `research-bank/R013/attempt-20260520/small-posets-n5.json`; it reports
+  `counterexample_count: 0` over all labeled non-chain posets in that range.
+- Added R013 attempt artifacts: `RAW.md`, `DIANOIA.md`, and `VERDICT.md`.
+- Wired the exact small-poset check into `tools/verify_all.py`.
+- Verdict: `PARTIAL-PROGRESS`; no `CLAIMS.md` row because this is not novel.
+
+Self-audit:
+- Commits this session so far: 4 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:20:00+09:00
 
 - Continued P11 on `R020` no-three-in-line after user challenged overfitting

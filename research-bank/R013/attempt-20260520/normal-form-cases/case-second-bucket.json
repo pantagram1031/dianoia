@@ -1,0 +1,14 @@
+{
+  "case": "second-matrix-bucket",
+  "labels": ["a", "b", "c", "d", "e", "f", "g"],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "c<e",
+    "c<f",
+    "d<e",
+    "e<g",
+    "f<g"
+  ],
+  "check_pairs": [["b", "d"]]
+}

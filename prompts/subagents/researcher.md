@@ -20,7 +20,9 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
    `connectors/oeis/server.py` and write the compact metadata result into the
    drop zone. Treat OEIS as computational/reference evidence unless a separate
    proof source is verified.
-4. For each candidate reference, collect author, year, title, and exact statement reference.
+4. Consult `skills/citation-discipline/SKILL.md`; for each candidate
+   reference, collect author, year, title, exact statement reference, and the
+   relationship between the cited statement and target claim.
 5. If the target claim involves small primes with prescribed quadratic
    character behavior, consult `skills/pollack-character/SKILL.md` before
    deciding whether the reference supports finiteness, explicit bounds, or only

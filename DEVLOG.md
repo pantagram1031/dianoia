@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-20T20:29:00+09:00
+
+- Added fifth Phase 5 skill: `skills/citation-discipline/SKILL.md`.
+- Updated `skills/INDEX.md`.
+- Wired the skill into `prompts/subagents/researcher.md` and
+  `prompts/subagents/reviewer.md`.
+- Marked Phase 5 complete in `ROADMAP.md`.
+
+Self-audit:
+- Commits this session so far: 3 pushed, 1 pending.
+- Concrete progress category: skill.
+- Failed-session streak: 0.
+
 ## 2026-05-20T20:20:00+09:00
 
 - Added fourth Phase 5 skill: `skills/sanity-small-cases/SKILL.md`.

@@ -13,7 +13,9 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 
 [PROCEDURE]
 1. If persona is `A`, hunt unjustified steps, hidden assumptions, swapped quantifiers, function-space slippage, and counterexamples.
-2. If persona is `B`, cross-check against literature, duplicate work, conflicting work, and hypotheses of cited prior art.
+2. If persona is `B`, consult `skills/citation-discipline/SKILL.md`, then
+   cross-check against literature, duplicate work, conflicting work, and
+   hypotheses of cited prior art.
 3. If persona is `C`, check definition consistency, quantifier order, and traceability for a strong PhD-level reader.
 4. If persona is `D`, answer the four ambition questions:
    - Did Phase 0 intake retreat from the user's stated problem to a weaker target, and if so was that retreat earned by a Phase 4 STUCK-STATE?
@@ -23,7 +25,7 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 5. For persona `D`, record a concrete answer or `NOT YET PRODUCED` for each question before listing defects. `NOT YET PRODUCED` is allowed only when the reviewed phase precedes the artifact needed to decide the question.
 6. Before listing defects, write an `attempted_attacks` section with persona-specific evidence:
    - Persona `A`: at least one counterexample search, quantifier stress test, or hidden-assumption attack, including the exact location inspected.
-   - Persona `B`: at least one citation, duplication, or state-of-the-art comparison, including the survey or corpus entry checked.
+   - Persona `B`: at least one citation, duplication, or state-of-the-art comparison, including the survey or corpus entry checked and whether the four citation fields are complete.
    - Persona `C`: at least one definition-consistency, notation, dependency, or reader-trace check, including the artifact path inspected.
    - Persona `D`: each ambition answer must cite the artifact path or state field used as evidence.
 7. Write every defect in the template fields: id, severity, location, description, suggested_fix, and status.

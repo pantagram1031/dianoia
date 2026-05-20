@@ -35,6 +35,9 @@ class Poset:
                     pairs.append((x, y))
         return pairs
 
+    def comparable(self, x: int, y: int) -> bool:
+        return x == y or (x, y) in self.less or (y, x) in self.less
+
 
 def transitive_closure(n: int, relations: Iterable[Relation]) -> frozenset[Relation]:
     reach = [[False] * n for _ in range(n)]
@@ -111,6 +114,45 @@ def count_extensions_with_order(poset: Poset, before: int, after: int) -> int:
     return count(0)
 
 
+def width(poset: Poset) -> int:
+    best = 0
+    for mask in range(1, 1 << poset.n):
+        items = [index for index in range(poset.n) if mask & (1 << index)]
+        if len(items) <= best:
+            continue
+        if all(not poset.comparable(x, y) for x, y in itertools.combinations(items, 2)):
+            best = len(items)
+    return best
+
+
+def height(poset: Poset) -> int:
+    memo: dict[int, int] = {}
+
+    def chain_from(item: int) -> int:
+        if item not in memo:
+            memo[item] = 1 + max(
+                (chain_from(upper) for lower, upper in poset.less if lower == item),
+                default=0,
+            )
+        return memo[item]
+
+    return max((chain_from(item) for item in range(poset.n)), default=0)
+
+
+def relabeled_key(poset: Poset, permutation: Sequence[int]) -> str:
+    bits: list[str] = []
+    for lower in range(poset.n):
+        for upper in range(poset.n):
+            if lower == upper:
+                continue
+            bits.append("1" if (permutation[lower], permutation[upper]) in poset.less else "0")
+    return "".join(bits)
+
+
+def canonical_key(poset: Poset) -> str:
+    return min(relabeled_key(poset, permutation) for permutation in itertools.permutations(range(poset.n)))
+
+
 def balance_report(poset: Poset) -> dict[str, object]:
     total = count_linear_extensions(poset)
     pairs: list[dict[str, object]] = []
@@ -144,6 +186,8 @@ def balance_report(poset: Poset) -> dict[str, object]:
     return {
         "n": poset.n,
         "relations": [list(pair) for pair in sorted(poset.less)],
+        "width": width(poset),
+        "height": height(poset),
         "linear_extensions": total,
         "incomparable_pair_count": len(pairs),
         "balanced_pair_count": len(balanced_pairs),
@@ -191,6 +235,13 @@ def all_labeled_posets(n: int) -> list[Poset]:
         seen.add(closure)
         posets.append(Poset(n=n, less=closure))
     return posets
+
+
+def all_unlabeled_posets(n: int) -> list[Poset]:
+    representatives: dict[str, Poset] = {}
+    for poset in all_labeled_posets(n):
+        representatives.setdefault(canonical_key(poset), poset)
+    return [representatives[key] for key in sorted(representatives)]
 
 
 def analyze_command(args: argparse.Namespace) -> int:
@@ -245,6 +296,81 @@ def exhaustive_command(args: argparse.Namespace) -> int:
     return 0 if not counterexamples else 1
 
 
+def summarize_posets(posets: Iterable[Poset]) -> dict[str, object]:
+    counterexamples: list[dict[str, object]] = []
+    width_distribution: dict[int, int] = {}
+    height_distribution: dict[int, int] = {}
+    worst_by_width: dict[int, dict[str, object]] = {}
+    non_chains = 0
+    total = 0
+
+    for poset in posets:
+        total += 1
+        poset_width = width(poset)
+        poset_height = height(poset)
+        width_distribution[poset_width] = width_distribution.get(poset_width, 0) + 1
+        height_distribution[poset_height] = height_distribution.get(poset_height, 0) + 1
+        if not poset.incomparable_pairs():
+            continue
+        non_chains += 1
+        report = balance_report(poset)
+        if not report["has_balanced_pair"]:
+            counterexamples.append(report)
+        best_pair = report["best_pair"]
+        if isinstance(best_pair, dict):
+            lower = Fraction(*best_pair["lower_orientation_probability"])
+            prior = worst_by_width.get(poset_width)
+            if prior is None or lower < Fraction(*prior["lower_orientation_probability"]):
+                worst_by_width[poset_width] = {
+                    "relations": report["relations"],
+                    "pair": best_pair["pair"],
+                    "lower_orientation_probability": best_pair[
+                        "lower_orientation_probability"
+                    ],
+                    "height": poset_height,
+                }
+
+    return {
+        "total_posets": total,
+        "non_chain_posets": non_chains,
+        "counterexample_count": len(counterexamples),
+        "counterexamples": counterexamples,
+        "width_distribution": {
+            str(key): width_distribution[key] for key in sorted(width_distribution)
+        },
+        "height_distribution": {
+            str(key): height_distribution[key] for key in sorted(height_distribution)
+        },
+        "worst_by_width": {
+            str(key): worst_by_width[key] for key in sorted(worst_by_width)
+        },
+    }
+
+
+def exhaustive_unlabeled_command(args: argparse.Namespace) -> int:
+    summary: list[dict[str, object]] = []
+    counterexample_count = 0
+    for n in range(2, args.max_n + 1):
+        posets = all_unlabeled_posets(n)
+        item = {"n": n, **summarize_posets(posets)}
+        counterexample_count += int(item["counterexample_count"])
+        if args.max_counterexamples >= 0:
+            item["counterexamples"] = item["counterexamples"][: args.max_counterexamples]
+        summary.append(item)
+
+    payload = {
+        "max_n": args.max_n,
+        "mode": "unlabeled-canonical",
+        "summary": summary,
+        "counterexample_count": counterexample_count,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0 if counterexample_count == 0 else 1
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -258,6 +384,12 @@ def main(argv: Sequence[str] | None = None) -> int:
     exhaustive_parser.add_argument("--max-counterexamples", type=int, default=3)
     exhaustive_parser.add_argument("--output", type=Path)
     exhaustive_parser.set_defaults(func=exhaustive_command)
+
+    unlabeled_parser = subparsers.add_parser("exhaustive-unlabeled")
+    unlabeled_parser.add_argument("--max-n", type=int, default=5)
+    unlabeled_parser.add_argument("--max-counterexamples", type=int, default=3)
+    unlabeled_parser.add_argument("--output", type=Path)
+    unlabeled_parser.set_defaults(func=exhaustive_unlabeled_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

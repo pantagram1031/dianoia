@@ -25,6 +25,7 @@ COMMANDS = [
         "research-bank/R020/certificates",
     ],
     [sys.executable, "tools/poset_balance.py", "exhaustive-small", "--max-n", "5"],
+    [sys.executable, "tools/poset_balance.py", "exhaustive-unlabeled", "--max-n", "5"],
 ]
 
 

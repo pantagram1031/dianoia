@@ -36,6 +36,17 @@ class PosetBalanceTest(unittest.TestCase):
         self.assertEqual(3, len(pb.all_labeled_posets(2)))
         self.assertEqual(19, len(pb.all_labeled_posets(3)))
 
+    def test_unlabeled_poset_enumeration_matches_small_counts(self) -> None:
+        self.assertEqual(2, len(pb.all_unlabeled_posets(2)))
+        self.assertEqual(5, len(pb.all_unlabeled_posets(3)))
+        self.assertEqual(16, len(pb.all_unlabeled_posets(4)))
+
+    def test_width_and_height_for_v_poset(self) -> None:
+        poset = pb.make_poset(3, [(0, 2), (1, 2)])
+
+        self.assertEqual(2, pb.width(poset))
+        self.assertEqual(2, pb.height(poset))
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"
@@ -46,6 +57,22 @@ class PosetBalanceTest(unittest.TestCase):
             payload = json.loads(output.read_text(encoding="utf-8"))
             self.assertEqual(0, payload["counterexample_count"])
             self.assertEqual(219, payload["summary"][-1]["labeled_posets"])
+
+    def test_exhaustive_unlabeled_records_structural_summaries(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "summary.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    ["exhaustive-unlabeled", "--max-n", "4", "--output", str(output)]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            last = payload["summary"][-1]
+            self.assertEqual(16, last["total_posets"])
+            self.assertEqual(0, last["counterexample_count"])
+            self.assertIn("width_distribution", last)
+            self.assertIn("worst_by_width", last)
 
 
 if __name__ == "__main__":

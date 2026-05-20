@@ -1,0 +1,28 @@
+{
+  "case": "u13-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "d"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "c<e",
+    "c<g",
+    "d<f",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U13",
+  "source_form_index": 1
+}

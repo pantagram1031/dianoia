@@ -1,0 +1,32 @@
+{
+  "case": "u42-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "d"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "b<f",
+    "c<e",
+    "c<f",
+    "d<e",
+    "d<f",
+    "e<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U42",
+  "source_form_index": 1
+}

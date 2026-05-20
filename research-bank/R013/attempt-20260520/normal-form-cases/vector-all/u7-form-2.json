@@ -1,0 +1,28 @@
+{
+  "case": "u7-form-2",
+  "check_pairs": [
+    [
+      "b",
+      "d"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "c<e",
+    "c<f",
+    "d<e",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U7",
+  "source_form_index": 2
+}

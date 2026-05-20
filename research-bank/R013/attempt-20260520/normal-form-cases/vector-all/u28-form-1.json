@@ -1,0 +1,28 @@
+{
+  "case": "u28-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "d"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "c<e",
+    "d<f",
+    "e<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U28",
+  "source_form_index": 1
+}

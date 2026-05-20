@@ -1,0 +1,29 @@
+{
+  "case": "u8-form-1",
+  "check_pairs": [
+    [
+      "b",
+      "f"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "c<e",
+    "c<f",
+    "d<e",
+    "d<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U8",
+  "source_form_index": 1
+}

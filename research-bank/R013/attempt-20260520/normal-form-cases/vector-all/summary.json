@@ -1,0 +1,1614 @@
+{
+  "case_count": 103,
+  "cases": [
+    {
+      "case": "p1-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "P1",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        14,
+        39
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p1-form-1.json"
+    },
+    {
+      "case": "p1-form-2",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "P1",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        5,
+        11
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p1-form-2.json"
+    },
+    {
+      "case": "p1-form-3",
+      "check_pair": [
+        "a",
+        "b"
+      ],
+      "class": "P1",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        14,
+        33
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p1-form-3.json"
+    },
+    {
+      "case": "p2-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "P2",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        19,
+        44
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-1.json"
+    },
+    {
+      "case": "p2-form-2",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "P2",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        25,
+        51
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-2.json"
+    },
+    {
+      "case": "p2-form-3",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "P2",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-3.json"
+    },
+    {
+      "case": "p2-form-4",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "P2",
+      "form_index": 4,
+      "lower_orientation_probability": [
+        18,
+        37
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-4.json"
+    },
+    {
+      "case": "p2-form-5",
+      "check_pair": [
+        "a",
+        "b"
+      ],
+      "class": "P2",
+      "form_index": 5,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-5.json"
+    },
+    {
+      "case": "p2-form-6",
+      "check_pair": [
+        "c",
+        "f"
+      ],
+      "class": "P2",
+      "form_index": 6,
+      "lower_orientation_probability": [
+        5,
+        12
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-6.json"
+    },
+    {
+      "case": "p3-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "P3",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        15,
+        31
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-1.json"
+    },
+    {
+      "case": "p3-form-2",
+      "check_pair": [
+        "e",
+        "g"
+      ],
+      "class": "P3",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        23,
+        47
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-2.json"
+    },
+    {
+      "case": "p3-form-3",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "P3",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-3.json"
+    },
+    {
+      "case": "p3-form-4",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "P3",
+      "form_index": 4,
+      "lower_orientation_probability": [
+        16,
+        33
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-4.json"
+    },
+    {
+      "case": "p4-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "P4",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p4-form-1.json"
+    },
+    {
+      "case": "p5-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "P5",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p5-form-1.json"
+    },
+    {
+      "case": "p6-form-1",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "P6",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        2,
+        5
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p6-form-1.json"
+    },
+    {
+      "case": "p7-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "P7",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        19,
+        41
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p7-form-1.json"
+    },
+    {
+      "case": "p7-form-2",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "P7",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        13,
+        32
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p7-form-2.json"
+    },
+    {
+      "case": "p8-form-1",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "P8",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        13,
+        32
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p8-form-1.json"
+    },
+    {
+      "case": "p8-form-2",
+      "check_pair": [
+        "c",
+        "f"
+      ],
+      "class": "P8",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        5,
+        11
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p8-form-2.json"
+    },
+    {
+      "case": "u1-form-1",
+      "check_pair": [
+        "d",
+        "f"
+      ],
+      "class": "U1",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        31,
+        63
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u1-form-1.json"
+    },
+    {
+      "case": "u1-form-2",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U1",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        7,
+        15
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u1-form-2.json"
+    },
+    {
+      "case": "u1-form-3",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U1",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        7,
+        17
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u1-form-3.json"
+    },
+    {
+      "case": "u2-form-1",
+      "check_pair": [
+        "d",
+        "e"
+      ],
+      "class": "U2",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        26,
+        57
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-1.json"
+    },
+    {
+      "case": "u2-form-2",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U2",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        11,
+        23
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-2.json"
+    },
+    {
+      "case": "u2-form-3",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U2",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        9,
+        20
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-3.json"
+    },
+    {
+      "case": "u2-form-4",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U2",
+      "form_index": 4,
+      "lower_orientation_probability": [
+        12,
+        25
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-4.json"
+    },
+    {
+      "case": "u2-form-5",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U2",
+      "form_index": 5,
+      "lower_orientation_probability": [
+        11,
+        24
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-5.json"
+    },
+    {
+      "case": "u2-form-6",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U2",
+      "form_index": 6,
+      "lower_orientation_probability": [
+        22,
+        53
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-6.json"
+    },
+    {
+      "case": "u3-form-1",
+      "check_pair": [
+        "d",
+        "e"
+      ],
+      "class": "U3",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        8,
+        17
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u3-form-1.json"
+    },
+    {
+      "case": "u3-form-2",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U3",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        5,
+        12
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u3-form-2.json"
+    },
+    {
+      "case": "u3-form-3",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U3",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        7,
+        15
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u3-form-3.json"
+    },
+    {
+      "case": "u4-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U4",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        8,
+        19
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u4-form-1.json"
+    },
+    {
+      "case": "u5-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U5",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        4,
+        9
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u5-form-1.json"
+    },
+    {
+      "case": "u5-form-2",
+      "check_pair": [
+        "e",
+        "g"
+      ],
+      "class": "U5",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        14,
+        33
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u5-form-2.json"
+    },
+    {
+      "case": "u6-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U6",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        3,
+        7
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u6-form-1.json"
+    },
+    {
+      "case": "u6-form-2",
+      "check_pair": [
+        "d",
+        "f"
+      ],
+      "class": "U6",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        31,
+        63
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u6-form-2.json"
+    },
+    {
+      "case": "u7-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U7",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        3,
+        7
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u7-form-1.json"
+    },
+    {
+      "case": "u7-form-2",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U7",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        4,
+        9
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u7-form-2.json"
+    },
+    {
+      "case": "u8-form-1",
+      "check_pair": [
+        "b",
+        "f"
+      ],
+      "class": "U8",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        3,
+        7
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u8-form-1.json"
+    },
+    {
+      "case": "u9-form-1",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U9",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        3,
+        7
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u9-form-1.json"
+    },
+    {
+      "case": "u10-form-1",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U10",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        7,
+        16
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u10-form-1.json"
+    },
+    {
+      "case": "u11-form-1",
+      "check_pair": [
+        "a",
+        "b"
+      ],
+      "class": "U11",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        11,
+        25
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u11-form-1.json"
+    },
+    {
+      "case": "u11-form-2",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U11",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        18,
+        37
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u11-form-2.json"
+    },
+    {
+      "case": "u12-form-1",
+      "check_pair": [
+        "c",
+        "f"
+      ],
+      "class": "U12",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        7,
+        15
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u12-form-1.json"
+    },
+    {
+      "case": "u12-form-2",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U12",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        11,
+        25
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u12-form-2.json"
+    },
+    {
+      "case": "u13-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U13",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        4,
+        9
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u13-form-1.json"
+    },
+    {
+      "case": "u13-form-2",
+      "check_pair": [
+        "d",
+        "e"
+      ],
+      "class": "U13",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        9,
+        20
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u13-form-2.json"
+    },
+    {
+      "case": "u14-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U14",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        19,
+        40
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u14-form-1.json"
+    },
+    {
+      "case": "u14-form-2",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U14",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        22,
+        49
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u14-form-2.json"
+    },
+    {
+      "case": "u15-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U15",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u15-form-1.json"
+    },
+    {
+      "case": "u15-form-2",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U15",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        14,
+        31
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u15-form-2.json"
+    },
+    {
+      "case": "u16-form-1",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U16",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        14,
+        31
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u16-form-1.json"
+    },
+    {
+      "case": "u17-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U17",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        5,
+        11
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u17-form-1.json"
+    },
+    {
+      "case": "u17-form-2",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U17",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        6,
+        13
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u17-form-2.json"
+    },
+    {
+      "case": "u18-form-1",
+      "check_pair": [
+        "c",
+        "f"
+      ],
+      "class": "U18",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        11,
+        24
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u18-form-1.json"
+    },
+    {
+      "case": "u19-form-1",
+      "check_pair": [
+        "d",
+        "f"
+      ],
+      "class": "U19",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        19,
+        40
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u19-form-1.json"
+    },
+    {
+      "case": "u19-form-2",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U19",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        6,
+        13
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u19-form-2.json"
+    },
+    {
+      "case": "u19-form-3",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U19",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        16,
+        33
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u19-form-3.json"
+    },
+    {
+      "case": "u20-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U20",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        23,
+        48
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u20-form-1.json"
+    },
+    {
+      "case": "u20-form-2",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U20",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        19,
+        41
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u20-form-2.json"
+    },
+    {
+      "case": "u21-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U21",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        7,
+        15
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u21-form-1.json"
+    },
+    {
+      "case": "u22-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U22",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        26,
+        55
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u22-form-1.json"
+    },
+    {
+      "case": "u22-form-2",
+      "check_pair": [
+        "c",
+        "f"
+      ],
+      "class": "U22",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        14,
+        29
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u22-form-2.json"
+    },
+    {
+      "case": "u23-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U23",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        11,
+        23
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u23-form-1.json"
+    },
+    {
+      "case": "u23-form-2",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U23",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        10,
+        21
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u23-form-2.json"
+    },
+    {
+      "case": "u24-form-1",
+      "check_pair": [
+        "d",
+        "e"
+      ],
+      "class": "U24",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        16,
+        33
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u24-form-1.json"
+    },
+    {
+      "case": "u24-form-2",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U24",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u24-form-2.json"
+    },
+    {
+      "case": "u25-form-1",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U25",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        22,
+        45
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u25-form-1.json"
+    },
+    {
+      "case": "u26-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U26",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        25,
+        51
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u26-form-1.json"
+    },
+    {
+      "case": "u27-form-1",
+      "check_pair": [
+        "c",
+        "f"
+      ],
+      "class": "U27",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        27,
+        55
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u27-form-1.json"
+    },
+    {
+      "case": "u28-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U28",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u28-form-1.json"
+    },
+    {
+      "case": "u28-form-2",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U28",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u28-form-2.json"
+    },
+    {
+      "case": "u29-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U29",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u29-form-1.json"
+    },
+    {
+      "case": "u30-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U30",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u30-form-1.json"
+    },
+    {
+      "case": "u30-form-2",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U30",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u30-form-2.json"
+    },
+    {
+      "case": "u31-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U31",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u31-form-1.json"
+    },
+    {
+      "case": "u31-form-2",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U31",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u31-form-2.json"
+    },
+    {
+      "case": "u31-form-3",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U31",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u31-form-3.json"
+    },
+    {
+      "case": "u32-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U32",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u32-form-1.json"
+    },
+    {
+      "case": "u32-form-2",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U32",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u32-form-2.json"
+    },
+    {
+      "case": "u33-form-1",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U33",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u33-form-1.json"
+    },
+    {
+      "case": "u34-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U34",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u34-form-1.json"
+    },
+    {
+      "case": "u35-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U35",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u35-form-1.json"
+    },
+    {
+      "case": "u36-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U36",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u36-form-1.json"
+    },
+    {
+      "case": "u36-form-2",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U36",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u36-form-2.json"
+    },
+    {
+      "case": "u37-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U37",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u37-form-1.json"
+    },
+    {
+      "case": "u38-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U38",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u38-form-1.json"
+    },
+    {
+      "case": "u39-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U39",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u39-form-1.json"
+    },
+    {
+      "case": "u40-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U40",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u40-form-1.json"
+    },
+    {
+      "case": "u41-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U41",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u41-form-1.json"
+    },
+    {
+      "case": "u42-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U42",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u42-form-1.json"
+    },
+    {
+      "case": "u43-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U43",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u43-form-1.json"
+    },
+    {
+      "case": "u43-form-2",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U43",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u43-form-2.json"
+    },
+    {
+      "case": "u44-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U44",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u44-form-1.json"
+    },
+    {
+      "case": "u44-form-2",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U44",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u44-form-2.json"
+    },
+    {
+      "case": "u45-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U45",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u45-form-1.json"
+    },
+    {
+      "case": "u46-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U46",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u46-form-1.json"
+    },
+    {
+      "case": "u47-form-1",
+      "check_pair": [
+        "e",
+        "f"
+      ],
+      "class": "U47",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u47-form-1.json"
+    },
+    {
+      "case": "u48-form-1",
+      "check_pair": [
+        "a",
+        "b"
+      ],
+      "class": "U48",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u48-form-1.json"
+    },
+    {
+      "case": "u49-form-1",
+      "check_pair": [
+        "a",
+        "b"
+      ],
+      "class": "U49",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u49-form-1.json"
+    },
+    {
+      "case": "u50-form-1",
+      "check_pair": [
+        "a",
+        "b"
+      ],
+      "class": "U50",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u50-form-1.json"
+    },
+    {
+      "case": "u51-form-1",
+      "check_pair": [
+        "a",
+        "b"
+      ],
+      "class": "U51",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        1,
+        2
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u51-form-1.json"
+    }
+  ],
+  "ids": [
+    "P1",
+    "P2",
+    "P3",
+    "P4",
+    "P5",
+    "P6",
+    "P7",
+    "P8",
+    "U1",
+    "U10",
+    "U11",
+    "U12",
+    "U13",
+    "U14",
+    "U15",
+    "U16",
+    "U17",
+    "U18",
+    "U19",
+    "U2",
+    "U20",
+    "U21",
+    "U22",
+    "U23",
+    "U24",
+    "U25",
+    "U26",
+    "U27",
+    "U28",
+    "U29",
+    "U3",
+    "U30",
+    "U31",
+    "U32",
+    "U33",
+    "U34",
+    "U35",
+    "U36",
+    "U37",
+    "U38",
+    "U39",
+    "U4",
+    "U40",
+    "U41",
+    "U42",
+    "U43",
+    "U44",
+    "U45",
+    "U46",
+    "U47",
+    "U48",
+    "U49",
+    "U5",
+    "U50",
+    "U51",
+    "U6",
+    "U7",
+    "U8",
+    "U9"
+  ],
+  "source": "research-bank\\R013\\attempt-20260520\\width3-rank2221-all-vector-form-ledger.json",
+  "written": [
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p1-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p1-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p1-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-4.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-5.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p2-form-6.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p3-form-4.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p4-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p5-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p6-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p7-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p7-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p8-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\p8-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u1-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u1-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u1-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-4.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-5.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u2-form-6.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u3-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u3-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u3-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u4-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u5-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u5-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u6-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u6-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u7-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u7-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u8-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u9-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u10-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u11-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u11-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u12-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u12-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u13-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u13-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u14-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u14-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u15-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u15-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u16-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u17-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u17-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u18-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u19-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u19-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u19-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u20-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u20-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u21-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u22-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u22-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u23-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u23-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u24-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u24-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u25-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u26-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u27-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u28-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u28-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u29-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u30-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u30-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u31-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u31-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u31-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u32-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u32-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u33-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u34-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u35-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u36-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u36-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u37-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u38-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u39-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u40-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u41-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u42-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u43-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u43-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u44-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u44-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u45-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u46-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u47-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u48-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u49-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u50-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-all\\u51-form-1.json"
+  ]
+}

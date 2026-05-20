@@ -1,0 +1,29 @@
+{
+  "case": "p5-form-1",
+  "check_pairs": [
+    [
+      "b",
+      "d"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "c<e",
+    "c<f",
+    "d<e",
+    "e<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "P5",
+  "source_form_index": 1
+}

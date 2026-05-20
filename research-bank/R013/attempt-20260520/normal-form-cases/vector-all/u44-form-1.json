@@ -1,0 +1,30 @@
+{
+  "case": "u44-form-1",
+  "check_pairs": [
+    [
+      "e",
+      "f"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "c<e",
+    "c<f",
+    "d<g",
+    "e<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U44",
+  "source_form_index": 1
+}

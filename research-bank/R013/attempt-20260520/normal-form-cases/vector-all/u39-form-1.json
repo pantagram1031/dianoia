@@ -1,0 +1,30 @@
+{
+  "case": "u39-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "d"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "c<e",
+    "c<f",
+    "d<e",
+    "d<f",
+    "e<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U39",
+  "source_form_index": 1
+}

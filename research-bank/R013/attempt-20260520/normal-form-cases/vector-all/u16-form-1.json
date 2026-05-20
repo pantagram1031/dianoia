@@ -1,0 +1,30 @@
+{
+  "case": "u16-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "e"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "b<e",
+    "d<e",
+    "d<f",
+    "e<g",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U16",
+  "source_form_index": 1
+}

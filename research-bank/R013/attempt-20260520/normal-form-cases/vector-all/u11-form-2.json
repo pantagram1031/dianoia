@@ -1,0 +1,29 @@
+{
+  "case": "u11-form-2",
+  "check_pairs": [
+    [
+      "c",
+      "e"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "c<g",
+    "d<e",
+    "d<f",
+    "e<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U11",
+  "source_form_index": 2
+}

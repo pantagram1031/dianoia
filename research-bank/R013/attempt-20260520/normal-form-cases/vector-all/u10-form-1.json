@@ -1,0 +1,30 @@
+{
+  "case": "u10-form-1",
+  "check_pairs": [
+    [
+      "c",
+      "e"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<c",
+    "b<e",
+    "b<g",
+    "d<e",
+    "d<f",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U10",
+  "source_form_index": 1
+}

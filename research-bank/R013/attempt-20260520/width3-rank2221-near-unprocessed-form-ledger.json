@@ -1,0 +1,2278 @@
+{
+  "class_count": 5,
+  "classes": [
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "cover_matrix": [
+        [
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "form_count": 3,
+      "forms": [
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              31,
+              63
+            ],
+            "pair": [
+              3,
+              5
+            ],
+            "x_before_y": [
+              31,
+              63
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "b<g",
+            "c<e",
+            "c<f",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 63,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                31,
+                63
+              ],
+              "pair": [
+                "d",
+                "f"
+              ],
+              "x_before_y": [
+                31,
+                63
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "b<g",
+              "c<e",
+              "c<f",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "d",
+              "e",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<g",
+              "c<e",
+              "c<f",
+              "c<g",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<g",
+            "c<e",
+            "c<f",
+            "c<g",
+            "f<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              7,
+              15
+            ],
+            "pair": [
+              1,
+              3
+            ],
+            "x_before_y": [
+              8,
+              15
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "b<g",
+            "c<e",
+            "d<f",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 45,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                7,
+                15
+              ],
+              "pair": [
+                "b",
+                "d"
+              ],
+              "x_before_y": [
+                8,
+                15
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "b<g",
+              "c<e",
+              "d<f",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "e",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<g",
+              "c<e",
+              "d<f",
+              "d<g",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<g",
+            "c<e",
+            "d<f",
+            "d<g",
+            "f<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              7,
+              17
+            ],
+            "pair": [
+              2,
+              4
+            ],
+            "x_before_y": [
+              10,
+              17
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<e",
+            "a<g",
+            "b<d",
+            "d<e",
+            "d<f",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 51,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                7,
+                17
+              ],
+              "pair": [
+                "c",
+                "e"
+              ],
+              "x_before_y": [
+                10,
+                17
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<e",
+              "a<g",
+              "b<d",
+              "d<e",
+              "d<f",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "c",
+              "e",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<e",
+              "a<g",
+              "b<d",
+              "b<e",
+              "b<f",
+              "b<g",
+              "d<e",
+              "d<f",
+              "d<g",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<e",
+            "a<g",
+            "b<d",
+            "b<e",
+            "b<f",
+            "b<g",
+            "d<e",
+            "d<f",
+            "d<g",
+            "f<g"
+          ],
+          "width": 3
+        }
+      ],
+      "id": "U1",
+      "ledger_min_lower_orientation_probability": [
+        7,
+        17
+      ],
+      "skip_vector": [
+        1,
+        1,
+        0
+      ],
+      "source_min_lower_orientation_probability": [
+        7,
+        17
+      ],
+      "state": "unprocessed"
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "cover_matrix": [
+        [
+          0,
+          2,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "form_count": 6,
+      "forms": [
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              26,
+              57
+            ],
+            "pair": [
+              3,
+              4
+            ],
+            "x_before_y": [
+              31,
+              57
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "c<e",
+            "c<f",
+            "e<g"
+          ],
+          "height": 4,
+          "linear_extensions": 57,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                26,
+                57
+              ],
+              "pair": [
+                "d",
+                "e"
+              ],
+              "x_before_y": [
+                31,
+                57
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "c<e",
+              "c<f",
+              "e<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "d",
+              "f",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<g",
+              "c<e",
+              "c<f",
+              "c<g",
+              "e<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<g",
+            "c<e",
+            "c<f",
+            "c<g",
+            "e<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              11,
+              23
+            ],
+            "pair": [
+              1,
+              2
+            ],
+            "x_before_y": [
+              11,
+              23
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "c<e",
+            "c<f",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 69,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                11,
+                23
+              ],
+              "pair": [
+                "b",
+                "c"
+              ],
+              "x_before_y": [
+                11,
+                23
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "c<e",
+              "c<f",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "d",
+              "e",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "c<e",
+              "c<f",
+              "c<g",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "c<e",
+            "c<f",
+            "c<g",
+            "f<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              9,
+              20
+            ],
+            "pair": [
+              2,
+              3
+            ],
+            "x_before_y": [
+              11,
+              20
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "c<e",
+            "d<f",
+            "e<g"
+          ],
+          "height": 4,
+          "linear_extensions": 40,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                9,
+                20
+              ],
+              "pair": [
+                "c",
+                "d"
+              ],
+              "x_before_y": [
+                11,
+                20
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "c<e",
+              "d<f",
+              "e<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "f",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<g",
+              "c<e",
+              "c<g",
+              "d<f",
+              "e<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<g",
+            "c<e",
+            "c<g",
+            "d<f",
+            "e<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              12,
+              25
+            ],
+            "pair": [
+              1,
+              3
+            ],
+            "x_before_y": [
+              12,
+              25
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "c<e",
+            "d<f",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 50,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                12,
+                25
+              ],
+              "pair": [
+                "b",
+                "d"
+              ],
+              "x_before_y": [
+                12,
+                25
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "c<e",
+              "d<f",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "e",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "c<e",
+              "d<f",
+              "d<g",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "c<e",
+            "d<f",
+            "d<g",
+            "f<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              11,
+              24
+            ],
+            "pair": [
+              2,
+              4
+            ],
+            "x_before_y": [
+              11,
+              24
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<e",
+            "b<d",
+            "d<e",
+            "d<f",
+            "e<g"
+          ],
+          "height": 4,
+          "linear_extensions": 48,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                11,
+                24
+              ],
+              "pair": [
+                "c",
+                "e"
+              ],
+              "x_before_y": [
+                11,
+                24
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<e",
+              "b<d",
+              "d<e",
+              "d<f",
+              "e<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "c",
+              "f",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<e",
+              "a<g",
+              "b<d",
+              "b<e",
+              "b<f",
+              "b<g",
+              "d<e",
+              "d<f",
+              "d<g",
+              "e<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<e",
+            "a<g",
+            "b<d",
+            "b<e",
+            "b<f",
+            "b<g",
+            "d<e",
+            "d<f",
+            "d<g",
+            "e<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              22,
+              53
+            ],
+            "pair": [
+              2,
+              4
+            ],
+            "x_before_y": [
+              31,
+              53
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<e",
+            "b<d",
+            "d<e",
+            "d<f",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 53,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                22,
+                53
+              ],
+              "pair": [
+                "c",
+                "e"
+              ],
+              "x_before_y": [
+                31,
+                53
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<e",
+              "b<d",
+              "d<e",
+              "d<f",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "c",
+              "e",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<e",
+              "b<d",
+              "b<e",
+              "b<f",
+              "b<g",
+              "d<e",
+              "d<f",
+              "d<g",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<e",
+            "b<d",
+            "b<e",
+            "b<f",
+            "b<g",
+            "d<e",
+            "d<f",
+            "d<g",
+            "f<g"
+          ],
+          "width": 3
+        }
+      ],
+      "id": "U2",
+      "ledger_min_lower_orientation_probability": [
+        22,
+        53
+      ],
+      "skip_vector": [
+        1,
+        0,
+        0
+      ],
+      "source_min_lower_orientation_probability": [
+        22,
+        53
+      ],
+      "state": "unprocessed"
+    },
+    {
+      "adjacent_vector": [
+        2,
+        2,
+        1
+      ],
+      "cover_matrix": [
+        [
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "form_count": 3,
+      "forms": [
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              8,
+              17
+            ],
+            "pair": [
+              3,
+              4
+            ],
+            "x_before_y": [
+              9,
+              17
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "b<f",
+            "c<e",
+            "c<f",
+            "e<g"
+          ],
+          "height": 4,
+          "linear_extensions": 51,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                8,
+                17
+              ],
+              "pair": [
+                "d",
+                "e"
+              ],
+              "x_before_y": [
+                9,
+                17
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "b<f",
+              "c<e",
+              "c<f",
+              "e<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "d",
+              "f",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<f",
+              "b<g",
+              "c<e",
+              "c<f",
+              "c<g",
+              "e<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<f",
+            "b<g",
+            "c<e",
+            "c<f",
+            "c<g",
+            "e<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              5,
+              12
+            ],
+            "pair": [
+              2,
+              3
+            ],
+            "x_before_y": [
+              7,
+              12
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "b<f",
+            "c<e",
+            "d<f",
+            "e<g"
+          ],
+          "height": 4,
+          "linear_extensions": 36,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                5,
+                12
+              ],
+              "pair": [
+                "c",
+                "d"
+              ],
+              "x_before_y": [
+                7,
+                12
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "b<f",
+              "c<e",
+              "d<f",
+              "e<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "f",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<f",
+              "b<g",
+              "c<e",
+              "c<g",
+              "d<f",
+              "e<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<f",
+            "b<g",
+            "c<e",
+            "c<g",
+            "d<f",
+            "e<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              7,
+              15
+            ],
+            "pair": [
+              2,
+              4
+            ],
+            "x_before_y": [
+              7,
+              15
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<e",
+            "a<f",
+            "b<d",
+            "d<e",
+            "d<f",
+            "e<g"
+          ],
+          "height": 4,
+          "linear_extensions": 45,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                7,
+                15
+              ],
+              "pair": [
+                "c",
+                "e"
+              ],
+              "x_before_y": [
+                7,
+                15
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<e",
+              "a<f",
+              "b<d",
+              "d<e",
+              "d<f",
+              "e<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "c",
+              "f",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<d",
+              "b<e",
+              "b<f",
+              "b<g",
+              "d<e",
+              "d<f",
+              "d<g",
+              "e<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<d",
+            "b<e",
+            "b<f",
+            "b<g",
+            "d<e",
+            "d<f",
+            "d<g",
+            "e<g"
+          ],
+          "width": 3
+        }
+      ],
+      "id": "U3",
+      "ledger_min_lower_orientation_probability": [
+        5,
+        12
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "source_min_lower_orientation_probability": [
+        5,
+        12
+      ],
+      "state": "unprocessed"
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        2
+      ],
+      "cover_matrix": [
+        [
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "form_count": 1,
+      "forms": [
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              8,
+              19
+            ],
+            "pair": [
+              2,
+              3
+            ],
+            "x_before_y": [
+              11,
+              19
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "b<f",
+            "c<e",
+            "c<f",
+            "d<e",
+            "e<g",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 19,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                8,
+                19
+              ],
+              "pair": [
+                "c",
+                "d"
+              ],
+              "x_before_y": [
+                11,
+                19
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "b<f",
+              "c<e",
+              "c<f",
+              "d<e",
+              "e<g",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<f",
+              "b<g",
+              "c<e",
+              "c<f",
+              "c<g",
+              "d<e",
+              "d<g",
+              "e<g",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<f",
+            "b<g",
+            "c<e",
+            "c<f",
+            "c<g",
+            "d<e",
+            "d<g",
+            "e<g",
+            "f<g"
+          ],
+          "width": 3
+        }
+      ],
+      "id": "U4",
+      "ledger_min_lower_orientation_probability": [
+        8,
+        19
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "source_min_lower_orientation_probability": [
+        8,
+        19
+      ],
+      "state": "unprocessed"
+    },
+    {
+      "adjacent_vector": [
+        2,
+        3,
+        1
+      ],
+      "cover_matrix": [
+        [
+          0,
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "form_count": 2,
+      "forms": [
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              4,
+              9
+            ],
+            "pair": [
+              2,
+              3
+            ],
+            "x_before_y": [
+              5,
+              9
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "b<f",
+            "c<e",
+            "c<f",
+            "d<e",
+            "e<g"
+          ],
+          "height": 4,
+          "linear_extensions": 27,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                4,
+                9
+              ],
+              "pair": [
+                "c",
+                "d"
+              ],
+              "x_before_y": [
+                5,
+                9
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "b<f",
+              "c<e",
+              "c<f",
+              "d<e",
+              "e<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "f",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<f",
+              "b<g",
+              "c<e",
+              "c<f",
+              "c<g",
+              "d<e",
+              "d<g",
+              "e<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<f",
+            "b<g",
+            "c<e",
+            "c<f",
+            "c<g",
+            "d<e",
+            "d<g",
+            "e<g"
+          ],
+          "width": 3
+        },
+        {
+          "best_pair": {
+            "balanced": true,
+            "lower_orientation_probability": [
+              14,
+              33
+            ],
+            "pair": [
+              4,
+              6
+            ],
+            "x_before_y": [
+              19,
+              33
+            ]
+          },
+          "cover_relations": [
+            "a<c",
+            "a<d",
+            "b<e",
+            "b<f",
+            "c<e",
+            "c<f",
+            "d<e",
+            "f<g"
+          ],
+          "height": 4,
+          "linear_extensions": 33,
+          "rank_layers": [
+            [
+              "a",
+              "b"
+            ],
+            [
+              "c",
+              "d"
+            ],
+            [
+              "e",
+              "f"
+            ],
+            [
+              "g"
+            ]
+          ],
+          "rank_normal_form": {
+            "best_pair": {
+              "balanced": true,
+              "lower_orientation_probability": [
+                14,
+                33
+              ],
+              "pair": [
+                "e",
+                "g"
+              ],
+              "x_before_y": [
+                19,
+                33
+              ]
+            },
+            "cover_relations": [
+              "a<c",
+              "a<d",
+              "b<e",
+              "b<f",
+              "c<e",
+              "c<f",
+              "d<e",
+              "f<g"
+            ],
+            "label_by_item": {
+              "0": "a",
+              "1": "b",
+              "2": "c",
+              "3": "d",
+              "4": "e",
+              "5": "f",
+              "6": "g"
+            },
+            "maximal_elements": [
+              "e",
+              "g"
+            ],
+            "minimal_elements": [
+              "a",
+              "b"
+            ],
+            "rank_layers": [
+              [
+                "a",
+                "b"
+              ],
+              [
+                "c",
+                "d"
+              ],
+              [
+                "e",
+                "f"
+              ],
+              [
+                "g"
+              ]
+            ],
+            "relations": [
+              "a<c",
+              "a<d",
+              "a<e",
+              "a<f",
+              "a<g",
+              "b<e",
+              "b<f",
+              "b<g",
+              "c<e",
+              "c<f",
+              "c<g",
+              "d<e",
+              "f<g"
+            ]
+          },
+          "relations": [
+            "a<c",
+            "a<d",
+            "a<e",
+            "a<f",
+            "a<g",
+            "b<e",
+            "b<f",
+            "b<g",
+            "c<e",
+            "c<f",
+            "c<g",
+            "d<e",
+            "f<g"
+          ],
+          "width": 3
+        }
+      ],
+      "id": "U5",
+      "ledger_min_lower_orientation_probability": [
+        14,
+        33
+      ],
+      "skip_vector": [
+        2,
+        0,
+        0
+      ],
+      "source_min_lower_orientation_probability": [
+        14,
+        33
+      ],
+      "state": "unprocessed"
+    }
+  ],
+  "height": 4,
+  "ids": [
+    "U1",
+    "U2",
+    "U3",
+    "U4",
+    "U5"
+  ],
+  "rank_shape": [
+    2,
+    2,
+    2,
+    1
+  ],
+  "source": "research-bank\\R013\\attempt-20260520\\width3-rank2221-vector-frontier.json",
+  "total_form_count": 15,
+  "width": 3
+}

@@ -1,0 +1,28 @@
+{
+  "case": "u2-form-2",
+  "check_pairs": [
+    [
+      "b",
+      "c"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "c<e",
+    "c<f",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "U2",
+  "source_form_index": 2
+}

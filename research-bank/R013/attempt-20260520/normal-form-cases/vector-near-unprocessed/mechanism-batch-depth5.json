@@ -1,0 +1,5446 @@
+{
+  "by_mechanism": {
+    "balanced-core-plus-forced-first": 2,
+    "balanced-core-with-forced-blocks": 1,
+    "forced-block": 12
+  },
+  "case_count": 15,
+  "case_dirs": [
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed"
+  ],
+  "cases": [
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-1.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 1,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 32,
+          "root_total": 63,
+          "split_counts": {
+            "24:24": 1,
+            "7:8": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 1
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 32,
+          "root_total": 63,
+          "split_counts": {
+            "7:8": 2,
+            "8:0": 1,
+            "9:16": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 9,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 32,
+          "root_total": 63,
+          "split_counts": {
+            "0:8": 1,
+            "3:0": 3,
+            "4:8": 3,
+            "5:0": 2
+          },
+          "state_counts": {
+            "first_before_second": 5,
+            "second_before_first": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 4,
+          "leaf_count": 18,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 32,
+          "root_total": 63,
+          "split_counts": {
+            "0:2": 1,
+            "0:6": 4,
+            "1:2": 3,
+            "2:0": 2,
+            "3:0": 8
+          },
+          "state_counts": {
+            "first_before_second": 10,
+            "second_before_first": 5,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 5,
+          "leaf_count": 37,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 31,
+          "root_second_before_first": 32,
+          "root_total": 63,
+          "split_counts": {
+            "0:2": 16,
+            "1:0": 11,
+            "2:0": 10
+          },
+          "state_counts": {
+            "first_before_second": 21,
+            "second_before_first": 16
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 5,
+        "forced_first_total": 31,
+        "forced_second_total": 32,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "first_before_second",
+        "lower_probability": [
+          31,
+          63
+        ],
+        "lower_total": 31,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "f",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "f",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "b",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "f",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "f",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "f",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "f",
+              "b",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "f",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "b",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "b",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "b",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "f",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "f",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "d",
+          "f"
+        ],
+        "root_split": {
+          "first_before_second": 31,
+          "second_before_first": 32,
+          "total": 63
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-1.json",
+        "split_counts": {
+          "0:2": 16,
+          "1:0": 11,
+          "2:0": 10
+        },
+        "upper_total": 32
+      },
+      "found": true,
+      "found_depth": 5,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        31,
+        63
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "d",
+        "f"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-2.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 24,
+          "root_second_before_first": 21,
+          "root_total": 45,
+          "split_counts": {
+            "10:0": 1,
+            "14:21": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 1
+          },
+          "unbalanced_unseen_leaf_count": 1
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 24,
+          "root_second_before_first": 21,
+          "root_total": 45,
+          "split_counts": {
+            "0:16": 1,
+            "10:0": 2,
+            "4:5": 1
+          },
+          "state_counts": {
+            "first_before_second": 2,
+            "second_before_first": 1,
+            "unseen": 1
+          },
+          "unbalanced_unseen_leaf_count": 1
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 9,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 24,
+          "root_second_before_first": 21,
+          "root_total": 45,
+          "split_counts": {
+            "0:5": 3,
+            "0:6": 1,
+            "4:0": 3,
+            "6:0": 2
+          },
+          "state_counts": {
+            "first_before_second": 5,
+            "second_before_first": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 3,
+        "forced_first_total": 24,
+        "forced_second_total": 21,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "second_before_first",
+        "lower_probability": [
+          21,
+          45
+        ],
+        "lower_total": 21,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 5,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 5,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 5,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "c",
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "b",
+          "d"
+        ],
+        "root_split": {
+          "first_before_second": 24,
+          "second_before_first": 21,
+          "total": 45
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-2.json",
+        "split_counts": {
+          "0:5": 3,
+          "0:6": 1,
+          "4:0": 3,
+          "6:0": 2
+        },
+        "upper_total": 24
+      },
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        21,
+        45
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "b",
+        "d"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-3.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 30,
+          "root_second_before_first": 21,
+          "root_total": 51,
+          "split_counts": {
+            "12:6": 1,
+            "18:15": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 1,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 30,
+          "root_second_before_first": 21,
+          "root_total": 51,
+          "split_counts": {
+            "3:0": 1,
+            "9:6": 2,
+            "9:9": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 4,
+          "depth": 3,
+          "leaf_count": 7,
+          "mechanism_type": "balanced-core-plus-forced-first",
+          "root_first_before_second": 30,
+          "root_second_before_first": 21,
+          "root_total": 51,
+          "split_counts": {
+            "3:0": 3,
+            "3:3": 1,
+            "6:6": 3
+          },
+          "state_counts": {
+            "first_before_second": 3,
+            "unseen": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        21,
+        51
+      ],
+      "max_depth": 5,
+      "mechanism_type": "balanced-core-plus-forced-first",
+      "pair": [
+        "c",
+        "e"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-1.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 26,
+          "root_total": 57,
+          "split_counts": {
+            "24:18": 1,
+            "7:8": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 1,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 26,
+          "root_total": 57,
+          "split_counts": {
+            "10:10": 1,
+            "7:0": 1,
+            "7:8": 2
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 1,
+          "depth": 3,
+          "leaf_count": 9,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 26,
+          "root_total": 57,
+          "split_counts": {
+            "2:2": 1,
+            "3:0": 3,
+            "4:0": 2,
+            "4:8": 3
+          },
+          "state_counts": {
+            "first_before_second": 5,
+            "unseen": 4
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 4,
+          "leaf_count": 18,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 26,
+          "root_total": 57,
+          "split_counts": {
+            "0:6": 3,
+            "1:0": 3,
+            "1:2": 4,
+            "3:0": 8
+          },
+          "state_counts": {
+            "first_before_second": 11,
+            "second_before_first": 3,
+            "unseen": 4
+          },
+          "unbalanced_unseen_leaf_count": 4
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 5,
+          "leaf_count": 36,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 31,
+          "root_second_before_first": 26,
+          "root_total": 57,
+          "split_counts": {
+            "0:2": 13,
+            "1:0": 15,
+            "2:0": 8
+          },
+          "state_counts": {
+            "first_before_second": 23,
+            "second_before_first": 13
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 5,
+        "forced_first_total": 31,
+        "forced_second_total": 26,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "second_before_first",
+        "lower_probability": [
+          26,
+          57
+        ],
+        "lower_total": 26,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "b",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "f",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "f",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "f",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "f",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "b",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "b",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "b",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "f",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "d",
+          "e"
+        ],
+        "root_split": {
+          "first_before_second": 31,
+          "second_before_first": 26,
+          "total": 57
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-1.json",
+        "split_counts": {
+          "0:2": 13,
+          "1:0": 15,
+          "2:0": 8
+        },
+        "upper_total": 31
+      },
+      "found": true,
+      "found_depth": 5,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        26,
+        57
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "d",
+        "e"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-2.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 33,
+          "root_second_before_first": 36,
+          "root_total": 69,
+          "split_counts": {
+            "15:0": 1,
+            "18:36": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 1
+          },
+          "unbalanced_unseen_leaf_count": 1
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 33,
+          "root_second_before_first": 36,
+          "root_total": 69,
+          "split_counts": {
+            "0:30": 1,
+            "15:0": 2,
+            "3:6": 1
+          },
+          "state_counts": {
+            "first_before_second": 2,
+            "second_before_first": 1,
+            "unseen": 1
+          },
+          "unbalanced_unseen_leaf_count": 1
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 9,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 33,
+          "root_second_before_first": 36,
+          "root_total": 69,
+          "split_counts": {
+            "0:12": 2,
+            "0:6": 2,
+            "12:0": 2,
+            "3:0": 3
+          },
+          "state_counts": {
+            "first_before_second": 5,
+            "second_before_first": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 3,
+        "forced_first_total": 33,
+        "forced_second_total": 36,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "first_before_second",
+        "lower_probability": [
+          33,
+          69
+        ],
+        "lower_total": 33,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 12,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 12,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 12,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "d",
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 12,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "b",
+          "c"
+        ],
+        "root_split": {
+          "first_before_second": 33,
+          "second_before_first": 36,
+          "total": 69
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-2.json",
+        "split_counts": {
+          "0:12": 2,
+          "0:6": 2,
+          "12:0": 2,
+          "3:0": 3
+        },
+        "upper_total": 36
+      },
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        33,
+        69
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "b",
+        "c"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-3.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 22,
+          "root_second_before_first": 18,
+          "root_total": 40,
+          "split_counts": {
+            "16:14": 1,
+            "6:4": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 22,
+          "root_second_before_first": 18,
+          "root_total": 40,
+          "split_counts": {
+            "0:10": 1,
+            "10:0": 1,
+            "6:4": 2
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "second_before_first": 1,
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 9,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 22,
+          "root_second_before_first": 18,
+          "root_total": 40,
+          "split_counts": {
+            "0:2": 1,
+            "0:4": 4,
+            "4:0": 1,
+            "6:0": 3
+          },
+          "state_counts": {
+            "first_before_second": 4,
+            "second_before_first": 5
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 3,
+        "forced_first_total": 22,
+        "forced_second_total": 18,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "second_before_first",
+        "lower_probability": [
+          18,
+          40
+        ],
+        "lower_total": 18,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "c",
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "c",
+          "d"
+        ],
+        "root_split": {
+          "first_before_second": 22,
+          "second_before_first": 18,
+          "total": 40
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-3.json",
+        "split_counts": {
+          "0:2": 1,
+          "0:4": 4,
+          "4:0": 1,
+          "6:0": 3
+        },
+        "upper_total": 22
+      },
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        18,
+        40
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "c",
+        "d"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-4.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 24,
+          "root_second_before_first": 26,
+          "root_total": 50,
+          "split_counts": {
+            "10:0": 1,
+            "14:26": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 1
+          },
+          "unbalanced_unseen_leaf_count": 1
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 24,
+          "root_second_before_first": 26,
+          "root_total": 50,
+          "split_counts": {
+            "0:20": 1,
+            "10:0": 2,
+            "4:6": 1
+          },
+          "state_counts": {
+            "first_before_second": 2,
+            "second_before_first": 1,
+            "unseen": 1
+          },
+          "unbalanced_unseen_leaf_count": 1
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 9,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 24,
+          "root_second_before_first": 26,
+          "root_total": 50,
+          "split_counts": {
+            "0:6": 3,
+            "0:8": 1,
+            "4:0": 3,
+            "6:0": 2
+          },
+          "state_counts": {
+            "first_before_second": 5,
+            "second_before_first": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 3,
+        "forced_first_total": 24,
+        "forced_second_total": 26,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "first_before_second",
+        "lower_probability": [
+          24,
+          50
+        ],
+        "lower_total": 24,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 8,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "c",
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "b",
+          "d"
+        ],
+        "root_split": {
+          "first_before_second": 24,
+          "second_before_first": 26,
+          "total": 50
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-4.json",
+        "split_counts": {
+          "0:6": 3,
+          "0:8": 1,
+          "4:0": 3,
+          "6:0": 2
+        },
+        "upper_total": 26
+      },
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        24,
+        50
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "b",
+        "d"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-5.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 22,
+          "root_second_before_first": 26,
+          "root_total": 48,
+          "split_counts": {
+            "10:8": 1,
+            "12:18": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 22,
+          "root_second_before_first": 26,
+          "root_total": 48,
+          "split_counts": {
+            "3:0": 1,
+            "5:10": 1,
+            "7:8": 2
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 7,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 22,
+          "root_second_before_first": 26,
+          "root_total": 48,
+          "split_counts": {
+            "1:2": 1,
+            "3:0": 3,
+            "4:8": 3
+          },
+          "state_counts": {
+            "first_before_second": 3,
+            "unseen": 4
+          },
+          "unbalanced_unseen_leaf_count": 4
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 4,
+          "leaf_count": 13,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 22,
+          "root_second_before_first": 26,
+          "root_total": 48,
+          "split_counts": {
+            "0:6": 3,
+            "1:2": 4,
+            "3:0": 6
+          },
+          "state_counts": {
+            "first_before_second": 6,
+            "second_before_first": 3,
+            "unseen": 4
+          },
+          "unbalanced_unseen_leaf_count": 4
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 5,
+          "leaf_count": 29,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 22,
+          "root_second_before_first": 26,
+          "root_total": 48,
+          "split_counts": {
+            "0:2": 13,
+            "1:0": 10,
+            "2:0": 6
+          },
+          "state_counts": {
+            "first_before_second": 16,
+            "second_before_first": 13
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 5,
+        "forced_first_total": 22,
+        "forced_second_total": 26,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "first_before_second",
+        "lower_probability": [
+          22,
+          48
+        ],
+        "lower_total": 22,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "e",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "f",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "e",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "f",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "e",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "f",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "d",
+              "f",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "f",
+              "a",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "c",
+          "e"
+        ],
+        "root_split": {
+          "first_before_second": 22,
+          "second_before_first": 26,
+          "total": 48
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-5.json",
+        "split_counts": {
+          "0:2": 13,
+          "1:0": 10,
+          "2:0": 6
+        },
+        "upper_total": 26
+      },
+      "found": true,
+      "found_depth": 5,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        22,
+        48
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "c",
+        "e"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-6.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 22,
+          "root_total": 53,
+          "split_counts": {
+            "12:6": 1,
+            "19:16": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 1,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 31,
+          "root_second_before_first": 22,
+          "root_total": 53,
+          "split_counts": {
+            "10:10": 1,
+            "3:0": 1,
+            "9:6": 2
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 4,
+          "depth": 3,
+          "leaf_count": 7,
+          "mechanism_type": "balanced-core-plus-forced-first",
+          "root_first_before_second": 31,
+          "root_second_before_first": 22,
+          "root_total": 53,
+          "split_counts": {
+            "3:0": 3,
+            "4:4": 1,
+            "6:6": 3
+          },
+          "state_counts": {
+            "first_before_second": 3,
+            "unseen": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        22,
+        53
+      ],
+      "max_depth": 5,
+      "mechanism_type": "balanced-core-plus-forced-first",
+      "pair": [
+        "c",
+        "e"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-1.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 27,
+          "root_second_before_first": 24,
+          "root_total": 51,
+          "split_counts": {
+            "20:16": 1,
+            "7:8": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 27,
+          "root_second_before_first": 24,
+          "root_total": 51,
+          "split_counts": {
+            "6:0": 1,
+            "7:8": 3
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 8,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 27,
+          "root_second_before_first": 24,
+          "root_total": 51,
+          "split_counts": {
+            "3:0": 5,
+            "4:8": 3
+          },
+          "state_counts": {
+            "first_before_second": 5,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 4,
+          "leaf_count": 14,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 27,
+          "root_second_before_first": 24,
+          "root_total": 51,
+          "split_counts": {
+            "0:6": 3,
+            "1:2": 3,
+            "3:0": 8
+          },
+          "state_counts": {
+            "first_before_second": 8,
+            "second_before_first": 3,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 5,
+          "leaf_count": 31,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 27,
+          "root_second_before_first": 24,
+          "root_total": 51,
+          "split_counts": {
+            "0:2": 12,
+            "1:0": 11,
+            "2:0": 8
+          },
+          "state_counts": {
+            "first_before_second": 19,
+            "second_before_first": 12
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 5,
+        "forced_first_total": 27,
+        "forced_second_total": 24,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "second_before_first",
+        "lower_probability": [
+          24,
+          51
+        ],
+        "lower_total": 24,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d",
+              "b",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "b",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "b",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "b",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "d",
+              "c",
+              "b",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "f",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "d",
+          "e"
+        ],
+        "root_split": {
+          "first_before_second": 27,
+          "second_before_first": 24,
+          "total": 51
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-1.json",
+        "split_counts": {
+          "0:2": 12,
+          "1:0": 11,
+          "2:0": 8
+        },
+        "upper_total": 27
+      },
+      "found": true,
+      "found_depth": 5,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        24,
+        51
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "d",
+        "e"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-2.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 21,
+          "root_second_before_first": 15,
+          "root_total": 36,
+          "split_counts": {
+            "15:11": 1,
+            "6:4": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 21,
+          "root_second_before_first": 15,
+          "root_total": 36,
+          "split_counts": {
+            "0:7": 1,
+            "6:4": 2,
+            "9:0": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "second_before_first": 1,
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 8,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 21,
+          "root_second_before_first": 15,
+          "root_total": 36,
+          "split_counts": {
+            "0:3": 1,
+            "0:4": 3,
+            "3:0": 1,
+            "6:0": 3
+          },
+          "state_counts": {
+            "first_before_second": 4,
+            "second_before_first": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 3,
+        "forced_first_total": 21,
+        "forced_second_total": 15,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "second_before_first",
+        "lower_probability": [
+          15,
+          36
+        ],
+        "lower_total": 15,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 6,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "c",
+          "d"
+        ],
+        "root_split": {
+          "first_before_second": 21,
+          "second_before_first": 15,
+          "total": 36
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-2.json",
+        "split_counts": {
+          "0:3": 1,
+          "0:4": 3,
+          "3:0": 1,
+          "6:0": 3
+        },
+        "upper_total": 21
+      },
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        15,
+        36
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "c",
+        "d"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-3.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 21,
+          "root_second_before_first": 24,
+          "root_total": 45,
+          "split_counts": {
+            "10:8": 1,
+            "11:16": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 21,
+          "root_second_before_first": 24,
+          "root_total": 45,
+          "split_counts": {
+            "3:0": 1,
+            "4:8": 1,
+            "7:8": 2
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 6,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 21,
+          "root_second_before_first": 24,
+          "root_total": 45,
+          "split_counts": {
+            "3:0": 3,
+            "4:8": 3
+          },
+          "state_counts": {
+            "first_before_second": 3,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 4,
+          "leaf_count": 12,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 21,
+          "root_second_before_first": 24,
+          "root_total": 45,
+          "split_counts": {
+            "0:6": 3,
+            "1:2": 3,
+            "3:0": 6
+          },
+          "state_counts": {
+            "first_before_second": 6,
+            "second_before_first": 3,
+            "unseen": 3
+          },
+          "unbalanced_unseen_leaf_count": 3
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 5,
+          "leaf_count": 27,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 21,
+          "root_second_before_first": 24,
+          "root_total": 45,
+          "split_counts": {
+            "0:2": 12,
+            "1:0": 9,
+            "2:0": 6
+          },
+          "state_counts": {
+            "first_before_second": 15,
+            "second_before_first": 12
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 5,
+        "forced_first_total": 21,
+        "forced_second_total": 24,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "first_before_second",
+        "lower_probability": [
+          21,
+          45
+        ],
+        "lower_total": 21,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "e",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "f",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c",
+              "d",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "e",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "f",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "c",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "c",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "e",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "e",
+              "f"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "e",
+              "g"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "f"
+            ]
+          },
+          {
+            "count": 1,
+            "counts_toward_lower_orientation": true,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "f",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "e",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "d",
+              "a",
+              "f",
+              "e"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "c",
+          "e"
+        ],
+        "root_split": {
+          "first_before_second": 21,
+          "second_before_first": 24,
+          "total": 45
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-3.json",
+        "split_counts": {
+          "0:2": 12,
+          "1:0": 9,
+          "2:0": 6
+        },
+        "upper_total": 24
+      },
+      "found": true,
+      "found_depth": 5,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        21,
+        45
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "c",
+        "e"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u4-form-1.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 11,
+          "root_second_before_first": 8,
+          "root_total": 19,
+          "split_counts": {
+            "3:2": 1,
+            "8:6": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 11,
+          "root_second_before_first": 8,
+          "root_total": 19,
+          "split_counts": {
+            "0:4": 1,
+            "3:2": 2,
+            "5:0": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "second_before_first": 1,
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 8,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 11,
+          "root_second_before_first": 8,
+          "root_total": 19,
+          "split_counts": {
+            "0:2": 4,
+            "2:0": 1,
+            "3:0": 3
+          },
+          "state_counts": {
+            "first_before_second": 4,
+            "second_before_first": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 3,
+        "forced_first_total": 11,
+        "forced_second_total": 8,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "second_before_first",
+        "lower_probability": [
+          8,
+          19
+        ],
+        "lower_total": 8,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 2,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "c",
+          "d"
+        ],
+        "root_split": {
+          "first_before_second": 11,
+          "second_before_first": 8,
+          "total": 19
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u4-form-1.json",
+        "split_counts": {
+          "0:2": 4,
+          "2:0": 1,
+          "3:0": 3
+        },
+        "upper_total": 11
+      },
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        8,
+        19
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "c",
+        "d"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u5-form-1.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 15,
+          "root_second_before_first": 12,
+          "root_total": 27,
+          "split_counts": {
+            "11:9": 1,
+            "4:3": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 15,
+          "root_second_before_first": 12,
+          "root_total": 27,
+          "split_counts": {
+            "0:6": 1,
+            "4:3": 2,
+            "7:0": 1
+          },
+          "state_counts": {
+            "first_before_second": 1,
+            "second_before_first": 1,
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 3,
+          "leaf_count": 8,
+          "mechanism_type": "forced-block",
+          "root_first_before_second": 15,
+          "root_second_before_first": 12,
+          "root_total": 27,
+          "split_counts": {
+            "0:3": 4,
+            "3:0": 1,
+            "4:0": 3
+          },
+          "state_counts": {
+            "first_before_second": 4,
+            "second_before_first": 4
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "forced_block_obligations": {
+        "applies": true,
+        "depth": 3,
+        "forced_first_total": 15,
+        "forced_second_total": 12,
+        "lemma_schema": [
+          "Partition linear extensions by the listed initial paths.",
+          "For each path, prove the terminal count by a direct residual-poset count.",
+          "Sum the terminal counts by forced orientation.",
+          "Use the lower orientation total as the certified probability lower bound."
+        ],
+        "lower_orientation": "second_before_first",
+        "lower_probability": [
+          12,
+          27
+        ],
+        "lower_total": 12,
+        "mechanism_type": "forced-block",
+        "obligations": [
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "b",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "b",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "a",
+              "c",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "b"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "a",
+              "d",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "b",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 4,
+            "counts_toward_lower_orientation": false,
+            "orientation": "first_before_second",
+            "path": [
+              "b",
+              "a",
+              "c"
+            ],
+            "remaining_after_choice": [
+              "d",
+              "e",
+              "f",
+              "g"
+            ]
+          },
+          {
+            "count": 3,
+            "counts_toward_lower_orientation": true,
+            "orientation": "second_before_first",
+            "path": [
+              "b",
+              "a",
+              "d"
+            ],
+            "remaining_after_choice": [
+              "c",
+              "e",
+              "f",
+              "g"
+            ]
+          }
+        ],
+        "pair": [
+          "c",
+          "d"
+        ],
+        "root_split": {
+          "first_before_second": 15,
+          "second_before_first": 12,
+          "total": 27
+        },
+        "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u5-form-1.json",
+        "split_counts": {
+          "0:3": 4,
+          "3:0": 1,
+          "4:0": 3
+        },
+        "upper_total": 15
+      },
+      "found": true,
+      "found_depth": 3,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        12,
+        27
+      ],
+      "max_depth": 5,
+      "mechanism_type": "forced-block",
+      "pair": [
+        "c",
+        "d"
+      ]
+    },
+    {
+      "case": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u5-form-2.json",
+      "depth_records": [
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 1,
+          "leaf_count": 2,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 19,
+          "root_second_before_first": 14,
+          "root_total": 33,
+          "split_counts": {
+            "14:10": 1,
+            "5:4": 1
+          },
+          "state_counts": {
+            "unseen": 2
+          },
+          "unbalanced_unseen_leaf_count": 2
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 2,
+          "leaf_count": 4,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 19,
+          "root_second_before_first": 14,
+          "root_total": 33,
+          "split_counts": {
+            "4:2": 1,
+            "5:4": 3
+          },
+          "state_counts": {
+            "unseen": 4
+          },
+          "unbalanced_unseen_leaf_count": 4
+        },
+        {
+          "balanced_unseen_leaf_count": 3,
+          "depth": 3,
+          "leaf_count": 8,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 19,
+          "root_second_before_first": 14,
+          "root_total": 33,
+          "split_counts": {
+            "2:1": 5,
+            "3:3": 3
+          },
+          "state_counts": {
+            "unseen": 8
+          },
+          "unbalanced_unseen_leaf_count": 5
+        },
+        {
+          "balanced_unseen_leaf_count": 0,
+          "depth": 4,
+          "leaf_count": 11,
+          "mechanism_type": "mixed",
+          "root_first_before_second": 19,
+          "root_second_before_first": 14,
+          "root_total": 33,
+          "split_counts": {
+            "1:2": 3,
+            "2:1": 8
+          },
+          "state_counts": {
+            "unseen": 11
+          },
+          "unbalanced_unseen_leaf_count": 11
+        },
+        {
+          "balanced_unseen_leaf_count": 11,
+          "depth": 5,
+          "leaf_count": 22,
+          "mechanism_type": "balanced-core-with-forced-blocks",
+          "root_first_before_second": 19,
+          "root_second_before_first": 14,
+          "root_total": 33,
+          "split_counts": {
+            "0:1": 3,
+            "1:0": 8,
+            "1:1": 11
+          },
+          "state_counts": {
+            "first_before_second": 8,
+            "second_before_first": 3,
+            "unseen": 11
+          },
+          "unbalanced_unseen_leaf_count": 0
+        }
+      ],
+      "found": true,
+      "found_depth": 5,
+      "labels": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "lower_probability": [
+        14,
+        33
+      ],
+      "max_depth": 5,
+      "mechanism_type": "balanced-core-with-forced-blocks",
+      "pair": [
+        "e",
+        "g"
+      ]
+    }
+  ],
+  "found_count": 15,
+  "max_depth": 5,
+  "unresolved": []
+}

@@ -1,0 +1,240 @@
+{
+  "case_count": 15,
+  "cases": [
+    {
+      "case": "u1-form-1",
+      "check_pair": [
+        "d",
+        "f"
+      ],
+      "class": "U1",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        31,
+        63
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-1.json"
+    },
+    {
+      "case": "u1-form-2",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U1",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        7,
+        15
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-2.json"
+    },
+    {
+      "case": "u1-form-3",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U1",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        7,
+        17
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-3.json"
+    },
+    {
+      "case": "u2-form-1",
+      "check_pair": [
+        "d",
+        "e"
+      ],
+      "class": "U2",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        26,
+        57
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-1.json"
+    },
+    {
+      "case": "u2-form-2",
+      "check_pair": [
+        "b",
+        "c"
+      ],
+      "class": "U2",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        11,
+        23
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-2.json"
+    },
+    {
+      "case": "u2-form-3",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U2",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        9,
+        20
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-3.json"
+    },
+    {
+      "case": "u2-form-4",
+      "check_pair": [
+        "b",
+        "d"
+      ],
+      "class": "U2",
+      "form_index": 4,
+      "lower_orientation_probability": [
+        12,
+        25
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-4.json"
+    },
+    {
+      "case": "u2-form-5",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U2",
+      "form_index": 5,
+      "lower_orientation_probability": [
+        11,
+        24
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-5.json"
+    },
+    {
+      "case": "u2-form-6",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U2",
+      "form_index": 6,
+      "lower_orientation_probability": [
+        22,
+        53
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-6.json"
+    },
+    {
+      "case": "u3-form-1",
+      "check_pair": [
+        "d",
+        "e"
+      ],
+      "class": "U3",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        8,
+        17
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-1.json"
+    },
+    {
+      "case": "u3-form-2",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U3",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        5,
+        12
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-2.json"
+    },
+    {
+      "case": "u3-form-3",
+      "check_pair": [
+        "c",
+        "e"
+      ],
+      "class": "U3",
+      "form_index": 3,
+      "lower_orientation_probability": [
+        7,
+        15
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-3.json"
+    },
+    {
+      "case": "u4-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U4",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        8,
+        19
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u4-form-1.json"
+    },
+    {
+      "case": "u5-form-1",
+      "check_pair": [
+        "c",
+        "d"
+      ],
+      "class": "U5",
+      "form_index": 1,
+      "lower_orientation_probability": [
+        4,
+        9
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u5-form-1.json"
+    },
+    {
+      "case": "u5-form-2",
+      "check_pair": [
+        "e",
+        "g"
+      ],
+      "class": "U5",
+      "form_index": 2,
+      "lower_orientation_probability": [
+        14,
+        33
+      ],
+      "path": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u5-form-2.json"
+    }
+  ],
+  "ids": [
+    "U1",
+    "U2",
+    "U3",
+    "U4",
+    "U5"
+  ],
+  "source": "research-bank\\R013\\attempt-20260520\\width3-rank2221-near-unprocessed-form-ledger.json",
+  "written": [
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u1-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-4.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-5.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u2-form-6.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-2.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u3-form-3.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u4-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u5-form-1.json",
+    "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-near-unprocessed\\u5-form-2.json"
+  ]
+}

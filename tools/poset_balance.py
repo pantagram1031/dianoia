@@ -119,7 +119,10 @@ def extension_recurrence_trace(
     labels: Sequence[str],
     first: int,
     second: int,
+    max_depth: int = 1,
 ) -> dict[str, object]:
+    if max_depth < 1:
+        raise ValueError("recurrence trace depth must be at least 1")
     prerequisites = poset.covers_mask()
     full = (1 << poset.n) - 1
 
@@ -150,7 +153,7 @@ def extension_recurrence_trace(
         return first_total, second_total
 
     @cache
-    def build(placed: int, relation_state: int) -> dict[str, object]:
+    def build(placed: int, relation_state: int, depth_remaining: int) -> dict[str, object]:
         first_total, second_total = solve(placed, relation_state)
         available = []
         for item in range(poset.n):
@@ -165,21 +168,26 @@ def extension_recurrence_trace(
             elif item == second and relation_state == 0:
                 next_state = 2
             child_first, child_second = solve(placed | bit, next_state)
-            available.append(
-                {
-                    "choose": labels[item],
-                    "remaining_after_choice": [
-                        labels[index]
-                        for index in range(poset.n)
-                        if not (placed | bit) & (1 << index)
-                    ],
-                    "pair_state_after_choice": ["unseen", "first_before_second", "second_before_first"][
-                        next_state
-                    ],
-                    "first_before_second": child_first,
-                    "second_before_first": child_second,
-                }
-            )
+            child_record = {
+                "choose": labels[item],
+                "remaining_after_choice": [
+                    labels[index]
+                    for index in range(poset.n)
+                    if not (placed | bit) & (1 << index)
+                ],
+                "pair_state_after_choice": ["unseen", "first_before_second", "second_before_first"][
+                    next_state
+                ],
+                "first_before_second": child_first,
+                "second_before_first": child_second,
+            }
+            if depth_remaining > 1:
+                child_record["subtrace"] = build(
+                    placed | bit,
+                    next_state,
+                    depth_remaining - 1,
+                )
+            available.append(child_record)
         return {
             "placed": [
                 labels[index] for index in range(poset.n) if placed & (1 << index)
@@ -192,7 +200,7 @@ def extension_recurrence_trace(
             "available": available,
         }
 
-    root = build(0, 0)
+    root = build(0, 0, max_depth)
     return root
 
 
@@ -745,10 +753,12 @@ def named_case_recurrence_command(args: argparse.Namespace) -> int:
         labels,
         index_by_label[first],
         index_by_label[second],
+        max_depth=args.depth,
     )
     payload = {
         "labels": labels,
         "pair": [first, second],
+        "depth": args.depth,
         "linear_extensions": trace["first_before_second"]
         + trace["second_before_first"],
         "cover_relations": named_edges(covers(poset), dict(enumerate(labels))),
@@ -1237,6 +1247,7 @@ def main(argv: Sequence[str] | None = None) -> int:
 
     named_case_recurrence_parser = subparsers.add_parser("named-case-recurrence")
     named_case_recurrence_parser.add_argument("case", type=Path)
+    named_case_recurrence_parser.add_argument("--depth", type=int, default=1)
     named_case_recurrence_parser.add_argument("--output", type=Path)
     named_case_recurrence_parser.set_defaults(func=named_case_recurrence_command)
 

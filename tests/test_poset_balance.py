@@ -126,6 +126,44 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual(1, payload["trace"]["second_before_first"])
             self.assertEqual(["a", "b"], [item["choose"] for item in payload["trace"]["available"]])
 
+    def test_named_case_recurrence_can_emit_nested_split(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            case = Path(temp_dir) / "case.json"
+            output = Path(temp_dir) / "trace.json"
+            case.write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b", "c", "d"],
+                        "cover_relations": ["a<c", "b<d"],
+                        "check_pairs": [["c", "d"]],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "named-case-recurrence",
+                        str(case),
+                        "--depth",
+                        "2",
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(2, payload["depth"])
+            root_choices = payload["trace"]["available"]
+            self.assertEqual(["a", "b"], [item["choose"] for item in root_choices])
+            self.assertIn("subtrace", root_choices[0])
+            self.assertEqual(["a"], root_choices[0]["subtrace"]["placed"])
+            self.assertEqual(
+                ["b", "c"],
+                [item["choose"] for item in root_choices[0]["subtrace"]["available"]],
+            )
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"

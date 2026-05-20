@@ -87,6 +87,7 @@ def check_benchmarks(result: CheckResult) -> None:
         bid = row["id"]
         source = ROOT / "benchmark-bank" / bid / "SOURCE.md"
         comparison = ROOT / "benchmark-bank" / bid / "COMPARISON.md"
+        run_manifest = ROOT / "benchmark-bank" / bid / "RUN.md"
         if not source.exists():
             result.add_fail(f"{bid}: missing {source.relative_to(ROOT)}")
             continue
@@ -101,6 +102,21 @@ def check_benchmarks(result: CheckResult) -> None:
                 result.add_fail(f"{bid}: SOURCE.md missing {required}")
         if "VALUE_ADDED" in row["verdict"] and "## Three Differences" not in comparison_text:
             result.add_fail(f"{bid}: VALUE_ADDED comparison missing Three Differences")
+        if int(bid[1:]) >= 6:
+            if not run_manifest.exists():
+                result.add_fail(f"{bid}: B6+ benchmark missing RUN.md")
+            else:
+                run_text = read_text(run_manifest)
+                for required in (
+                    "benchmark_id",
+                    "run_class",
+                    "## Freshness Protocol",
+                    "## Subagent Fire Audit",
+                    "## Reviewer Fire Audit",
+                    "## Token Accounting",
+                ):
+                    if required not in run_text:
+                        result.add_fail(f"{bid}: RUN.md missing {required}")
         if "UNVERIFIED" in row["tokens"]:
             result.add_warn(f"{bid}: token accounting is UNVERIFIED")
 
@@ -163,6 +179,10 @@ def check_docs(result: CheckResult) -> None:
             result.add_fail(f"ARCHITECTURE.md missing section: {needle}")
     if "Continuous Improvement Track" not in roadmap:
         result.add_fail("ROADMAP.md missing Continuous Improvement Track")
+    if not (ROOT / "benchmark-bank" / "RUNBOOK.md").exists():
+        result.add_fail("benchmark-bank/RUNBOOK.md missing")
+    if not (ROOT / "templates" / "benchmark_case" / "RUN.md").exists():
+        result.add_fail("templates/benchmark_case/RUN.md missing")
     if not result.fail:
         result.add_ok("docs/state files contain current continuous-improvement baseline")
 

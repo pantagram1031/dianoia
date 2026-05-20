@@ -85,6 +85,7 @@ Fresh problem statements always create a fresh problem slug, even if
 - `skills/`: reusable math/research procedures used by subagent prompts.
 - `connectors/`: local wrappers for external reference lookup.
 - `benchmark-bank/`: controlled comparison sources and comparisons.
+- `benchmark-bank/RUNBOOK.md`: required B6+ benchmark protocol.
 - `capability-test/`: audit and smoke-test evidence.
 
 ## Current Capabilities

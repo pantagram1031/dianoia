@@ -1,5 +1,19 @@
 # Devlog
 
+## 2026-05-20T22:55:00+09:00
+
+- Added `benchmark-bank/RUNBOOK.md` to require B6+ run manifests and stricter
+  reproducibility evidence.
+- Added `templates/benchmark_case/` with SOURCE/RUN/COMPARISON templates.
+- Updated `tools/verify_dianoia_state.py` so B6+ rows fail verification when
+  `RUN.md` is missing required sections.
+- Updated README/NEXT_SESSION with the B6+ protocol.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: benchmark, test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T22:42:00+09:00
 
 - Added `tools/verify_dianoia_state.py` to check benchmark rows, skill

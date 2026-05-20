@@ -248,6 +248,39 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertIn("cover_matrix=", payload["buckets"][0]["signature"])
             self.assertNotIn("layer_vertex_signatures=", payload["buckets"][0]["signature"])
 
+    def test_bucket_members_extracts_all_matching_profiles(self) -> None:
+        bucket = (
+            "layers=2,2,1|covers=4|mins=2|maxs=2|"
+            "cover_matrix=[[0,2,1],[0,0,1],[0,0,0]]"
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output = Path(temp_dir) / "members.json"
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "bucket-members",
+                        "--max-n",
+                        "5",
+                        "--width",
+                        "3",
+                        "--rank-shape",
+                        "2,2,1",
+                        "--signature",
+                        "matrix",
+                        "--bucket",
+                        bucket,
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual("matrix", payload["signature_mode"])
+            self.assertEqual(bucket, payload["bucket"])
+            self.assertEqual(1, payload["record_count"])
+            self.assertEqual([4, 11], payload["records"][0]["lower_orientation_probability"])
+
 
 if __name__ == "__main__":
     unittest.main()

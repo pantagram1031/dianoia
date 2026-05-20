@@ -691,6 +691,16 @@ def matrix_signature_bucket(profile: dict[str, object]) -> str:
     )
 
 
+def profile_signature(profile: dict[str, object], mode: str) -> str:
+    if mode == "fine":
+        return fine_signature_bucket(profile)
+    if mode == "matrix":
+        return matrix_signature_bucket(profile)
+    if mode == "coarse":
+        return signature_bucket(profile)
+    raise ValueError(f"unknown signature mode: {mode}")
+
+
 def shape_classes_command(args: argparse.Namespace) -> int:
     shape_filter = parse_rank_shape(args.rank_shape)
     buckets: dict[str, dict[str, object]] = {}
@@ -708,12 +718,7 @@ def shape_classes_command(args: argparse.Namespace) -> int:
                 continue
             lower = Fraction(*best_pair["lower_orientation_probability"])
             profile = structural_profile(poset)
-            if args.signature == "fine":
-                key = fine_signature_bucket(profile)
-            elif args.signature == "matrix":
-                key = matrix_signature_bucket(profile)
-            else:
-                key = signature_bucket(profile)
+            key = profile_signature(profile, args.signature)
             bucket = buckets.setdefault(
                 key,
                 {
@@ -774,6 +779,64 @@ def shape_classes_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def bucket_members_command(args: argparse.Namespace) -> int:
+    shape_filter = parse_rank_shape(args.rank_shape)
+    records: list[dict[str, object]] = []
+    for n in range(2, args.max_n + 1):
+        posets = filtered_posets(
+            all_unlabeled_posets(n),
+            only_width=args.width,
+            only_height=args.height,
+            only_rank_shape=shape_filter,
+        )
+        for poset in posets:
+            report = balance_report(poset)
+            best_pair = report["best_pair"]
+            if not isinstance(best_pair, dict):
+                continue
+            profile = structural_profile(poset)
+            signature = profile_signature(profile, args.signature)
+            if signature != args.bucket:
+                continue
+            lower = Fraction(*best_pair["lower_orientation_probability"])
+            records.append(
+                {
+                    "n": n,
+                    "lower_orientation_probability": [
+                        lower.numerator,
+                        lower.denominator,
+                    ],
+                    "best_pair": best_pair,
+                    "relations": report["relations"],
+                    "linear_extensions": report["linear_extensions"],
+                    "profile": profile,
+                    "signature": signature,
+                }
+            )
+    records.sort(
+        key=lambda item: (
+            Fraction(*item["lower_orientation_probability"]),
+            item["linear_extensions"],
+            len(item["relations"]),
+        )
+    )
+    payload = {
+        "max_n": args.max_n,
+        "width": args.width,
+        "height": args.height,
+        "rank_shape": list(shape_filter) if shape_filter else None,
+        "signature_mode": args.signature,
+        "bucket": args.bucket,
+        "record_count": len(records),
+        "records": records,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(payload, indent=2, sort_keys=True))
+    return 0
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -819,6 +882,20 @@ def main(argv: Sequence[str] | None = None) -> int:
     classes_parser.add_argument("--examples-per-bucket", type=int, default=2)
     classes_parser.add_argument("--output", type=Path)
     classes_parser.set_defaults(func=shape_classes_command)
+
+    bucket_parser = subparsers.add_parser("bucket-members")
+    bucket_parser.add_argument("--max-n", type=int, default=7)
+    bucket_parser.add_argument("--width", type=int, required=True)
+    bucket_parser.add_argument("--height", type=int)
+    bucket_parser.add_argument("--rank-shape")
+    bucket_parser.add_argument(
+        "--signature",
+        choices=["coarse", "matrix", "fine"],
+        default="matrix",
+    )
+    bucket_parser.add_argument("--bucket", required=True)
+    bucket_parser.add_argument("--output", type=Path)
+    bucket_parser.set_defaults(func=bucket_members_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

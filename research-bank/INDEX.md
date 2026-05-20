@@ -13,5 +13,7 @@
 | R009 | Lonely Runner 2024 survey plus 2026 finite-case progress | number theory | 2026-05-20 (OPEN-VERIFIED) | B | fixed-runner certificate replay and variant-separation checks give concrete computational proof targets | CURATED-OPEN-VERIFIED |
 | R010 | Bansal 2026 Komlos discrepancy bounds and open-problem sources | probability | 2026-05-20 (OPEN-VERIFIED) | C | exact finite discrepancy certificates and restricted matrix classes can target bounded progress | CURATED-OPEN-VERIFIED |
 | R011 | Chen-Li-Xi-Xu 2026 Mahler dimension-three frontier papers | geometry | 2026-05-20 (OPEN-VERIFIED) | C | exact Hanner-polytope computations and local stability subclaims provide bounded geometric targets | CURATED-OPEN-VERIFIED |
+| R012 | Guo 2026 rainbow-cycle progress around Caccetta-Haggkvist | combinatorics | 2026-05-20 (OPEN-VERIFIED) | B | small-digraph exact search and restricted rainbow-cycle variants can produce checkable progress | CURATED-OPEN-VERIFIED |
+| R013 | Kahn-Aires 2026 balancing extensions and 1/3-2/3 poset sources | order theory | 2026-05-20 (OPEN-VERIFIED) | A | exact linear-extension counting gives replayable finite certificates and tractable subcase search | CURATED-OPEN-VERIFIED |
 
-Current counted P10 progress: 10 `OPEN-VERIFIED` candidates across 6 areas.
+Current counted P10 progress: 12 `OPEN-VERIFIED` candidates across 7 areas.

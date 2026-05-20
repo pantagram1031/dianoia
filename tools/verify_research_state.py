@@ -87,6 +87,20 @@ def research_bank_stats(index_text: str) -> ResearchBankStats:
     return ResearchBankStats(open_verified=open_verified, open_verified_areas=areas)
 
 
+def p10_gate_message(stats: ResearchBankStats) -> str:
+    needed_candidates = max(0, 20 - stats.open_verified)
+    needed_areas = max(0, 4 - len(stats.open_verified_areas))
+    if needed_candidates == 0 and needed_areas == 0:
+        return (
+            f"P10 gate READY: {stats.open_verified} OPEN-VERIFIED candidates across "
+            f"{len(stats.open_verified_areas)} areas"
+        )
+    return (
+        f"P10 gate PENDING: need {needed_candidates} more OPEN-VERIFIED candidates "
+        f"and {needed_areas} more areas"
+    )
+
+
 def simple_field(text: str, name: str) -> str:
     match = re.search(rf"^{re.escape(name)}:\s*(.*?)\s*$", text, re.MULTILINE)
     return match.group(1).strip() if match else ""
@@ -172,6 +186,7 @@ def check_state_files(result: CheckResult, root: Path) -> None:
             f"P10 progress: {stats.open_verified} OPEN-VERIFIED candidates across "
             f"{len(stats.open_verified_areas)} areas"
         )
+        result.add_ok(p10_gate_message(stats))
 
 
 def check_infra_wiring(result: CheckResult, root: Path) -> None:

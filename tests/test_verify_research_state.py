@@ -122,6 +122,28 @@ class ResearchStateVerifierTest(unittest.TestCase):
         self.assertEqual(2, stats.open_verified)
         self.assertEqual({"number theory", "algebra"}, stats.open_verified_areas)
 
+    def test_p10_gate_reports_pending_until_20_candidates_and_4_areas(self) -> None:
+        stats = research_state.ResearchBankStats(
+            open_verified=19,
+            open_verified_areas={"number theory", "algebra", "geometry", "probability"},
+        )
+
+        self.assertEqual(
+            "P10 gate PENDING: need 1 more OPEN-VERIFIED candidates and 0 more areas",
+            research_state.p10_gate_message(stats),
+        )
+
+    def test_p10_gate_reports_ready_at_20_candidates_and_4_areas(self) -> None:
+        stats = research_state.ResearchBankStats(
+            open_verified=20,
+            open_verified_areas={"number theory", "algebra", "geometry", "probability"},
+        )
+
+        self.assertEqual(
+            "P10 gate READY: 20 OPEN-VERIFIED candidates across 4 areas",
+            research_state.p10_gate_message(stats),
+        )
+
     def test_p10_progress_message_reports_verified_count_and_areas(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             root = Path(temp_dir)

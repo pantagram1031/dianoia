@@ -80,6 +80,12 @@ def section_body(text: str, heading: str) -> str:
     return match.group(1).strip() if match else ""
 
 
+def markdown_bullet_field(text: str, name: str) -> str:
+    pattern = re.compile(rf"^\s*[-*]\s+{re.escape(name)}:\s*(.*)$", re.MULTILINE)
+    match = pattern.search(text)
+    return match.group(1).strip() if match else ""
+
+
 def weak_blank(value: str) -> bool:
     normalized = value.strip().lower()
     return normalized in {"", "none", "n/a", "na", "no", "unknown", "tbd"}
@@ -120,6 +126,11 @@ def check_benchmarks(result: CheckResult) -> None:
         for required in ("## Metadata", "## Modification", "## Area", "## Artifacts"):
             if required not in source_text:
                 result.add_fail(f"{bid}: SOURCE.md missing {required}")
+        if int(bid[1:]) >= 6:
+            metadata = section_body(source_text, "Metadata")
+            for field in ("Authors", "Year", "Title", "Exact statement reference"):
+                if weak_blank(markdown_bullet_field(metadata, field)):
+                    result.add_fail(f"{bid}: SOURCE.md Metadata missing {field}")
         if "VALUE_ADDED" in row["verdict"] and "## Three Differences" not in comparison_text:
             result.add_fail(f"{bid}: VALUE_ADDED comparison missing Three Differences")
         if int(bid[1:]) >= 6:

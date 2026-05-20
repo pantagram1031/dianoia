@@ -44,6 +44,34 @@ Controlled modification.
 """
 
 
+def source_text_missing_exact_statement(area: str = "algebra") -> str:
+    return f"""# Source
+
+## Metadata
+
+- Authors: A
+- Year: 2026
+- Title: T
+
+## Source
+
+arXiv:test
+
+## Modification
+
+Controlled modification.
+
+## Area
+
+{area}
+
+## Artifacts
+
+- Raw baseline: raw
+- Dianoia run: dianoia
+"""
+
+
 def comparison_text() -> str:
     return """# Comparison
 
@@ -160,6 +188,24 @@ class BenchmarkManifestVerifierTest(unittest.TestCase):
 
         self.assertTrue(
             any("controlled-comparison must name a concrete known weakness" in item for item in result.fail),
+            result.fail,
+        )
+
+    def test_b6_source_must_have_four_citation_fields(self) -> None:
+        original_root = verifier.ROOT
+        try:
+            with tempfile.TemporaryDirectory() as temp_dir:
+                temp_root = Path(temp_dir)
+                make_repo(temp_root, run_text("full-fresh", "none"))
+                write(temp_root / "benchmark-bank" / "B6" / "SOURCE.md", source_text_missing_exact_statement())
+                verifier.ROOT = temp_root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_benchmarks(result)
+        finally:
+            verifier.ROOT = original_root
+
+        self.assertTrue(
+            any("SOURCE.md Metadata missing Exact statement reference" in item for item in result.fail),
             result.fail,
         )
 

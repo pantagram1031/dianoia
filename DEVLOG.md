@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T00:22:00+09:00
+
+- Added a B6+ source metadata regression to
+  `tests/test_verify_dianoia_state.py`.
+- Extended `tools/verify_dianoia_state.py` so B6+ `SOURCE.md` metadata must
+  include nonblank `Authors`, `Year`, `Title`, and
+  `Exact statement reference` fields.
+- Recorded smoke evidence in
+  `capability-test/BENCHMARK-SOURCE-METADATA-VERIFY-20260521.md`.
+
+Self-audit:
+- Commits this session so far: 0 pushed, 1 pending.
+- Concrete progress category: benchmark, test.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:07:00+09:00
 
 - Extended `tools/verify_dianoia_state.py` so required docs/state files include

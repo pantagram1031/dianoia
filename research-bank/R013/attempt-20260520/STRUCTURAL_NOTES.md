@@ -36,6 +36,10 @@ Artifacts:
   matrix-bucket cases.
 - `NORMAL_FORM_COUNT_LEDGER.md`: replayable named-case count certificates for
   the three rank-normal cases.
+- `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
+  forms from the common cover matrix.
+- `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
+  artifact for the common cover matrix.
 - `normal-form-cases/`: named case inputs and generated count reports.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
@@ -78,10 +82,9 @@ These are search signals only:
    whether `14/39` is the extremal lower probability in that restricted class.
    The exact restricted run now confirms this for all 103 unlabeled profiles
    through `n=7`.
-4. Turn `MATRIX_BUCKET_NOTES.md` into a coordinate-free sublemma for the
-   3-profile matrix bucket: equality only in Case A, with Cases B and C giving
-   `14/33` and `5/11`. `RANK_NORMAL_FORM_NOTES.md` now supplies the stable
-   rank-layer names for this proof attempt.
+4. Replace the remaining computational subcase with a hand proof:
+   `COVER_MATRIX_DERIVATION.md` derives the three normal forms from the common
+   cover matrix, and `NORMAL_FORM_COUNT_LEDGER.md` certifies their counts.
 5. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

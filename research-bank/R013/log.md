@@ -157,3 +157,14 @@ candidate_id: R013
 - Result: Case A/B/C orientation counts are now replayable from named
   cover-relation inputs: `14/39`, `14/33`, and `5/11`.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-21 P11 Attempt 1L
+
+- Added `cover-matrix-forms` to derive rank-normal forms directly from a rank
+  shape and cover matrix.
+- Generated
+  `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`.
+- Added `research-bank/R013/attempt-20260520/COVER_MATRIX_DERIVATION.md`.
+- Result: the common matrix, width 3, height 4, and rank shape `2,2,2,1`
+  produce exactly three rank-normal forms, matching Cases A/B/C.
+- Claim discipline: no `CLAIMS.md` row.

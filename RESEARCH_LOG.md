@@ -13,6 +13,16 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T00:43:00+09:00
+
+- Added direct cover-matrix derivation for the R013 rank-normal subcase.
+- New artifacts:
+  `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
+  and `research-bank/R013/attempt-20260520/COVER_MATRIX_DERIVATION.md`.
+- Finite signal: the common cover matrix plus width 3, height 4, and rank
+  shape `2,2,2,1` yields exactly three rank-normal forms.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-21T00:25:00+09:00
 
 - Added named-case count certificates for the R013 rank-normal forms.

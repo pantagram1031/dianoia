@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T00:43:00+09:00
+
+- Continued P11 on `R013`.
+- Added `cover-matrix-forms` to derive normal forms directly from rank shape
+  and cover matrix.
+- Generated `width3-rank2221-cover-matrix-forms-n7.json`.
+- Added `COVER_MATRIX_DERIVATION.md`, recording that the common matrix under
+  width 3 and height 4 has exactly three rank-normal forms.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T00:25:00+09:00
 
 - Continued P11 on `R013`.

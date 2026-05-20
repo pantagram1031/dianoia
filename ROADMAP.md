@@ -88,8 +88,9 @@ and a fine 103-singleton split. `MATRIX_BUCKET_NOTES.md` now extracts the
 `width3-rank2221-extremal-matrix-bucket-n7.json` makes that extraction
 reproducible. `RANK_NORMAL_FORM_NOTES.md` now rewrites those cases with stable
 rank-layer labels, and `NORMAL_FORM_COUNT_LEDGER.md` certifies the three
-orientation counts from named case inputs. Next, derive the three normal forms
-from the cover matrix and prove the equality subcase coordinate-free before any
-novelty claim.
+orientation counts from named case inputs. `COVER_MATRIX_DERIVATION.md` now
+derives the same three forms directly from the cover matrix. Next, replace the
+remaining count replays with a hand recurrence/enumeration before any novelty
+claim.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

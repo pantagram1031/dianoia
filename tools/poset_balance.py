@@ -771,6 +771,141 @@ def named_case_recurrence_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def recurrence_leaves(trace: dict[str, object]) -> list[dict[str, object]]:
+    leaves: list[dict[str, object]] = []
+
+    def walk(node: dict[str, object], path: list[str]) -> None:
+        available = node.get("available", [])
+        if not isinstance(available, list):
+            raise ValueError("recurrence trace available field must be a list")
+        if not available:
+            leaves.append(
+                {
+                    "path": path,
+                    "pair_state": node["pair_state"],
+                    "first_before_second": node["first_before_second"],
+                    "second_before_first": node["second_before_first"],
+                    "total": int(node["first_before_second"])
+                    + int(node["second_before_first"]),
+                }
+            )
+            return
+        for child in available:
+            if not isinstance(child, dict):
+                raise ValueError("recurrence trace child must be a dictionary")
+            choose = str(child["choose"])
+            child_path = path + [choose]
+            if "subtrace" in child:
+                subtrace = child["subtrace"]
+                if not isinstance(subtrace, dict):
+                    raise ValueError("recurrence subtrace must be a dictionary")
+                walk(subtrace, child_path)
+            else:
+                leaves.append(
+                    {
+                        "path": child_path,
+                        "pair_state": child["pair_state_after_choice"],
+                        "first_before_second": child["first_before_second"],
+                        "second_before_first": child["second_before_first"],
+                        "total": int(child["first_before_second"])
+                        + int(child["second_before_first"]),
+                        "remaining_after_choice": child.get(
+                            "remaining_after_choice",
+                            [],
+                        ),
+                    }
+                )
+
+    walk(trace, [])
+    return leaves
+
+
+def recurrence_leaf_summary_command(args: argparse.Namespace) -> int:
+    payload = json.loads(args.recurrence.read_text(encoding="utf-8"))
+    leaves = recurrence_leaves(payload["trace"])
+    state_totals: dict[str, dict[str, int]] = {}
+    for leaf in leaves:
+        state = str(leaf["pair_state"])
+        state_total = state_totals.setdefault(
+            state,
+            {"first_before_second": 0, "second_before_first": 0, "total": 0},
+        )
+        state_total["first_before_second"] += int(leaf["first_before_second"])
+        state_total["second_before_first"] += int(leaf["second_before_first"])
+        state_total["total"] += int(leaf["total"])
+    out = {
+        "source": str(args.recurrence),
+        "labels": payload.get("labels"),
+        "pair": payload.get("pair"),
+        "depth": payload.get("depth"),
+        "leaf_count": len(leaves),
+        "first_before_second": payload["trace"]["first_before_second"],
+        "second_before_first": payload["trace"]["second_before_first"],
+        "state_totals": state_totals,
+        "leaves": leaves,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
+def recurrence_leaf_compare_command(args: argparse.Namespace) -> int:
+    left = json.loads(args.left.read_text(encoding="utf-8"))
+    right = json.loads(args.right.read_text(encoding="utf-8"))
+    left_leaves = recurrence_leaves(left["trace"])
+    right_leaves = recurrence_leaves(right["trace"])
+
+    def split_key(leaf: dict[str, object]) -> str:
+        return f"{leaf['first_before_second']}:{leaf['second_before_first']}"
+
+    def split_counts(leaves: list[dict[str, object]]) -> dict[str, int]:
+        counts: dict[str, int] = {}
+        for leaf in leaves:
+            counts[split_key(leaf)] = counts.get(split_key(leaf), 0) + 1
+        return counts
+
+    left_counts = split_counts(left_leaves)
+    right_counts = split_counts(right_leaves)
+    split_comparison = [
+        {
+            "split": split,
+            "left_count": left_counts.get(split, 0),
+            "right_count": right_counts.get(split, 0),
+        }
+        for split in sorted(set(left_counts) | set(right_counts))
+    ]
+    out = {
+        "left": str(args.left),
+        "right": str(args.right),
+        "left_pair": left.get("pair"),
+        "right_pair": right.get("pair"),
+        "left_leaf_count": len(left_leaves),
+        "right_leaf_count": len(right_leaves),
+        "left_total_split": [
+            left["trace"]["first_before_second"],
+            left["trace"]["second_before_first"],
+        ],
+        "right_total_split": [
+            right["trace"]["first_before_second"],
+            right["trace"]["second_before_first"],
+        ],
+        "matching_total_split": (
+            left["trace"]["first_before_second"] == right["trace"]["first_before_second"]
+            and left["trace"]["second_before_first"] == right["trace"]["second_before_first"]
+        ),
+        "split_comparison": split_comparison,
+        "left_leaves": left_leaves,
+        "right_leaves": right_leaves,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0
+
+
 def exhaustive_command(args: argparse.Namespace) -> int:
     summary: list[dict[str, object]] = []
     counterexamples: list[dict[str, object]] = []
@@ -1818,6 +1953,17 @@ def main(argv: Sequence[str] | None = None) -> int:
     named_case_recurrence_parser.add_argument("--depth", type=int, default=1)
     named_case_recurrence_parser.add_argument("--output", type=Path)
     named_case_recurrence_parser.set_defaults(func=named_case_recurrence_command)
+
+    leaf_summary_parser = subparsers.add_parser("recurrence-leaf-summary")
+    leaf_summary_parser.add_argument("recurrence", type=Path)
+    leaf_summary_parser.add_argument("--output", type=Path)
+    leaf_summary_parser.set_defaults(func=recurrence_leaf_summary_command)
+
+    leaf_compare_parser = subparsers.add_parser("recurrence-leaf-compare")
+    leaf_compare_parser.add_argument("left", type=Path)
+    leaf_compare_parser.add_argument("right", type=Path)
+    leaf_compare_parser.add_argument("--output", type=Path)
+    leaf_compare_parser.set_defaults(func=recurrence_leaf_compare_command)
 
     exhaustive_parser = subparsers.add_parser("exhaustive-small")
     exhaustive_parser.add_argument("--max-n", type=int, default=5)

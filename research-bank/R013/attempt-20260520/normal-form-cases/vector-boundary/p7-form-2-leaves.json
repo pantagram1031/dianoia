@@ -1,0 +1,107 @@
+{
+  "depth": 2,
+  "first_before_second": 19,
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "leaf_count": 4,
+  "leaves": [
+    {
+      "first_before_second": 8,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 8
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 9,
+      "total": 9
+    },
+    {
+      "first_before_second": 3,
+      "pair_state": "unseen",
+      "path": [
+        "a",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 4,
+      "total": 7
+    },
+    {
+      "first_before_second": 8,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 8
+    }
+  ],
+  "pair": [
+    "b",
+    "c"
+  ],
+  "second_before_first": 13,
+  "source": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-boundary\\p7-form-2-recurrence-depth2.json",
+  "state_totals": {
+    "first_before_second": {
+      "first_before_second": 16,
+      "second_before_first": 0,
+      "total": 16
+    },
+    "second_before_first": {
+      "first_before_second": 0,
+      "second_before_first": 9,
+      "total": 9
+    },
+    "unseen": {
+      "first_before_second": 3,
+      "second_before_first": 4,
+      "total": 7
+    }
+  }
+}

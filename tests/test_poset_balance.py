@@ -164,6 +164,96 @@ class PosetBalanceTest(unittest.TestCase):
                 [item["choose"] for item in root_choices[0]["subtrace"]["available"]],
             )
 
+    def test_recurrence_leaf_summary_flattens_nested_trace(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            recurrence = Path(temp_dir) / "trace.json"
+            output = Path(temp_dir) / "leaves.json"
+            recurrence.write_text(
+                json.dumps(
+                    {
+                        "labels": ["a", "b"],
+                        "pair": ["a", "b"],
+                        "depth": 2,
+                        "trace": {
+                            "pair_state": "unseen",
+                            "first_before_second": 3,
+                            "second_before_first": 2,
+                            "available": [
+                                {
+                                    "choose": "a",
+                                    "pair_state_after_choice": "first_before_second",
+                                    "first_before_second": 2,
+                                    "second_before_first": 0,
+                                },
+                                {
+                                    "choose": "b",
+                                    "pair_state_after_choice": "second_before_first",
+                                    "first_before_second": 0,
+                                    "second_before_first": 2,
+                                },
+                            ],
+                        },
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    ["recurrence-leaf-summary", str(recurrence), "--output", str(output)]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertEqual(2, payload["leaf_count"])
+            self.assertEqual(2, payload["state_totals"]["first_before_second"]["total"])
+            self.assertEqual(["a"], payload["leaves"][0]["path"])
+
+    def test_recurrence_leaf_compare_records_matching_total_split(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            left = Path(temp_dir) / "left.json"
+            right = Path(temp_dir) / "right.json"
+            output = Path(temp_dir) / "compare.json"
+            payload = {
+                "pair": ["a", "b"],
+                "trace": {
+                    "pair_state": "unseen",
+                    "first_before_second": 1,
+                    "second_before_first": 1,
+                    "available": [
+                        {
+                            "choose": "a",
+                            "pair_state_after_choice": "first_before_second",
+                            "first_before_second": 1,
+                            "second_before_first": 0,
+                        },
+                        {
+                            "choose": "b",
+                            "pair_state_after_choice": "second_before_first",
+                            "first_before_second": 0,
+                            "second_before_first": 1,
+                        },
+                    ],
+                },
+            }
+            left.write_text(json.dumps(payload), encoding="utf-8")
+            right.write_text(json.dumps(payload), encoding="utf-8")
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "recurrence-leaf-compare",
+                        str(left),
+                        str(right),
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            comparison = json.loads(output.read_text(encoding="utf-8"))
+            self.assertTrue(comparison["matching_total_split"])
+            self.assertEqual(2, comparison["left_leaf_count"])
+            self.assertEqual(2, comparison["right_leaf_count"])
+
     def test_exhaustive_small_finds_no_counterexample_through_four(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             output = Path(temp_dir) / "summary.json"

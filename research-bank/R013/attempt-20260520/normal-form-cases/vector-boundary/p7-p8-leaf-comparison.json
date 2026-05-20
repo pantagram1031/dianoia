@@ -1,0 +1,173 @@
+{
+  "left": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-boundary\\p7-form-2-recurrence-depth2.json",
+  "left_leaf_count": 4,
+  "left_leaves": [
+    {
+      "first_before_second": 8,
+      "pair_state": "first_before_second",
+      "path": [
+        "a",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 8
+    },
+    {
+      "first_before_second": 0,
+      "pair_state": "second_before_first",
+      "path": [
+        "a",
+        "c"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 9,
+      "total": 9
+    },
+    {
+      "first_before_second": 3,
+      "pair_state": "unseen",
+      "path": [
+        "a",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 4,
+      "total": 7
+    },
+    {
+      "first_before_second": 8,
+      "pair_state": "first_before_second",
+      "path": [
+        "b",
+        "a"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 0,
+      "total": 8
+    }
+  ],
+  "left_pair": [
+    "b",
+    "c"
+  ],
+  "left_total_split": [
+    19,
+    13
+  ],
+  "matching_total_split": true,
+  "right": "research-bank\\R013\\attempt-20260520\\normal-form-cases\\vector-boundary\\p8-form-1-recurrence-depth2.json",
+  "right_leaf_count": 3,
+  "right_leaves": [
+    {
+      "first_before_second": 7,
+      "pair_state": "unseen",
+      "path": [
+        "a",
+        "b"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 4,
+      "total": 11
+    },
+    {
+      "first_before_second": 5,
+      "pair_state": "unseen",
+      "path": [
+        "a",
+        "d"
+      ],
+      "remaining_after_choice": [
+        "b",
+        "c",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 5,
+      "total": 10
+    },
+    {
+      "first_before_second": 7,
+      "pair_state": "unseen",
+      "path": [
+        "b",
+        "a"
+      ],
+      "remaining_after_choice": [
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+      ],
+      "second_before_first": 4,
+      "total": 11
+    }
+  ],
+  "right_pair": [
+    "c",
+    "e"
+  ],
+  "right_total_split": [
+    19,
+    13
+  ],
+  "split_comparison": [
+    {
+      "left_count": 1,
+      "right_count": 0,
+      "split": "0:9"
+    },
+    {
+      "left_count": 1,
+      "right_count": 0,
+      "split": "3:4"
+    },
+    {
+      "left_count": 0,
+      "right_count": 1,
+      "split": "5:5"
+    },
+    {
+      "left_count": 0,
+      "right_count": 2,
+      "split": "7:4"
+    },
+    {
+      "left_count": 2,
+      "right_count": 0,
+      "split": "8:0"
+    }
+  ]
+}

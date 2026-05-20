@@ -109,6 +109,19 @@ extensions, so the lower probability is `2/5`; `SIXTH_MATRIX_BUCKET_NOTES.md`
 gives the hand enumeration. During extraction, the correct signature was
 verified to have `covers=9`, matching the cover-matrix edge sum.
 
+The seventh-ranked bucket has also been extracted and replayed:
+
+- `width3-rank2221-seventh-matrix-bucket-n7.json`
+- `width3-rank2221-seventh-cover-matrix-forms-n7.json`
+- `normal-form-cases/case-seventh-bucket-0.json`
+- `normal-form-cases/case-seventh-bucket-1.json`
+- `SEVENTH_MATRIX_BUCKET_NOTES.md`
+
+It has two rank-normal forms. Exact replay gives lower probabilities `19/41`
+and `13/32`; the second form attains the bucket minimum, and
+`SEVENTH_MATRIX_BUCKET_NOTES.md` gives a hand enumeration for that equality
+form.
+
 ## Claim Discipline
 
 No `CLAIMS.md` row. This roadmap only organizes restricted finite subcases

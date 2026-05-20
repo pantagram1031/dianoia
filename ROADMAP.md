@@ -101,7 +101,8 @@ for the equality form. `FOURTH_MATRIX_BUCKET_NOTES.md` now classifies the next
 four-profile `2/5` bucket similarly. Next target another remaining singleton
 `2/5` bucket. `FIFTH_MATRIX_BUCKET_NOTES.md` and
 `SIXTH_MATRIX_BUCKET_NOTES.md` now classify those two singletons; next target
-the first `13/32` bucket or try to abstract the completed buckets into a
-broader width-3 lemma.
+the first `13/32` bucket. `SEVENTH_MATRIX_BUCKET_NOTES.md` now classifies that
+bucket; next target the second `13/32` bucket or try to abstract the completed
+buckets into a broader width-3 lemma.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

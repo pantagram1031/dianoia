@@ -35,7 +35,11 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   `SIXTH_MATRIX_BUCKET_NOTES.md` classifies the remaining singleton `2/5`
   bucket, also with exact replay counts and a hand enumeration. Next either
   classify the first `13/32` matrix bucket, or abstract the completed buckets
-  into a broader width-3 lemma candidate;
+  into a broader width-3 lemma candidate. `SEVENTH_MATRIX_BUCKET_NOTES.md`
+  now classifies the first `13/32` matrix bucket with exact replay counts for
+  both forms and a hand enumeration for the weaker form. Next either classify
+  the second `13/32` matrix bucket, or abstract the completed buckets into a
+  broader width-3 lemma candidate;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -95,6 +99,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/FOURTH_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/FIFTH_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/SIXTH_MATRIX_BUCKET_NOTES.md`
+  - `research-bank/R013/attempt-20260520/SEVENTH_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`
@@ -106,6 +111,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-fifth-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-sixth-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-sixth-cover-matrix-forms-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-seventh-matrix-bucket-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-seventh-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/normal-form-cases/`
   - `research-bank/R013/attempt-20260520/normal-form-cases/*-recurrence-depth2.json`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`

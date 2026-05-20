@@ -13,6 +13,21 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T04:25:00+09:00
+
+- Continued P11 on `R013` by classifying the seventh-ranked matrix bucket in
+  the restricted width-3, height-4, rank-shape `2,2,2,1` class.
+- New artifacts:
+  `width3-rank2221-seventh-matrix-bucket-n7.json`,
+  `width3-rank2221-seventh-cover-matrix-forms-n7.json`,
+  `normal-form-cases/case-seventh-bucket-*`, and
+  `SEVENTH_MATRIX_BUCKET_NOTES.md`.
+- Finite signal: the seventh bucket has two rank-normal forms. Exact replay
+  gives lower probabilities `19/41` and `13/32`; the weaker form is
+  hand-counted in the note.
+- Claim discipline: restricted subcase only; no `CLAIMS.md` row and no P12
+  trigger.
+
 ## 2026-05-21T04:05:00+09:00
 
 - Continued P11 on `R013` by classifying the sixth-ranked matrix bucket in

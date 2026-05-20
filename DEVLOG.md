@@ -1,5 +1,16 @@
 # Devlog
 
+## 2026-05-20T19:28:00+09:00
+
+- Added first Phase 5 skill: `skills/pollack-character/SKILL.md`.
+- Updated `skills/INDEX.md`.
+- Wired the skill into `prompts/subagents/researcher.md` and `prompts/subagents/prover.md`.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: skill.
+- Failed-session streak: 0.
+
 ## 2026-05-20T19:20:00+09:00
 
 - Created `raw-attempt-2/` fresh baseline for S_a.

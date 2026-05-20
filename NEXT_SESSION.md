@@ -3,8 +3,8 @@
 Resume parallel Phases 4-7.
 
 Immediate next step:
-Add first Phase 5 skill (`pollack-character`) or first Phase 6 connector
-(`arxiv`) while also preparing the first Phase 4 benchmark-bank entry.
+Add first Phase 6 connector (`arxiv`) or prepare the first Phase 4
+benchmark-bank entry.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -12,6 +12,8 @@ Current state:
 - `capability-test/PHASE2-SMOKE-agents-router.md` records router-level smoke
   evidence.
 - Phase 3 is complete with VALUE_ADDED in `capability-test/RETEST.md`.
+- Phase 5 has 1/5 skills: `skills/pollack-character/SKILL.md`, referenced by
+  researcher and prover subagent prompts.
 
 Important:
 - MASTERPIECE still needs >=5 VALUE_ADDED benchmark rows across >=3 areas,

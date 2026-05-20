@@ -12,10 +12,13 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 [PROCEDURE]
 1. Restate the lemma with all quantifiers explicit.
 2. List permitted dependencies from ledger or corpus.
-3. Attempt the proof in WN inside `proof.fml`.
-4. Mark every unclosed step with `[GAP: <missing> | suffices: <what would close>]`.
-5. If a contradiction or counterexample is found, write it precisely and set status `FALSIFIED`.
-6. Write `return.md` with status `PROVED`, `GAP`, or `FALSIFIED` and the artifact path.
+3. If the lemma uses quadratic character primes or a Pollack/APSSV-style
+   small-prime input, consult `skills/pollack-character/SKILL.md` and include
+   an effectiveness/explicit-bound note in `proof.fml`.
+4. Attempt the proof in WN inside `proof.fml`.
+5. Mark every unclosed step with `[GAP: <missing> | suffices: <what would close>]`.
+6. If a contradiction or counterexample is found, write it precisely and set status `FALSIFIED`.
+7. Write `return.md` with status `PROVED`, `GAP`, or `FALSIFIED` and the artifact path.
 
 [OUTPUTS]
 1. `proof.fml`.

@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T05:00:00+09:00
+
+- Continued P11 on `R013`.
+- Added `NEAR_BOUNDARY_SYNTHESIS.md` to stop the work from becoming pure
+  replay and extract residual-count patterns from the completed near-boundary
+  buckets.
+- Identified the next mathematical step: feature-partition the remaining
+  matrix buckets to search for a dominance or local-degree lemma.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note.
+- Failed-session streak: 0.
+
 ## 2026-05-21T04:45:00+09:00
 
 - Continued P11 on `R013`.

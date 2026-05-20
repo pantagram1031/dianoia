@@ -13,6 +13,16 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T05:00:00+09:00
+
+- Continued P11 on `R013` by adding `NEAR_BOUNDARY_SYNTHESIS.md`.
+- Consolidated the completed near-boundary matrix buckets with minimum at most
+  `13/32`, including the extremal `14/39` bucket, the five `2/5` buckets, and
+  the two `13/32` buckets.
+- Extracted repeated residual-count patterns and three proof-obligation routes
+  for a restricted width-3 lemma.
+- Claim discipline: synthesis only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T04:45:00+09:00
 
 - Continued P11 on `R013` by classifying the eighth-ranked matrix bucket in

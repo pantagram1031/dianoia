@@ -56,6 +56,9 @@ Artifacts:
   exact replay counts for both forms and a hand count for the weaker form.
 - `EIGHTH_MATRIX_BUCKET_NOTES.md`: second `13/32` matrix bucket derivation with
   exact replay counts for both forms and a hand count for the weaker form.
+- `NEAR_BOUNDARY_SYNTHESIS.md`: consolidation of the processed near-boundary
+  buckets into reusable residual-count patterns and proof obligations for a
+  restricted width-3 lemma.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -115,8 +118,10 @@ These are search signals only:
    another singleton `2/5` bucket; `SIXTH_MATRIX_BUCKET_NOTES.md` handles the
    remaining singleton `2/5` bucket; `SEVENTH_MATRIX_BUCKET_NOTES.md` handles
    the first `13/32` bucket; `EIGHTH_MATRIX_BUCKET_NOTES.md` handles the
-   second `13/32` bucket. The next nontrivial target is an abstraction of the
-   completed near-boundary buckets into a width-3 lemma candidate.
+   second `13/32` bucket. `NEAR_BOUNDARY_SYNTHESIS.md` now extracts common
+   residual-count patterns. The next nontrivial target is a feature partition
+   of the remaining matrix buckets to look for a dominance or local-degree
+   lemma.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

@@ -103,7 +103,8 @@ four-profile `2/5` bucket similarly. Next target another remaining singleton
 `SIXTH_MATRIX_BUCKET_NOTES.md` now classify those two singletons; next target
 the first `13/32` bucket. `SEVENTH_MATRIX_BUCKET_NOTES.md` now classifies that
 bucket. `EIGHTH_MATRIX_BUCKET_NOTES.md` now classifies the second `13/32`
-bucket; next target an abstraction of the completed buckets into a broader
-width-3 lemma.
+bucket. `NEAR_BOUNDARY_SYNTHESIS.md` now abstracts the completed buckets into
+residual-count patterns and proof obligations; next target a feature partition
+of the remaining matrix buckets to find a dominance or local-degree lemma.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

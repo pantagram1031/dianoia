@@ -2,6 +2,18 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 1W
+
+- Added `research-bank/R013/attempt-20260520/NEAR_BOUNDARY_SYNTHESIS.md`.
+- Consolidated all processed near-boundary matrix buckets with minimum at most
+  `13/32`.
+- Extracted repeated residual-count patterns that recur in the hand counts:
+  two lower bounds before one top, one fork plus one chain-to-top, and two
+  independent top constraints with a free element.
+- Next proof direction: partition remaining matrix buckets by simple cover
+  features to look for a dominance or local-degree lemma.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-strategy work.
+
 ## 2026-05-21 P11 Attempt 1V
 
 - Classified the eighth-ranked matrix bucket for the restricted width-3,

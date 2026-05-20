@@ -42,7 +42,10 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   broader width-3 lemma candidate. `EIGHTH_MATRIX_BUCKET_NOTES.md` now
   classifies the second `13/32` matrix bucket with exact replay counts for
   both forms and a hand enumeration for the weaker form. Next abstract the
-  completed near-boundary bucket notes into a broader width-3 lemma candidate;
+  completed near-boundary bucket notes into a broader width-3 lemma candidate.
+  `NEAR_BOUNDARY_SYNTHESIS.md` now performs that first abstraction and names
+  the next concrete step: feature-partition the remaining matrix buckets to
+  look for a dominance or local-degree lemma;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -104,6 +107,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/SIXTH_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/SEVENTH_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/EIGHTH_MATRIX_BUCKET_NOTES.md`
+  - `research-bank/R013/attempt-20260520/NEAR_BOUNDARY_SYNTHESIS.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`

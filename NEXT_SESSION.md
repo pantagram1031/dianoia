@@ -68,7 +68,11 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   nonnegative deltas from U6, with 8 processed dangerous deltas, 51
   unprocessed deltas, and 0 mixed delta groups. Next construct
   human-checkable count/recurrence ledgers for U6 and the dangerous deltas,
-  then attempt a uniform exclusion/injection proof for other deltas;
+  then attempt a uniform exclusion/injection proof for other deltas.
+  `U6_DANGEROUS_FORM_LEDGER_NOTES.md` now records the first such ledger:
+  U6 plus P1-P8 reduce to 22 rank-normal forms, with source minima matching
+  ledger minima. Next extract named case files or recurrence ledgers for the
+  boundary classes P7/P8 and compare their count identities;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -142,6 +146,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-vector-frontier.json`
   - `research-bank/R013/attempt-20260520/VECTOR_DELTA_CLASSIFICATION.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-vector-deltas-from-u6.json`
+  - `research-bank/R013/attempt-20260520/U6_DANGEROUS_FORM_LEDGER_NOTES.md`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-u6-dangerous-form-ledger.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`

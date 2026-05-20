@@ -74,6 +74,8 @@ Artifacts:
   story.
 - `VECTOR_DELTA_CLASSIFICATION.md`: all vector classes as nonnegative deltas
   from U6, isolating eight dangerous processed delta groups.
+- `U6_DANGEROUS_FORM_LEDGER_NOTES.md`: 22 rank-normal forms for U6 and P1-P8,
+  with ledger minima matching source minima.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -152,6 +154,8 @@ These are search signals only:
    `VECTOR_DELTA_CLASSIFICATION.md` now provides that classification; the next
    step is count/recurrence ledgers for U6 and the dangerous deltas, then a
    uniform proof attempt for the non-dangerous deltas.
+   `U6_DANGEROUS_FORM_LEDGER_NOTES.md` now reduces U6 and P1-P8 to 22
+   rank-normal forms; next extract named cases or recurrence ledgers for P7/P8.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

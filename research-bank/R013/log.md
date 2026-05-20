@@ -2,6 +2,16 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 2D
+
+- Added `matrix-vector-form-ledger` to `tools/poset_balance.py`.
+- Added
+  `research-bank/R013/attempt-20260520/width3-rank2221-u6-dangerous-form-ledger.json`.
+- Added `research-bank/R013/attempt-20260520/U6_DANGEROUS_FORM_LEDGER_NOTES.md`.
+- Result: U6 and dangerous vector classes P1-P8 reduce to 22 rank-normal
+  forms. Ledger minima match source minima for all nine vector classes.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 2C
 
 - Added `matrix-vector-deltas` to `tools/poset_balance.py`.

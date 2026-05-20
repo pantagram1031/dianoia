@@ -13,6 +13,16 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T07:05:00+09:00
+
+- Continued P11 on `R013` by generating a rank-normal-form ledger for U6 and
+  the eight dangerous vector classes P1-P8.
+- Artifact: `width3-rank2221-u6-dangerous-form-ledger.json` contains 9 vector
+  classes and 22 total forms.
+- Added `U6_DANGEROUS_FORM_LEDGER_NOTES.md`; source minima and ledger minima
+  agree for every class.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T06:45:00+09:00
 
 - Continued P11 on `R013` by turning the U6 frontier into a vector-delta

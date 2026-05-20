@@ -130,5 +130,9 @@ nonnegative deltas from U6, with 8 processed dangerous delta groups, 51
 unprocessed delta groups, and 0 mixed delta groups. Next target: construct
 human-checkable count/recurrence ledgers for U6 and the dangerous deltas, then
 attempt a uniform exclusion/injection argument for all other deltas.
+`U6_DANGEROUS_FORM_LEDGER_NOTES.md` now records the first human-checkable
+ledger: U6 plus P1-P8 reduce to 22 rank-normal forms, with ledger minima
+matching source minima. Next target: extract named case files or recurrence
+ledgers for the boundary classes P7/P8 and compare their count identities.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

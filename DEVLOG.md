@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T07:05:00+09:00
+
+- Continued P11 on `R013`.
+- Added `matrix-vector-form-ledger` and generated
+  `width3-rank2221-u6-dangerous-form-ledger.json`.
+- Added `U6_DANGEROUS_FORM_LEDGER_NOTES.md`: the U6 frontier plus eight
+  dangerous vector classes reduce to 22 rank-normal forms, with ledger minima
+  matching source minima.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 1 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T06:45:00+09:00
 
 - Continued P11 on `R013`.

@@ -53,7 +53,12 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   `ALL_FEATURE_PARTITION_NOTES.md` now do this: 67 buckets, 53 feature groups,
   8 processed buckets, 59 unprocessed buckets, and 2 mixed feature groups.
   Next refine the feature key using exact adjacent/skip vectors or
-  shadowed-skip data to separate the mixed groups;
+  shadowed-skip data to separate the mixed groups. Vector detail now exists:
+  `width3-rank2221-all-matrix-feature-partition-vector.json` and
+  `VECTOR_FEATURE_PARTITION_NOTES.md` record 59 vector feature groups and 0
+  mixed processed/unprocessed groups. Next extract the eight processed vector
+  classes into a compact lemma table and attempt a vector-class dominance
+  proof for the remaining classes;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -120,6 +125,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-near-boundary-feature-partition.json`
   - `research-bank/R013/attempt-20260520/ALL_FEATURE_PARTITION_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-all-matrix-feature-partition.json`
+  - `research-bank/R013/attempt-20260520/VECTOR_FEATURE_PARTITION_NOTES.md`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-all-matrix-feature-partition-vector.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`

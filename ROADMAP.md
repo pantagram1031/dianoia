@@ -111,5 +111,10 @@ feature partition with processed/unprocessed labels.
 53 feature groups, 8 processed buckets, 59 unprocessed buckets, and 2 mixed
 feature groups. Next target: refine the feature key using exact adjacent/skip
 vectors or shadowed-skip data to separate the mixed groups.
+`VECTOR_FEATURE_PARTITION_NOTES.md` now records that exact adjacent/skip vector
+grouping separates the mixed classes: 59 vector feature groups and 0 mixed
+processed/unprocessed groups. Next target: extract the eight processed vector
+classes into a lemma table and attempt a vector-class dominance argument for
+the remaining classes.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

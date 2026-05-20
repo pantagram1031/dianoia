@@ -2,6 +2,17 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 1Z
+
+- Added vector-detail grouping to `tools/poset_balance.py matrix-feature-partition`.
+- Added
+  `research-bank/R013/attempt-20260520/width3-rank2221-all-matrix-feature-partition-vector.json`.
+- Added `research-bank/R013/attempt-20260520/VECTOR_FEATURE_PARTITION_NOTES.md`.
+- Feature signal: exact adjacent/skip vector grouping changes the all-bucket
+  partition from 53 coarse groups with 2 mixed processed/unprocessed groups to
+  59 vector groups with 0 mixed groups.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 1Y
 
 - Extended `matrix-feature-partition` with processed-threshold labels.

@@ -64,6 +64,9 @@ Artifacts:
   cover-density and skip-cover features.
 - `ALL_FEATURE_PARTITION_NOTES.md`: interpretation of the all-67-bucket
   partition with processed/unprocessed labels and mixed feature classes.
+- `VECTOR_FEATURE_PARTITION_NOTES.md`: interpretation of the vector-detail
+  partition; exact adjacent/skip vectors separate processed and unprocessed
+  feature classes.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -130,6 +133,10 @@ These are search signals only:
    `ALL_FEATURE_PARTITION_NOTES.md` now records that partition and identifies
    two mixed feature groups; the next step is to refine the feature key using
    exact adjacent/skip vectors or shadowed-skip data.
+   `VECTOR_FEATURE_PARTITION_NOTES.md` performs the exact-vector refinement and
+   reduces mixed processed/unprocessed groups to zero. The next proof-support
+   target is an eight-row processed vector-class table and a dominance argument
+   for the vector classes outside that table.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

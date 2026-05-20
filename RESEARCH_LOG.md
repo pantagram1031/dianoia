@@ -13,6 +13,18 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T05:50:00+09:00
+
+- Continued P11 on `R013` by refining the all-bucket feature partition with
+  exact adjacent and skip vectors in the grouping key.
+- Generated
+  `width3-rank2221-all-matrix-feature-partition-vector.json`: 67 source
+  buckets, 59 vector feature groups, 8 processed buckets, 59 unprocessed
+  buckets, and 0 mixed processed/unprocessed groups.
+- Added `VECTOR_FEATURE_PARTITION_NOTES.md`; the next mathematical target is a
+  vector-class dominance lemma rather than another bucket-by-bucket replay.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T05:35:00+09:00
 
 - Continued P11 on `R013` by extending `matrix-feature-partition` with

@@ -3,6 +3,14 @@ Resume the active problem from durable disk state without relying on chat histor
 [INPUTS]
 1. Optional `$1`: problem slug. Default is the contents of `problems/.active`.
 
+[PRECONDITIONS]
+1. If `$1` is absent, `problems/.active` exists and contains exactly one slug.
+2. A slug is a problem directory name, not a free-form problem statement.
+3. Resume is only for continuing an existing `BLOCKED-ITERATE` problem. It is
+   never the router for a fresh theorem/problem statement.
+4. If the active problem is closed, do not append new user content to it. Fresh
+   problem statements must go through `prompts/prove.md`.
+
 [PROCEDURE]
 1. Resolve the slug from `$1` or `problems/.active`.
 2. Read `IDENTITY.md`, `goal.md`, `problems/<slug>/session_state.md`, `problems/<slug>/claim_ledger.md` tail 20, and `problems/<slug>/resume_brief.md` if present.
@@ -22,9 +30,16 @@ Resume the active problem from durable disk state without relying on chat histor
 [FAILURE]
 1. Missing slug and missing `problems/.active`: print `BLOCKED: no active problem.` and stop.
 2. Missing required state file: print `BLOCKED: missing required state file <path>.` and stop.
+3. Malformed `problems/.active` with zero, multiple, or whitespace-only slugs:
+   print `BLOCKED: malformed active problem pointer.` and stop.
+4. `$1` looks like a fresh problem statement rather than an existing slug:
+   print `BLOCKED: fresh problem statements use prompts/prove.md.` and stop.
 
 INVARIANTS (v4 resume discipline):
 - Only `BLOCKED-ITERATE` is resume-eligible. `SUCCESS-MEANINGFUL` and `FAILURE-AMBITION-GAP` are closed states and MUST NOT have `halt_flag` cleared by resume.
+- Closed problems are immutable except for explicit supersession notes written
+  by `prompts/prove.md`; resume MUST NOT write mathematical content into a
+  closed problem.
 - On resume from a BLOCKED-ITERATE problem, do NOT re-run Phase 0 intake. Read prior session_state.md, the most recent STUCK-STATE entry in work_journal.md, and the NEXT-SESSION ATTACK PLAN in resume_brief.md.
 - Phase 3 hypotheses for the new session must include the refined attack plan as at least one hypothesis. The original direct attack from the first session is restated and re-tested at this point.
 - The new session may invoke SpecialistFactory if the refined attack plan names a specialist domain not present in specialists/INDEX.md.

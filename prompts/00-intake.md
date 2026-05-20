@@ -7,6 +7,8 @@ Convert a raw problem statement into a formal investigation brief and initialize
 [PRECONDITIONS]
 1. `problems/.active` names exactly one slug.
 2. `problems/<slug>/problem.md` exists and contains the raw problem statement.
+3. `problems/<slug>/session_state.md`, if present, does not mark the problem
+   closed with `halt_flag: true`.
 
 [PROCEDURE]
 1. Read `IDENTITY.md`, `goal.md`, `corpus/INDEX.md`, and the active `problem.md`.
@@ -25,7 +27,10 @@ Convert a raw problem statement into a formal investigation brief and initialize
 2. Initialized or updated `claim_ledger.md` and `session_state.md`.
 
 [FAILURE]
-1. Missing `problem.md`: print `BLOCKED: missing problem statement.` and stop.
+1. Missing or malformed `problems/.active`: print `BLOCKED: malformed active problem pointer.` and stop.
+2. `problems/.active` names a slug whose directory is missing: print `BLOCKED: active problem directory missing.` and stop.
+3. Missing `problem.md`: print `BLOCKED: missing problem statement.` and stop.
+4. `session_state.md` marks the active problem closed with `halt_flag: true`: print `BLOCKED: active problem is closed; use prompts/prove.md for a fresh problem.` and stop.
 
 INVARIANTS (v4 ambition):
 - Section A "Formal Restatement" states the user's original problem in formal language without weakening. The words "partial", "conditional", "restricted", "weakened", "sub-case", "reformulation", "approximate" are forbidden in Section A. Their presence is a fatal defect.

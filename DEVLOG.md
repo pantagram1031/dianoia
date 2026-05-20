@@ -1,5 +1,17 @@
 # Devlog
 
+## 2026-05-20T18:48:00+09:00
+
+- Patched `prompts/resume.md` with explicit malformed `.active` handling and fresh-problem boundary text.
+- Patched `prompts/00-intake.md` with malformed, missing-directory, missing-problem, and closed-active failure cases.
+- Ran smoke in `dianoia-run`; malformed `.active` was detected, fake halted `.active` was superseded, fresh slug `prove-that-the-s-a-set-4cb341` became active, and `intake.md` exists.
+- Recorded smoke evidence in `capability-test/PHASE2-SMOKE-resume-intake-active-guards.md`.
+
+Self-audit:
+- Commits this session so far: 4 pushed, 1 pending.
+- Concrete progress category: fix.
+- Failed-session streak: 0.
+
 ## 2026-05-20T18:40:00+09:00
 
 - Patched `prompts/prove.md` with stale-active/closed-active handling.

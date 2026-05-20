@@ -3,12 +3,13 @@
 Resume Phase 2.
 
 Immediate next step:
-Implement the next DIAGNOSIS.md patch in severity order.
+Resolve DIAGNOSIS R1 at the routing boundary.
 
-Next patch target:
-- `prompts/resume.md` and `prompts/00-intake.md`: add malformed `.active`
-  failures and cross-reference that closed-problem resume is not fresh-problem
-  routing.
+Current state:
+- `prompts/prove.md`, `prompts/resume.md`, and `prompts/00-intake.md` have
+  prompt-level stale-active guards with smoke evidence.
+- R1 remains UNVERIFIED because `AGENTS.md` first-message route selection is
+  constitutional and unchanged.
 
 Important:
 - `AGENTS.md` is constitutional. If the required smoke test cannot pass without

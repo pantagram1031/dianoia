@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T02:16:00+09:00
+
+- Added tests for a non-HTTP Lean connector contract.
+- Updated `tools/verify_connectors.py` so `connectors/lean/server.py` uses
+  `check`/`env` JSON contract checks instead of arXiv/OEIS `search`/`fetch`.
+- Added `connectors/lean/` with README, example, and a local formal-check
+  wrapper that reports `UNVERIFIED` when Lean is unavailable.
+- Updated researcher subagent guidance to invoke the Lean connector for
+  formalizable claims.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: infra, connector.
+- Failed-session streak: 0.
+
 ## 2026-05-21T02:05:00+09:00
 
 - Pivoted to the updated RESEARCH_CONTRIBUTION goal.

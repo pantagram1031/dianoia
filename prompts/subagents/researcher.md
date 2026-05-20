@@ -20,17 +20,21 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
    `connectors/oeis/server.py` and write the compact metadata result into the
    drop zone. Treat OEIS as computational/reference evidence unless a separate
    proof source is verified.
-4. Consult `skills/citation-discipline/SKILL.md`; for each candidate
+4. For claims that may be formalized or already have a Lean artifact, invoke
+   `connectors/lean/server.py env` and, when a `.lean` file exists, invoke
+   `connectors/lean/server.py check <file>`. Record `UNVERIFIED` explicitly if
+   Lean is unavailable or the check cannot be run.
+5. Consult `skills/citation-discipline/SKILL.md`; for each candidate
    reference, collect author, year, title, exact statement reference, and the
    relationship between the cited statement and target claim.
-5. If the target claim involves small primes with prescribed quadratic
+6. If the target claim involves small primes with prescribed quadratic
    character behavior, consult `skills/pollack-character/SKILL.md` before
    deciding whether the reference supports finiteness, explicit bounds, or only
    an ineffective obstruction.
-6. Put complete references in `verified.md`.
-7. Put incomplete or unresolved references in `unverified.md` with missing fields named.
-8. Do not use unverified references as support for claims.
-9. Write `return.md` with status and artifact paths.
+7. Put complete references in `verified.md`.
+8. Put incomplete or unresolved references in `unverified.md` with missing fields named.
+9. Do not use unverified references as support for claims.
+10. Write `return.md` with status and artifact paths.
 
 [OUTPUTS]
 1. `verified.md`.

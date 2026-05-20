@@ -57,6 +57,27 @@ def check_server_contract(result: CheckResult, relative: str, server: Path) -> N
         result.add_ok(f"{relative} exposes search/fetch JSON CLI contract")
 
 
+def check_lean_contract(result: CheckResult, relative: str, server: Path) -> None:
+    try:
+        py_compile.compile(str(server), doraise=True)
+    except py_compile.PyCompileError as exc:
+        result.add_fail(f"{relative} does not compile: {exc.msg}")
+        return
+
+    text = read_text(server)
+    required = {
+        "argparse": "argparse" in text,
+        "json.dumps": "json.dumps" in text,
+        "check subcommand": "add_parser(\"check\"" in text or "add_parser('check'" in text,
+        "env subcommand": "add_parser(\"env\"" in text or "add_parser('env'" in text,
+    }
+    missing = [label for label, present in required.items() if not present]
+    if missing:
+        result.add_fail(f"{relative} missing Lean contract phrases: " + "; ".join(missing))
+    else:
+        result.add_ok(f"{relative} exposes check/env JSON CLI contract")
+
+
 def check_connectors(root: Path = ROOT) -> CheckResult:
     result = CheckResult(ok=[], fail=[])
     dirs = connector_dirs(root)
@@ -82,7 +103,10 @@ def check_connectors(root: Path = ROOT) -> CheckResult:
 
         server = directory / "server.py"
         if server.exists():
-            check_server_contract(result, f"connectors/{name}/server.py", server)
+            if name == "lean":
+                check_lean_contract(result, f"connectors/{name}/server.py", server)
+            else:
+                check_server_contract(result, f"connectors/{name}/server.py", server)
 
         invocation = f"connectors/{name}/server.py"
         if invocation in researcher and "invoke" in researcher.lower():

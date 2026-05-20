@@ -20,3 +20,8 @@ Current objective:
 - Immediate focus: build formal-check, openness-verification, and
   adversarial-novelty infrastructure before curating 20 verified-open problems.
 
+## 2026-05-21T02:16:00+09:00
+
+- Added `connectors/lean/` as the first P9 formal-check connector.
+- The wrapper reports `UNAVAILABLE`/`UNVERIFIED` when Lean is not installed
+  rather than silently passing a formal gate.

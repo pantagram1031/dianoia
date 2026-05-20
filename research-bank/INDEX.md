@@ -15,5 +15,7 @@
 | R011 | Chen-Li-Xi-Xu 2026 Mahler dimension-three frontier papers | geometry | 2026-05-20 (OPEN-VERIFIED) | C | exact Hanner-polytope computations and local stability subclaims provide bounded geometric targets | CURATED-OPEN-VERIFIED |
 | R012 | Guo 2026 rainbow-cycle progress around Caccetta-Haggkvist | combinatorics | 2026-05-20 (OPEN-VERIFIED) | B | small-digraph exact search and restricted rainbow-cycle variants can produce checkable progress | CURATED-OPEN-VERIFIED |
 | R013 | Kahn-Aires 2026 balancing extensions and 1/3-2/3 poset sources | order theory | 2026-05-20 (OPEN-VERIFIED) | A | exact linear-extension counting gives replayable finite certificates and tractable subcase search | CURATED-OPEN-VERIFIED |
+| R014 | Goldmakher-Martin-Peringuey 2025 Artin primitive-root refinements | number theory | 2026-05-20 (OPEN-VERIFIED) | C | exact primitive-root computations and GRH-separation checks provide bounded verifiable targets | CURATED-OPEN-VERIFIED |
+| R015 | 2026 Erdos-Szekeres revisited and happy ending status sources | geometry | 2026-05-20 (OPEN-VERIFIED) | B | SAT/order-type certificate replay and relaxed convex-polygon variants are exact-checkable | CURATED-OPEN-VERIFIED |
 
-Current counted P10 progress: 12 `OPEN-VERIFIED` candidates across 7 areas.
+Current counted P10 progress: 14 `OPEN-VERIFIED` candidates across 7 areas.

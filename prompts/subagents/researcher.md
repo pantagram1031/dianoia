@@ -13,7 +13,9 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 1. Search in the order biased by the specialist profile when supplied.
 2. For arXiv papers or arXiv-id-like queries, invoke
    `connectors/arxiv/server.py` and write the compact metadata result into the
-   drop zone before judging whether the reference is complete.
+   drop zone before judging whether the reference is complete. Consult
+   `skills/arxiv-fetch/SKILL.md` to separate metadata, fallback abstract-page
+   evidence, and exact statement verification.
 3. For OEIS sequence ids or sequence-like computational evidence, invoke
    `connectors/oeis/server.py` and write the compact metadata result into the
    drop zone. Treat OEIS as computational/reference evidence unless a separate

@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-20T20:12:00+09:00
+
+- Added third Phase 5 skill: `skills/arxiv-fetch/SKILL.md`.
+- Updated `skills/INDEX.md`.
+- Wired the skill into `prompts/subagents/researcher.md` alongside the arXiv
+  connector procedure.
+- Updated ROADMAP/NEXT_SESSION skill counts.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: skill.
+- Failed-session streak: 0.
+
 ## 2026-05-20T20:02:00+09:00
 
 - Promoted the S_a Phase 3 VALUE_ADDED retest into benchmark-bank entry B1.

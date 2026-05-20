@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-21T02:24:00+09:00
+
+- Added P9 skills `openness-verification` and `adversarial-novelty-check`.
+- Updated `skills/INDEX.md`.
+- Wired researcher subagent guidance to require openness and novelty checks for
+  research-bank candidates and candidate contribution claims.
+- Updated `RESEARCH_LOG.md`.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: infra, skill.
+- Failed-session streak: 0.
+
 ## 2026-05-21T02:16:00+09:00
 
 - Added tests for a non-HTTP Lean connector contract.

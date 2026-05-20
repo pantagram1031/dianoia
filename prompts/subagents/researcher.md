@@ -24,17 +24,24 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
    `connectors/lean/server.py env` and, when a `.lean` file exists, invoke
    `connectors/lean/server.py check <file>`. Record `UNVERIFIED` explicitly if
    Lean is unavailable or the check cannot be run.
-5. Consult `skills/citation-discipline/SKILL.md`; for each candidate
+5. For any research-bank candidate, published-as-open problem, conjecture,
+   bound-improvement target, or possible `CLAIMS.md` promotion, consult
+   `skills/openness-verification/SKILL.md`. Require at least three independent
+   openness angles and mark stale or incomplete checks `UNVERIFIED`.
+6. For any candidate contribution or novelty-sensitive claim, consult
+   `skills/adversarial-novelty-check/SKILL.md` and gather search evidence for
+   renamed, generalized, specialized, dual, or recently solved versions.
+7. Consult `skills/citation-discipline/SKILL.md`; for each candidate
    reference, collect author, year, title, exact statement reference, and the
    relationship between the cited statement and target claim.
-6. If the target claim involves small primes with prescribed quadratic
+8. If the target claim involves small primes with prescribed quadratic
    character behavior, consult `skills/pollack-character/SKILL.md` before
    deciding whether the reference supports finiteness, explicit bounds, or only
    an ineffective obstruction.
-7. Put complete references in `verified.md`.
-8. Put incomplete or unresolved references in `unverified.md` with missing fields named.
-9. Do not use unverified references as support for claims.
-10. Write `return.md` with status and artifact paths.
+9. Put complete references in `verified.md`.
+10. Put incomplete or unresolved references in `unverified.md` with missing fields named.
+11. Do not use unverified references as support for claims.
+12. Write `return.md` with status and artifact paths.
 
 [OUTPUTS]
 1. `verified.md`.

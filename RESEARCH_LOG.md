@@ -25,3 +25,10 @@ Current objective:
 - Added `connectors/lean/` as the first P9 formal-check connector.
 - The wrapper reports `UNAVAILABLE`/`UNVERIFIED` when Lean is not installed
   rather than silently passing a formal gate.
+
+## 2026-05-21T02:24:00+09:00
+
+- Added `skills/openness-verification/SKILL.md` and
+  `skills/adversarial-novelty-check/SKILL.md`.
+- Wired researcher prompt to use both skills for research-bank candidates and
+  any novelty-sensitive `CLAIMS.md` promotion.

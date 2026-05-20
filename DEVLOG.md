@@ -1,5 +1,23 @@
 # Devlog
 
+## 2026-05-20T23:01:00+09:00
+
+- Continued P11 on `R013`.
+- Added rank-shape filtering to `tools/poset_balance.py`.
+- Classified the width-3, height-4, rank-layer-shape `2,2,2,1` target class:
+  103 unlabeled profiles, no counterexamples, worst best-pair lower probability
+  `14/39`, next worst `2/5`.
+- Added `width3-rank2221-n7.json` and
+  `width3-rank2221-extremals-n7.json`.
+- Updated R013 notes with a sharper proof target: show the `14/39` extremal is
+  unique in the restricted class, or produce the exact small extremal family.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 1 pushed before this log update.
+- Concrete progress category: attempt, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:00:00+09:00
 
 - Continued P11 on `R013`.

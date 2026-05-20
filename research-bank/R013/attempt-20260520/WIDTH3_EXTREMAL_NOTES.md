@@ -7,6 +7,8 @@ status: OBSERVATION-NOT-CLAIM
 
 `width3-extremals-n7.json` records the 12 width-3 unlabeled posets through
 seven elements with smallest best-pair lower-orientation probabilities.
+`width3-rank2221-n7.json` and `width3-rank2221-extremals-n7.json` restrict to
+the proof-target class: width 3, height 4, rank-layer-shape `2,2,2,1`.
 
 The command was:
 
@@ -31,6 +33,13 @@ The current extremal width-3 records are:
 The first `n=7` extremal is the only recorded example in the top 12 below
 `4/11`.
 
+Inside the restricted width-3, height-4, rank-layer-shape `2,2,2,1` class:
+
+- total unlabeled posets: 103;
+- counterexamples to the base 1/3-2/3 condition: 0;
+- worst best-pair lower probability: `14/39`;
+- next worst lower probability: `2/5`.
+
 ## Shape Signal
 
 The strongest `n=7` profile has:
@@ -53,17 +62,17 @@ links into both the balanced-pair side and the side branch.
 
 ## Next Proof Attempt
 
-Try to formalize a restricted lemma for width-3, height-4, rank-layer-shape
-`2,2,2,1` posets:
+The exact restricted-family check suggests the sharper finite lemma:
 
 > If a seven-element width-3 poset has rank layer sizes `2,2,2,1`, then either
-> it has a pair with orientation probability at least `4/11` and at most
-> `7/11`, or it is isomorphic to one of a small extremal-profile family whose
-> best lower probability is `14/39`.
+> it has a pair with orientation probability at least `2/5` and at most `3/5`,
+> or it is isomorphic to the unique recorded extremal profile whose best lower
+> probability is `14/39`.
 
-This is not yet a theorem. The next required work is to generate the restricted
-family, classify the profile variants, and compare against known width/thin
-poset literature before any novelty claim.
+This is not yet a theorem. The next required work is to verify uniqueness
+under the same canonical key, produce a small human-checkable case split for
+the 103 restricted profiles, and compare against known width/thin poset
+literature before any novelty claim.
 
 ## Claim Discipline
 

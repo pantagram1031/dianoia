@@ -27,7 +27,9 @@ it to test small posets exactly.
    elements.
 8. Added an extremal width profiler and recorded the top width-3 near-boundary
    profiles through seven elements.
-9. Wired the small-poset and extremal-profile checks into `tools/verify_all.py`.
+9. Added rank-shape filtering and classified the width-3, height-4,
+   rank-layer-shape `2,2,2,1` target class.
+10. Wired the small-poset and extremal-profile checks into `tools/verify_all.py`.
 
 ## Verification
 
@@ -96,6 +98,20 @@ python tools\poset_balance.py extremal-width `
 
 Result: the top profile is a seven-element width-3, height-4 poset with
 rank-layer sizes `2,2,2,1`, 39 linear extensions, and best-pair lower
+probability `14/39`.
+
+Restricted rank-shape command:
+
+```powershell
+python tools\poset_balance.py exhaustive-unlabeled `
+  --max-n 7 `
+  --width 3 `
+  --height 4 `
+  --rank-shape 2,2,2,1 `
+  --output research-bank\R013\attempt-20260520\width3-rank2221-n7.json
+```
+
+Result: 103 unlabeled profiles, no counterexamples, and worst best-pair lower
 probability `14/39`.
 
 ## Outcome

@@ -18,6 +18,9 @@ Artifacts:
   elements.
 - `width3-extremals-n7.json`: top width-3 near-boundary profiles through seven
   elements.
+- `width3-rank2221-n7.json`: restricted width-3, height-4,
+  rank-layer-shape `2,2,2,1` summary.
+- `width3-rank2221-extremals-n7.json`: restricted extremal list.
 - `WIDTH3_EXTREMAL_NOTES.md`: human-readable proof-target notes.
 - `tools/poset_balance.py`: exact linear-extension and balanced-pair analyzer.
 
@@ -58,6 +61,8 @@ These are search signals only:
 3. Start with the specific proof target in `WIDTH3_EXTREMAL_NOTES.md`:
    classify width-3, height-4, rank-layer-shape `2,2,2,1` posets and determine
    whether `14/39` is the extremal lower probability in that restricted class.
+   The exact restricted run now confirms this for all 103 unlabeled profiles
+   through `n=7`.
 4. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

@@ -80,6 +80,8 @@ expansion. Prefer R013 structural lemma extraction around the exact small-data
 signals in `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`,
 especially the width-3 proof target in
 `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`: classify
-width-3, height-4, rank-layer-shape `2,2,2,1` posets and test whether `14/39`
-is extremal in that restricted class. R020 remains available if the next step
-is bounded search/proof work rather than external solver engineering.
+width-3, height-4, rank-layer-shape `2,2,2,1` posets. The restricted class now
+has an exact artifact: 103 unlabeled profiles, worst lower probability
+`14/39`, next worst `2/5`. Next, test uniqueness/case-split proof structure
+before any novelty claim. R020 remains available if the next step is bounded
+search/proof work rather than external solver engineering.

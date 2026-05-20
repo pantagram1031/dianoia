@@ -12,7 +12,8 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
 - continue `R013` by extracting a structural lemma candidate from
   `STRUCTURAL_NOTES.md`, especially the width-3 separation signal and
   the concrete `WIDTH3_EXTREMAL_NOTES.md` target: classify width-3, height-4,
-  rank-layer-shape `2,2,2,1` posets and test whether `14/39` is extremal; or
+  rank-layer-shape `2,2,2,1` posets. The exact restricted artifact exists;
+  next test uniqueness/case-split proof structure for the `14/39` extremal; or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
 - switch to `R017` Graceful Tree Conjecture if both R013 and R020 become mostly
@@ -51,6 +52,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json`
   - `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`
   - `research-bank/R013/attempt-20260520/width3-extremals-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-extremals-n7.json`
   - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
   - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`

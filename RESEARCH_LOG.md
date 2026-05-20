@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T23:01:00+09:00
+
+- Classified the R013 width-3, height-4, rank-layer-shape `2,2,2,1`
+  restricted target class.
+- New artifacts:
+  `research-bank/R013/attempt-20260520/width3-rank2221-n7.json` and
+  `research-bank/R013/attempt-20260520/width3-rank2221-extremals-n7.json`.
+- Finite signal: 103 unlabeled profiles, no counterexamples, worst best-pair
+  lower probability `14/39`, next worst `2/5`.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-20T23:00:00+09:00
 
 - Extracted R013 width-3 extremal profiles rather than merely extending

@@ -11,6 +11,7 @@ verdict: PARTIAL-PROGRESS
   tests, a replayed exhaustive labeled small-poset check through five elements,
   a canonical unlabeled check through seven elements, and a focused width-3
   frontier summary with extremal profiles.
+- The proposed rank-layer target class was classified exactly for `n=7`.
 
 ## Exact Evidence
 
@@ -21,6 +22,8 @@ verdict: PARTIAL-PROGRESS
 - `research-bank/R013/attempt-20260520/unlabeled-posets-n7.json`
 - `research-bank/R013/attempt-20260520/width3-unlabeled-n7.json`
 - `research-bank/R013/attempt-20260520/width3-extremals-n7.json`
+- `research-bank/R013/attempt-20260520/width3-rank2221-n7.json`
+- `research-bank/R013/attempt-20260520/width3-rank2221-extremals-n7.json`
 - `research-bank/R013/attempt-20260520/WIDTH3_EXTREMAL_NOTES.md`
 - `research-bank/R013/attempt-20260520/STRUCTURAL_NOTES.md`
 - `tools/verify_all.py`
@@ -42,6 +45,8 @@ The unlabeled seven-element artifact reports:
 - focused width-3 worst best-pair lower probability at `n=7`: `14/39`.
 - extremal profile proof target: width 3, height 4, rank-layer shape
   `2,2,2,1`.
+- restricted target class: 103 unlabeled profiles, no counterexamples, worst
+  best-pair lower probability `14/39`, next worst `2/5`.
 
 ## Claim Discipline
 

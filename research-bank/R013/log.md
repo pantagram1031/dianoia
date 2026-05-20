@@ -67,3 +67,19 @@ candidate_id: R013
 - Wired a small extremal-profile smoke into `tools/verify_all.py`.
 - Claim discipline: no `CLAIMS.md` row; this is a proof target extracted from
   exact finite evidence, not a solved claim.
+
+## 2026-05-20 P11 Attempt 1E
+
+- Added rank-shape filtering to the exact poset tool.
+- Classified the restricted target class:
+  width 3, height 4, rank-layer-shape `2,2,2,1`.
+- Artifact:
+  `research-bank/R013/attempt-20260520/width3-rank2221-n7.json` reports
+  103 unlabeled profiles, no counterexamples, and worst best-pair lower
+  probability `14/39`.
+- Artifact:
+  `research-bank/R013/attempt-20260520/width3-rank2221-extremals-n7.json`
+  records the restricted near-boundary profiles; the next worst lower
+  probability after `14/39` is `2/5`.
+- Claim discipline: no `CLAIMS.md` row; this sharpens the restricted proof
+  target but does not prove novelty or a theorem.

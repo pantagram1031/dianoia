@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T23:48:00+09:00
+
+- Added `tools/verify_routing_guards.py` to check stale `.active`, closed-active,
+  resume-only, and intake guard text across `AGENTS.md` and phase prompts.
+- Added `tests/test_verify_routing_guards.py`, including a regression that
+  wrapped guard phrases still count as present.
+- Integrated routing guard verification into `tools/verify_all.py`.
+- Recorded smoke evidence in
+  `capability-test/ROUTING-GUARDS-VERIFY-20260520.md`.
+
+Self-audit:
+- Commits this session so far: 0 pushed, 1 pending.
+- Concrete progress category: test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:36:00+09:00
 
 - Added `tools/verify_all.py` to run unit tests, state verifier, and phase-loop

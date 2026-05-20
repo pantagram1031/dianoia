@@ -26,7 +26,7 @@ reproducibility.
 |-------|--------|---------------|
 | Benchmark expansion | IN_PROGRESS | Add B6+ with full fresh raw and dianoia artifacts when feasible |
 | Benchmark reproducibility | IN_PROGRESS | Add verifier/runbook/templates that reject weak or simulated rows |
-| Phase-loop reliability | IN_PROGRESS | Regression checks for routing, checkpoint, Reviewer D, and subagent fire |
+| Phase-loop reliability | IN_PROGRESS | Routing, checkpoint, Reviewer D, and subagent-fire checks are covered by local verifiers; next add smoke checks from real fresh runs |
 | Skills/connectors | WATCH | Add or revise only when benchmark evidence shows a reusable need |
 | Docs | WATCH | Keep README/ARCHITECTURE/EXAMPLES/CHANGELOG synced after substantive changes |
 | Deeper research | READY-BUT-GATED-BY-JUDGMENT | Begin only with honest reports and no publishable claim without user approval |
@@ -35,4 +35,5 @@ reproducibility.
 
 Harden benchmark reproducibility before adding B6: local verification should
 make it obvious which rows are full fresh runs, which are weaker controlled
-comparisons, and which evidence is missing.
+comparisons, and which evidence is missing. The verifier suite now includes
+state, phase-loop, and routing-guard checks through `python tools\verify_all.py`.

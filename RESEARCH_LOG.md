@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T01:18:00+09:00
+
+- Continued P11 on `R013` by deepening the normal-form recurrence traces.
+- New artifacts:
+  `research-bank/R013/attempt-20260520/normal-form-cases/*-recurrence-depth2.json`.
+- Tooling change: `named-case-recurrence` now accepts `--depth` so recurrence
+  proofs can expose nested branch splits without changing default output.
+- Finite signal: Cases A/B/C now have second-level minimal-choice branches
+  recorded in `RECURRENCE_LEDGER.md`.
+- Claim discipline: no new result, no `CLAIMS.md` row, no P12 trigger.
+
 ## 2026-05-21T01:01:00+09:00
 
 - Added recurrence traces for the R013 normal-form count certificates.

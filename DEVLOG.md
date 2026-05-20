@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T01:18:00+09:00
+
+- Continued P11 on `R013`.
+- Added bounded-depth recurrence traces to `tools/poset_balance.py` with test
+  coverage.
+- Generated depth-2 recurrence artifacts for the three normal-form cases.
+- Updated R013 recurrence and structural notes so the next proof step is a
+  terminal hand enumeration of residual branch counts.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 2 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T01:01:00+09:00
 
 - Continued P11 on `R013`.

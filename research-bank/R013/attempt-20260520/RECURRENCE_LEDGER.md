@@ -6,8 +6,8 @@ status: OBSERVATION-NOT-CLAIM
 ## Scope
 
 This ledger replaces the named-case count reports with a more transparent
-minimal-element recurrence. The recurrence is still generated, but it exposes
-the first-step split needed for a hand enumeration.
+minimal-element recurrence. The recurrence is still generated, but it now
+exposes the first two recurrence levels needed for a hand enumeration.
 
 For a named case and checked pair `(x,y)`, write `N_x` for the number of
 linear extensions with `x` before `y`, and `N_y` for the number with `y` before
@@ -27,6 +27,21 @@ python tools\poset_balance.py named-case-recurrence `
 python tools\poset_balance.py named-case-recurrence `
   research-bank\R013\attempt-20260520\normal-form-cases\case-c.json `
   --output research-bank\R013\attempt-20260520\normal-form-cases\case-c-recurrence.json
+
+python tools\poset_balance.py named-case-recurrence `
+  research-bank\R013\attempt-20260520\normal-form-cases\case-a.json `
+  --depth 2 `
+  --output research-bank\R013\attempt-20260520\normal-form-cases\case-a-recurrence-depth2.json
+
+python tools\poset_balance.py named-case-recurrence `
+  research-bank\R013\attempt-20260520\normal-form-cases\case-b.json `
+  --depth 2 `
+  --output research-bank\R013\attempt-20260520\normal-form-cases\case-b-recurrence-depth2.json
+
+python tools\poset_balance.py named-case-recurrence `
+  research-bank\R013\attempt-20260520\normal-form-cases\case-c.json `
+  --depth 2 `
+  --output research-bank\R013\attempt-20260520\normal-form-cases\case-c-recurrence-depth2.json
 ```
 
 ## Root Recurrences
@@ -66,6 +81,47 @@ total:    (N_c, N_d) = (15, 18)
 ```
 
 Thus the lower orientation probability is `15/33 = 5/11`.
+
+## Second-Level Recurrences
+
+The depth-2 traces expose the next recurrence layer without changing the
+root totals above.
+
+### Case A after root choices
+
+```text
+after choose a:
+  choose b: (N_c, N_b) = (0, 11)
+  choose c: (N_c, N_b) = (11, 0)
+  choose d: (N_c, N_b) = (3, 3)
+
+after choose b:
+  choose a: (N_c, N_b) = (0, 11)
+```
+
+### Case B after root choices
+
+```text
+after choose a:
+  choose b: (N_a, N_b) = (11, 0)
+  choose c: (N_a, N_b) = (3, 0)
+
+after choose b:
+  choose a: (N_a, N_b) = (0, 11)
+  choose d: (N_a, N_b) = (0, 8)
+```
+
+### Case C after root choices
+
+```text
+after choose a:
+  choose b: (N_c, N_d) = (4, 5)
+  choose c: (N_c, N_d) = (7, 0)
+  choose d: (N_c, N_d) = (0, 8)
+
+after choose b:
+  choose a: (N_c, N_d) = (4, 5)
+```
 
 ## Proof Use
 

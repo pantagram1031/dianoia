@@ -178,3 +178,17 @@ candidate_id: R013
 - Result: the branch recurrences now show how `14/39`, `14/33`, and `5/11`
   arise from root minimal choices.
 - Claim discipline: no `CLAIMS.md` row.
+
+## 2026-05-21 P11 Attempt 1N
+
+- Extended `named-case-recurrence` with a bounded `--depth` option while
+  preserving the default root-split output.
+- Generated depth-2 recurrence traces for Cases A/B/C:
+  `case-a-recurrence-depth2.json`, `case-b-recurrence-depth2.json`, and
+  `case-c-recurrence-depth2.json`.
+- Updated `RECURRENCE_LEDGER.md` and `STRUCTURAL_NOTES.md` to record the
+  second-level branch counts.
+- Result: the common-matrix subcase is closer to a hand-checkable proof; the
+  remaining work is to replace the residual branch totals with terminal
+  chain/shuffle counts.
+- Claim discipline: no `CLAIMS.md` row.

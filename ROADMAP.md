@@ -91,6 +91,8 @@ rank-layer labels, and `NORMAL_FORM_COUNT_LEDGER.md` certifies the three
 orientation counts from named case inputs. `COVER_MATRIX_DERIVATION.md` now
 derives the same three forms directly from the cover matrix. Next, replace the
 remaining recurrence branch counts with a hand enumeration before any novelty
-claim; `RECURRENCE_LEDGER.md` now exposes the first-step recurrences.
+claim; `RECURRENCE_LEDGER.md` now exposes depth-2 recurrences for Cases A/B/C,
+and the next proof step is to reduce residual branch totals to terminal
+chain/shuffle counts.
 R020 remains available if the next step is bounded search/proof work rather
 than external solver engineering.

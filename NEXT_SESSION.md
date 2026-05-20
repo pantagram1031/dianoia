@@ -20,8 +20,10 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   extraction. `RANK_NORMAL_FORM_NOTES.md` rewrites those cases using stable
   rank-layer labels. `NORMAL_FORM_COUNT_LEDGER.md` certifies the named-case
   counts. `COVER_MATRIX_DERIVATION.md` derives the three normal forms from the
-  cover matrix. `RECURRENCE_LEDGER.md` exposes first-step recurrence counts;
-  next replace the remaining recurrence branch counts with a hand enumeration;
+  cover matrix. `RECURRENCE_LEDGER.md` exposes depth-2 recurrence counts, with
+  `case-a-recurrence-depth2.json`, `case-b-recurrence-depth2.json`, and
+  `case-c-recurrence-depth2.json`; next reduce the residual branch totals to
+  terminal chain/shuffle counts by hand;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -76,6 +78,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/COVER_MATRIX_DERIVATION.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/normal-form-cases/`
+  - `research-bank/R013/attempt-20260520/normal-form-cases/*-recurrence-depth2.json`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`
     `python tools/poset_balance.py exhaustive-unlabeled --max-n 5`, and a
     small matrix-signature `shape-classes` smoke.

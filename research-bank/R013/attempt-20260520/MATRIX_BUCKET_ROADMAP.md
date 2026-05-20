@@ -122,6 +122,19 @@ and `13/32`; the second form attains the bucket minimum, and
 `SEVENTH_MATRIX_BUCKET_NOTES.md` gives a hand enumeration for that equality
 form.
 
+The eighth-ranked bucket has also been extracted and replayed:
+
+- `width3-rank2221-eighth-matrix-bucket-n7.json`
+- `width3-rank2221-eighth-cover-matrix-forms-n7.json`
+- `normal-form-cases/case-eighth-bucket-0.json`
+- `normal-form-cases/case-eighth-bucket-1.json`
+- `EIGHTH_MATRIX_BUCKET_NOTES.md`
+
+It has two rank-normal forms. Exact replay gives lower probabilities `13/32`
+and `5/11`; the first form attains the bucket minimum, and
+`EIGHTH_MATRIX_BUCKET_NOTES.md` gives a hand enumeration for that equality
+form.
+
 ## Claim Discipline
 
 No `CLAIMS.md` row. This roadmap only organizes restricted finite subcases

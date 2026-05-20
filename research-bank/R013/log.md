@@ -2,6 +2,24 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 1V
+
+- Classified the eighth-ranked matrix bucket for the restricted width-3,
+  height-4, rank-shape `2,2,2,1` class.
+- Artifact:
+  `research-bank/R013/attempt-20260520/width3-rank2221-eighth-matrix-bucket-n7.json`
+  extracts the two-profile bucket with signature
+  `layers=2,2,2,1|covers=8|mins=2|maxs=2|cover_matrix=[[0,3,1,0],[0,0,2,1],[0,0,0,1],[0,0,0,0]]`.
+- Artifact:
+  `research-bank/R013/attempt-20260520/width3-rank2221-eighth-cover-matrix-forms-n7.json`
+  derives the same two rank-normal forms directly from the cover matrix.
+- Artifact:
+  `research-bank/R013/attempt-20260520/EIGHTH_MATRIX_BUCKET_NOTES.md`
+  records lower probabilities `13/32` and `5/11`, with a hand count for the
+  weaker `13/32` form.
+- Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
+  subcase, not a proof of the published open problem.
+
 ## 2026-05-21 P11 Attempt 1U
 
 - Classified the seventh-ranked matrix bucket for the restricted width-3,

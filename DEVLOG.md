@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-20T21:28:00+09:00
+
+- Added Phase 4 benchmark B3 in geometry from Samarakkody 2026,
+  arXiv:2603.14663, Theorem 7.5.
+- Created raw baseline artifacts in
+  `C:\Users\SAMSUNG\Downloads\raw-attempt-4`.
+- Created dianoia-run artifacts in
+  `C:\Users\SAMSUNG\Downloads\dianoia-run\problems\b3-isoperimetric-formalization`.
+- Appended B3 to `BENCHMARK.md` as VALUE_ADDED and updated docs/state files.
+
+Self-audit:
+- Commits this session so far: 6 pushed, 1 pending.
+- Concrete progress category: benchmark.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:05:00+09:00
 
 - Added Phase 4 benchmark B2 in combinatorics from Bai-Berczi 2026,

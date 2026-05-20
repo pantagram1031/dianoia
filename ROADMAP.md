@@ -10,7 +10,7 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 1 | DIAGNOSE | COMPLETE | DIAGNOSIS.md |
 | 2 | FIX | COMPLETE | AGENTS.md routing guard plus Phase 2 smoke artifacts |
 | 3 | RE-TEST SAME PROBLEM | COMPLETE: VALUE_ADDED | capability-test/RETEST.md |
-| 4 | EXPAND BENCHMARK BANK | IN_PROGRESS | 2/5 VALUE_ADDED rows across 2 areas |
+| 4 | EXPAND BENCHMARK BANK | IN_PROGRESS | 3/5 VALUE_ADDED rows across 3 areas |
 | 5 | BUILD SKILLS | COMPLETE | 5/5 skills added and referenced by subagent prompts |
 | 6 | BUILD CONNECTORS | COMPLETE | 2/2 connectors added: arxiv, oeis |
 | 7 | DOCS | COMPLETE | README.md, ARCHITECTURE.md, EXAMPLES.md, CHANGELOG.md current as of B2/Phase 5/Phase 6 |
@@ -19,5 +19,5 @@ Initialized: 2026-05-20T17:54:05+09:00
 ## Current Priority
 
 Proceed with Phase 4 benchmark expansion. Phases 5, 6, and 7 are complete for
-the current repository state. Phase 4 needs 3 more VALUE_ADDED rows across at
-least 1 additional area.
+the current repository state. Phase 4 needs 2 more VALUE_ADDED rows; the
+distinct-area requirement is satisfied.

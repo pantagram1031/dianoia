@@ -26,6 +26,17 @@ COMMANDS = [
     ],
     [sys.executable, "tools/poset_balance.py", "exhaustive-small", "--max-n", "5"],
     [sys.executable, "tools/poset_balance.py", "exhaustive-unlabeled", "--max-n", "5"],
+    [
+        sys.executable,
+        "tools/poset_balance.py",
+        "extremal-width",
+        "--max-n",
+        "5",
+        "--width",
+        "3",
+        "--limit",
+        "1",
+    ],
 ]
 
 

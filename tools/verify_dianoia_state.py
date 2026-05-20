@@ -199,7 +199,15 @@ def check_connectors(result: CheckResult) -> None:
 
 
 def check_docs(result: CheckResult) -> None:
-    required_files = ["README.md", "ARCHITECTURE.md", "EXAMPLES.md", "CHANGELOG.md", "ROADMAP.md", "NEXT_SESSION.md"]
+    required_files = [
+        "README.md",
+        "ARCHITECTURE.md",
+        "EXAMPLES.md",
+        "CHANGELOG.md",
+        "ROADMAP.md",
+        "NEXT_SESSION.md",
+        "DEVLOG.md",
+    ]
     for name in required_files:
         if not (ROOT / name).exists():
             result.add_fail(f"missing doc/state file: {name}")
@@ -218,6 +226,13 @@ def check_docs(result: CheckResult) -> None:
         result.add_fail("benchmark-bank/RUNBOOK.md missing")
     if not (ROOT / "templates" / "benchmark_case" / "RUN.md").exists():
         result.add_fail("templates/benchmark_case/RUN.md missing")
+    for name in required_files:
+        path = ROOT / name
+        if not path.exists():
+            continue
+        for reference in sorted(set(re.findall(r"capability-test/[A-Za-z0-9._/-]+\.md", read_text(path)))):
+            if not (ROOT / Path(reference)).exists():
+                result.add_fail(f"missing referenced capability artifact: {reference}")
     if not result.fail:
         result.add_ok("docs/state files contain current continuous-improvement baseline")
 

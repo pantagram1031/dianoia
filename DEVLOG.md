@@ -1,5 +1,19 @@
 # Devlog
 
+## 2026-05-21T00:07:00+09:00
+
+- Extended `tools/verify_dianoia_state.py` so required docs/state files include
+  `DEVLOG.md` and cited `capability-test/*.md` artifacts must exist.
+- Added a regression in `tests/test_verify_dianoia_state.py` for a missing
+  referenced capability artifact.
+- Recorded smoke evidence in
+  `capability-test/CAPABILITY-REFERENCE-VERIFY-20260520.md`.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: docs, test.
+- Failed-session streak: 0.
+
 ## 2026-05-20T23:58:00+09:00
 
 - Added `tools/verify_connectors.py` to check connector README/example/server

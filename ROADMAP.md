@@ -28,7 +28,7 @@ reproducibility.
 | Benchmark reproducibility | IN_PROGRESS | Add verifier/runbook/templates that reject weak or simulated rows |
 | Phase-loop reliability | IN_PROGRESS | Routing, checkpoint, Reviewer D, and subagent-fire checks are covered by local verifiers; next add smoke checks from real fresh runs |
 | Skills/connectors | WATCH | Connector files and subagent wiring are covered by `tools/verify_connectors.py`; add or revise only when benchmark evidence shows a reusable need |
-| Docs | WATCH | Keep README/ARCHITECTURE/EXAMPLES/CHANGELOG synced after substantive changes |
+| Docs | WATCH | `tools/verify_dianoia_state.py` checks required docs and referenced capability artifacts; keep README/ARCHITECTURE/EXAMPLES/CHANGELOG synced after substantive changes |
 | Deeper research | READY-BUT-GATED-BY-JUDGMENT | Begin only with honest reports and no publishable claim without user approval |
 
 ## Current Priority

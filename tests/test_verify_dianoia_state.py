@@ -164,5 +164,33 @@ class BenchmarkManifestVerifierTest(unittest.TestCase):
         )
 
 
+class CapabilityReferenceVerifierTest(unittest.TestCase):
+    def test_missing_referenced_capability_artifact_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            root = Path(temp_dir)
+            write(root / "README.md", "5 accepted controlled comparisons\nbaseline rather than a terminal\n")
+            write(root / "ARCHITECTURE.md", "## Phase Loop\n## Meaningfulness Gate\n## Subagent Flow\n")
+            write(root / "ROADMAP.md", "Continuous Improvement Track\ncapability-test/MISSING.md\n")
+            write(root / "EXAMPLES.md", "")
+            write(root / "CHANGELOG.md", "")
+            write(root / "NEXT_SESSION.md", "")
+            write(root / "DEVLOG.md", "")
+            write(root / "benchmark-bank" / "RUNBOOK.md", "")
+            write(root / "templates" / "benchmark_case" / "RUN.md", "")
+
+            original_root = verifier.ROOT
+            try:
+                verifier.ROOT = root
+                result = verifier.CheckResult(ok=[], warn=[], fail=[])
+                verifier.check_docs(result)
+            finally:
+                verifier.ROOT = original_root
+
+        self.assertTrue(
+            any("missing referenced capability artifact: capability-test/MISSING.md" in item for item in result.fail),
+            result.fail,
+        )
+
+
 if __name__ == "__main__":
     unittest.main()

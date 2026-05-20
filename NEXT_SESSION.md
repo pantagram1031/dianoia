@@ -29,8 +29,9 @@ Important:
   so future B6+ rows prefer full fresh raw and dianoia runs and clearly label
   weaker evidence.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
-  smoke is `capability-test/STATE-VERIFY-20260520.md`; warnings are expected
-  for UNVERIFIED token accounting in B1-B5.
+  smoke is `capability-test/CAPABILITY-REFERENCE-VERIFY-20260520.md`; warnings
+  are expected for UNVERIFIED token accounting in B1-B5. It also checks that
+  docs/state references to `capability-test/*.md` artifacts resolve.
 - Phase-loop verifier exists: `python tools\verify_phase_loop.py`. Latest smoke
   is `capability-test/PHASE-LOOP-VERIFY-20260520.md`.
 - Routing guard verifier exists: `python tools\verify_routing_guards.py`.

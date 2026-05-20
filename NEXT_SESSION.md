@@ -30,8 +30,10 @@ Do not keep expanding replay as a substitute for mathematics. Choose one:
   six-profile third bucket with exact replay counts and a hand count for the
   equality form. `FOURTH_MATRIX_BUCKET_NOTES.md` classifies the four-profile
   fourth bucket with exact replay counts and a hand count for the equality
-  form. Next either classify another remaining singleton `2/5` matrix bucket,
-  or abstract the completed buckets into a broader width-3 lemma candidate;
+  form. `FIFTH_MATRIX_BUCKET_NOTES.md` classifies another singleton `2/5`
+  bucket with exact replay counts and a hand enumeration. Next either classify
+  the remaining singleton `2/5` matrix bucket, or abstract the completed
+  buckets into a broader width-3 lemma candidate;
   or
 - return to `R020` only for bounded search/proof work accepted by the verifier,
   not for more source-format replay; or
@@ -89,6 +91,7 @@ Current state:
   - `research-bank/R013/attempt-20260520/SECOND_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/THIRD_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/FOURTH_MATRIX_BUCKET_NOTES.md`
+  - `research-bank/R013/attempt-20260520/FIFTH_MATRIX_BUCKET_NOTES.md`
   - `research-bank/R013/attempt-20260520/width3-rank2221-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-second-cover-matrix-forms-n7.json`
@@ -96,6 +99,8 @@ Current state:
   - `research-bank/R013/attempt-20260520/width3-rank2221-third-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-fourth-matrix-bucket-n7.json`
   - `research-bank/R013/attempt-20260520/width3-rank2221-fourth-cover-matrix-forms-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-fifth-matrix-bucket-n7.json`
+  - `research-bank/R013/attempt-20260520/width3-rank2221-fifth-cover-matrix-forms-n7.json`
   - `research-bank/R013/attempt-20260520/normal-form-cases/`
   - `research-bank/R013/attempt-20260520/normal-form-cases/*-recurrence-depth2.json`
   - `tools/verify_all.py` runs `python tools/poset_balance.py exhaustive-small --max-n 5`

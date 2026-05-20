@@ -86,6 +86,17 @@ It has four rank-normal forms. Generated exact counts show bucket minimum
 `2/5`, attained only by one form; `FOURTH_MATRIX_BUCKET_NOTES.md` hand-counts
 that equality form.
 
+The fifth-ranked bucket has also been extracted and replayed:
+
+- `width3-rank2221-fifth-matrix-bucket-n7.json`
+- `width3-rank2221-fifth-cover-matrix-forms-n7.json`
+- `normal-form-cases/case-fifth-bucket.json`
+- `FIFTH_MATRIX_BUCKET_NOTES.md`
+
+It is a singleton bucket. The pair `(c,d)` has counts `(18,12)` over `30`
+extensions, so the lower probability is `2/5`; `FIFTH_MATRIX_BUCKET_NOTES.md`
+gives the hand enumeration.
+
 ## Claim Discipline
 
 No `CLAIMS.md` row. This roadmap only organizes restricted finite subcases

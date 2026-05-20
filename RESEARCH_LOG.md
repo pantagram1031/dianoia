@@ -13,6 +13,21 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T03:48:00+09:00
+
+- Continued P11 on `R013` by classifying the fifth-ranked matrix bucket in
+  the restricted width-3, height-4, rank-shape `2,2,2,1` class.
+- New artifacts:
+  `width3-rank2221-fifth-matrix-bucket-n7.json`,
+  `width3-rank2221-fifth-cover-matrix-forms-n7.json`,
+  `normal-form-cases/case-fifth-bucket*`, and
+  `FIFTH_MATRIX_BUCKET_NOTES.md`.
+- Finite signal: the fifth bucket is singleton; exact replay counts give
+  `(18,12)` over `30` extensions for `(c,d)`, lower probability `2/5`, with a
+  hand enumeration in the note.
+- Claim discipline: restricted subcase only; no `CLAIMS.md` row and no P12
+  trigger.
+
 ## 2026-05-21T03:15:00+09:00
 
 - Continued P11 on `R013` by classifying the fourth-ranked matrix bucket in

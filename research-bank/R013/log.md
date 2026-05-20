@@ -244,3 +244,16 @@ candidate_id: R013
   a hand count for the equality form with lower probability `2/5`.
 - Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
   subcase, not a solution of R013.
+
+## 2026-05-21 P11 Attempt 1S
+
+- Extracted the fifth-ranked `2/5` matrix bucket to
+  `width3-rank2221-fifth-matrix-bucket-n7.json`.
+- Derived the singleton rank-normal form in
+  `width3-rank2221-fifth-cover-matrix-forms-n7.json`.
+- Added named replay and depth-2 recurrence artifacts under
+  `normal-form-cases/case-fifth-bucket*`.
+- Added `FIFTH_MATRIX_BUCKET_NOTES.md`, recording exact generated counts and a
+  hand count for `(c,d)` with lower probability `2/5`.
+- Claim discipline: no `CLAIMS.md` row; this remains a restricted finite
+  subcase, not a solution of R013.

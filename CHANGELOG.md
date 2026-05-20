@@ -27,6 +27,8 @@
   candidates across 6/4 required areas.
 - Added counted `OPEN-VERIFIED` candidates R012-R015, bringing P10 to 14/20
   candidates across 7/4 required areas.
+- Added counted `OPEN-VERIFIED` candidates R016-R021, bringing P10 to 20/20
+  candidates across 10/4 required areas and opening P11 attempts.
 
 ## 2026-05-21 Continuous Objective Refresh
 

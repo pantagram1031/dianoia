@@ -13,6 +13,22 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T21:46:00+09:00
+
+- Added six counted P10 `OPEN-VERIFIED` candidates:
+  - `R016`: Barnette's conjecture, graph theory, rank B.
+  - `R017`: Graceful Tree Conjecture, graph theory, rank A.
+  - `R018`: Hadwiger-Boltyanski illumination conjecture, geometry, rank C.
+  - `R019`: Ryser-Brualdi-Stein Latin square transversal conjecture, design
+    theory, rank B.
+  - `R020`: no-three-in-line problem, discrete geometry, rank A.
+  - `R021`: Erdos-Gyarfas power-of-two cycles conjecture, graph theory, rank B.
+- Current P10 progress: 20/20 `OPEN-VERIFIED` candidates across 10/4 required
+  areas. P10 gate is satisfied.
+- P11 selection note: prioritize `R020` first because exact coordinates,
+  integer line checks, and CSP certificate replay make a fast honest attempt
+  path. `R013` and `R017` are the next rank-A alternatives.
+
 ## 2026-05-20T21:31:00+09:00
 
 - Added four counted P10 `OPEN-VERIFIED` candidates:

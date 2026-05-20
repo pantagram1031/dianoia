@@ -16,8 +16,8 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 7 | DOCS | COMPLETE | README.md, ARCHITECTURE.md, EXAMPLES.md, CHANGELOG.md current as of B5/Phase 5/Phase 6 |
 | 8 | DEEPER RESEARCH | GATED | Requires 5 contamination-free novel VALUE_ADDED B6+ rows across 3 areas |
 | 9 | RESEARCH INFRA | COMPLETE | `connectors/lean/`, enhanced `connectors/arxiv/`, openness/novelty skills, research-state verifier, and candidate templates |
-| 10 | CURATION | IN_PROGRESS | Requires research-bank with 20 verified-open candidates across 4 areas |
-| 11 | ATTEMPTS | PENDING | Requires curated research-bank candidate selection |
+| 10 | CURATION | COMPLETE | `research-bank/INDEX.md` records 20 `OPEN-VERIFIED` candidates across 10 areas |
+| 11 | ATTEMPTS | READY | P10 gate satisfied; begin candidate attempts from highest-tractability bank entries |
 | 12 | VERIFICATION GATE | PENDING | Mandatory for any SOLVED-CLAIM |
 | 13 | INTERMEDIATE WINS | PENDING | Draft note plus BLOCKED_ON_USER before any external claim |
 
@@ -33,8 +33,8 @@ for external mathematician review.
 | Track | Status | Next Evidence |
 |-------|--------|---------------|
 | P9 infra | COMPLETE | `connectors/lean/`, enhanced arXiv lookup, openness skill, adversarial novelty skill, `tools/verify_research_state.py`, `templates/research_candidate/` |
-| P10 curation | IN_PROGRESS | `research-bank/INDEX.md` with 20 verified-open candidates across 4 areas |
-| P11 attempts | PENDING | One candidate attempt log per session after P10 seed set exists |
+| P10 curation | COMPLETE | `research-bank/INDEX.md` with 20 verified-open candidates across 10 areas |
+| P11 attempts | READY | First attempt should target a rank A candidate with exact-checkable artifacts |
 | P12 verification | PENDING | `CLAIMS.md` rows with gates, confidence, and downgrade/blocked status |
 | P13 notes | PENDING | `research-bank/<id>/draft-note.md` for any intermediate win |
 
@@ -63,21 +63,14 @@ reproducibility toward that evidence standard.
 
 ## Current Priority
 
-P10 CURATION. Seed `research-bank/` with verified-open candidates across at
-least four mathematical areas. For each candidate, copy
-`templates/research_candidate/`, run the openness and novelty skills, preserve
-arXiv `query_meta` when used, and do not promote to P11 unless openness is
-current within seven days.
+P11 ATTEMPTS. P10 curation is complete: `research-bank/INDEX.md` records 20
+`OPEN-VERIFIED` candidates across 10 areas, plus one `OPEN-WEAK` warm-up
+candidate (`research-bank/R001/`). Begin attempts from rank A/B candidates
+whose subtargets have exact certificate paths.
 
-Current P10 count: 14 `OPEN-VERIFIED` candidates across 7 areas
-(`research-bank/R002/` number theory, `research-bank/R003/` real analysis,
-`research-bank/R004/` algebra, `research-bank/R005/` combinatorics,
-`research-bank/R006/` geometry, `research-bank/R007/` combinatorics,
-`research-bank/R008/` number theory, `research-bank/R009/` number theory,
-`research-bank/R010/` probability, `research-bank/R011/` geometry,
-`research-bank/R012/` combinatorics, `research-bank/R013/` order theory,
-`research-bank/R014/` number theory, `research-bank/R015/` geometry); 1
-`OPEN-WEAK` warm-up candidate (`research-bank/R001/`) in combinatorics. Need
-6 more `OPEN-VERIFIED` candidates and 0 additional areas before P11
-scale-up. Continue prioritizing rank A/B candidates and exact-checkable
-subtargets before P11 attempts.
+Recommended first P11 target: `research-bank/R020/` no-three-in-line, rank A.
+Reason: it has current 2026 CSP frontier evidence, exact integer
+collinearity checks, and a natural first deliverable: replay one known
+`D(n)=2n` certificate with an auditable verifier before searching beyond the
+frontier. Alternative rank A target: `research-bank/R013/` 1/3-2/3 posets,
+where exact linear-extension counts provide similarly replayable artifacts.

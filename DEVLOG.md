@@ -1,5 +1,26 @@
 # Devlog
 
+## 2026-05-20T21:46:00+09:00
+
+- Continued P10 CURATION from a clean, synced `main`.
+- Added six counted `OPEN-VERIFIED` candidates:
+  - `R016` Barnette's conjecture, graph theory, rank B.
+  - `R017` Graceful Tree Conjecture, graph theory, rank A.
+  - `R018` Hadwiger-Boltyanski illumination conjecture, geometry, rank C.
+  - `R019` Ryser-Brualdi-Stein Latin square transversal conjecture, design
+    theory, rank B.
+  - `R020` no-three-in-line problem, discrete geometry, rank A.
+  - `R021` Erdos-Gyarfas power-of-two cycles conjecture, graph theory, rank B.
+- Used live web/status sources and arXiv connector sweeps for openness checks,
+  preserving the closure-search evidence in each candidate's `OPENNESS.md`.
+- Advanced P10 from 14/20 across 7 areas to 20/20 across 10 areas.
+- Marked P10 complete and moved ROADMAP/NEXT_SESSION handoff to P11 attempts.
+
+Self-audit:
+- Commits this session: 4 pushed.
+- Concrete progress category: curation, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:31:00+09:00
 
 - Continued P10 CURATION from a clean, synced `main`.

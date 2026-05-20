@@ -19,5 +19,7 @@
 | R015 | 2026 Erdos-Szekeres revisited and happy ending status sources | geometry | 2026-05-20 (OPEN-VERIFIED) | B | SAT/order-type certificate replay and relaxed convex-polygon variants are exact-checkable | CURATED-OPEN-VERIFIED |
 | R016 | Barnette Hamiltonicity status sources and restricted graph partials | graph theory | 2026-05-20 (OPEN-VERIFIED) | B | finite cubic bipartite planar graph generation and Hamiltonian-cycle certificates give bounded subclass targets | CURATED-OPEN-VERIFIED |
 | R017 | 2026 graceful-tree spider partials and current status sources | graph theory | 2026-05-20 (OPEN-VERIFIED) | A | exact graceful-labeling search can synthesize and verify narrow new tree-family lemmas | CURATED-OPEN-VERIFIED |
+| R018 | Hadwiger-Boltyanski illumination status and 2026 cap-body partials | geometry | 2026-05-20 (OPEN-VERIFIED) | C | finite polytope illumination certificates can target restricted convex-body classes | CURATED-OPEN-VERIFIED |
+| R019 | Montgomery Latin-square transversal survey and RBS open-problem status | design theory | 2026-05-20 (OPEN-VERIFIED) | B | exact Latin-square and rainbow-matching checks can target restricted odd-order families | CURATED-OPEN-VERIFIED |
 
-Current counted P10 progress: 16 `OPEN-VERIFIED` candidates across 8 areas.
+Current counted P10 progress: 18 `OPEN-VERIFIED` candidates across 9 areas.

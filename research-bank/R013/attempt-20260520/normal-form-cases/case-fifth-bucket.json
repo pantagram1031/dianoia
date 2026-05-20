@@ -1,0 +1,29 @@
+{
+  "case": "fifth-matrix-bucket",
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "b<f",
+    "c<e",
+    "c<f",
+    "d<e",
+    "d<g",
+    "f<g"
+  ],
+  "check_pairs": [
+    [
+      "c",
+      "d"
+    ]
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "cover_matrix": [
+    [
+      0,
+      2,
+      2,
+      0
+    ],
+    [
+      0,
+      0,
+      3,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "form_count": 1,
+  "forms": [
+    {
+      "cover_relations": [
+        "a<c",
+        "a<d",
+        "b<e",
+        "b<f",
+        "c<e",
+        "c<f",
+        "d<e",
+        "d<g",
+        "f<g"
+      ],
+      "height": 4,
+      "linear_extensions": 30,
+      "rank_layers": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "c",
+          "d"
+        ],
+        [
+          "e",
+          "f"
+        ],
+        [
+          "g"
+        ]
+      ],
+      "rank_normal_form": {
+        "best_pair": {
+          "balanced": true,
+          "lower_orientation_probability": [
+            2,
+            5
+          ],
+          "pair": [
+            "c",
+            "d"
+          ],
+          "x_before_y": [
+            3,
+            5
+          ]
+        },
+        "cover_relations": [
+          "a<c",
+          "a<d",
+          "b<e",
+          "b<f",
+          "c<e",
+          "c<f",
+          "d<e",
+          "d<g",
+          "f<g"
+        ],
+        "label_by_item": {
+          "0": "a",
+          "1": "b",
+          "2": "c",
+          "3": "d",
+          "4": "e",
+          "5": "f",
+          "6": "g"
+        },
+        "maximal_elements": [
+          "e",
+          "g"
+        ],
+        "minimal_elements": [
+          "a",
+          "b"
+        ],
+        "rank_layers": [
+          [
+            "a",
+            "b"
+          ],
+          [
+            "c",
+            "d"
+          ],
+          [
+            "e",
+            "f"
+          ],
+          [
+            "g"
+          ]
+        ],
+        "relations": [
+          "a<c",
+          "a<d",
+          "a<e",
+          "a<f",
+          "a<g",
+          "b<e",
+          "b<f",
+          "b<g",
+          "c<e",
+          "c<f",
+          "c<g",
+          "d<e",
+          "d<g",
+          "f<g"
+        ]
+      },
+      "relations": [
+        "a<c",
+        "a<d",
+        "a<e",
+        "a<f",
+        "a<g",
+        "b<e",
+        "b<f",
+        "b<g",
+        "c<e",
+        "c<f",
+        "c<g",
+        "d<e",
+        "d<g",
+        "f<g"
+      ],
+      "width": 3
+    }
+  ],
+  "height": 4,
+  "rank_shape": [
+    2,
+    2,
+    2,
+    1
+  ],
+  "width": 3
+}

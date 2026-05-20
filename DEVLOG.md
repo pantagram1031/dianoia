@@ -1,5 +1,18 @@
 # Devlog
 
+## 2026-05-20T18:40:00+09:00
+
+- Patched `prompts/prove.md` with stale-active/closed-active handling.
+- Ran Phase 2 smoke in `dianoia-run` with fake `halt_flag=true` active problem.
+- Clean smoke result: `.active` changed to `prove-that-for-fixed-positive-integer-2579e5`, fresh `problem.md` and `intake.md` exist, and old fake journal has a supersession note.
+- Recorded smoke evidence in `capability-test/PHASE2-SMOKE-prove-stale-active.md`.
+- R1 remains UNVERIFIED at AGENTS router level because `AGENTS.md` is constitutional and unchanged.
+
+Self-audit:
+- Commits this session so far: 3 pushed, 1 pending.
+- Concrete progress category: fix.
+- Failed-session streak: 0.
+
 ## 2026-05-20T18:31:00+09:00
 
 - Wrote `DIAGNOSIS.md` with ranked BLOCKING/MAJOR/MINOR root causes.

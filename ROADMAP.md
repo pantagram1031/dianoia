@@ -8,7 +8,7 @@ Initialized: 2026-05-20T17:54:05+09:00
 |-------|------|--------|----------|
 | 0 | VERIFY PRIOR EXPERIMENT | COMPLETE | capability-test/VERIFY_PRIOR.md |
 | 1 | DIAGNOSE | COMPLETE | DIAGNOSIS.md |
-| 2 | FIX | IN_PROGRESS | prompts/templates patches pending |
+| 2 | FIX | IN_PROGRESS | prompts/prove.md patch smoke-tested; R1 router risk remains |
 | 3 | RE-TEST SAME PROBLEM | PENDING | capability-test/RETEST.md pending |
 | 4 | EXPAND BENCHMARK BANK | BLOCKED_BY_PHASE_3 | BENCHMARK.md initialized |
 | 5 | BUILD SKILLS | BLOCKED_BY_PHASE_3_ROTATION | skills/INDEX.md exists, no SKILL.md entries yet |
@@ -18,6 +18,7 @@ Initialized: 2026-05-20T17:54:05+09:00
 
 ## Current Priority
 
-Begin Phase 2 fixes in DIAGNOSIS.md severity order. First patch should address
-R1/R2 as far as possible within non-constitutional prompt files, then run the
-required stale `.active` smoke test.
+Continue Phase 2 fixes in DIAGNOSIS.md severity order. The prompt-level
+`prove.md` stale-active guard passed smoke testing; remaining R1 risk may
+require constitutional `AGENTS.md` approval if no prompt-only mitigation can
+make first-message routing deterministic.

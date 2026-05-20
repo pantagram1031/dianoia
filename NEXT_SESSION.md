@@ -3,12 +3,12 @@
 Resume Phase 2.
 
 Immediate next step:
-Implement the first DIAGNOSIS.md patch in severity order.
+Implement the next DIAGNOSIS.md patch in severity order.
 
-First patch target:
-- `prompts/prove.md`: add stale-active/closed-active handling, supersession
-  evidence, and postconditions that make the fake `halt_flag=true` smoke test
-  deterministic.
+Next patch target:
+- `prompts/resume.md` and `prompts/00-intake.md`: add malformed `.active`
+  failures and cross-reference that closed-problem resume is not fresh-problem
+  routing.
 
 Important:
 - `AGENTS.md` is constitutional. If the required smoke test cannot pass without

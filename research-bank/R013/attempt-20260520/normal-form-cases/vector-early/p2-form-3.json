@@ -1,0 +1,29 @@
+{
+  "case": "p2-form-3",
+  "check_pairs": [
+    [
+      "b",
+      "d"
+    ]
+  ],
+  "cover_relations": [
+    "a<c",
+    "a<d",
+    "b<e",
+    "c<e",
+    "c<g",
+    "d<f",
+    "f<g"
+  ],
+  "labels": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g"
+  ],
+  "source_class": "P2",
+  "source_form_index": 3
+}

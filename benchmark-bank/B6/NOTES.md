@@ -1,6 +1,6 @@
 # B6 Notes
 
-Status: source selected; raw and dianoia runs pending.
+Status: source selected; raw baseline complete; dianoia run pending.
 
 Why this problem:
 
@@ -15,3 +15,10 @@ Why this problem:
 Do not append a `BENCHMARK.md` row until both raw and dianoia artifacts exist
 and `benchmark-bank/B6/RUN.md` and `benchmark-bank/B6/COMPARISON.md` satisfy
 the B6+ verifier gates.
+
+Raw baseline:
+
+- `C:\Users\SAMSUNG\Downloads\raw-attempt-7\answer.md`
+- `C:\Users\SAMSUNG\Downloads\raw-attempt-7\run.md`
+
+Raw baseline preliminary audit is in `benchmark-bank/B6/RAW-AUDIT.md`.

@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T01:35:00+09:00
+
+- Selected B6, a contamination-free novel combinatorics benchmark from Bonamy,
+  Groenland, Johnston, Morrison, and Scott's 2026 paper "Infinite
+  induced-saturated graphs."
+- Added `benchmark-bank/B6/SOURCE.md`, `PROBLEM.md`, and `NOTES.md`.
+- Ran isolated raw baseline in `C:\Users\SAMSUNG\Downloads\raw-attempt-7`.
+- Added `benchmark-bank/B6/RAW-AUDIT.md` and `RUN-PARTIAL.md` recording raw
+  artifacts and pending dianoia-side work.
+
+Self-audit:
+- Commits this session so far: 1 pushed, 1 pending.
+- Concrete progress category: benchmark.
+- Failed-session streak: 0.
+
 ## 2026-05-21T01:18:00+09:00
 
 - Applied the user's refreshed operating prompt to durable repo state without

@@ -3,8 +3,8 @@
 Resume continuous improvement.
 
 Immediate next step:
-Finish B6+ reproducibility gates, then start the first contamination-free novel
-B6 benchmark against raw GPT-5.5.
+Finish the B6 dianoia-side run and compare it against the completed raw
+baseline in `C:\Users\SAMSUNG\Downloads\raw-attempt-7`.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -30,6 +30,14 @@ Important:
 - Live victory condition: 5 contamination-free novel VALUE_ADDED head-to-head
   benchmarks against raw GPT-5.5 across at least 3 mathematical areas. B6+ rows
   are the forward objective track.
+- B6 source is selected:
+  `benchmark-bank/B6/SOURCE.md` and `benchmark-bank/B6/PROBLEM.md`.
+- B6 raw baseline is complete:
+  `C:\Users\SAMSUNG\Downloads\raw-attempt-7\answer.md` and
+  `C:\Users\SAMSUNG\Downloads\raw-attempt-7\run.md`.
+- B6 has `benchmark-bank/B6/RUN-PARTIAL.md` and
+  `benchmark-bank/B6/RAW-AUDIT.md`; do not create `BENCHMARK.md` row until the
+  dianoia run and comparison artifacts exist.
 - Current continuous-improvement priority: add reproducibility tooling/runbook
   so future B6+ rows prefer full fresh raw and dianoia runs and clearly label
   weaker evidence.

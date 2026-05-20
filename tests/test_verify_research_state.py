@@ -68,6 +68,9 @@ BLOCKED-EXTERNAL-REVIEW
     write(root / "connectors" / "lean" / "server.py", "env check UNVERIFIED\n")
     write(root / "skills" / "openness-verification" / "SKILL.md", "## When To Use\n## Procedure\n")
     write(root / "skills" / "adversarial-novelty-check" / "SKILL.md", "## When To Use\n## Procedure\n")
+    write(root / "templates" / "research_candidate" / "SOURCE.md", "id:\n")
+    for filename in ("OPENNESS.md", "TRACTABILITY.md", "log.md", "NOVELTY.md", "CLAIM_GATE.md"):
+        write(root / "templates" / "research_candidate" / filename, "candidate_id:\n")
 
 
 class ResearchStateVerifierTest(unittest.TestCase):

@@ -11,6 +11,11 @@ Each candidate should live under `research-bank/<id>/` with:
   might add value.
 - `log.md`: attempt log, verdicts, and links to dianoia/raw artifacts.
 
+Start each candidate by copying `templates/research_candidate/` into a fresh
+`research-bank/<id>/` directory. Do not promote a candidate to P11 unless
+`OPENNESS.md` is current within seven days and records three independent source
+angles.
+
 Candidate row format for future `INDEX.md`:
 
 | id | source | area | openness verified date | tractability rank | why dianoia adds value | status |
@@ -18,4 +23,3 @@ Candidate row format for future `INDEX.md`:
 
 P10 target before P11 scale-up: at least 20 verified-open candidates across at
 least 4 mathematical areas.
-

@@ -15,8 +15,8 @@ Initialized: 2026-05-20T17:54:05+09:00
 | 6 | BUILD CONNECTORS | COMPLETE | 2/2 connectors added: arxiv, oeis |
 | 7 | DOCS | COMPLETE | README.md, ARCHITECTURE.md, EXAMPLES.md, CHANGELOG.md current as of B5/Phase 5/Phase 6 |
 | 8 | DEEPER RESEARCH | GATED | Requires 5 contamination-free novel VALUE_ADDED B6+ rows across 3 areas |
-| 9 | RESEARCH INFRA | IN_PROGRESS | Build formal-check, openness-verification, and adversarial-novelty infrastructure |
-| 10 | CURATION | PENDING | Requires research-bank with 20 verified-open candidates across 4 areas |
+| 9 | RESEARCH INFRA | COMPLETE | `connectors/lean/`, enhanced `connectors/arxiv/`, openness/novelty skills, research-state verifier, and candidate templates |
+| 10 | CURATION | IN_PROGRESS | Requires research-bank with 20 verified-open candidates across 4 areas |
 | 11 | ATTEMPTS | PENDING | Requires curated research-bank candidate selection |
 | 12 | VERIFICATION GATE | PENDING | Mandatory for any SOLVED-CLAIM |
 | 13 | INTERMEDIATE WINS | PENDING | Draft note plus BLOCKED_ON_USER before any external claim |
@@ -32,8 +32,8 @@ for external mathematician review.
 
 | Track | Status | Next Evidence |
 |-------|--------|---------------|
-| P9 infra | IN_PROGRESS | `connectors/lean/`, enhanced arXiv lookup, openness skill, adversarial novelty skill |
-| P10 curation | PENDING | `research-bank/INDEX.md` with 20 verified-open candidates across 4 areas |
+| P9 infra | COMPLETE | `connectors/lean/`, enhanced arXiv lookup, openness skill, adversarial novelty skill, `tools/verify_research_state.py`, `templates/research_candidate/` |
+| P10 curation | IN_PROGRESS | `research-bank/INDEX.md` with 20 verified-open candidates across 4 areas |
 | P11 attempts | PENDING | One candidate attempt log per session after P10 seed set exists |
 | P12 verification | PENDING | `CLAIMS.md` rows with gates, confidence, and downgrade/blocked status |
 | P13 notes | PENDING | `research-bank/<id>/draft-note.md` for any intermediate win |
@@ -63,8 +63,8 @@ reproducibility toward that evidence standard.
 
 ## Current Priority
 
-P9 INFRA. Build local tooling and prompts so later research attempts cannot
-mistake stale literature, renamed known results, or unverified proofs for a
-contribution. First concrete deliverables: Lean formal-check wrapper, enhanced
-arXiv/open-search support, openness-verification skill, adversarial-novelty
-skill, and Researcher prompt wiring.
+P10 CURATION. Seed `research-bank/` with verified-open candidates across at
+least four mathematical areas. For each candidate, copy
+`templates/research_candidate/`, run the openness and novelty skills, preserve
+arXiv `query_meta` when used, and do not promote to P11 unless openness is
+current within seven days.

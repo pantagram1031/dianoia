@@ -71,8 +71,8 @@ def check_phase_state(result: CheckResult, root: Path) -> None:
     ):
         if phrase not in roadmap:
             result.add_fail(f"ROADMAP.md missing research phrase: {phrase}")
-    if "RESEARCH INFRA" in roadmap and "IN_PROGRESS" in roadmap:
-        result.add_ok("ROADMAP.md records active P9 research infrastructure")
+    if "RESEARCH INFRA" in roadmap and ("IN_PROGRESS" in roadmap or "COMPLETE" in roadmap):
+        result.add_ok("ROADMAP.md records research infrastructure phase state")
 
 
 def check_state_files(result: CheckResult, root: Path) -> None:
@@ -181,12 +181,28 @@ def check_candidate_dirs(result: CheckResult, root: Path) -> None:
                 result.add_fail(f"research candidate {candidate.name} missing {filename}")
 
 
+def check_templates(result: CheckResult, root: Path) -> None:
+    template_dir = root / "templates" / "research_candidate"
+    required = ("SOURCE.md", "OPENNESS.md", "TRACTABILITY.md", "log.md", "NOVELTY.md", "CLAIM_GATE.md")
+    for filename in required:
+        path = template_dir / filename
+        if not path.exists():
+            result.add_fail(f"missing templates/research_candidate/{filename}")
+            continue
+        text = read_text(path)
+        if "candidate_id" not in text and filename != "SOURCE.md":
+            result.add_fail(f"templates/research_candidate/{filename} missing candidate_id field")
+    if all((template_dir / filename).exists() for filename in required):
+        result.add_ok("research candidate templates exist")
+
+
 def check_research_state(root: Path = ROOT) -> CheckResult:
     result = CheckResult(ok=[], warn=[], fail=[])
     check_phase_state(result, root)
     check_state_files(result, root)
     check_infra_wiring(result, root)
     check_candidate_dirs(result, root)
+    check_templates(result, root)
     return result
 
 

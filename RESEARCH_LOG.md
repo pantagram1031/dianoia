@@ -13,6 +13,16 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T20:34:00+09:00
+
+- Enhanced `connectors/arxiv/` with category/date-bounded search and an
+  `openness` command that emits reproducible `query_meta` for openness trails.
+- Added `tools/verify_research_state.py` and wired it into
+  `tools/verify_all.py` so P9-P13 scaffolding is checked every session.
+- Added `templates/research_candidate/` for P10 candidate curation and P12
+  novelty/claim gates.
+- Marked P9 INFRA complete and opened P10 CURATION as the current priority.
+
 ## 2026-05-21T02:05:00+09:00
 
 - Goal updated from forward benchmark evidence to research contribution.

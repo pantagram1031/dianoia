@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-05-20 Research Contribution P9 Infra
+
+- Added Lean formal-check connector scaffolding, with explicit `UNVERIFIED`
+  behavior when Lean is unavailable.
+- Enhanced the arXiv connector with date/category search and openness-lead
+  query metadata.
+- Added openness-verification and adversarial-novelty skills and wired them
+  into Researcher.
+- Added research-state verification and candidate templates to prepare P10
+  curation and P12 claim gates.
+
 ## 2026-05-21 Continuous Objective Refresh
 
 - Re-centered ROADMAP, README, BENCHMARK, NEXT_SESSION, and DECISIONS on the

@@ -1,5 +1,21 @@
 # Devlog
 
+## 2026-05-20T20:34:00+09:00
+
+- Enhanced `connectors/arxiv/server.py` with date/category search and
+  openness-lead queries for research-bank curation.
+- Added offline unit tests for the arXiv query builder and openness output
+  shape.
+- Added `tools/verify_research_state.py`, tests, and full-verifier wiring.
+- Added `templates/research_candidate/` and updated `research-bank/README.md`,
+  `ROADMAP.md`, `NEXT_SESSION.md`, and `RESEARCH_LOG.md`.
+- Marked P9 INFRA complete and P10 CURATION in progress.
+
+Self-audit:
+- Commits this session so far: 2 pushed, 1 pending.
+- Concrete progress category: infra, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-21T02:24:00+09:00
 
 - Added P9 skills `openness-verification` and `adversarial-novelty-check`.

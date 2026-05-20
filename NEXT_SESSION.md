@@ -3,8 +3,9 @@
 Resume continuous improvement.
 
 Immediate next step:
-Continue P9 INFRA for the RESEARCH_CONTRIBUTION objective: build formal-check,
-openness-verification, and adversarial-novelty infrastructure.
+Begin P10 CURATION for the RESEARCH_CONTRIBUTION objective: seed
+`research-bank/` with verified-open candidates across at least four
+mathematical areas.
 
 Current state:
 - Phase 2 is complete: `prompts/prove.md`, `prompts/resume.md`,
@@ -31,6 +32,14 @@ Important:
 - MASTERPIECE baseline is present, so the active phase is P9 INFRA.
 - Persistent research state files now include `RESEARCH_LOG.md`, `CLAIMS.md`,
   and `research-bank/`.
+- P9 INFRA is complete:
+  - `connectors/lean/` reports `UNVERIFIED` when Lean is unavailable.
+  - `connectors/arxiv/` supports date/category search and `openness` queries
+    with reproducible `query_meta`.
+  - `skills/openness-verification/` and
+    `skills/adversarial-novelty-check/` are wired into Researcher.
+  - `tools/verify_research_state.py` is included in `tools/verify_all.py`.
+  - `templates/research_candidate/` contains the P10/P12 artifact skeletons.
 - `capability-test/MASTERPIECE.md` is baseline evidence, not a stop condition.
 - Live victory condition: a verifiable math contribution that passes openness,
   novelty, adversarial, and formal/computational gates, then halts
@@ -43,8 +52,9 @@ Important:
 - B6 has `benchmark-bank/B6/RUN-PARTIAL.md` and
   `benchmark-bank/B6/RAW-AUDIT.md`; do not create `BENCHMARK.md` row until the
   dianoia run and comparison artifacts exist.
-- Current priority: P9 infrastructure, then P10 curation of 20 verified-open
-  candidates across 4 areas.
+- Current priority: P10 curation of 20 verified-open candidates across 4
+  areas. Use `templates/research_candidate/` for each candidate and preserve
+  openness search metadata.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
   smoke is `capability-test/BENCHMARK-RUN-WORKSPACE-PATHS-VERIFY-20260521.md`;
   warnings are expected for UNVERIFIED token accounting in B1-B5. It also

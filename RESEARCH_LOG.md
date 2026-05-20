@@ -29,6 +29,19 @@ Current objective:
   perturbation conjecture. It is not counted toward the 20 verified-open P10
   target.
 
+## 2026-05-20T20:56:00+09:00
+
+- Strengthened `tools/verify_research_state.py` so P10 progress is counted
+  from `research-bank/INDEX.md` and index `OPEN-VERIFIED` rows must match each
+  candidate's `OPENNESS.md` status.
+- Added three counted `OPEN-VERIFIED` candidates:
+  - `R002`: perfect cuboid, number theory, rank C.
+  - `R003`: Kakeya set conjecture in dimensions `n >= 4`, real analysis,
+    rank D.
+  - `R004`: Koethe conjecture, algebra, rank D.
+- Current P10 progress: 3/20 `OPEN-VERIFIED` candidates across 3/4 required
+  areas. Need to prioritize one more area plus more tractable rank A/B rows.
+
 ## 2026-05-21T02:05:00+09:00
 
 - Goal updated from forward benchmark evidence to research contribution.

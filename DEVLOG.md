@@ -1,5 +1,24 @@
 # Devlog
 
+## 2026-05-20T20:56:00+09:00
+
+- Added P10 verifier counting for `OPEN-VERIFIED` candidates and distinct
+  areas.
+- Added a consistency guard requiring `research-bank/INDEX.md`
+  `OPEN-VERIFIED` rows to agree with each candidate `OPENNESS.md`.
+- Curated three counted `OPEN-VERIFIED` candidates:
+  - `R002` perfect cuboid, number theory, rank C.
+  - `R003` Kakeya set conjecture in dimensions `n >= 4`, real analysis,
+    rank D.
+  - `R004` Koethe conjecture, algebra, rank D.
+- Updated `ROADMAP.md`, `NEXT_SESSION.md`, `RESEARCH_LOG.md`, and
+  `CHANGELOG.md` with current P10 state.
+
+Self-audit:
+- Commits this session so far: 3 pushed, 1 pending.
+- Concrete progress category: curation, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T20:34:00+09:00
 
 - Enhanced `connectors/arxiv/server.py` with date/category search and

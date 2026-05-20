@@ -69,5 +69,8 @@ least four mathematical areas. For each candidate, copy
 arXiv `query_meta` when used, and do not promote to P11 unless openness is
 current within seven days.
 
-Current P10 count: 0 `OPEN-VERIFIED` candidates; 1 `OPEN-WEAK` warm-up
-candidate (`research-bank/R001/`) in combinatorics.
+Current P10 count: 3 `OPEN-VERIFIED` candidates across 3 areas
+(`research-bank/R002/` number theory, `research-bank/R003/` real analysis,
+`research-bank/R004/` algebra); 1 `OPEN-WEAK` warm-up candidate
+(`research-bank/R001/`) in combinatorics. Need 17 more `OPEN-VERIFIED`
+candidates and at least 1 additional area before P11 scale-up.

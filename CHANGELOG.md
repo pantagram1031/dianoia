@@ -13,6 +13,13 @@
 - Fixed arXiv multi-word query precision after live smoke testing and seeded
   `research-bank/R001/` as an `OPEN-WEAK` warm-up candidate.
 
+## 2026-05-20 P10 Research Curation
+
+- Added P10 research-bank progress counting and index/OpenNESS consistency
+  verification.
+- Added counted `OPEN-VERIFIED` candidates R002-R004, bringing P10 to 3/20
+  candidates across 3/4 required areas.
+
 ## 2026-05-21 Continuous Objective Refresh
 
 - Re-centered ROADMAP, README, BENCHMARK, NEXT_SESSION, and DECISIONS on the

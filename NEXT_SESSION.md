@@ -60,6 +60,16 @@ Important:
   Bonamy-Groenland-Johnston-Morrison-Scott Conjecture 8.4. It is not counted
   toward the 20 verified-open target until broader independent openness sources
   are added.
+- P10 counted state: 3/20 `OPEN-VERIFIED` candidates across 3/4 required
+  areas:
+  - `research-bank/R002/`: perfect cuboid, number theory, rank C.
+  - `research-bank/R003/`: Kakeya set conjecture in dimensions `n >= 4`, real
+    analysis, rank D.
+  - `research-bank/R004/`: Koethe conjecture, algebra, rank D.
+- `tools/verify_research_state.py` now reports P10 counts and rejects
+  `OPEN-VERIFIED` index rows whose candidate `OPENNESS.md` status disagrees.
+- Next concrete deliverable: add more `OPEN-VERIFIED` candidates, prioritizing
+  the missing fourth area and higher-tractability rank A/B candidates.
 - Baseline verifier exists: `python tools\verify_dianoia_state.py`. Latest
   smoke is `capability-test/BENCHMARK-RUN-WORKSPACE-PATHS-VERIFY-20260521.md`;
   warnings are expected for UNVERIFIED token accounting in B1-B5. It also

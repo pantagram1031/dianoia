@@ -1,5 +1,20 @@
 # Devlog
 
+## 2026-05-21T05:15:00+09:00
+
+- Continued P11 on `R013`.
+- Added `matrix-feature-partition` to `tools/poset_balance.py`, with unit test
+  coverage and a `verify_all.py` smoke.
+- Generated `width3-rank2221-near-boundary-feature-partition.json`.
+- Added `FEATURE_PARTITION_NOTES.md` to interpret the thresholded partition
+  and name the next all-bucket partition step.
+- Verdict remains `PARTIAL-PROGRESS`; no `CLAIMS.md` row.
+
+Self-audit:
+- Commits this session so far: 4 pushed before this log update.
+- Concrete progress category: attempt, note, verify.
+- Failed-session streak: 0.
+
 ## 2026-05-21T05:00:00+09:00
 
 - Continued P11 on `R013`.

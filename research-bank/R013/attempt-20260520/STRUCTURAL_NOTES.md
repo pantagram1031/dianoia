@@ -59,6 +59,9 @@ Artifacts:
 - `NEAR_BOUNDARY_SYNTHESIS.md`: consolidation of the processed near-boundary
   buckets into reusable residual-count patterns and proof obligations for a
   restricted width-3 lemma.
+- `FEATURE_PARTITION_NOTES.md`: interpretation of the thresholded matrix
+  feature partition that separates the processed near-boundary buckets by
+  cover-density and skip-cover features.
 - `COVER_MATRIX_DERIVATION.md`: direct derivation of the three rank-normal
   forms from the common cover matrix.
 - `width3-rank2221-cover-matrix-forms-n7.json`: generated direct derivation
@@ -119,9 +122,9 @@ These are search signals only:
    remaining singleton `2/5` bucket; `SEVENTH_MATRIX_BUCKET_NOTES.md` handles
    the first `13/32` bucket; `EIGHTH_MATRIX_BUCKET_NOTES.md` handles the
    second `13/32` bucket. `NEAR_BOUNDARY_SYNTHESIS.md` now extracts common
-   residual-count patterns. The next nontrivial target is a feature partition
-   of the remaining matrix buckets to look for a dominance or local-degree
-   lemma.
+   residual-count patterns. `FEATURE_PARTITION_NOTES.md` now interprets the
+   thresholded feature partition. The next nontrivial target is to partition
+   all 67 matrix buckets and mark which feature classes remain unprocessed.
 6. Scale canonical generation to `n=8` only after further optimizing
    canonical-key speed or adding targeted filters.
 

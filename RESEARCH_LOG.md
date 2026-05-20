@@ -13,6 +13,17 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-21T05:15:00+09:00
+
+- Continued P11 on `R013` by adding a matrix-feature partition command to
+  `tools/poset_balance.py`, a unit test, and a `verify_all.py` smoke.
+- Generated
+  `width3-rank2221-near-boundary-feature-partition.json` for all processed
+  near-boundary buckets with threshold `13/32`.
+- Added `FEATURE_PARTITION_NOTES.md` interpreting the feature groups and the
+  local-degree proof direction.
+- Claim discipline: proof-support only; no `CLAIMS.md` row and no P12 trigger.
+
 ## 2026-05-21T05:00:00+09:00
 
 - Continued P11 on `R013` by adding `NEAR_BOUNDARY_SYNTHESIS.md`.

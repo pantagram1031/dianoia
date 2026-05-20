@@ -2,6 +2,18 @@
 
 candidate_id: R013
 
+## 2026-05-21 P11 Attempt 1X
+
+- Added `matrix-feature-partition` to `tools/poset_balance.py`.
+- Added
+  `research-bank/R013/attempt-20260520/width3-rank2221-near-boundary-feature-partition.json`
+  using threshold `13/32`.
+- Added `research-bank/R013/attempt-20260520/FEATURE_PARTITION_NOTES.md`.
+- Feature signal: the processed near-boundary buckets separate by cover
+  density and skip-cover features; the next proof-support task is an
+  all-bucket processed/unprocessed feature partition.
+- Claim discipline: no `CLAIMS.md` row; this remains proof-support work.
+
 ## 2026-05-21 P11 Attempt 1W
 
 - Added `research-bank/R013/attempt-20260520/NEAR_BOUNDARY_SYNTHESIS.md`.

@@ -1,5 +1,19 @@
 # Devlog
 
+## 2026-05-20T19:36:00+09:00
+
+- Added first Phase 6 connector: `connectors/arxiv/`.
+- Implemented `server.py` using Python stdlib and the public arXiv Atom API.
+- Added fallback fetch from the arXiv abstract page when the Atom API returns HTTP 429.
+- Verified `python connectors/arxiv/server.py fetch 2604.06609` exits 0 and emits metadata for the APSSV source.
+- Added README and example.
+- Wired the connector into `prompts/subagents/researcher.md`.
+
+Self-audit:
+- Commits this session so far: 3 pushed, 1 pending.
+- Concrete progress category: connector.
+- Failed-session streak: 0.
+
 ## 2026-05-20T19:28:00+09:00
 
 - Added first Phase 5 skill: `skills/pollack-character/SKILL.md`.

@@ -3,7 +3,7 @@
 Resume parallel Phases 4-7.
 
 Immediate next step:
-Add first Phase 6 connector (`arxiv`) or prepare the first Phase 4
+Add second Phase 6 connector (`oeis`) or prepare the first Phase 4
 benchmark-bank entry.
 
 Current state:
@@ -14,6 +14,8 @@ Current state:
 - Phase 3 is complete with VALUE_ADDED in `capability-test/RETEST.md`.
 - Phase 5 has 1/5 skills: `skills/pollack-character/SKILL.md`, referenced by
   researcher and prover subagent prompts.
+- Phase 6 has 1/2 connectors: `connectors/arxiv/`, referenced by the researcher
+  subagent prompt.
 
 Important:
 - MASTERPIECE still needs >=5 VALUE_ADDED benchmark rows across >=3 areas,

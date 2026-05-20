@@ -11,15 +11,18 @@ forbidden_writes: IDENTITY.md, goal.md, AGENTS.md, prompts/, templates/, corpus/
 
 [PROCEDURE]
 1. Search in the order biased by the specialist profile when supplied.
-2. For each candidate reference, collect author, year, title, and exact statement reference.
-3. If the target claim involves small primes with prescribed quadratic
+2. For arXiv papers or arXiv-id-like queries, invoke
+   `connectors/arxiv/server.py` and write the compact metadata result into the
+   drop zone before judging whether the reference is complete.
+3. For each candidate reference, collect author, year, title, and exact statement reference.
+4. If the target claim involves small primes with prescribed quadratic
    character behavior, consult `skills/pollack-character/SKILL.md` before
    deciding whether the reference supports finiteness, explicit bounds, or only
    an ineffective obstruction.
-4. Put complete references in `verified.md`.
-5. Put incomplete or unresolved references in `unverified.md` with missing fields named.
-6. Do not use unverified references as support for claims.
-7. Write `return.md` with status and artifact paths.
+5. Put complete references in `verified.md`.
+6. Put incomplete or unresolved references in `unverified.md` with missing fields named.
+7. Do not use unverified references as support for claims.
+8. Write `return.md` with status and artifact paths.
 
 [OUTPUTS]
 1. `verified.md`.

@@ -23,6 +23,8 @@
   timeouts are explicit `UNVERIFIED` evidence instead of silent crashes.
 - Added counted `OPEN-VERIFIED` candidates R005-R007, bringing P10 to 6/20
   candidates across 5/4 required areas.
+- Added counted `OPEN-VERIFIED` candidates R008-R011, bringing P10 to 10/20
+  candidates across 6/4 required areas.
 
 ## 2026-05-21 Continuous Objective Refresh
 

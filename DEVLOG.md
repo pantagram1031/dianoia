@@ -1,5 +1,25 @@
 # Devlog
 
+## 2026-05-20T21:22:00+09:00
+
+- Continued P10 CURATION after syncing `main`.
+- Added four counted `OPEN-VERIFIED` candidates:
+  - `R008` Erdos-Straus conjecture, number theory, rank B.
+  - `R009` Lonely Runner conjecture, number theory, rank B.
+  - `R010` Komlos discrepancy conjecture, probability, rank C.
+  - `R011` symmetric Mahler conjecture in dimensions `n >= 4`, geometry,
+    rank C.
+- Used live web/source checks and arXiv connector sweeps for each candidate,
+  preserving recent-search evidence in `OPENNESS.md`.
+- Advanced P10 from 6/20 across 5 areas to 10/20 across 6 areas.
+- Updated persistent handoff/state files with the new P10 count and next
+  priority.
+
+Self-audit:
+- Commits this session: 3 pushed.
+- Concrete progress category: curation, verify, doc.
+- Failed-session streak: 0.
+
 ## 2026-05-20T21:12:00+09:00
 
 - Hardened `connectors/arxiv/server.py` so rate limits and timeouts return

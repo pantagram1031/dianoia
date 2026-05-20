@@ -13,6 +13,20 @@ Current objective:
 - Do not claim publication or public mathematical priority. A successful gate
   halts as `BLOCKED_ON_USER` for external mathematician review.
 
+## 2026-05-20T21:22:00+09:00
+
+- Added four counted P10 `OPEN-VERIFIED` candidates:
+  - `R008`: Erdos-Straus conjecture, number theory, rank B.
+  - `R009`: Lonely Runner conjecture, number theory, rank B.
+  - `R010`: Komlos discrepancy conjecture, probability, rank C.
+  - `R011`: symmetric Mahler conjecture in dimensions `n >= 4`, geometry,
+    rank C.
+- Current P10 progress: 10/20 `OPEN-VERIFIED` candidates across 6/4 required
+  areas. Need 10 more candidates before P11 scale-up.
+- Selection bias note: the newly added rank B/C candidates emphasize bounded,
+  exact-checkable intermediate wins: modular covers, certificate replay,
+  finite discrepancy checks, and rational convex-polytope computations.
+
 ## 2026-05-20T21:12:00+09:00
 
 - Hardened the arXiv connector's search path against live API instability:

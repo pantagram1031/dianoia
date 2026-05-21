@@ -2297,6 +2297,121 @@ def matrix_vector_named_cases_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def matrix_vector_coverage_check_command(args: argparse.Namespace) -> int:
+    partition = json.loads(args.partition.read_text(encoding="utf-8"))
+    frontier = json.loads(args.frontier.read_text(encoding="utf-8"))
+    ledger = json.loads(args.ledger.read_text(encoding="utf-8"))
+
+    groups = {str(group["feature_key"]): group for group in partition["groups"]}
+    records = list(frontier["processed_classes"]) + list(frontier["unprocessed_classes"])
+    ledger_classes = {str(item["id"]): item for item in ledger["classes"]}
+
+    errors: list[str] = []
+    class_checks: list[dict[str, object]] = []
+    covered_feature_keys: set[str] = set()
+    for record in records:
+        class_id = str(record["id"])
+        feature_key = str(record["feature_key"])
+        group = groups.get(feature_key)
+        ledger_class = ledger_classes.get(class_id)
+        if group is None:
+            errors.append(f"{class_id}: feature key missing from partition")
+            continue
+        if ledger_class is None:
+            errors.append(f"{class_id}: missing from form ledger")
+            continue
+        covered_feature_keys.add(feature_key)
+        group_profile_count = int(group["profile_count"])
+        record_profile_count = int(record["profile_count"])
+        ledger_form_count = int(ledger_class["form_count"])
+        if group_profile_count != record_profile_count:
+            errors.append(
+                f"{class_id}: frontier profile_count {record_profile_count} "
+                f"!= partition profile_count {group_profile_count}"
+            )
+        if ledger_form_count != group_profile_count:
+            errors.append(
+                f"{class_id}: ledger form_count {ledger_form_count} "
+                f"!= partition profile_count {group_profile_count}"
+            )
+        if list(record["adjacent_vector"]) != list(ledger_class["adjacent_vector"]):
+            errors.append(f"{class_id}: adjacent_vector mismatch")
+        if list(record["skip_vector"]) != list(ledger_class["skip_vector"]):
+            errors.append(f"{class_id}: skip_vector mismatch")
+        class_checks.append(
+            {
+                "id": class_id,
+                "state": "processed"
+                if int(record.get("processed_bucket_count", 0)) > 0
+                else "unprocessed",
+                "bucket_count": int(group["bucket_count"]),
+                "profile_count": group_profile_count,
+                "form_count": ledger_form_count,
+                "feature_key": feature_key,
+            }
+        )
+
+    missing_feature_keys = sorted(set(groups) - covered_feature_keys)
+    extra_ledger_ids = sorted(set(ledger_classes) - {str(record["id"]) for record in records})
+    if missing_feature_keys:
+        errors.append(
+            "partition feature keys not represented in frontier: "
+            + ", ".join(missing_feature_keys)
+        )
+    if extra_ledger_ids:
+        errors.append("ledger ids not represented in frontier: " + ", ".join(extra_ledger_ids))
+
+    total_partition_profiles = sum(int(group["profile_count"]) for group in groups.values())
+    total_ledger_forms = sum(int(item["form_count"]) for item in ledger_classes.values())
+    if total_partition_profiles != total_ledger_forms:
+        errors.append(
+            f"total ledger forms {total_ledger_forms} != partition profiles {total_partition_profiles}"
+        )
+
+    mechanism_summary: dict[str, object] | None = None
+    if args.mechanism_batch:
+        mechanism = json.loads(args.mechanism_batch.read_text(encoding="utf-8"))
+        case_count = int(mechanism["case_count"])
+        found_count = int(mechanism["found_count"])
+        unresolved = list(mechanism.get("unresolved", []))
+        if case_count != total_ledger_forms:
+            errors.append(
+                f"mechanism case_count {case_count} != ledger forms {total_ledger_forms}"
+            )
+        if found_count != case_count:
+            errors.append(f"mechanism found_count {found_count} != case_count {case_count}")
+        if unresolved:
+            errors.append("mechanism unresolved cases present: " + ", ".join(unresolved))
+        mechanism_summary = {
+            "source": str(args.mechanism_batch),
+            "case_count": case_count,
+            "found_count": found_count,
+            "unresolved_count": len(unresolved),
+            "by_mechanism": mechanism.get("by_mechanism", {}),
+        }
+
+    out = {
+        "ok": not errors,
+        "errors": errors,
+        "partition_source": str(args.partition),
+        "frontier_source": str(args.frontier),
+        "ledger_source": str(args.ledger),
+        "partition_group_count": int(partition["group_count"]),
+        "frontier_class_count": len(records),
+        "ledger_class_count": len(ledger_classes),
+        "partition_bucket_count": sum(int(group["bucket_count"]) for group in groups.values()),
+        "partition_profile_count": total_partition_profiles,
+        "ledger_form_count": total_ledger_forms,
+        "class_checks": sorted(class_checks, key=lambda item: str(item["id"])),
+        "mechanism_summary": mechanism_summary,
+    }
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(out, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    print(json.dumps(out, indent=2, sort_keys=True))
+    return 0 if out["ok"] else 1
+
+
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
@@ -2455,6 +2570,14 @@ def main(argv: Sequence[str] | None = None) -> int:
     vector_cases_parser.add_argument("--output-dir", type=Path, required=True)
     vector_cases_parser.add_argument("--summary", type=Path)
     vector_cases_parser.set_defaults(func=matrix_vector_named_cases_command)
+
+    coverage_parser = subparsers.add_parser("matrix-vector-coverage-check")
+    coverage_parser.add_argument("partition", type=Path)
+    coverage_parser.add_argument("frontier", type=Path)
+    coverage_parser.add_argument("ledger", type=Path)
+    coverage_parser.add_argument("--mechanism-batch", type=Path)
+    coverage_parser.add_argument("--output", type=Path)
+    coverage_parser.set_defaults(func=matrix_vector_coverage_check_command)
 
     args = parser.parse_args(argv)
     return args.func(args)

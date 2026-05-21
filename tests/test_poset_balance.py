@@ -1073,6 +1073,96 @@ class PosetBalanceTest(unittest.TestCase):
             self.assertEqual("P7", case_payload["source_class"])
             self.assertEqual([["a", "b"]], case_payload["check_pairs"])
 
+    def test_matrix_vector_coverage_check_matches_partition_frontier_and_ledger(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            partition = Path(temp_dir) / "partition.json"
+            frontier = Path(temp_dir) / "frontier.json"
+            ledger = Path(temp_dir) / "ledger.json"
+            mechanism = Path(temp_dir) / "mechanism.json"
+            output = Path(temp_dir) / "coverage.json"
+            feature_key = "covers=1|adjacent_vector=1|skip_vector=0"
+            partition.write_text(
+                json.dumps(
+                    {
+                        "group_count": 1,
+                        "groups": [
+                            {
+                                "feature_key": feature_key,
+                                "bucket_count": 1,
+                                "profile_count": 2,
+                            }
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            frontier.write_text(
+                json.dumps(
+                    {
+                        "processed_classes": [
+                            {
+                                "id": "P1",
+                                "feature_key": feature_key,
+                                "adjacent_vector": [1],
+                                "skip_vector": [0],
+                                "profile_count": 2,
+                                "processed_bucket_count": 1,
+                            }
+                        ],
+                        "unprocessed_classes": [],
+                    }
+                ),
+                encoding="utf-8",
+            )
+            ledger.write_text(
+                json.dumps(
+                    {
+                        "classes": [
+                            {
+                                "id": "P1",
+                                "adjacent_vector": [1],
+                                "skip_vector": [0],
+                                "form_count": 2,
+                            }
+                        ]
+                    }
+                ),
+                encoding="utf-8",
+            )
+            mechanism.write_text(
+                json.dumps(
+                    {
+                        "case_count": 2,
+                        "found_count": 2,
+                        "unresolved": [],
+                        "by_mechanism": {"forced-block": 2},
+                    }
+                ),
+                encoding="utf-8",
+            )
+            with redirect_stdout(StringIO()):
+                code = pb.main(
+                    [
+                        "matrix-vector-coverage-check",
+                        str(partition),
+                        str(frontier),
+                        str(ledger),
+                        "--mechanism-batch",
+                        str(mechanism),
+                        "--output",
+                        str(output),
+                    ]
+                )
+
+            self.assertEqual(0, code)
+            payload = json.loads(output.read_text(encoding="utf-8"))
+            self.assertTrue(payload["ok"])
+            self.assertEqual(1, payload["partition_group_count"])
+            self.assertEqual(1, payload["frontier_class_count"])
+            self.assertEqual(2, payload["partition_profile_count"])
+            self.assertEqual(2, payload["ledger_form_count"])
+            self.assertEqual(0, payload["mechanism_summary"]["unresolved_count"])
+
 
 if __name__ == "__main__":
     unittest.main()
